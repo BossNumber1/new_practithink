@@ -139,12 +139,12 @@ input {
     display: flex;
 }
 
-.subjects {
+/* .subjects {
     background-color: orange;
     position: absolute;
     left: 751.25px;
     top: 105px;
-}
+} */
 
 .pencilRed {
     position: absolute;
@@ -167,10 +167,10 @@ input {
 /* ruler styles */
 
 .ruler {
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 101px;
-    left: -250px;
+    left: 635.25px;
     display: flex;
     cursor: grab;
 }
@@ -191,7 +191,7 @@ input {
 .btns {
     position: relative;
     left: calc(50% - 570px / 2);
-    top: 323.74px;
+    top: 223.74px;
     display: flex;
     /* flex-direction: row;
     align-items: flex-start; */
@@ -225,4 +225,46 @@ input {
     margin-right: 30px;
     background-color: white;
     cursor: pointer;
+}
+
+/* pencils styles */
+
+.pencils {
+    position: relative;
+    left: 351px;
+    top: 92px;
+    width: 420.06px;
+    height: 62.74px;
+    /* border: 1px solid black; */
+}
+
+#redPencil {
+    position: relative;
+    top: 17px;
+}
+
+#redPencil img {
+    width: 20px;
+    height: 199px;
+}
+
+#greenPencil {
+    position: relative;
+    left: -15px;
+}
+
+#greenPencil img {
+    width: 20px;
+    height: 180px;
+}
+
+#bluePencil {
+    position: relative;
+    top: -55px;
+    left: 249px;
+}
+
+#bluePencil img {
+    width: 20px;
+    height: 173px;
 }
