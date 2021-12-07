@@ -110,7 +110,7 @@ body {
     height: 30px;
 }
 
-.inputContent input {
+.inputContent div {
     margin-right: 30px;
     border: 1.5px solid #2f2f2f;
     display: flex;
@@ -136,28 +136,22 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-
     position: static;
     width: 54px;
     height: 30px;
     /* left: 84px;
     top: 0px; */
-
     text-align: center;
-
     background: #369cb7;
     /* border: 1px solid #369cb7; */
     border: none !important;
     box-sizing: border-box;
     border-radius: 5px;
-
     flex: none;
     order: 1;
     flex-grow: 0;
     /* margin: 0px 30px; */
-
     color: #ffffff;
-
     cursor: grab;
 }
 
