@@ -98,9 +98,6 @@ body {
     left: calc(50% - 810px / 2);
     width: 810px;
     height: 90px;
-    /* left: 315px; */
-    /* top: 1173px; */
-    border: 1px solid gray;
 }
 
 /* 2. inputs styles */
@@ -171,7 +168,6 @@ body {
     padding: 0px;
     width: 642px;
     height: 30px;
-    border: 1px solid green;
     position: absolute;
     bottom: 0;
 }
