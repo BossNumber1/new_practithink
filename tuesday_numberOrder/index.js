@@ -44,3 +44,23 @@ function drop(e) {
     // именно - после всех операций - удаляем содержимое изначального места
     orig.textContent = "";
 }
+
+// checking for the correct result
+
+let correctOrder = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+let resultat = [];
+
+document.getElementById("submit").onclick = function () {
+    let firstRow = document.getElementsByClassName("inputsCollection");
+    let chil = firstRow[0].children;
+
+    for (let i = 0; i < chil.length; i++) {
+        if (chil[i].innerText == correctOrder[i]) {
+            resultat.push("верно");
+        } else {
+            resultat.push("нет");
+        }
+    }
+
+    alert(resultat);
+};
