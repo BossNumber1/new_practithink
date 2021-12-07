@@ -35,7 +35,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 489px;
+    height: 424px;
     top: 10px;
     left: calc(50% - 1170px / 2);
     border: 0.5px solid #369cb7;
@@ -78,28 +78,47 @@ body {
     margin-bottom: 47px;
 }
 
-input {
+/* content styles */
+
+.content {
+    /* position: absolute; */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 61px;
-    height: 38px;
-    left: 581px;
-    top: 375px;
-    background: #ffffff;
-    border: 1.4px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
+    top: 103px;
+    left: 510px;
+    width: 504px;
+    height: 171px;
+    /* border: 1px solid black; */
 }
 
-/* .subjects {
-    background-color: orange;
+.resetField {
+    /* position: absolute; */
+    width: 170px;
+    height: 90px;
+    /* left: 635px; */
+    top: 35px;
+
+    background: #dc97f4;
+    opacity: 0.3;
+    border: 0.5px dashed #064c5b;
+    box-sizing: border-box;
+}
+
+/* triangles styles */
+
+.firstTriangle,
+.secondTriangle {
+    cursor: grab;
+}
+
+.firstTriangle {
+    margin-left: 41px;
+    margin-right: 31.43px;
+}
+
+.secondTriangle img {
     position: absolute;
-    left: 751.25px;
-    top: 105px;
-} */
+    bottom: 0;
+}
 
 /* ruler styles */
 
@@ -159,42 +178,4 @@ input {
     margin-right: 30px;
     background-color: white;
     cursor: pointer;
-}
-
-/* pencils styles */
-
-.pencils {
-    left: 351px;
-    top: 92px;
-    width: 420.06px;
-    height: 62.74px;
-    /* border: 1px solid black; */
-}
-
-#redPencil {
-    top: 17px;
-}
-
-#redPencil img {
-    width: 20px;
-    height: 199px;
-}
-
-#greenPencil {
-    left: -15px;
-}
-
-#greenPencil img {
-    width: 20px;
-    height: 180px;
-}
-
-#bluePencil {
-    top: -55px;
-    left: 249px;
-}
-
-#bluePencil img {
-    width: 20px;
-    height: 173px;
 }
