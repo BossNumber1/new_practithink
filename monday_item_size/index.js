@@ -1,3 +1,5 @@
+let answerChoice;
+
 // implementation of movement and rotation of the ruler
 
 dragElement(document.getElementsByClassName("ruler")[0]);
@@ -64,3 +66,52 @@ document
             rotationFunction.onRotated(e);
         }
     });
+
+// check implementation
+
+document.getElementById("redBtn").onclick = function () {
+    document.getElementById("redBtn").style.background = "red";
+    document.getElementById("redBtn").style.color = "white";
+
+    document.getElementById("blueBtn").style.background = "white";
+    document.getElementById("blueBtn").style.color = "black";
+
+    document.getElementById("greenBtn").style.background = "white";
+    document.getElementById("greenBtn").style.color = "black";
+
+    answerChoice = "верный ответ, молодец";
+};
+
+document.getElementById("blueBtn").onclick = function () {
+    document.getElementById("blueBtn").style.background = "blue";
+    document.getElementById("blueBtn").style.color = "white";
+
+    document.getElementById("redBtn").style.background = "white";
+    document.getElementById("redBtn").style.color = "black";
+
+    document.getElementById("greenBtn").style.background = "white";
+    document.getElementById("greenBtn").style.color = "black";
+
+    answerChoice = "ответ неверный, можете попробовать ещё раз";
+};
+
+document.getElementById("greenBtn").onclick = function () {
+    document.getElementById("greenBtn").style.background = "green";
+    document.getElementById("greenBtn").style.color = "white";
+
+    document.getElementById("blueBtn").style.background = "white";
+    document.getElementById("blueBtn").style.color = "black";
+
+    document.getElementById("redBtn").style.background = "white";
+    document.getElementById("redBtn").style.color = "black";
+
+    answerChoice = "ответ неверный, можете попробовать ещё раз";
+};
+
+document.getElementById("submit").onclick = function () {
+    if (answerChoice) {
+        alert(answerChoice);
+    } else {
+        alert(" сначала необходимо выбрать один из вариантов ");
+    }
+};
