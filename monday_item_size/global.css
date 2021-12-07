@@ -2,9 +2,6 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
 }
 
 * {
@@ -83,42 +80,6 @@ body {
     margin-top: 31px;
 }
 
-.table {
-    position: relative;
-    width: 370px;
-    height: 177px;
-    top: 85px;
-    left: 200px;
-}
-
-.line,
-.lineTitle {
-    display: flex;
-}
-
-.line div,
-.lineTitle div {
-    border: 1px solid #cccccc;
-    width: 185px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.line div {
-    color: #2f2f2f;
-}
-
-.lineTitle div {
-    background: #205b64;
-    color: white;
-}
-
 input {
     display: flex;
     flex-direction: row;
@@ -135,34 +96,12 @@ input {
     border-radius: 5px;
 }
 
-.tableSubjects {
-    display: flex;
-}
-
 /* .subjects {
     background-color: orange;
     position: absolute;
     left: 751.25px;
     top: 105px;
 } */
-
-.pencilRed {
-    position: absolute;
-    top: 83.86px;
-    left: 20px;
-}
-
-.pencilBlue {
-    position: absolute;
-    top: 34.18px;
-    left: 73px;
-}
-
-.pencilGreen {
-    position: absolute;
-    top: 33.68px;
-    left: 159.02px;
-}
 
 /* ruler styles */
 
