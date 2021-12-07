@@ -112,6 +112,10 @@ body {
     position: absolute;
 }
 
+/* .firstTriangle {
+    border: 1px solid black;
+} */
+
 .secondTriangle {
     margin-left: 115px;
     margin-top: 80px;
@@ -130,13 +134,15 @@ body {
 .leftEdge,
 .rightEdge {
     display: flex;
-    width: 50px;
-    height: 57px;
+    width: 90px;
+    height: 50px;
     position: absolute;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
+    /* border: 1px solid black; */
 }
 
 .rightEdge {
-    left: 81%;
+    top: 70%;
+    /* left: 4%; */
 }

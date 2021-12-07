@@ -2,12 +2,12 @@
 
 dragElement(document.getElementsByClassName("firstTriangle")[0]);
 
-// const rotationFunction = new Propeller(
-//     document.getElementsByClassName("ruler")[0],
-//     {
-//         inertia: 0,
-//     }
-// );
+const rotationFunction = new Propeller(
+    document.getElementsByClassName("firstTriangle")[0],
+    {
+        inertia: 0,
+    }
+);
 
 function dragElement(element) {
     let pos1 = 0,
@@ -44,23 +44,23 @@ function dragElement(element) {
     }
 }
 
-// document
-//     .getElementsByClassName("firstTriangle")[0]
-//     .addEventListener("mousedown", (e) => {
-//         if (
-//             (e.target.className !== "leftEdge" ||
-//                 e.target.className !== "rightEdge") &&
-//             e.target.className === "imgRuler"
-//         ) {
-//             rotationFunction.stop();
-//             dragElement(document.getElementsByClassName("ruler")[0]);
-//         }
+document
+    .getElementsByClassName("firstTriangle")[0]
+    .addEventListener("mousedown", (e) => {
+        if (
+            (e.target.className !== "leftEdge" ||
+                e.target.className !== "rightEdge") &&
+            e.target.className === "mainImg"
+        ) {
+            rotationFunction.stop();
+            dragElement(document.getElementsByClassName("firstTriangle")[0]);
+        }
 
-//         if (
-//             (e.target.className === "leftEdge" ||
-//                 e.target.className === "rightEdge") &&
-//             e.target.className !== "imgRuler"
-//         ) {
-//             rotationFunction.onRotated(e);
-//         }
-//     });
+        if (
+            (e.target.className === "leftEdge" ||
+                e.target.className === "rightEdge") &&
+            e.target.className !== "mainImg"
+        ) {
+            rotationFunction.onRotated(e);
+        }
+    });
