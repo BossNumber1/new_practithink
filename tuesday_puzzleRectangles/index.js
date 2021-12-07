@@ -140,3 +140,9 @@ document
             rotationFunctionForSecondTriangle.onRotated(e);
         }
     });
+
+document.getElementById("submit").onclick = function () {
+    // получаем координаты треугольников
+    // сравниваем их с координатами прямоугольника
+    // если верно, то...
+};
