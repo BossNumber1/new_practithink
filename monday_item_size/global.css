@@ -104,7 +104,8 @@ input {
 /* ruler styles */
 
 .ruler {
-    top: 101px;
+    position: absolute;
+    top: 181px;
     left: 505px;
     display: flex;
     cursor: grab;
