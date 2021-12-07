@@ -26,14 +26,12 @@ function drop(e) {
     orig.classList.remove("filledField");
 
     // orig.setAttribute("data-name", currentName);
-    // orig.parentElement.style.cursor = "default";
 
     // e.target.src = "./pictures/" + categoryDiv + ".svg";
     e.target.id = idTakenDiv;
     e.target.classList.add("filledField");
     e.target.textContent = orig.textContent;
     // e.target.setAttribute("data-name", categoryDiv);
-    // e.target.parentElement.style.cursor = "grab";
 
     // именно - после всех операций - удаляем содержимое изначального места
     orig.textContent = "";
