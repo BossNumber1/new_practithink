@@ -159,28 +159,31 @@ document.getElementById("submit").onclick = function () {
 
     // Решение:
 
-    // 1. получаем координаты треугольников
+    // 1. получаю координаты треугольников
 
     // - беру первый треугольник
     let firstTriangle = document.getElementsByClassName("firstTriangle")[0];
+    // - беру второй треугольник
+    let secondTriangle = document.getElementsByClassName("secondTriangle")[0];
 
-    // - получаю его координаты
-    let coordElem = getCoords(firstTriangle);
+    // - получаю координаты первого
+    let coordElemFirst = getCoords(firstTriangle);
+    // - получаю координаты первого
+    let coordElemSecond = getCoords(secondTriangle);
 
     // 2. сравниваю их с координатами прямоугольника
     if (
-        coordElem.left < 570 &&
-        coordElem.left > 560 &&
-        coordElem.top < 220 &&
-        coordElem.top > 200
+        coordElemFirst.left < 570 &&
+        coordElemFirst.left > 560 &&
+        coordElemFirst.top < 220 &&
+        coordElemFirst.top > 200 &&
+        coordElemSecond.left < 570 &&
+        coordElemSecond.left > 560 &&
+        coordElemSecond.top < 220 &&
+        coordElemSecond.top > 200
     ) {
-        alert("uraaa");
+        alert("молодец! всё верно :)");
     } else {
-        alert("ahaha");
+        alert("не верно");
     }
-
-    // ... если верно, то...
-
-    // left 565
-    // top 210 - прямоугольника
 };
