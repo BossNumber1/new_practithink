@@ -101,30 +101,31 @@ body {
 
 /* triangles styles */
 
+.triangles {
+    position: relative;
+    left: 41px;
+}
+
 .firstTriangle,
 .secondTriangle {
     cursor: grab;
-}
-
-.firstTriangle {
-    margin-left: 41px;
-    margin-right: 31.43px;
-}
-
-.secondTriangle img {
     position: absolute;
-    bottom: 0;
 }
 
-/* ruler styles */
+.secondTriangle {
+    margin-left: 115px;
+    margin-top: 80px;
+}
 
-.ruler {
+/* edges styles */
+
+/* .ruler {
     position: absolute;
     top: 181px;
     left: 505px;
     display: flex;
     cursor: grab;
-}
+} */
 
 .leftEdge,
 .rightEdge {
