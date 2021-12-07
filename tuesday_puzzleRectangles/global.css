@@ -81,7 +81,6 @@ body {
 /* content styles */
 
 .content {
-    /* position: absolute; */
     display: flex;
     top: 103px;
     left: 510px;
@@ -91,12 +90,9 @@ body {
 }
 
 .resetField {
-    /* position: absolute; */
     width: 170px;
     height: 90px;
-    /* left: 635px; */
     top: 35px;
-
     background: #dc97f4;
     opacity: 0.3;
     border: 0.5px dashed #064c5b;
@@ -142,40 +138,4 @@ body {
 
 .rightEdge {
     left: 81%;
-}
-
-.btns {
-    left: calc(50% - 570px / 2);
-    top: 223.74px;
-    display: flex;
-    /* flex-direction: row;
-    align-items: flex-start; */
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 570px;
-    height: 45px;
-}
-
-.btns button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    width: 170px;
-    height: 45px;
-    left: calc(50% - 170px / 2 - 200px);
-    top: calc(50% - 45px / 2);
-
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 30px;
-    background-color: white;
-    cursor: pointer;
 }
