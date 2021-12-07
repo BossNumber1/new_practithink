@@ -147,7 +147,7 @@ body {
     position: absolute;
     cursor: pointer;
     z-index: 1;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .rightCorner {

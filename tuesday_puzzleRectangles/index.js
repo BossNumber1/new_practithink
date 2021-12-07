@@ -1,8 +1,9 @@
-// implementation of movement and rotation of the triangles
+// implementation of movement and rotation of the first triangle
 
 dragElement(document.getElementsByClassName("firstTriangle")[0]);
+dragElement(document.getElementsByClassName("secondTriangle")[0]);
 
-const rotationFunction = new Propeller(
+const rotationFunctionForFirstTriangle = new Propeller(
     document.getElementsByClassName("firstTriangle")[0],
     {
         inertia: 0,
@@ -48,19 +49,49 @@ document
     .getElementsByClassName("firstTriangle")[0]
     .addEventListener("mousedown", (e) => {
         if (
-            (e.target.className !== "leftEdge" ||
-                e.target.className !== "rightEdge") &&
+            (e.target.className !== "topСorner" ||
+                e.target.className !== "bottomСorners") &&
             e.target.className === "mainImg"
         ) {
-            rotationFunction.stop();
+            rotationFunctionForFirstTriangle.stop();
             dragElement(document.getElementsByClassName("firstTriangle")[0]);
         }
 
         if (
-            (e.target.className === "leftEdge" ||
-                e.target.className === "rightEdge") &&
+            (e.target.className === "topСorner" ||
+                e.target.className === "bottomСorners") &&
             e.target.className !== "mainImg"
         ) {
-            rotationFunction.onRotated(e);
+            rotationFunctionForFirstTriangle.onRotated(e);
+        }
+    });
+
+// implementation of movement and rotation of the second triangle
+
+const rotationFunctionForSecondTriangle = new Propeller(
+    document.getElementsByClassName("secondTriangle")[0],
+    {
+        inertia: 0,
+    }
+);
+
+document
+    .getElementsByClassName("secondTriangle")[0]
+    .addEventListener("mousedown", (e) => {
+        if (
+            (e.target.className !== "leftCorners" ||
+                e.target.className !== "rightCorner") &&
+            e.target.className === "mainImgSecondTriangle"
+        ) {
+            rotationFunctionForSecondTriangle.stop();
+            dragElement(document.getElementsByClassName("secondTriangle")[0]);
+        }
+
+        if (
+            (e.target.className === "leftCorners" ||
+                e.target.className === "rightCorner") &&
+            e.target.className !== "mainImgSecondTriangle"
+        ) {
+            rotationFunctionForSecondTriangle.onRotated(e);
         }
     });
