@@ -142,7 +142,45 @@ document
     });
 
 document.getElementById("submit").onclick = function () {
-    // получаем координаты треугольников
-    // сравниваем их с координатами прямоугольника
-    // если верно, то...
+    // Дано:
+
+    // функция для получения координат фигуры
+
+    function getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset,
+        };
+    }
+
+    // Надо: ...
+
+    // Решение:
+
+    // 1. получаем координаты треугольников
+
+    // - беру первый треугольник
+    let firstTriangle = document.getElementsByClassName("firstTriangle")[0];
+
+    // - получаю его координаты
+    let coordElem = getCoords(firstTriangle);
+
+    // 2. сравниваю их с координатами прямоугольника
+    if (
+        coordElem.left < 570 &&
+        coordElem.left > 560 &&
+        coordElem.top < 220 &&
+        coordElem.top > 200
+    ) {
+        alert("uraaa");
+    } else {
+        alert("ahaha");
+    }
+
+    // ... если верно, то...
+
+    // left 565
+    // top 210 - прямоугольника
 };
