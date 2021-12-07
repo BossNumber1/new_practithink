@@ -1,10 +1,17 @@
-// implementation of movement and rotation of the first triangle
+//  common and initialization
 
 dragElement(document.getElementsByClassName("firstTriangle")[0]);
 dragElement(document.getElementsByClassName("secondTriangle")[0]);
 
 const rotationFunctionForFirstTriangle = new Propeller(
     document.getElementsByClassName("firstTriangle")[0],
+    {
+        inertia: 0,
+    }
+);
+
+const rotationFunctionForSecondTriangle = new Propeller(
+    document.getElementsByClassName("secondTriangle")[0],
     {
         inertia: 0,
     }
@@ -45,6 +52,8 @@ function dragElement(element) {
     }
 }
 
+// implementation of movement and rotation of the first triangle
+
 document
     .getElementsByClassName("firstTriangle")[0]
     .addEventListener("mousedown", (e) => {
@@ -67,13 +76,6 @@ document
     });
 
 // implementation of movement and rotation of the second triangle
-
-const rotationFunctionForSecondTriangle = new Propeller(
-    document.getElementsByClassName("secondTriangle")[0],
-    {
-        inertia: 0,
-    }
-);
 
 document
     .getElementsByClassName("secondTriangle")[0]
