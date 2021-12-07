@@ -34,7 +34,6 @@ body {
 }
 
 .app {
-    position: relative;
     width: 1170px;
     height: 489px;
     top: 10px;
@@ -46,7 +45,6 @@ body {
 }
 
 .titlePage {
-    position: relative;
     top: 29px;
     text-align: center;
     width: 1170px;
@@ -106,8 +104,6 @@ input {
 /* ruler styles */
 
 .ruler {
-    position: relative;
-    /* position: absolute; */
     top: 101px;
     left: 505px;
     display: flex;
@@ -128,7 +124,6 @@ input {
 }
 
 .btns {
-    position: relative;
     left: calc(50% - 570px / 2);
     top: 223.74px;
     display: flex;
@@ -142,8 +137,6 @@ input {
 }
 
 .btns button {
-    position: relative;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -169,7 +162,6 @@ input {
 /* pencils styles */
 
 .pencils {
-    position: relative;
     left: 351px;
     top: 92px;
     width: 420.06px;
@@ -178,7 +170,6 @@ input {
 }
 
 #redPencil {
-    position: relative;
     top: 17px;
 }
 
@@ -188,7 +179,6 @@ input {
 }
 
 #greenPencil {
-    position: relative;
     left: -15px;
 }
 
@@ -198,7 +188,6 @@ input {
 }
 
 #bluePencil {
-    position: relative;
     top: -55px;
     left: 249px;
 }
