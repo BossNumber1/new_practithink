@@ -118,6 +118,7 @@ input {
     height: 57px;
     position: absolute;
     cursor: pointer;
+    z-index: 1;
 }
 
 .rightEdge {
