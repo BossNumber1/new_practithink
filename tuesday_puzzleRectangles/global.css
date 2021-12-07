@@ -123,26 +123,35 @@ body {
 
 /* edges styles */
 
-/* .ruler {
-    position: absolute;
-    top: 181px;
-    left: 505px;
-    display: flex;
-    cursor: grab;
-} */
-
-.leftEdge,
-.rightEdge {
+.topСorner,
+.bottomСorners {
     display: flex;
     width: 90px;
     height: 50px;
     position: absolute;
     cursor: pointer;
-    z-index: 2;
-    /* border: 1px solid black; */
+    z-index: 1;
 }
 
-.rightEdge {
+.bottomСorners {
     top: 70%;
-    /* left: 4%; */
+}
+
+/* for second triangle */
+
+.leftCorners,
+.rightCorner {
+    display: flex;
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.rightCorner {
+    top: 50px;
+    left: 80%;
+    height: 50px;
 }
