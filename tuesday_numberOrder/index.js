@@ -3,6 +3,11 @@
 function dragStart(event) {
     localStorage.setItem("idTakenDiv", event.target.id);
     // localStorage.setItem("categoryDiv", event.target.dataset.name);
+
+    localStorage.setItem(
+        "classElementGrandparent",
+        event.target.parentElement.parentElement.className
+    );
 }
 
 function allowDrop(event) {
@@ -11,8 +16,12 @@ function allowDrop(event) {
 
 function drop(e) {
     console.log("yoh!");
-    // получаем id и имя несомого элемента
+    // получаем id несомого элемента и класс прародителя
     let idTakenDiv = localStorage.getItem("idTakenDiv");
+    let classElementGrandparent = localStorage.getItem(
+        "classElementGrandparent"
+    );
+
     // let categoryDiv = localStorage.getItem("categoryDiv");
 
     // берем id того элемента, на который положим несомый
@@ -22,13 +31,18 @@ function drop(e) {
 
     // меняем поля местами
     let orig = document.getElementById(idTakenDiv);
-    // orig.src = "./pictures/" + currentName + ".svg";
     orig.id = currentId;
-    orig.classList.remove("filledField");
+
+    if (classElementGrandparent === "collectionFilledFields") {
+        orig.style.background = "#369cb7";
+        orig.style.opacity = "0.5";
+        //   orig.textContent = orig.textContent;
+    } else {
+        orig.classList.remove("filledField");
+    }
 
     // orig.setAttribute("data-name", currentName);
 
-    // e.target.src = "./pictures/" + categoryDiv + ".svg";
     e.target.id = idTakenDiv;
     e.target.classList.add("filledField");
     e.target.textContent = orig.textContent;
