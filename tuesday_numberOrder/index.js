@@ -10,6 +10,7 @@ function allowDrop(event) {
 }
 
 function drop(e) {
+    console.log("yoh!");
     // получаем id и имя несомого элемента
     let idTakenDiv = localStorage.getItem("idTakenDiv");
     // let categoryDiv = localStorage.getItem("categoryDiv");
