@@ -103,6 +103,7 @@ body {
 
 .triangles {
     /* position: relative; */
+    position: absolute;
     left: 41px;
 }
 
@@ -112,13 +113,16 @@ body {
     position: absolute;
 }
 
-/* .firstTriangle {
-    border: 1px solid black;
-} */
+.firstTriangle {
+    /* border: 1px solid black; */
+    left: 195px;
+}
 
 .secondTriangle {
-    margin-left: 115px;
-    margin-top: 80px;
+    /* margin-left: 115px;
+    margin-top: 80px;  */
+    left: 315px;
+    top: 80px;
 }
 
 /* edges styles */
