@@ -36,7 +36,6 @@ function drop(e) {
     if (classElementGrandparent === "collectionFilledFields") {
         orig.style.background = "#369cb7";
         orig.style.opacity = "0.5";
-        //   orig.textContent = orig.textContent;
     } else {
         orig.classList.remove("filledField");
     }
@@ -46,6 +45,10 @@ function drop(e) {
     e.target.id = idTakenDiv;
     e.target.classList.add("filledField");
     e.target.textContent = orig.textContent;
+
+    if (classElementGrandparent !== "collectionFilledFields") {
+        e.target.style.opacity = "1";
+    }
     // e.target.setAttribute("data-name", categoryDiv);
 
     // именно - после всех операций - удаляем содержимое изначального места
