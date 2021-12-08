@@ -2,10 +2,10 @@
 
 function dragStart(e) {
     localStorage.setItem("idSign", e.target.id);
-    // localStorage.setItem(
-    //     "classGrandparent",
-    //     e.target.parentElement.parentElement.className
-    // );
+    localStorage.setItem(
+        "classGrandparentElement",
+        e.target.parentElement.className
+    );
 }
 
 function allowDrop(event) {
@@ -15,9 +15,11 @@ function allowDrop(event) {
 function drop(e) {
     // получаем id взятого элемента и класс прародителя
     let idSign = localStorage.getItem("idSign");
-    //     ? localStorage.getItem("idSign")
-    //     : "square";
-    // let classGrandparent = localStorage.getItem("classGrandparent");
+    let classGrandparentElement = localStorage.getItem(
+        "classGrandparentElement"
+    );
+
+    let currentClassGrandparent = e.target.parentElement.className;
     // берем id того элемента, на который положим несомый
     // // let currentId;
     // // if (e.target.id == e.target.alt) {
@@ -31,14 +33,16 @@ function drop(e) {
     // меняем поля местами
     // currentElem.appendChild(orig);
 
-    currentElem.parentElement.className = "buttonContent";
+    currentElem.parentElement.className = classGrandparentElement;
     currentElem.id = idSign;
     currentElem.textContent = orig.textContent;
     currentElem.setAttribute("draggable", true);
 
     orig.textContent = "";
-    // orig.id = currentId;
-    // if (classGrandparent === "bottomRow") {
+    orig.id = currentId;
+    orig.parentElement.className = currentClassGrandparent;
+    orig.style.background = "#369cb7";
+    // if (classGrandparentElement === "bottomRow") {
     //     // let pele = orig.parentElement; // получаю родителя
     //     // let pos = pele.dataset.position; // теперь его позицию
     //     orig.parentElement.style.position = "relative";
@@ -67,7 +71,7 @@ function drop(e) {
     // } else {
     //     e.target.parentElement.className = "square";
     // }
-    // if (classGrandparent !== "bottomRow") {
+    // if (classGrandparentElement !== "bottomRow") {
     //     e.target.style.opacity = "1";
     // }
 }
