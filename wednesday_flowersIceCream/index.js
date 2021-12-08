@@ -1,21 +1,28 @@
 let selected = { amountIceCream: 0, amountFlowers: 0 };
 
 document.getElementById("amountIceCream").onchange = function (e) {
-    selected.amountIceCream = e.target.value;
+    if (e.target.value == 6) {
+        selected.amountIceCream = "right";
+    } else {
+        selected.amountIceCream = "wrong";
+    }
 };
 
 document.getElementById("amountFlowers").onchange = function (e) {
-    selected.amountFlowers = e.target.value;
+    if (e.target.value == 6) {
+        selected.amountFlowers = "right";
+    } else {
+        selected.amountFlowers = "wrong";
+    }
 };
 
 // submit
 
 document.getElementById("submit").onclick = function () {
     alert(
-        "you decided that we have " +
+        "your result: by ice cream - " +
             selected.amountIceCream +
-            " ice creams & " +
-            selected.amountFlowers +
-            " flowers"
+            ", by flowers - " +
+            selected.amountFlowers
     );
 };
