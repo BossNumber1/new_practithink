@@ -13,7 +13,7 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    // получаем id взятого элемента
+    // получаем id взятого элемента и класс прародителя
     let idTakenNumber = localStorage.getItem("idTakenNumber");
     let classGrandparent = localStorage.getItem("classGrandparent");
 
