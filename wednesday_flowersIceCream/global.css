@@ -193,22 +193,39 @@ body {
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-
     position: static;
     width: 54px;
     height: 30px;
-    left: 0px;
-    top: 0.2px;
-
+    /* left: 0px;
+    top: 0.2px; */
     border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
     transform: rotate(-0.21deg);
-
-    /* Inside Auto Layout */
-
     flex: none;
     order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+}
+
+#selectInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+
+    position: static;
+    width: 54px;
+    height: 30px;
+    /* left: 84.11px;
+    top: 0px; */
+    background: #f4f4f4;
+    border: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
     flex-grow: 0;
     margin-right: 30px;
 }
@@ -238,20 +255,17 @@ top: 3036.2px; */
     position: static;
     width: 54px;
     height: 30px;
-    left: 0px;
-    top: 0px;
+    /* left: 0px;
+    top: 0px; */
 
     background: #369cb7;
     border: 1px solid #369cb7;
     box-sizing: border-box;
     border-radius: 5px;
-
-    /* Inside Auto Layout */
-
     flex: none;
     order: 0;
     flex-grow: 0;
     margin-right: 30px;
     color: white;
-    cursor: pointer;
+    cursor: grab;
 }
