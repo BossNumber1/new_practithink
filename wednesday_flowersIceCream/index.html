@@ -72,7 +72,12 @@
                         <input type="text" id="amountIceCream" />
                     </div>
                     <div class="inputContent">
-                        <div id="selectInput"></div>
+                        <div
+                            id="selectInput"
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                        ></div>
                     </div>
                     <div class="inputContent" id="amountFlowers">
                         <input type="text" />
@@ -80,13 +85,34 @@
                 </div>
                 <div class="btnsCollection">
                     <div class="buttonContent">
-                        <button><</button>
+                        <button
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                            draggable="true"
+                        >
+                            <
+                        </button>
                     </div>
                     <div class="buttonContent">
-                        <button>=</button>
+                        <button
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                            draggable="true"
+                        >
+                            =
+                        </button>
                     </div>
                     <div class="buttonContent">
-                        <button>></button>
+                        <button
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                            draggable="true"
+                        >
+                            >
+                        </button>
                     </div>
                 </div>
             </div>
