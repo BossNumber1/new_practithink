@@ -20,6 +20,7 @@ function drop(e) {
     );
 
     let currentClassGrandparent = e.target.parentElement.className;
+
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
 
