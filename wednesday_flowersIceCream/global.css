@@ -94,11 +94,11 @@ body {
 /* content styles */
 
 .content {
-    top: 143px;
+    top: 63px;
     left: calc(50% - 571px / 2);
     width: 571px;
     height: 264.2px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     display: flex;
     align-items: center;
@@ -114,7 +114,9 @@ body {
 }
 
 .topRow,
-.bottomRow {
+.bottomRow,
+.topRowFlower,
+.bottomRowFlower {
     display: flex;
 }
 
@@ -138,5 +140,24 @@ body {
 .flowers {
     width: 270px;
     height: 134px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.topRowFlower,
+.bottomRowFlower {
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.topRowFlower div,
+.bottomRowFlower div {
+    width: 42px;
+    height: 39px;
+    /* left: 16px;
+    top: 16px; */
 }
