@@ -110,7 +110,7 @@ body {
 .iceCream {
     width: 270px;
     height: 134px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .topRow,
