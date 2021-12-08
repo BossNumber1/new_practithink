@@ -1,8 +1,7 @@
 // drag and drop implementation
 
 function dragStart(e) {
-    // alert("goood");
-    // localStorage.setItem("idTakenNumber", e.target.id);
+    localStorage.setItem("idSign", e.target.id);
     // localStorage.setItem(
     //     "classGrandparent",
     //     e.target.parentElement.parentElement.className
@@ -14,23 +13,27 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    alert("op!");
-    // // получаем id взятого элемента и класс прародителя
-    // let idTakenNumber = localStorage.getItem("idTakenNumber")
-    //     ? localStorage.getItem("idTakenNumber")
+    // получаем id взятого элемента и класс прародителя
+    let idSign = localStorage.getItem("idSign");
+    //     ? localStorage.getItem("idSign")
     //     : "square";
     // let classGrandparent = localStorage.getItem("classGrandparent");
-    // // берем id того элемента, на который положим несомый
+    // берем id того элемента, на который положим несомый
     // // let currentId;
     // // if (e.target.id == e.target.alt) {
     // let currentId = e.target.id ? e.target.id : "square";
     // // } else {
-    // //     currentId = e.target.alt;
+    let currentId = e.target.id;
     // // }
-    // // получаем объекты
-    // let orig = document.getElementById(idTakenNumber);
-    // let currentElem = document.getElementById(currentId);
-    // // меняем поля местами
+    // получаем объекты
+    let orig = document.getElementById(idSign);
+    let currentElem = document.getElementById(currentId);
+    // меняем поля местами
+    // currentElem.appendChild(orig);
+
+    currentElem.parentElement.className = "buttonContent";
+    currentElem.id = idSign;
+    currentElem.textContent = orig.textContent;
     // orig.id = currentId;
     // if (classGrandparent === "bottomRow") {
     //     // let pele = orig.parentElement; // получаю родителя
@@ -53,9 +56,9 @@ function drop(e) {
     //     orig.src = "./pictures/" + currentId + ".svg";
     //     // orig.id = currentId;
     // }
-    // console.log("idTakenNumber =", idTakenNumber, " / currentId =", currentId);
-    // currentElem.id = idTakenNumber;
-    // currentElem.src = "./pictures/" + idTakenNumber + ".svg";
+    // console.log("idSign =", idSign, " / currentId =", currentId);
+    // currentElem.id = idSign;
+    // currentElem.src = "./pictures/" + idSign + ".svg";
     // if (currentId.parentElement === "square") {
     //     e.target.parentElement.className = "number";
     // } else {

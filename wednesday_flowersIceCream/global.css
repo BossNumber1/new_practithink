@@ -245,7 +245,7 @@ top: 3036.2px; */
 
 /* Auto Layout */
 
-.buttonContent button {
+.buttonContent div {
     display: flex;
     flex-direction: row;
     justify-content: center;
