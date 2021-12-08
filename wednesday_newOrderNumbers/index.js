@@ -20,12 +20,11 @@ function drop(e) {
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
 
-    // меняем поля местами
-    // 1. получаем объекты
+    // получаем объекты
     let orig = document.getElementById(idTakenNumber);
     let currentElem = document.getElementById(currentId);
 
-    // 2. меняем
+    // меняем поля местами
     orig.id = currentId;
     orig.alt = currentId;
 
