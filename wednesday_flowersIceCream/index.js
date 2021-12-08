@@ -45,11 +45,44 @@ function drop(e) {
 
 // check implementation
 
+let selected = { amountIceCream: 0, amountFlowers: 0, sign: "" };
+
+document.getElementById("amountIceCream").onchange = function (e) {
+    if (e.target.value == 6) {
+        selected.amountIceCream = "right";
+    } else {
+        selected.amountIceCream = "wrong";
+    }
+};
+
+document.getElementById("amountFlowers").onchange = function (e) {
+    if (e.target.value == 7) {
+        selected.amountFlowers = "right";
+    } else {
+        selected.amountFlowers = "wrong";
+    }
+};
+
 document.getElementById("submit").onclick = function () {
+    let selectedSign =
+        document.getElementsByClassName("inputCollection")[0].children[1]
+            .textContent;
+
+    selectedSign = selectedSign.replace(/\s/g, "");
+
+    debugger;
+    if (selectedSign == "<") {
+        selected.sign = "right";
+    } else {
+        selected.sign = "wrong";
+    }
+
     alert(
         "your result: by ice cream - " +
             selected.amountIceCream +
             ", by flowers - " +
-            selected.amountFlowers
+            selected.amountFlowers +
+            ", by sign - " +
+            selected.sign
     );
 };
