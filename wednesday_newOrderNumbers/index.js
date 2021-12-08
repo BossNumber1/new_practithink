@@ -28,21 +28,24 @@ function drop(e) {
     orig.id = currentId;
 
     if (classGrandparent === "bottomRow") {
-        let pele = orig.parentElement; // получаю родителя
-        let pos = pele.dataset.position; // теперь его позицию
+        // let pele = orig.parentElement; // получаю родителя
+        // let pos = pele.dataset.position; // теперь его позицию
 
-        orig.remove();
+        orig.parentElement.style.position = "relative";
+        orig.parentElement.style.display = "flex";
 
         let objectBeingCreated = document.createElement("img");
+        objectBeingCreated.style.borderRadius = "50px";
+        objectBeingCreated.style.background = "#369cb7";
+        objectBeingCreated.style.position = "absolute";
         objectBeingCreated.style.width = "50px";
         objectBeingCreated.style.height = "50px";
-        objectBeingCreated.style.borderRadius = "50px";
-        objectBeingCreated.style.background = "lightgray";
+        objectBeingCreated.style.top = "0px";
+        objectBeingCreated.style.right = "0px";
+        objectBeingCreated.style.zIndex = 10;
+        // objectBeingCreated.id = "cape";
 
-        let placeSelectedFigure =
-            document.getElementsByClassName(classGrandparent)[0].children[pos];
-
-        placeSelectedFigure.appendChild(objectBeingCreated);
+        orig.parentElement.appendChild(objectBeingCreated);
     } else {
         orig.src = "./pictures/" + currentId + ".svg";
     }
