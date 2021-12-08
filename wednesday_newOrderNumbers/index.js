@@ -29,24 +29,15 @@ function drop(e) {
     // } else {
     //     orig.classList.remove("filledField");
     // }
-    e.target.classList.remove("square");
-    e.target.classList.add("number");
-    // console.log("e.target =", e.target);
+
     let elem = e.target;
+    elem.className = "number";
 
     let objectBeingCreated = document.createElement("img");
-    //   objectBeingCreated.style.position = "absolute";
-    //   objectBeingCreated.style.paddingTop = e.clientY - 240 + "px";
-    //   objectBeingCreated.style.paddingLeft = e.clientX - 660 + "px";
     //   objectBeingCreated.id = "appleInBasket" + positionApple;
 
     objectBeingCreated.id = idTakenNumber;
     objectBeingCreated.src = "./pictures/" + idTakenNumber + ".svg";
-
-    //   document
-    //       .getElementsByClassName("fruitBase")[0]
-    //       .appendChild(objectBeingCreated)
-    //       .appendChild(selectedFigure);
 
     elem.appendChild(objectBeingCreated);
     // e.target.id = idTakenNumber;
@@ -56,6 +47,4 @@ function drop(e) {
     // if (classElementGrandparent !== "collectionFilledFields") {
     //     e.target.style.opacity = "1";
     // }
-    // // именно - после всех операций - удаляем содержимое изначального места
-    // orig.textContent = "";
 }
