@@ -41,7 +41,13 @@ function drop(e) {
     orig.textContent = "";
     orig.id = currentId;
     orig.parentElement.className = currentClassGrandparent;
-    orig.style.background = "#369cb7";
+
+    // alert(orig.parentElement.className);
+
+    if (orig.parentElement.parentElement.className !== "inputCollection") {
+        orig.style.background = "#369cb7";
+    }
+
     // if (classGrandparentElement === "bottomRow") {
     //     // let pele = orig.parentElement; // получаю родителя
     //     // let pos = pele.dataset.position; // теперь его позицию
