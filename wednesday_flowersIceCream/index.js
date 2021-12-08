@@ -34,6 +34,9 @@ function drop(e) {
     currentElem.parentElement.className = "buttonContent";
     currentElem.id = idSign;
     currentElem.textContent = orig.textContent;
+    currentElem.setAttribute("draggable", true);
+
+    orig.textContent = "";
     // orig.id = currentId;
     // if (classGrandparent === "bottomRow") {
     //     // let pele = orig.parentElement; // получаю родителя
