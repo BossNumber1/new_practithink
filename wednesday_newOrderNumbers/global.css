@@ -94,8 +94,33 @@ body {
 /* content styles */
 
 .content {
-    top: 132px;
-    left: calc(50% - 810px / 2);
-    width: 810px;
-    height: 90px;
+    top: 133px;
+    left: calc(50% - 450px / 2);
+    width: 450px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+.topRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    /* position: absolute; */
+    width: 450px;
+    height: 50px;
+    /* left: 495px; */
+    /* top: 677px; */
+    border: 1px solid orange;
+}
+
+.bottomRow {
+    top: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 450px;
+    height: 50px;
+    border: 1px solid red;
 }
