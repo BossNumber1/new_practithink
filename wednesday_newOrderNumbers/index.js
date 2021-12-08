@@ -1,10 +1,10 @@
 // drag and drop implementation
 
-function dragStart(event) {
-    localStorage.setItem("idTakenNumber", event.target.id);
+function dragStart(e) {
+    localStorage.setItem("idTakenNumber", e.target.id);
     localStorage.setItem(
         "classGrandparent",
-        event.target.parentElement.parentElement.className
+        e.target.parentElement.parentElement.className
     );
 }
 
@@ -26,7 +26,6 @@ function drop(e) {
 
     // меняем поля местами
     orig.id = currentId;
-    orig.alt = currentId;
 
     if (classGrandparent === "bottomRow") {
         orig.style.opacity = "0.5";
@@ -36,7 +35,6 @@ function drop(e) {
 
     currentElem.id = idTakenNumber;
     currentElem.src = "./pictures/" + idTakenNumber + ".svg";
-    currentElem.alt = idTakenNumber;
 
     if (currentId === "square") {
         e.target.parentElement.className = "number";
