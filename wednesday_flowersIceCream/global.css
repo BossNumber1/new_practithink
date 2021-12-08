@@ -161,3 +161,65 @@ body {
     /* left: 16px;
     top: 16px; */
 }
+
+/* addition styles */
+
+.additionInTheFormInputs {
+    top: 87px;
+    /* left: 273px; */
+    left: calc(50% - 222px / 2);
+    width: 222px;
+    border: 1px solid black;
+}
+
+.inputCollection {
+    display: flex;
+
+    flex-direction: row;
+    align-items: flex-start;
+
+    /* position: absolute; */
+    width: 222px;
+    height: 30.2px;
+    /* left: 609px; */
+    /* top: 2976px; */
+}
+
+.inputContent input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+
+    position: static;
+    width: 54px;
+    height: 30px;
+    left: 0px;
+    top: 0.2px;
+
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: rotate(-0.21deg);
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+}
+
+.btnsCollection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 0px; */
+
+    /* position: absolute; */
+    width: 222px;
+    height: 30px;
+    /* left: 609px;
+top: 3036.2px; */
+}
