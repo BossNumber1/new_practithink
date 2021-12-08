@@ -21,18 +21,13 @@ function drop(e) {
 
     let currentClassGrandparent = e.target.parentElement.className;
     // берем id того элемента, на который положим несомый
-    // // let currentId;
-    // // if (e.target.id == e.target.alt) {
-    // let currentId = e.target.id ? e.target.id : "square";
-    // // } else {
     let currentId = e.target.id;
-    // // }
+
     // получаем объекты
     let orig = document.getElementById(idSign);
     let currentElem = document.getElementById(currentId);
-    // меняем поля местами
-    // currentElem.appendChild(orig);
 
+    // меняем поля местами
     currentElem.parentElement.className = classGrandparentElement;
     currentElem.id = idSign;
     currentElem.textContent = orig.textContent;
@@ -42,44 +37,9 @@ function drop(e) {
     orig.id = currentId;
     orig.parentElement.className = currentClassGrandparent;
 
-    // alert(orig.parentElement.className);
-
     if (orig.parentElement.parentElement.className !== "inputCollection") {
         orig.style.background = "#369cb7";
     }
-
-    // if (classGrandparentElement === "bottomRow") {
-    //     // let pele = orig.parentElement; // получаю родителя
-    //     // let pos = pele.dataset.position; // теперь его позицию
-    //     orig.parentElement.style.position = "relative";
-    //     orig.parentElement.style.display = "flex";
-    //     let objectBeingCreated = document.createElement("img");
-    //     objectBeingCreated.style.borderRadius = "50px";
-    //     objectBeingCreated.style.background = "#369cb7";
-    //     objectBeingCreated.style.position = "absolute";
-    //     objectBeingCreated.style.width = "50px";
-    //     objectBeingCreated.style.height = "50px";
-    //     objectBeingCreated.style.top = "0px";
-    //     objectBeingCreated.style.right = "0px";
-    //     objectBeingCreated.style.zIndex = 10;
-    //     // objectBeingCreated.id = "cape";
-    //     orig.parentElement.appendChild(objectBeingCreated);
-    //     // orig.id = currentId;
-    // } else {
-    //     orig.src = "./pictures/" + currentId + ".svg";
-    //     // orig.id = currentId;
-    // }
-    // console.log("idSign =", idSign, " / currentId =", currentId);
-    // currentElem.id = idSign;
-    // currentElem.src = "./pictures/" + idSign + ".svg";
-    // if (currentId.parentElement === "square") {
-    //     e.target.parentElement.className = "number";
-    // } else {
-    //     e.target.parentElement.className = "square";
-    // }
-    // if (classGrandparentElement !== "bottomRow") {
-    //     e.target.style.opacity = "1";
-    // }
 }
 
 // check implementation
