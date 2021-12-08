@@ -44,7 +44,7 @@ function drop(e) {
         e.target.parentElement.className = "square";
     }
 
-    // if (classGrandparent !== "collectionFilledFields") {
-    //     e.target.style.opacity = "1";
-    // }
+    if (classGrandparent !== "bottomRow") {
+        e.target.style.opacity = "1";
+    }
 }
