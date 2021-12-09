@@ -1,9 +1,9 @@
 // check implementation
 
 let howManyCounted = {
-    jellyfish: 0,
-    seaHorse: 0,
-    result: 0,
+    jellyfish: "wrong",
+    seaHorse: "wrong",
+    result: "wrong",
 };
 
 document.getElementById("numberJellyfish").onchange = function (e) {
@@ -30,13 +30,13 @@ document.getElementById("result").onchange = function (e) {
     }
 };
 
-document.getElementById("submit").onchange = function (e) {
+document.getElementById("submit").onclick = function () {
     alert(
         "your results: number of jellyfish - " +
             howManyCounted.jellyfish +
-            ", number of sea horses -" +
+            ", number of sea horses - " +
             howManyCounted.seaHorse +
-            ", total -" +
+            ", total - " +
             howManyCounted.result
     );
 };
