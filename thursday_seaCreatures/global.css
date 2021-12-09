@@ -46,17 +46,11 @@ body {
 
 .titlePage {
     top: 26px;
-    /* left: 280px; */
-    /* width: 770px; */
-    /* height: 22px; */
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    /* display: flex; */
-    /* align-items: center;
-     */
     color: #2f2f2f;
 }
 
@@ -86,7 +80,6 @@ body {
     position: absolute;
     width: 1169px;
     height: 0px;
-    /* left: 136px; */
     top: 91px;
     border-bottom: 1px solid #a8a8a8;
 }
@@ -98,10 +91,6 @@ body {
     left: calc(50% - 505px / 2); /* 333 */
     width: 505px;
     height: 275px;
-    /* border: 1px solid black; */
-    /* display: flex;
-    align-items: flex-end;
-    justify-content: space-between; */
 }
 
 /* animals styles */
@@ -109,7 +98,6 @@ body {
 .animals {
     width: 505px;
     height: 192.8px;
-    /* border: 1px solid orange; */
 }
 
 .rowJellyfish,
@@ -148,15 +136,12 @@ body {
     align-items: center;
     width: 192px;
     height: 30px;
-    /* border: 1px solid red; */
 }
 
 .inputContent input {
     position: static;
     width: 50px;
     height: 30px;
-    /* left: 71px; */
-    /* top: 0px; */
     flex: none;
     order: 2;
     flex-grow: 0;
