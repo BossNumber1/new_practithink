@@ -13,7 +13,6 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    debugger;
     // получаем id несомого элемента и класс прародителя
     let idTakenCandy = localStorage.getItem("idTakenCandy");
     // let classElementGrandparent = localStorage.getItem(
@@ -31,17 +30,17 @@ function drop(e) {
     // создаём новый объект
     let objectBeingCreated = document.createElement("img");
     objectBeingCreated.src = "./pictures/" + idTakenCandy + ".svg";
+    objectBeingCreated.style.marginLeft = "10px";
+    objectBeingCreated.style.marginTop = "10px";
     objectBeingCreated.id = idTakenCandy;
     objectBeingCreated.alt = idTakenCandy;
-
-    debugger;
 
     // меняем поля местами
 
     // orig.id = currentId;
     // if (classElementGrandparent === "collectionFilledFields") {
     //     orig.style.background = "#369cb7";
-    //     orig.style.opacity = "0.5";
+    orig.style.opacity = "0.5";
     // } else {
     //     orig.classList.remove("filledField");
     // }
