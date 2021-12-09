@@ -118,6 +118,7 @@ body {
     order: 3;
     flex-grow: 0;
     margin-right: 30px;
+    cursor: grab;
 }
 
 /* mans styles */
