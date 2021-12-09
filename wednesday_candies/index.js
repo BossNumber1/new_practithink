@@ -42,6 +42,7 @@ function drop(e) {
     objectBeingCreated.style.marginTop = "10px";
     objectBeingCreated.id = idTakenElement;
     objectBeingCreated.alt = objectName;
+    objectBeingCreated.style.cursor = "grab";
 
     // меняем поля местами
 
@@ -49,6 +50,7 @@ function drop(e) {
     // if (classElementGrandparent === "collectionFilledFields") {
     //     orig.style.background = "#369cb7";
     orig.style.opacity = "0.5";
+    orig.style.cursor = "default";
     // } else {
     //     orig.classList.remove("filledField");
     // }
