@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    position: relative;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.nameTask {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #369cb7;
+    margin: 0 0 5px 40px;
+}
+
+.app {
+    width: 1170px;
+    height: 550px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage {
+    top: 26px;
+    /* left: 280px; */
+    /* width: 770px; */
+    /* height: 22px; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    /* display: flex; */
+    /* align-items: center;
+     */
+    color: #2f2f2f;
+}
+
+.submit input {
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #369cb7;
+    flex-direction: column;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    background: #369cb7;
+    border: 0.5px solid #369cb7;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 47px;
+    margin-left: 505px;
+    margin-top: 10px;
+}
+
+.lineUnderHeading {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    /* left: 136px; */
+    top: 91px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content {
+    top: 155px;
+    left: calc(50% - 505px / 2); /* 333 */
+    width: 505px;
+    height: 275px;
+    /* border: 1px solid black; */
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: space-between; */
+}
+
+.animals {
+    width: 505px;
+    height: 192.8px;
+    /* border: 1px solid orange; */
+}
+
+.inputsCollections {
+    top: 49px;
+    left: calc(50% - 192px / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 30px;
+    /* border: 1px solid red; */
+}
+
+.inputContent input {
+    position: static;
+    width: 50px;
+    height: 30px;
+    /* left: 71px; */
+    /* top: 0px; */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 5px;
+    border: 1px solid #2f2f2f;
+    border-radius: 5px;
+}
+
+.sign {
+    position: static;
+    width: 11px;
+    height: 22px;
+    left: 55px;
+    top: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
