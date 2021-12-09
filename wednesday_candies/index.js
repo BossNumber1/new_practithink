@@ -14,7 +14,15 @@ function allowDrop(event) {
 
 function drop(e) {
     // получаем id несомого элемента и класс прародителя
-    let idTakenCandy = localStorage.getItem("idTakenCandy");
+    let idTakenElement = localStorage.getItem("idTakenCandy");
+    let copyId = idTakenElement;
+    copyId.slice(0, -1);
+    let objectName = copyId.slice(0, -1);
+
+    // if (objectName === "candy") {
+    //     idTakenElement = objectName;
+    // }
+
     // let classElementGrandparent = localStorage.getItem(
     //     "classElementGrandparent"
     // );
@@ -23,17 +31,17 @@ function drop(e) {
     let currentId = e.target.id;
 
     // получаем объекты
-    let orig = document.getElementById(idTakenCandy);
+    let orig = document.getElementById(idTakenElement);
     let currentElem = document.getElementById(currentId);
-    let placeDropCandy = document.getElementById("placeDropCandy");
+    // let placeDropCandy = document.getElementById("placeDropCandy");
 
     // создаём новый объект
     let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.src = "./pictures/" + idTakenCandy + ".svg";
+    objectBeingCreated.src = "./pictures/" + objectName + ".svg";
     objectBeingCreated.style.marginLeft = "10px";
     objectBeingCreated.style.marginTop = "10px";
-    objectBeingCreated.id = idTakenCandy;
-    objectBeingCreated.alt = idTakenCandy;
+    objectBeingCreated.id = idTakenElement;
+    objectBeingCreated.alt = objectName;
 
     // меняем поля местами
 
@@ -44,8 +52,8 @@ function drop(e) {
     // } else {
     //     orig.classList.remove("filledField");
     // }
-    placeDropCandy.appendChild(objectBeingCreated);
-    // e.target.id = idTakenCandy;
+    currentElem.appendChild(objectBeingCreated);
+    // e.target.id = idTakenElement;
     // e.target.classList.add("filledField");
     // e.target.textContent = orig.textContent;
     // if (classElementGrandparent !== "collectionFilledFields") {
