@@ -99,3 +99,40 @@ body {
     height: 273px;
     border: 1px solid gray;
 }
+
+.cubes {
+    left: calc(50% - 84.62px / 2);
+    width: 84.62px;
+    height: 187.73px;
+    border: 1px solid orange;
+}
+
+.btns {
+    top: 37px;
+    left: calc(50% - 570px / 2);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 570px;
+    height: 45px;
+}
+
+.btns div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 170px;
+    height: 45px;
+    left: calc(50% - 170px / 2 - 200px);
+    top: calc(50% - 45px / 2);
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+}
