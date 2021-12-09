@@ -15,9 +15,7 @@ function allowDrop(event) {
 function drop(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenElement = localStorage.getItem("idTakenCandy");
-    let copyId = idTakenElement;
-    copyId.slice(0, -1);
-    let objectName = copyId.slice(0, -1);
+    let objectName = idTakenElement.slice(0, -1);
 
     // if (objectName === "candy") {
     //     idTakenElement = objectName;
