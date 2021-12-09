@@ -16,7 +16,12 @@
             <div class="lineUnderHeading"></div>
             <div class="content">
                 <div class="candies">
-                    <div class="candy">
+                    <div
+                        class="candy"
+                        ondrop="drop(event)"
+                        ondragover="allowDrop(event)"
+                        ondragstart="dragStart(event)"
+                    >
                         <img src="./pictures/candy.svg" alt="candy" />
                     </div>
                     <div class="candy">
@@ -39,7 +44,12 @@
                     </div>
                 </div>
                 <div class="mans">
-                    <div class="bob">
+                    <div
+                        class="bob"
+                        ondrop="drop(event)"
+                        ondragover="allowDrop(event)"
+                        ondragstart="dragStart(event)"
+                    >
                         <div class="header">
                             <div class="textHeader">Bob</div>
                         </div>
