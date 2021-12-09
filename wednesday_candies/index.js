@@ -60,3 +60,16 @@ function drop(e) {
         document.getElementById("candy").remove();
     }
 }
+
+// check implementation
+
+document.getElementById("submit").onclick = function () {
+    let basketBob = document.getElementById("placeDropCandyBob");
+    let basketDave = document.getElementById("placeDropCandyDave");
+
+    if (basketBob.children.length === 4 && basketDave.children.length === 3) {
+        alert(" well done, that's right ");
+    } else {
+        alert(" wrong try again ");
+    }
+};
