@@ -56,5 +56,7 @@ function drop(e) {
     if (classElemGrandparent == "bob" || classElemGrandparent == "dave") {
         let toRemove = document.getElementById("candy");
         toRemove.remove();
+
+        document.getElementById("candy").remove();
     }
 }
