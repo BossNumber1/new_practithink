@@ -39,7 +39,7 @@ function drop(e) {
     orig.parentElement.className = currentClassGrandparent;
 
     if (orig.parentElement.parentElement.className !== "inputCollection") {
-        orig.style.background = "#369cb7";
+        orig.style.background = "#c2e1e9";
     }
 }
 
