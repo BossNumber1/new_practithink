@@ -86,7 +86,6 @@ body {
     position: absolute;
     width: 1169px;
     height: 0px;
-    /* left: 136px; */
     top: 91px;
     border-bottom: 1px solid #a8a8a8;
 }
@@ -98,7 +97,6 @@ body {
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 279.69px;
-    /* border: 1px solid black; */
 }
 
 /* candies styles */
@@ -110,7 +108,6 @@ body {
     left: calc(50% - 530px / 2);
     width: 530px;
     height: 50px;
-    /* border: 1px solid black; */
 }
 
 .candy img {
@@ -126,12 +123,45 @@ body {
 /* mans styles */
 
 .mans {
-    /* position: absolute; */
     width: 570px;
-    height: 189.69px;
-    /* left: 435px; */
-    /* top: 4163px; */
-    border: 1px solid green;
+    height: 160px;
     margin-top: 67px;
     margin-left: -1px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.bob {
+    width: 270px;
+    height: 160px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.dave {
+    width: 270px;
+    height: 160px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.header {
+    width: 271px;
+    height: 28px;
+    background: #205b64;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.textHeader {
+    width: 34px;
+    height: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    left: calc(50% - 34px / 2);
+    top: calc(50% - 20px / 2);
+    color: #ffffff;
 }
