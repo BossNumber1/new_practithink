@@ -1,7 +1,7 @@
 // drag and drop implementation
 
 function dragStart(event) {
-    // localStorage.setItem("idTakenDiv", event.target.id);
+    localStorage.setItem("idTakenCandy", event.target.id);
     // localStorage.setItem(
     //     "classElementGrandparent",
     //     event.target.parentElement.parentElement.className
@@ -13,16 +13,31 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    alert("yess 2!");
-    // // получаем id несомого элемента и класс прародителя
-    // let idTakenDiv = localStorage.getItem("idTakenDiv");
+    debugger;
+    // получаем id несомого элемента и класс прародителя
+    let idTakenCandy = localStorage.getItem("idTakenCandy");
     // let classElementGrandparent = localStorage.getItem(
     //     "classElementGrandparent"
     // );
-    // // берем id того элемента, на который положим несомый
-    // let currentId = e.target.id;
-    // // меняем поля местами
-    // let orig = document.getElementById(idTakenDiv);
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orig = document.getElementById(idTakenCandy);
+    let currentElem = document.getElementById(currentId);
+    let placeDropCandy = document.getElementById("placeDropCandy");
+
+    // создаём новый объект
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.src = "./pictures/" + idTakenCandy + ".svg";
+    objectBeingCreated.id = idTakenCandy;
+    objectBeingCreated.alt = idTakenCandy;
+
+    debugger;
+
+    // меняем поля местами
+
     // orig.id = currentId;
     // if (classElementGrandparent === "collectionFilledFields") {
     //     orig.style.background = "#369cb7";
@@ -30,7 +45,8 @@ function drop(e) {
     // } else {
     //     orig.classList.remove("filledField");
     // }
-    // e.target.id = idTakenDiv;
+    placeDropCandy.appendChild(objectBeingCreated);
+    // e.target.id = idTakenCandy;
     // e.target.classList.add("filledField");
     // e.target.textContent = orig.textContent;
     // if (classElementGrandparent !== "collectionFilledFields") {
