@@ -153,3 +153,23 @@ body {
     margin-right: 30px;
     cursor: pointer;
 }
+
+.btns div:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 170px;
+    height: 45px;
+    left: calc(50% - 170px / 2);
+    top: calc(50% - 45px / 2);
+    border: 1px solid #369cb7;
+    color: #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    flex-grow: 0;
+    margin-right: 30px;
+}
