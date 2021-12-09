@@ -31,7 +31,6 @@ function drop(e) {
     // получаем объекты
     let orig = document.getElementById(idTakenElement);
     let currentElem = document.getElementById(currentId);
-    // let placeDropCandy = document.getElementById("placeDropCandy");
 
     // создаём новый объект
     let objectBeingCreated = document.createElement("img");
