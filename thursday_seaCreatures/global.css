@@ -128,11 +128,6 @@ body {
     justify-content: center;
 }
 
-/* .rowJellyfish div,
-.rowSeahorses div:last-of-type {
-    border-right: none;
-} */
-
 .rowJellyfish div:last-of-type,
 .rowSeahorses div:last-of-type {
     border-right: 2px solid #a1a6d9;
