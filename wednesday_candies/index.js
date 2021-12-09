@@ -2,10 +2,15 @@
 
 function dragStart(event) {
     localStorage.setItem("idTakenCandy", event.target.id);
-    // localStorage.setItem(
-    //     "classElementGrandparent",
-    //     event.target.parentElement.parentElement.className
-    // );
+    localStorage.setItem(
+        "classElemGrandparent",
+        event.target.parentElement.parentElement.className
+    );
+
+    console.log(
+        "classElemGrandparent",
+        event.target.parentElement.parentElement.className
+    );
 }
 
 function allowDrop(event) {
@@ -21,9 +26,7 @@ function drop(e) {
     //     idTakenElement = objectName;
     // }
 
-    // let classElementGrandparent = localStorage.getItem(
-    //     "classElementGrandparent"
-    // );
+    let classElemGrandparent = localStorage.getItem("classElemGrandparent");
 
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
@@ -44,7 +47,7 @@ function drop(e) {
     // меняем поля местами
 
     // orig.id = currentId;
-    // if (classElementGrandparent === "collectionFilledFields") {
+    // if (classElemGrandparent === "collectionFilledFields") {
     //     orig.style.background = "#369cb7";
     orig.style.opacity = "0.5";
     orig.style.cursor = "default";
@@ -55,9 +58,10 @@ function drop(e) {
     // e.target.id = idTakenElement;
     // e.target.classList.add("filledField");
     // e.target.textContent = orig.textContent;
-    // if (classElementGrandparent !== "collectionFilledFields") {
-    //     e.target.style.opacity = "1";
-    // }
+
+    if (classElemGrandparent !== "bob" || classElemGrandparent !== "dave") {
+        e.target.style.opacity = "1";
+    }
     // // именно - после всех операций - удаляем содержимое изначального места
     // orig.textContent = "";
 }
