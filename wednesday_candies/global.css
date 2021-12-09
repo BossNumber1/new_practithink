@@ -166,3 +166,8 @@ body {
     top: calc(50% - 20px / 2);
     color: #ffffff;
 }
+
+.placeDropCandy {
+    width: 271px;
+    height: 133px;
+}
