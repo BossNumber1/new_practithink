@@ -52,4 +52,51 @@ function drop(e) {
 
 // check implementation
 
-document.getElementById("submit").onclick = function () {};
+let result = {
+    basketCircle: 0,
+    basketSquare: 0,
+    basketTriangle: 0,
+    basketRectangle: 0,
+};
+
+document.getElementById("submit").onclick = function () {
+    let basketCircle = document.getElementById("basketCircle");
+    let basketSquare = document.getElementById("basketSquare");
+    let basketTriangle = document.getElementById("basketTriangle");
+    let basketRectangle = document.getElementById("basketRectangle");
+
+    if (basketCircle.children.length === 3) {
+        result.basketCircle = "right";
+    } else {
+        result.basketCircle = "wrong";
+    }
+
+    if (basketSquare.children.length === 2) {
+        result.basketSquare = "right";
+    } else {
+        result.basketSquare = "wrong";
+    }
+
+    if (basketTriangle.children.length === 2) {
+        result.basketTriangle = "right";
+    } else {
+        result.basketTriangle = "wrong";
+    }
+
+    if (basketRectangle.children.length === 2) {
+        result.basketRectangle = "right";
+    } else {
+        result.basketRectangle = "wrong";
+    }
+
+    alert(
+        "your answers: for circle - " +
+            result.basketCircle +
+            ", for square - " +
+            result.basketSquare +
+            ", for triangle - " +
+            result.basketTriangle +
+            ", for rectangle - " +
+            result.basketRectangle
+    );
+};
