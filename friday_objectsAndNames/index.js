@@ -23,7 +23,7 @@ function drop(e) {
     let orig = document.getElementById(idFigure);
 
     let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.id = idFigure;
+    objectBeingCreated.id = idFigure + "circle";
     objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
     objectBeingCreated.style.cursor = "grab";
     objectBeingCreated.style.marginTop = "5px";
@@ -34,17 +34,13 @@ function drop(e) {
             .getElementById(currentId)
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
+        orig.style.opacity = "0.5";
+        orig.style.cursor = "default";
     }
-
-    // создаём копию и ставим на место оригинала
-
-    orig.style.opacity = "0.5";
-    orig.style.cursor = "default";
 
     // делаем возврат на место
 
     if (grandparentClass === "objects") {
-        debugger;
         e.target.style.opacity = "1";
         orig.remove();
     }
