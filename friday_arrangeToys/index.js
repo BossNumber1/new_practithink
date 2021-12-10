@@ -36,3 +36,47 @@ function drop(e) {
     currentElement.id = idFigure;
     orig.id = currentId;
 }
+
+// check implementation
+
+let choice = {
+    topSeat: "",
+    centralSeat: "",
+    bottomSeat: "",
+};
+
+document.getElementById("submit").onclick = function () {
+    let topSeat = document.getElementById("topSeat");
+    let centralSeat = document.getElementById("centralSeat");
+    let bottomSeat = document.getElementById("bottomSeat");
+
+    if (topSeat.children[0].id === "pyramid") {
+        choice.topSeat = "right";
+    } else {
+        choice.topSeat = "wrong";
+    }
+
+    if (centralSeat.children[0].id === "car") {
+        choice.centralSeat = "right";
+    } else {
+        choice.centralSeat = "wrong";
+    }
+
+    if (bottomSeat.children[0].id === "robot") {
+        choice.bottomSeat = "right";
+    } else {
+        choice.bottomSeat = "wrong";
+    }
+
+    let numberCorrectlyPlacedToys = 0;
+
+    for (let index in choice) {
+        if (choice[index] === "right") numberCorrectlyPlacedToys++;
+    }
+
+    if (numberCorrectlyPlacedToys === 3) {
+        alert("you are great, everything is right");
+    } else {
+        alert("toys placed incorrectly, try again");
+    }
+};
