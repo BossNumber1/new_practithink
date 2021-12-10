@@ -15,6 +15,9 @@ function drop(e) {
     // получаем класс предка предка
     let grandparentClass = e.target.parentElement.parentElement.className;
 
+    // получаем текущий id
+    let currentId = e.target.id;
+
     // начинаем ложить фигуру в корзину
 
     let orig = document.getElementById(idFigure); // получаем картинку для вставки
@@ -28,7 +31,7 @@ function drop(e) {
 
     if (grandparentClass !== "topRow" || grandparentClass !== "bottomRow") {
         document
-            .getElementsByClassName("placeDroppingFigures")[0]
+            .getElementById(currentId)
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
     }
