@@ -16,8 +16,16 @@
             <div class="content">
                 <div class="figures">
                     <div class="topRow">
-                        <div>
-                            <img src="./pictures/heart.svg" alt="heart" />
+                        <div
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                        >
+                            <img
+                                src="./pictures/heart.svg"
+                                alt="heart"
+                                id="heart0"
+                            />
                         </div>
                         <div>
                             <img src="./pictures/rhombus.svg" alt="rhombus" />
@@ -70,6 +78,9 @@
                         <div
                             class="placeDroppingFigures"
                             id="basketHearts"
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
                         ></div>
                     </div>
                     <div class="star">
