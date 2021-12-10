@@ -93,8 +93,9 @@ body {
 /* content styles */
 
 .content {
-    top: 131px;
-    left: calc(50% - 370px / 2);
-    width: 370px;
-    height: 350px;
+    top: 132px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 371px;
+    border: 1px solid black;
 }
