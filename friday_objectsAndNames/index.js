@@ -12,15 +12,15 @@ function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
 
-    // получаем класс предка предка
+    // получаем класс предка
     let parentClass = e.target.parentElement.className;
 
     // получаем текущий id
     let currentId = e.target.id;
 
-    // начинаем ложить фигуру в корзину
-
-    let orig = document.getElementById(idFigure); // для начала получаем картинку для вставки
+    // начинаем ложить объект в корзину
+    // получаем картинку для вставки
+    let orig = document.getElementById(idFigure);
 
     let objectBeingCreated = document.createElement("img");
     objectBeingCreated.id = idFigure;
@@ -44,6 +44,7 @@ function drop(e) {
     // делаем возврат на место
 
     if (parentClass === "objects") {
+        debugger;
         e.target.style.opacity = "1";
         orig.remove();
     }
