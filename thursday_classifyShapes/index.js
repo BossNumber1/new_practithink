@@ -34,17 +34,16 @@ function drop(e) {
             .getElementById(currentId)
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
+
+        orig.src = "./pictures/square.svg";
+        orig.style.cursor = "default";
     }
-
-    // создаём копию и ставим на место оригинала
-
-    orig.style.opacity = "0.5";
-    orig.style.cursor = "default";
 
     // делаем возврат на место
 
     if (grandparentClass === "topRow" || grandparentClass === "bottomRow") {
-        e.target.style.opacity = "1";
+        e.target.src = "./pictures/" + idFigure + ".svg";
+        e.target.style.cursor = "grab";
         orig.remove();
     }
 }
