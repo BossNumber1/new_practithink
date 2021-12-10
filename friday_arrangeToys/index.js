@@ -18,9 +18,21 @@ function drop(e) {
     // получаем текущий id
     let currentId = e.target.id;
 
-    // // начинаем ложить объект в корзину
+    // начинаем ложить объект в корзину
     // // получаем картинку для вставки
-    // let orig = document.getElementById(idFigure);
+    let orig = document.getElementById(idFigure);
+    let currentElement = document.getElementById(currentId);
+
+    if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
+        currentElement.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
+        orig.src = "./pictures/" + idFigure + ".svg";
+    } else {
+        currentElement.src = "./pictures/" + idFigure + ".svg";
+        orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
+    }
+
+    currentElement.id = idFigure;
+    orig.id = currentId;
 
     // let objectBeingCreated = document.createElement("img");
     // objectBeingCreated.id = idFigure + "temp";
