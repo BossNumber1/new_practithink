@@ -111,6 +111,10 @@ body {
     height: 100px;
 }
 
+img:hover {
+    transform: scale(1.2);
+}
+
 .topRow,
 .bottomRow {
     width: 451.67px;
