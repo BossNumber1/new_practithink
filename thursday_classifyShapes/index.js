@@ -26,7 +26,7 @@ function drop(e) {
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "5px";
 
-    if (grandparentClass !== "topRow") {
+    if (grandparentClass !== "topRow" || grandparentClass !== "bottomRow") {
         document
             .getElementsByClassName("placeDroppingFigures")[0]
             .appendChild(document.createElement("div"))
