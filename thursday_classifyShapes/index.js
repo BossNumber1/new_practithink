@@ -20,7 +20,7 @@ function drop(e) {
 
     // начинаем ложить фигуру в корзину
 
-    let orig = document.getElementById(idFigure); // получаем картинку для вставки
+    let orig = document.getElementById(idFigure); // для начала получаем картинку для вставки
 
     let objectBeingCreated = document.createElement("img");
     objectBeingCreated.id = idFigure.slice(0, -1);
