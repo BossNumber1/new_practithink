@@ -114,6 +114,10 @@ body {
     cursor: grab;
 }
 
+img:hover {
+    transform: scale(1.2);
+}
+
 /* collections styles */
 
 .mergingCollections {
