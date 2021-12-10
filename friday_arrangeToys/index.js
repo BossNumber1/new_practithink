@@ -22,12 +22,17 @@ function drop(e) {
     // начинаем уборку
     if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
         currentElement.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
+        currentElement.style.cursor = "grab";
         orig.src = "./pictures/" + idFigure + ".svg";
+        orig.style.cursor = "default";
     } else {
         currentElement.src = "./pictures/" + idFigure + ".svg";
+        currentElement.style.cursor = "grab";
         orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
+        orig.style.cursor = "default";
     }
 
+    // поменять id для дальнейших переносок
     currentElement.id = idFigure;
     orig.id = currentId;
 }
