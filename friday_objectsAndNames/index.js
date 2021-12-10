@@ -13,7 +13,7 @@ function drop(e) {
     let idFigure = localStorage.getItem("idFigure");
 
     // получаем класс предка предка
-    let grandparentClass = e.target.parentElement.parentElement.className;
+    let parentClass = e.target.parentElement.className;
 
     // получаем текущий id
     let currentId = e.target.id;
@@ -29,7 +29,7 @@ function drop(e) {
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "3px";
 
-    if (grandparentClass !== "topRow" || grandparentClass !== "bottomRow") {
+    if (parentClass !== "objects") {
         document
             .getElementById(currentId)
             .appendChild(document.createElement("div"))
@@ -43,7 +43,7 @@ function drop(e) {
 
     // делаем возврат на место
 
-    if (grandparentClass === "topRow" || grandparentClass === "bottomRow") {
+    if (parentClass === "objects") {
         e.target.style.opacity = "1";
         orig.remove();
     }
@@ -51,39 +51,4 @@ function drop(e) {
 
 // check implementation
 
-let answers = { hearts: 0, stars: 0, rhombus: 0 };
-
-document.getElementById("numberHearts").onchange = function (e) {
-    if (e.target.value == 6) {
-        answers.hearts = "right";
-    } else {
-        answers.hearts = "wrong";
-    }
-};
-
-document.getElementById("numberStars").onchange = function (e) {
-    if (e.target.value == 4) {
-        answers.stars = "right";
-    } else {
-        answers.stars = "wrong";
-    }
-};
-
-document.getElementById("numberRhombus").onchange = function (e) {
-    if (e.target.value == 4) {
-        answers.rhombus = "right";
-    } else {
-        answers.rhombus = "wrong";
-    }
-};
-
-document.getElementById("submit").onclick = function () {
-    alert(
-        "your choice: for hearts - " +
-            answers.hearts +
-            ", for stars - " +
-            answers.stars +
-            ", for rhombus - " +
-            answers.rhombus
-    );
-};
+document.getElementById("submit").onclick = function () {};
