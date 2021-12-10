@@ -120,16 +120,16 @@ body {
     justify-content: space-between;
 }
 
-/* .topRow {
-    border: 1px solid green;
-} */
-
 .bottomRow {
     top: 17px;
     /* border: 1px solid blue; */
 }
 
-/* baze styles */
+.topRow div {
+    cursor: grab;
+}
+
+/* collections styles */
 
 .mergingCollections {
     top: 70px;
