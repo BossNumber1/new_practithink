@@ -17,23 +17,26 @@ function drop() {
     let idFigure = localStorage.getItem("idFigure");
 
     // let positionAppleInRow = localStorage.getItem("positionAppleInRow");
-    // // начинаем ложить яблоко в корзину
+    // начинаем ложить яблоко в корзину
     // if (parentElementIdStart !== "appleInBasket" + positionAppleInRow) {
-    // let selectedFigure = document.getElementById(idFigure); // получаем картинку для вставки
+    let orig = document.getElementById(idFigure); // получаем картинку для вставки
 
-    let objectBeingCreated = document.createElement("div");
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.id = idFigure;
+    objectBeingCreated.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
     objectBeingCreated.style.cursor = "grab";
 
-    let childImplementableObject = document.createElement("img");
-    childImplementableObject.id = idFigure;
-    childImplementableObject.src =
-        "./pictures/" + idFigure.slice(0, -1) + ".svg";
     //     objectBeingCreated.id = "appleInBasket" + positionAppleInRow;
     document
         .getElementsByClassName("placeDroppingFigures")[0]
-        .appendChild(objectBeingCreated)
-        .appendChild(childImplementableObject);
-    //     // создаём копию и ставим на место оригинала
+        .appendChild(document.createElement("div"))
+        .appendChild(objectBeingCreated);
+
+    // создаём копию и ставим на место оригинала
+
+    orig.style.opacity = "0.5";
+    orig.style.cursor = "default";
+
     //     let copyBeingCreated = document.createElement("img");
     //     copyBeingCreated.src = "./pictures/apple.svg";
     //     copyBeingCreated.id = idFigure;
