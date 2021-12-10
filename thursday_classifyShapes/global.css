@@ -180,6 +180,7 @@ body {
     /* background-color: #a8a8a8; */
     width: 169px;
     height: 115px;
+    display: flex;
 }
 
 /* inputs styles */
