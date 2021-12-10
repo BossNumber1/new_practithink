@@ -68,9 +68,7 @@ function drop(e) {
 
     if (grandparentClass === "topRow") {
         e.target.style.opacity = "1";
-        // document.getElementById("heart").remove();
         orig.remove();
-        // orig.remove();
     }
     // if (parentElementIdStart === "appleInBasket" + positionAppleInRow) {
     //     // убираем яблоко из корзины
