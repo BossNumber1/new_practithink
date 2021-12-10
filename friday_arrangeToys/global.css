@@ -156,3 +156,7 @@ body {
 .toy img {
     cursor: grab;
 }
+
+img:hover {
+    transform: scale(1.2);
+}
