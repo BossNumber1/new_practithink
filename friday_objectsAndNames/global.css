@@ -105,23 +105,22 @@ body {
 .objects {
     left: calc(50% - 743px / 2);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
     width: 743px;
     height: 55px;
-    border: 1px solid gray;
 }
 
 /* collections styles */
 
 .mergingCollections {
-    top: 70px;
+    top: 77px;
     width: 770px;
     height: 168px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .heart,
