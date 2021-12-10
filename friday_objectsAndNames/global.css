@@ -110,6 +110,10 @@ body {
     height: 55px;
 }
 
+.objects img {
+    cursor: grab;
+}
+
 /* collections styles */
 
 .mergingCollections {
