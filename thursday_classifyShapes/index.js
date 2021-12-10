@@ -15,9 +15,10 @@ function drop() {
 
     // let parentElementIdStart = localStorage.getItem("parentElementIdStart");
     let idFigure = localStorage.getItem("idFigure");
-
     // let positionAppleInRow = localStorage.getItem("positionAppleInRow");
-    // начинаем ложить яблоко в корзину
+
+    // начинаем ложить фигуру в корзину
+
     // if (parentElementIdStart !== "appleInBasket" + positionAppleInRow) {
     let orig = document.getElementById(idFigure); // получаем картинку для вставки
 
