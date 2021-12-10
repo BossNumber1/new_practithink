@@ -99,6 +99,8 @@ body {
     height: 350px;
 }
 
+/* closet styles */
+
 .closetSpace {
     left: calc(50% - 370px / 2);
     width: 370px;
@@ -111,6 +113,30 @@ body {
     width: 198px;
     height: 250px;
 }
+
+#bottomSeat,
+#centralSeat,
+#topSeat {
+    width: 60px;
+    height: 60px;
+}
+
+#topSeat {
+    top: -235px;
+    left: 195px;
+}
+
+#centralSeat {
+    top: -213px;
+    left: 195px;
+}
+
+#bottomSeat {
+    top: -193px;
+    left: 115px;
+}
+
+/* toys styles */
 
 .toys {
     top: 39px;
