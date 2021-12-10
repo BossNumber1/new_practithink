@@ -97,7 +97,6 @@ body {
     left: calc(50% - 770px / 2);
     width: 770px;
     height: 302px;
-    border: 1px solid gray;
 }
 
 /* objects styles */
@@ -123,40 +122,32 @@ body {
     /* border: 1px solid orange; */
 }
 
-.heart,
-.star,
-.rhombus {
-    width: 169px;
-    height: 160px;
+.circle,
+.square,
+.triangle,
+.rectangle {
+    width: 170px;
+    height: 168px;
     border: 1px solid #d0d0d0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-radius: 5px;
 }
 
-.headerHeart,
-.headerStar,
-.headerRhombus {
+.headerCircle,
+.headerSquare,
+.headerTriangle,
+.headerRectangle {
     width: 170px;
-    height: 45px;
+    height: 28px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    left: -2px;
+    /* left: -2px; */
     top: -1px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.headerHeart {
-    background: #ffe5e1;
-}
-
-.headerStar {
-    background: #def0aa;
-}
-
-.headerRhombus {
-    background: #e1ecf9;
+    background: #205b64;
+    color: white;
 }
 
 .placeDroppingFigures {
