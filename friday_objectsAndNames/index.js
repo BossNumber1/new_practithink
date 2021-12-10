@@ -13,7 +13,7 @@ function drop(e) {
     let idFigure = localStorage.getItem("idFigure");
 
     // получаем класс предка
-    let parentClass = e.target.parentElement.className;
+    let grandparentClass = e.target.parentElement.parentElement.className;
 
     // получаем текущий id
     let currentId = e.target.id;
@@ -29,7 +29,7 @@ function drop(e) {
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "3px";
 
-    if (parentClass !== "objects") {
+    if (grandparentClass !== "objects") {
         document
             .getElementById(currentId)
             .appendChild(document.createElement("div"))
@@ -43,7 +43,7 @@ function drop(e) {
 
     // делаем возврат на место
 
-    if (parentClass === "objects") {
+    if (grandparentClass === "objects") {
         debugger;
         e.target.style.opacity = "1";
         orig.remove();
