@@ -23,11 +23,11 @@ function drop(e) {
     let orig = document.getElementById(idFigure); // для начала получаем картинку для вставки
 
     let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.id = idFigure.slice(0, -1);
-    objectBeingCreated.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
+    objectBeingCreated.id = idFigure;
+    objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
     objectBeingCreated.style.cursor = "grab";
     objectBeingCreated.style.marginTop = "5px";
-    objectBeingCreated.style.marginLeft = "5px";
+    objectBeingCreated.style.marginLeft = "3px";
 
     if (grandparentClass !== "topRow" || grandparentClass !== "bottomRow") {
         document
