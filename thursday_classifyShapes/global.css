@@ -115,15 +115,18 @@ body {
 .bottomRow {
     width: 451.67px;
     height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.topRow {
+/* .topRow {
     border: 1px solid green;
-}
+} */
 
 .bottomRow {
     top: 17px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 /* baze styles */
@@ -156,6 +159,9 @@ body {
     border-top-right-radius: 5px;
     left: -2px;
     top: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .headerHeart {
