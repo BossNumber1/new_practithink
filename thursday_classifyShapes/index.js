@@ -25,6 +25,8 @@ function drop() {
     objectBeingCreated.id = idFigure;
     objectBeingCreated.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
     objectBeingCreated.style.cursor = "grab";
+    objectBeingCreated.style.marginTop = "5px";
+    objectBeingCreated.style.marginLeft = "5px";
 
     //     objectBeingCreated.id = "appleInBasket" + positionAppleInRow;
     document
