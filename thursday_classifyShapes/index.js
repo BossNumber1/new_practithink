@@ -48,3 +48,42 @@ function drop(e) {
         orig.remove();
     }
 }
+
+// check implementation
+
+let answers = { hearts: 0, stars: 0, rhombus: 0 };
+
+document.getElementById("numberHearts").onchange = function (e) {
+    if (e.target.value == 6) {
+        answers.hearts = "right";
+    } else {
+        answers.hearts = "wrong";
+    }
+};
+
+document.getElementById("numberStars").onchange = function (e) {
+    if (e.target.value == 4) {
+        answers.stars = "right";
+    } else {
+        answers.stars = "wrong";
+    }
+};
+
+document.getElementById("numberRhombus").onchange = function (e) {
+    if (e.target.value == 4) {
+        answers.rhombus = "right";
+    } else {
+        answers.rhombus = "wrong";
+    }
+};
+
+document.getElementById("submit").onclick = function () {
+    alert(
+        "your choice: for hearts - " +
+            answers.hearts +
+            ", for stars - " +
+            answers.stars +
+            ", for rhombus - " +
+            answers.rhombus
+    );
+};
