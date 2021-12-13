@@ -56,10 +56,6 @@ body {
     line-height: 22px;
     color: #2f2f2f;
     text-align: center;
-    border: 1px solid gray;
-
-    /* display: flex;
-    align-items: center; */
 }
 
 .submit input {
@@ -96,10 +92,14 @@ body {
 
 .content {
     top: 132px;
-    left: calc(50% - 770px / 2);
-    width: 770px;
-    height: 604.76px;
-    /* border: 1px solid gray; */
+    left: calc(50% - 610px / 2);
+    width: 610px;
+    height: 428px;
+    border: 1px solid gray;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* 1. cubes styles */
