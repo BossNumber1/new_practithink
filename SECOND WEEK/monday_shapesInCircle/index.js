@@ -22,18 +22,16 @@ function drop(e) {
     // начинаем уборку
     if (currentId === "flowersPlace" || currentId === "redColorPlace") {
         // добавляем объект в корзину
-
         let tray = document.createElement("div");
         tray.style.height = "50px";
         tray.style.width = "50px";
-
         tray.style.position = "absolute";
-        tray.style.paddingTop = e.clientY - 270 + "px";
+        tray.style.marginTop = e.clientY - 270 + "px";
 
         if (currentId === "flowersPlace") {
-            tray.style.paddingLeft = e.clientX - 430 + "px";
+            tray.style.marginLeft = e.clientX - 430 + "px";
         } else {
-            tray.style.paddingLeft = e.clientX - 600 + "px";
+            tray.style.marginLeft = e.clientX - 600 + "px";
         }
 
         let objectBeingCreated = document.createElement("img");
