@@ -13,19 +13,40 @@ function drop(e) {
     let idFigure = localStorage.getItem("idFigure");
 
     // получаем текущий id
-    let currentId = e.target.id;
+    let currentId;
+
+    if (e.target.id) {
+        currentId = e.target.id;
+    } else {
+        currentId = e.target.className;
+    }
+
+    // console.log("currentId =", currentId);
 
     // получаем картинки
     let orig = document.getElementById(idFigure);
     let currentElement = document.getElementById(currentId);
 
+    debugger;
+
     // начинаем уборку
     // if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
-    currentElement.src = "./pictures/" + idFigure.slice(0, -1) + ".svg";
-    currentElement.style.cursor = "grab";
-    orig.src = "./pictures/" + idFigure + ".svg";
-    orig.style.cursor = "default";
-    // } else {
+    if (currentId === "basketFlat") {
+        // добавляем предмет в корзину
+        let objectBeingCreated = document.createElement("img");
+        objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
+
+        document
+            .getElementById("placeFlat")
+            .appendChild(document.createElement("div"))
+            .appendChild(objectBeingCreated);
+
+        // заменяем место предмета на квадрат
+        orig.src = "./pictures/emptyPlace.svg";
+        orig.style.cursor = "default";
+    }
+
+    // else {
     //     currentElement.src = "./pictures/" + idFigure + ".svg";
     //     currentElement.style.cursor = "grab";
     //     orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
