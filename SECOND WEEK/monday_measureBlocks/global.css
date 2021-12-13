@@ -93,8 +93,8 @@ body {
 
 .content {
     top: 132px;
-    left: calc(50% - 610px / 2);
-    width: 610px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
     height: 604.76px;
     border: 1px solid gray;
 }
@@ -184,6 +184,7 @@ body {
 
 .diceShop {
     top: 68.99px;
+    left: calc(50% - 610px / 2);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -212,4 +213,37 @@ body {
 
 .bottomRow {
     margin-top: 8px;
+}
+
+/* btns styles */
+
+.btnsAndQuestion {
+    margin-top: 95px;
+    /* border: 1px solid orange; */
+}
+
+.question {
+    width: 770px;
+    height: 22px;
+    /* left: 336px; */
+    /* top: 12821.76px; */
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 45px;
+    /* left: 536px; */
+    /* top: 12873.76px; */
+    border: 1px solid gray;
 }
