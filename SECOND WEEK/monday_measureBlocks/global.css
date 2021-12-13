@@ -102,27 +102,23 @@ body {
 /* 1. cubes styles */
 
 .cubes {
-    top: 126px;
-    left: calc(50% - 543px / 2);
-    width: 543px;
-    height: 217px;
+    left: calc(50% - 172px / 2);
+    width: 172px;
+    height: 308.01px;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
-    align-items: center;
+    border: 1px solid gray;
 }
 
-.leftWarehouse {
-    width: 222.36px;
-    height: 189.43px;
-    display: flex;
-}
-
-.columnDice div {
+.rightColumn div,
+.leftColumn div {
     margin: -10.7px 0;
     cursor: grab;
 }
 
-.columnDice {
+.rightColumn,
+.leftColumn {
     margin-right: 6.7px;
 }
 
