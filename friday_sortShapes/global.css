@@ -97,7 +97,7 @@ body {
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 371px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /* figures styles */
@@ -143,11 +143,12 @@ body {
 
 .headerFlat,
 .headerSolid {
-    width: 270px;
+    width: 271px;
     height: 28px;
     background: #205b64;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    margin-left: -1px;
 }
 
 .headerText {
