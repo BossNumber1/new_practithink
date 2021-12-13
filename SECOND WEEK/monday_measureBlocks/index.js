@@ -23,9 +23,19 @@ function drop(e) {
 
     // меняем картинки местами
     currentElement.src = "./pictures/" + nameObjectOrig + ".svg";
-    currentElement.id = idOrig;
+    currentElement.style.opacity = "1";
 
-    orig.src = "./pictures/" + nameObjectCurrent + ".svg";
+    if (
+        orig.parentElement.parentElement.className === "topRow" ||
+        orig.parentElement.parentElement.className === "bottomRow"
+    ) {
+        orig.style.opacity = "0.5";
+    } else {
+        orig.src = "./pictures/" + nameObjectCurrent + ".svg";
+    }
+
+    // меняем id местами
+    currentElement.id = idOrig;
     orig.id = currentId;
 }
 
