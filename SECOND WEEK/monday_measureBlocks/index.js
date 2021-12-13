@@ -24,6 +24,7 @@ function drop(e) {
     // меняем картинки местами
     currentElement.src = "./pictures/" + nameObjectOrig + ".svg";
     currentElement.style.opacity = "1";
+    currentElement.style.cursor = "grab";
 
     if (
         orig.parentElement.parentElement.className === "topRow" ||
@@ -37,6 +38,9 @@ function drop(e) {
     // меняем id местами
     currentElement.id = idOrig;
     orig.id = currentId;
+
+    // меняем вид курсора
+    orig.style.cursor = "default";
 }
 
 // check implementation
