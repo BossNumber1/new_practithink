@@ -118,3 +118,13 @@ img {
     margin-right: 30px;
     cursor: grab;
 }
+
+/* circles styles */
+
+.circles {
+    top: 75px;
+    left: calc(50% - 466px / 2);
+    width: 466px;
+    height: 301px;
+    border: 1px solid gray;
+}
