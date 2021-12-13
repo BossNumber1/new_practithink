@@ -13,8 +13,16 @@
             <div class="content">
                 <div>
                     <div class="topRow">
-                        <div>
-                            <img src="./pictures/cube.svg" alt="cube" />
+                        <div
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                        >
+                            <img
+                                src="./pictures/cube.svg"
+                                alt="cube"
+                                id="cube"
+                            />
                         </div>
                         <div>
                             <img src="./pictures/star.svg" alt="star" />
@@ -48,7 +56,12 @@
                     </div>
                 </div>
                 <div class="baskets">
-                    <div class="basketFlat">
+                    <div
+                        class="basketFlat"
+                        ondrop="drop(event)"
+                        ondragover="allowDrop(event)"
+                        ondragstart="dragStart(event)"
+                    >
                         <div class="headerFlat">
                             <div class="headerText">Flat</div>
                         </div>
