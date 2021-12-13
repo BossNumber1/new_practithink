@@ -144,7 +144,13 @@
                         <div class="headerSolid">
                             <div class="headerText">Solid</div>
                         </div>
-                        <div class="placeDropFigures" id="placeSolid"></div>
+                        <div
+                            class="placeDropFigures"
+                            id="placeSolid"
+                            ondrop="drop(event)"
+                            ondragover="allowDrop(event)"
+                            ondragstart="dragStart(event)"
+                        ></div>
                     </div>
                 </div>
             </div>

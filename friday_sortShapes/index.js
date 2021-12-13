@@ -11,29 +11,27 @@ function allowDrop(event) {
 function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
-debugger
+
     // получаем текущий id
     let currentId = e.target.id;
-
+    debugger;
     // получаем картинки
     let orig = document.getElementById(idFigure);
     let currentElement = document.getElementById(currentId);
 
     // начинаем уборку
-    if (currentId === "placeFlat") {
+    if (currentId === "placeFlat" || currentId === "placeSolid") {
         // добавляем предмет в корзину
 
         let tray = document.createElement("div");
         tray.style.height = "60px";
         tray.style.width = "60px";
-        
+
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
 
-        currentElement
-            .appendChild(tray)
-            .appendChild(objectBeingCreated);
+        currentElement.appendChild(tray).appendChild(objectBeingCreated);
 
         // заменяем место предмета на квадрат
         orig.src = "./pictures/emptyPlace.svg";
