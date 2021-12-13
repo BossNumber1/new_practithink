@@ -146,3 +146,22 @@ img {
 .redColor {
     margin-left: 165px;
 }
+
+.flowersHeader,
+.redColorHeader {
+    /* position: absolute; */
+    top: -25px;
+    left: 120.5px;
+    width: 105px;
+    height: 20px;
+    /* left: 605px; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    /* position:; */
+}
