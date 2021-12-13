@@ -111,6 +111,25 @@ body {
     border: 1px solid gray;
 }
 
+/* columns styles */
+
+.leftColumn,
+.rightColumn {
+    display: flex;
+}
+
+.tool {
+    margin-right: 5px;
+}
+
+#tassel {
+    top: 40px;
+}
+
+#pencil {
+    top: 60px;
+}
+
 .column div {
     margin: -10.7px 0;
     cursor: grab;
