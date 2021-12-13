@@ -124,16 +124,15 @@ body {
 }
 
 #tassel {
-    top: 40px;
+    top: 50px;
 }
 
 #pencil {
-    top: 60px;
+    top: 70px;
 }
 
 .column div {
     margin: -10.7px 0;
-    cursor: grab;
 }
 
 .column {
@@ -158,6 +157,7 @@ body {
     margin: 0px 5px;
     border: 1.5px solid #2f2f2f;
     border-radius: 5px;
+    text-align: center;
 }
 
 .about {
