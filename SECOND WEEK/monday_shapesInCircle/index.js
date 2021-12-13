@@ -26,9 +26,15 @@ function drop(e) {
         let tray = document.createElement("div");
         tray.style.height = "50px";
         tray.style.width = "50px";
+
         tray.style.position = "absolute";
         tray.style.paddingTop = e.clientY - 270 + "px";
-        tray.style.paddingLeft = e.clientX - 430 + "px";
+
+        if (currentId === "flowersPlace") {
+            tray.style.paddingLeft = e.clientX - 430 + "px";
+        } else {
+            tray.style.paddingLeft = e.clientX - 600 + "px";
+        }
 
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
