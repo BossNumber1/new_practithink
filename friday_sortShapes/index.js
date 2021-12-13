@@ -43,11 +43,10 @@ function drop(e) {
         orig.style.cursor = "default";
         orig.id = "emptyPlace";
     } else {
-        // alert("idFigure =" + idFigure);
-        // alert("currentId =" + currentId);
         currentElement.src = "./pictures/" + idFigure + ".svg";
         //     currentElement.style.cursor = "grab";
-        //     orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
+        orig.remove();
+        // orig.src = "./pictures/" + currentId + ".svg";
         //     orig.style.cursor = "default";
     }
 }
