@@ -11,7 +11,7 @@ function allowDrop(event) {
 function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
-    // debugger;
+
     // получаем текущий id
     let currentId;
 
@@ -45,6 +45,7 @@ function drop(e) {
     } else {
         currentElement.src = "./pictures/" + idFigure + ".svg";
         currentElement.style.cursor = "grab";
+        currentElement.id = idFigure;
 
         orig.remove();
     }
