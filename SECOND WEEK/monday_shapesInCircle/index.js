@@ -55,10 +55,38 @@ function drop(e) {
 
 // check implementation
 
-// document.getElementById("flowersPlace").onclick = function () {
-//     alert("clicked to flowers area");
-// };
+const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
 
-// document.getElementById("redColorPlace").onclick = function () {
-//     alert("clicked to red color area");
-// };
+document.getElementById("flowersPlace").onclick = function () {
+    let length = document.getElementById("flowersPlace").children.length;
+
+    let idObjectFirst =
+        document.getElementById("flowersPlace").children[1].children[0].id;
+    let idObjectSecond =
+        document.getElementById("flowersPlace").children[2].children[0].id;
+    let idObjectThird =
+        document.getElementById("flowersPlace").children[3].children[0].id;
+
+    if (length === 4) {
+        let resultatByFirstObject = contentFlowersArea.includes(idObjectFirst);
+        let resultatBySecondObject =
+            contentFlowersArea.includes(idObjectSecond);
+        let resultatByThirdObject = contentFlowersArea.includes(idObjectThird);
+
+        if (
+            resultatByFirstObject == true &&
+            resultatBySecondObject == true &&
+            resultatByThirdObject == true
+        ) {
+            alert("всё верно");
+        } else {
+            alert("неверная комбинация");
+        }
+    } else {
+        alert("neobchodimo echo");
+    }
+};
+
+document.getElementById("redColorPlace").onclick = function () {
+    // alert("clicked to red color area");
+};

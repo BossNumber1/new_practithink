@@ -119,6 +119,10 @@ img {
     cursor: grab;
 }
 
+img:hover {
+    transform: scale(1.2);
+}
+
 /* circles styles */
 
 .circles {
