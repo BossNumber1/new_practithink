@@ -95,7 +95,7 @@ body {
     left: calc(50% - 610px / 2);
     width: 610px;
     height: 428px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .row {
@@ -126,5 +126,23 @@ img {
     left: calc(50% - 466px / 2);
     width: 466px;
     height: 301px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: space-between; */
+}
+
+.flowers,
+.redColor {
+    width: 301px;
+    height: 301px;
+    /* left: 651px; */
+    border: 1px solid #a1a6d9;
+    box-sizing: border-box;
+    border-radius: 301px;
+    position: absolute;
+}
+
+.redColor {
+    margin-left: 165px;
 }
