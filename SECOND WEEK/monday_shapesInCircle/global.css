@@ -96,71 +96,14 @@ body {
     width: 610px;
     height: 428px;
     border: 1px solid gray;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
-
-/* 1. cubes styles */
-
-.cubes {
-    left: calc(50% - 172px / 2);
-    width: 172px;
-    height: 330px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-/* columns styles */
-
-/* inputs styles */
-
-.inputContent {
-    /* top: 30px; */
-    left: calc(50% - 70px / 2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70px;
-    height: 56px;
-}
-
-.inputContent input {
-    width: 50px;
-    height: 30px;
-    margin: 0px 5px;
-    border: 1.5px solid #2f2f2f;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.about {
-    position: static;
-    width: 62px;
-    height: 16px;
-    left: 4px;
-    top: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #2f2f2f;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 10px 0px;
-}
-
-/* row styles */
 
 .row {
+    left: calc(50% - 610px / 2);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    /* border: 1px solid gray; */
+    width: 610px;
+    height: 50px;
+    border: 1px solid gray;
 }
