@@ -111,14 +111,12 @@ body {
     border: 1px solid gray;
 }
 
-.rightColumn div,
-.leftColumn div {
+.column div {
     margin: -10.7px 0;
     cursor: grab;
 }
 
-.rightColumn,
-.leftColumn {
+.column {
     margin-right: 6.7px;
 }
 
