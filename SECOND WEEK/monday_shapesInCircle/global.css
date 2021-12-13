@@ -6,6 +6,7 @@ body {
 
 * {
     position: relative;
+
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -35,7 +36,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 857px;
+    height: 680px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -45,7 +46,6 @@ body {
 }
 
 .titlePage {
-    position: relative;
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -56,6 +56,10 @@ body {
     line-height: 22px;
     color: #2f2f2f;
     text-align: center;
+    border: 1px solid gray;
+
+    /* display: flex;
+    align-items: center; */
 }
 
 .submit input {
@@ -84,7 +88,6 @@ body {
     position: absolute;
     width: 1169px;
     height: 0px;
-    /* left: 136px; */
     top: 80px;
     border-bottom: 1px solid #a8a8a8;
 }
@@ -111,33 +114,6 @@ body {
 }
 
 /* columns styles */
-
-.leftColumn,
-.rightColumn {
-    display: flex;
-    top: -40px;
-    height: 222.01px;
-}
-
-.tool {
-    margin-right: 5px;
-}
-
-#tassel {
-    top: 50px;
-}
-
-#pencil {
-    top: 70px;
-}
-
-.column div {
-    margin: -10.7px 0;
-}
-
-.column {
-    margin-right: 6.7px;
-}
 
 /* inputs styles */
 
@@ -180,89 +156,11 @@ body {
     margin: 10px 0px;
 }
 
-/* diceShop styles */
+/* row styles */
 
-.diceShop {
-    top: 68.99px;
-    left: calc(50% - 610px / 2);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 610px;
-    height: 80.76px;
-    /* border: 1px solid gray; */
-}
-
-.topRow,
-.bottomRow {
+.row {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     /* border: 1px solid gray; */
-}
-
-.topRow div,
-.bottomRow div {
-    position: static;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 20px;
-    cursor: grab;
-}
-
-.bottomRow {
-    margin-top: 8px;
-}
-
-/* btns styles */
-
-.btnsAndQuestion {
-    margin-top: 95px;
-    /* border: 1px solid orange; */
-}
-
-.question {
-    width: 770px;
-    height: 22px;
-    /* left: 336px; */
-    /* top: 12821.76px; */
-    margin-bottom: 30px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: #2f2f2f;
-}
-
-.btns {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    left: calc(50% - 370px / 2);
-    width: 370px;
-    height: 45px;
-}
-
-.btns div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
-    position: static;
-    width: 170px;
-    height: 45px;
-    left: calc(50% - 170px / 2 - 100px);
-    top: calc(50% - 45px / 2);
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 30px;
-    cursor: pointer;
 }
