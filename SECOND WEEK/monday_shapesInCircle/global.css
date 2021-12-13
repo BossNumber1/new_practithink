@@ -116,4 +116,5 @@ img {
     order: 7;
     flex-grow: 0;
     margin-right: 30px;
+    cursor: grab;
 }
