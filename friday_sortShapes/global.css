@@ -124,20 +124,44 @@ body {
 
 /* baskets styles */
 
-.basket {
+.baskets {
+    top: 73px;
+    width: 570px;
+    height: 179px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.basketFlat {
+.basketFlat,
+.basketSolid {
+    width: 270px;
+    height: 179px;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
-.headerFlat {
+.headerFlat,
+.headerSolid {
+    width: 270px;
+    height: 28px;
+    background: #205b64;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.headerText {
+    width: 32px;
+    height: 20px;
+    top: calc(50% - 20px / 2);
+    left: calc(50% - 32px / 2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
 }
 
 .placeDropFigures {
-}
-
-.basketSolid {
-}
-
-.headerSolid {
 }
