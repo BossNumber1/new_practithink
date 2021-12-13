@@ -13,13 +13,7 @@ function drop(e) {
     let idFigure = localStorage.getItem("idFigure");
 
     // получаем текущий id
-    let currentId;
-
-    if (e.target.id) {
-        currentId = e.target.id;
-    } else {
-        currentId = e.target.className;
-    }
+    let currentId = e.target.id;
 
     // получаем картинки
     let orig = document.getElementById(idFigure);
@@ -27,14 +21,14 @@ function drop(e) {
 
     // начинаем уборку
     // if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
-    if (currentId === "basketFlat") {
+    if (currentId === "placeFlat") {
         // добавляем предмет в корзину
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
+        objectBeingCreated.style.backgroundColor = "red";
 
-        document
-            .getElementById("placeFlat")
+        currentElement
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
 

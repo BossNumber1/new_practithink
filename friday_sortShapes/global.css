@@ -166,4 +166,7 @@ img {
 }
 
 .placeDropFigures {
+    background-color: orange;
+    width: 270px;
+    height: 150px;
 }
