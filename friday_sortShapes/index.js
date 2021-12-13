@@ -11,7 +11,7 @@ function allowDrop(event) {
 function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
-
+debugger
     // получаем текущий id
     let currentId = e.target.id;
 
@@ -20,16 +20,19 @@ function drop(e) {
     let currentElement = document.getElementById(currentId);
 
     // начинаем уборку
-    // if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
     if (currentId === "placeFlat") {
         // добавляем предмет в корзину
+
+        let tray = document.createElement("div");
+        tray.style.height = "60px";
+        tray.style.width = "60px";
+        
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
-        objectBeingCreated.style.backgroundColor = "red";
 
         currentElement
-            .appendChild(document.createElement("div"))
+            .appendChild(tray)
             .appendChild(objectBeingCreated);
 
         // заменяем место предмета на квадрат
