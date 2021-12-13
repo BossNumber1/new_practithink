@@ -44,9 +44,8 @@ function drop(e) {
         orig.id = "emptyPlace";
     } else {
         currentElement.src = "./pictures/" + idFigure + ".svg";
-        //     currentElement.style.cursor = "grab";
+        currentElement.style.cursor = "grab";
+
         orig.remove();
-        // orig.src = "./pictures/" + currentId + ".svg";
-        //     orig.style.cursor = "default";
     }
 }
