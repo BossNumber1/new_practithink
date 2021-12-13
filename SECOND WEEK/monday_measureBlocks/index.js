@@ -1,8 +1,7 @@
 // drag and drop implementation
 
 function dragStart(event) {
-    localStorage.setItem("idTakenCube", event.target.id);
-    localStorage.setItem("nameCube", event.target.dataset.name);
+    localStorage.setItem("idOrig", event.target.id);
 }
 
 function allowDrop(event) {
@@ -10,25 +9,24 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    // получаем id и имя несомого элемента
-    let idTakenCube = localStorage.getItem("idTakenCube");
-    let nameCube = localStorage.getItem("nameCube");
+    // получаем id взятого элемента
+    let idOrig = localStorage.getItem("idOrig");
+    let nameObjectOrig = idOrig.slice(0, -1);
 
-    // берем id того элемента, на который положим несомый
+    // получаем id, на который кладём элемент
     let currentId = e.target.id;
-    let currentName = e.target.dataset.name;
-    debugger;
-    // меняем картинки местами
-    let orig = document.getElementById(idTakenCube);
-    orig.src = "./pictures/" + currentName + ".svg";
-    orig.id = currentId;
-    orig.setAttribute("data-name", currentName);
-    orig.parentElement.style.cursor = "default";
+    let nameObjectCurrent = currentId.slice(0, -1);
 
-    e.target.src = "./pictures/" + nameCube + ".svg";
-    e.target.id = idTakenCube;
-    e.target.setAttribute("data-name", nameCube);
-    e.target.parentElement.style.cursor = "grab";
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/" + nameObjectOrig + ".svg";
+    currentElement.id = idOrig;
+
+    orig.src = "./pictures/" + nameObjectCurrent + ".svg";
+    orig.id = currentId;
 }
 
 // check implementation
