@@ -35,7 +35,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 575px;
+    height: 857px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -46,18 +46,16 @@ body {
 
 .titlePage {
     position: relative;
-    top: 15px;
-    left: 280px;
+    top: 25px;
+    left: calc(50% - 770px / 2);
     width: 770px;
     height: 22px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    /* display: flex; */
-    /* align-items: center;
-    text-align: center; */
     color: #2f2f2f;
+    text-align: center;
 }
 
 .submit input {
@@ -82,44 +80,6 @@ body {
     margin-top: 10px;
 }
 
-.subtitle {
-    position: relative;
-    top: 25px;
-    left: calc(50% - 223px / 2);
-    display: flex;
-    width: 223px;
-    height: 24px;
-}
-
-.imgSubtitle {
-    position: relative;
-    /* left: 0%; */
-    /* right: 89.24%; */
-    /* top: 0%; */
-    /* bottom: 0%; */
-    /* flex: none;
-    order: 0;
-    flex-grow: 0; */
-    /* margin: 0px 10px; */
-}
-
-.subtitleText {
-    /* left: 15.25%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #065b5b;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 10px;
-}
-
 .lineUnderHeading {
     position: absolute;
     width: 1169px;
@@ -130,6 +90,14 @@ body {
 }
 
 /* content styles */
+
+.content {
+    top: 132px;
+    left: calc(50% - 610px / 2);
+    width: 610px;
+    height: 604.76px;
+    border: 1px solid gray;
+}
 
 /* 1. cubes styles */
 
