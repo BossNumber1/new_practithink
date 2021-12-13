@@ -96,7 +96,7 @@ body {
     left: calc(50% - 770px / 2);
     width: 770px;
     height: 604.76px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 /* 1. cubes styles */
