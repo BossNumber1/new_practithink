@@ -11,7 +11,7 @@ function allowDrop(event) {
 function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
-
+    // debugger;
     // получаем текущий id
     let currentId;
 
@@ -21,13 +21,9 @@ function drop(e) {
         currentId = e.target.className;
     }
 
-    // console.log("currentId =", currentId);
-
     // получаем картинки
     let orig = document.getElementById(idFigure);
     let currentElement = document.getElementById(currentId);
-
-    debugger;
 
     // начинаем уборку
     // if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
@@ -35,6 +31,7 @@ function drop(e) {
         // добавляем предмет в корзину
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
+        objectBeingCreated.id = idFigure;
 
         document
             .getElementById("placeFlat")
@@ -44,16 +41,13 @@ function drop(e) {
         // заменяем место предмета на квадрат
         orig.src = "./pictures/emptyPlace.svg";
         orig.style.cursor = "default";
+        orig.id = "emptyPlace";
+    } else {
+        // alert("idFigure =" + idFigure);
+        // alert("currentId =" + currentId);
+        currentElement.src = "./pictures/" + idFigure + ".svg";
+        //     currentElement.style.cursor = "grab";
+        //     orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
+        //     orig.style.cursor = "default";
     }
-
-    // else {
-    //     currentElement.src = "./pictures/" + idFigure + ".svg";
-    //     currentElement.style.cursor = "grab";
-    //     orig.src = "./pictures/" + currentId.slice(0, -1) + ".svg";
-    //     orig.style.cursor = "default";
-    // }
-
-    // поменять id для дальнейших переносок
-    currentElement.id = idFigure;
-    orig.id = currentId;
 }
