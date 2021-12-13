@@ -8,40 +8,6 @@ function allowDrop(event) {
     event.preventDefault();
 }
 
-function drop2(e) {
-    // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOriginal");
-
-    // получаем имя и id, на который кладём элемент
-    let currentId;
-
-    if (e.target.id !== "flowersPlace" && e.target.id !== "redColorPlace") {
-        currentId = e.target.id;
-    } else {
-        currentId = "emptyPlace";
-    }
-
-    // получаем объекты
-    let orig = document.getElementById(idOrig);
-    let currentElement = document.getElementById(currentId);
-
-    // меняем картинки местами
-    currentElement.src = "./pictures/" + idOrig + ".svg";
-
-    // if (
-    //     orig.parentElement.parentElement.className === "topRow" ||
-    //     orig.parentElement.parentElement.className === "bottomRow"
-    // ) {
-    //     orig.style.opacity = "0.5";
-    // } else {
-    orig.src = "./pictures/" + currentId + ".svg";
-    // }
-
-    // меняем id местами
-    currentElement.id = idOrig;
-    orig.id = currentId;
-}
-
 function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idOriginal");
