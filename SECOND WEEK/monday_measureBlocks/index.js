@@ -9,11 +9,11 @@ function allowDrop(event) {
 }
 
 function drop(e) {
-    // получаем id взятого элемента
+    // получаем имя и id взятого элемента
     let idOrig = localStorage.getItem("idOrig");
     let nameObjectOrig = idOrig.slice(0, -1);
 
-    // получаем id, на который кладём элемент
+    // получаем имя и id, на который кладём элемент
     let currentId = e.target.id;
     let nameObjectCurrent = currentId.slice(0, -1);
 
