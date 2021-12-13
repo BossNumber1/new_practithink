@@ -14,7 +14,7 @@ function drop(e) {
 
     // получаем текущий id
     let currentId = e.target.id;
-    debugger;
+
     // получаем картинки
     let orig = document.getElementById(idFigure);
     let currentElement = document.getElementById(currentId);
@@ -45,3 +45,31 @@ function drop(e) {
         orig.remove();
     }
 }
+
+// check implementation
+
+let result = { basketFlat: "", basketSolid: "" };
+
+document.getElementById("submit").onclick = function () {
+    let basketFlat = document.getElementById("placeFlat");
+    let basketSolid = document.getElementById("placeSolid");
+
+    if (basketFlat.children.length === 5) {
+        result.basketFlat = "right";
+    } else {
+        result.basketFlat = "wrong";
+    }
+
+    if (basketSolid.children.length === 5) {
+        result.basketSolid = "right";
+    } else {
+        result.basketSolid = "wrong";
+    }
+
+    alert(
+        "you put in the basket for flat figures - " +
+            result.basketFlat +
+            " and in the basket for solid figures - " +
+            result.basketSolid
+    );
+};
