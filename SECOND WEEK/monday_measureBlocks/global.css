@@ -102,26 +102,19 @@ body {
 /* 1. cubes styles */
 
 .cubes {
-    position: relative;
     top: 126px;
     left: calc(50% - 543px / 2);
     width: 543px;
     height: 217px;
-    /* border: 1px solid orange; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .leftWarehouse {
-    position: relative;
     width: 222.36px;
     height: 189.43px;
     display: flex;
-    /* left: 222.13px; */
-    /* top: 0px; */
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-    /* border: 1px solid pink; */
 }
 
 .columnDice div {
@@ -131,33 +124,6 @@ body {
 
 .columnDice {
     margin-right: 6.7px;
-}
-
-/* .columnDice div  */
-
-/* #firstСolumn {
-    margin-left: 70px;
-} */
-
-.betweenWarehouses {
-    position: relative;
-    width: 20px;
-    height: 5px;
-    background: #2f2f2f;
-}
-
-.rightWarehouse {
-    position: relative;
-    width: 224px;
-    height: 188px;
-    display: flex;
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-
-    /* border: 1px solid yellow; */
-
-    /* position: relative;
-    width: 222.36px;
-    height: 189.43px; */
 }
 
 /* 2. inputs styles */
@@ -184,24 +150,4 @@ body {
     margin: 0px 5px;
     border: 1.5px solid #2f2f2f;
     border-radius: 5px;
-}
-
-#minus,
-#equation {
-    position: relative;
-    top: 4px;
-    height: 22px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #2f2f2f;
-}
-
-#minus {
-    width: 7px;
-}
-
-#equation {
-    width: 11px;
 }
