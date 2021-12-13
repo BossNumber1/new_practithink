@@ -45,9 +45,13 @@ function drop(e) {
 
 // check implementation
 
+let selectBtn;
+
 document.getElementById("selectBrush").onclick = function () {
     document.getElementById("selectBrush").style.backgroundColor = "#369CB7";
     document.getElementById("selectBrush").style.color = "white";
+
+    selectBtn = "right";
 
     document.getElementById("selectPencil").style.backgroundColor = "white";
     document.getElementById("selectPencil").style.color = "black";
@@ -57,6 +61,12 @@ document.getElementById("selectPencil").onclick = function () {
     document.getElementById("selectPencil").style.backgroundColor = "#369CB7";
     document.getElementById("selectPencil").style.color = "white";
 
+    selectBtn = "wrong";
+
     document.getElementById("selectBrush").style.backgroundColor = "white";
     document.getElementById("selectBrush").style.color = "black";
+};
+
+document.getElementById("submit").onclick = function () {
+    alert("you made the " + selectBtn + " choice");
 };
