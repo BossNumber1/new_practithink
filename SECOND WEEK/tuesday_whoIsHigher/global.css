@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    position: relative;
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.nameTask {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #369cb7;
+    margin: 0 0 5px 40px;
+}
+
+.app {
+    width: 1170px;
+    height: 680px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+.submit input {
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #369cb7;
+    flex-direction: column;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    background: #369cb7;
+    border: 0.5px solid #369cb7;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 47px;
+    margin-left: 505px;
+    margin-top: 10px;
+}
+
+.lineUnderHeading {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 80px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content {
+    top: 132px;
+    left: calc(50% - 610px / 2);
+    width: 610px;
+    height: 428px;
+    /* border: 1px solid gray; */
+}
+
+.row {
+    left: calc(50% - 610px / 2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 610px;
+    height: 50px;
+    /* border: 1px solid gray; */
+}
+
+img {
+    position: static;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+    margin-right: 30px;
+    cursor: grab;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+/* circles styles */
+
+.circles {
+    top: 75px;
+    left: calc(50% - 466px / 2);
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 466px;
+    height: 301px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.circle-container {
+    width: 301px;
+    height: 301px;
+    border: 1px solid #a1a6d9;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-circle {
+    width: 301px;
+    height: 301px;
+    /* background-color: orange; */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 170px;
+    cursor: pointer;
+}
+
+.right-circle-container {
+    transform: rotate(180deg);
+    border: 1px solid #a1a6d9;
+    position: absolute;
+    left: 165px;
+}
+
+/* circles headers styles */
+
+.circlesHeaders {
+    width: 260px;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* border: 1px solid gray; */
+    left: 195px;
+    position: absolute;
+    top: 100px;
+}
+
+.flowersHeader,
+.redColorHeader {
+    /* position: absolute; */
+    /* top: -25px; */
+    /* left: 120.5px; */
+    width: 105px;
+    height: 20px;
+    /* left: 605px; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    /* position:; */
+    z-index: 10;
+}
+
+/* .flowersHeader {
+    left: 120.5px;
+}
+
+.redColorHeader {
+    transform: rotate(180deg);
+    left: 90.5px;
+    top: 320px;
+} */
