@@ -179,4 +179,5 @@ body {
     order: 0;
     flex-grow: 0;
     margin-right: 30px;
+    cursor: pointer;
 }
