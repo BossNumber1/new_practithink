@@ -116,12 +116,11 @@ body {
     position: static;
     width: 130px;
     height: 130px;
-    flex: none;
-    /* order: 4; */
-    flex-grow: 0;
     margin: 0 30px;
-    border: 1px solid #369cb7;
-    box-shadow: 0 0 10px #369cb7;
-    border-radius: 5px;
     overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
+    border-radius: 10px;
 }
