@@ -124,3 +124,12 @@ body {
     box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
     border-radius: 10px;
 }
+
+img:hover {
+    margin: 0 30px;
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
+    border-radius: 10px;
+}
