@@ -36,7 +36,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 680px;
+    height: 627px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -47,8 +47,8 @@ body {
 
 .titlePage {
     top: 25px;
-    left: calc(50% - 770px / 2);
-    width: 770px;
+    left: calc(50% - 561px / 2);
+    width: 561px;
     height: 22px;
     font-style: normal;
     font-weight: 600;
@@ -92,8 +92,8 @@ body {
 
 .content {
     top: 132px;
-    left: calc(50% - 610px / 2);
-    width: 610px;
-    height: 428px;
-    /* border: 1px solid gray; */
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 375px;
+    border: 1px solid gray;
 }
