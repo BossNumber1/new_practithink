@@ -96,7 +96,7 @@ body {
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 375px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 /* mans styles */
@@ -135,7 +135,8 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 0 25px;
+    margin-left: 25px;
+    margin-right: 40px;
 }
 
 .signatures .name {
