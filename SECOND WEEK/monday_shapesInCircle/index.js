@@ -45,16 +45,6 @@ function drop(e) {
         tray.style.marginTop = e.offsetY + "px";
         tray.style.marginLeft = e.offsetX + "px";
 
-        // if (currentClass === "circle-container") {
-        //     tray.style.marginLeft = e.clientX - 330 + "px";
-        // } else if (currentClass === "background-circle") {
-        //     tray.style.marginLeft = e.clientX - 600 + "px";
-        //     tray.style.marginTop = e.clientY - 145 + "px";
-        // } else {
-        //     tray.style.marginLeft = e.clientX - 630 + "px";
-        //     tray.style.marginTop = e.clientY - 100 + "px";
-        // }
-
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
