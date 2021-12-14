@@ -130,7 +130,7 @@ document.getElementById("submit").onclick = function () {
     let res2 = checkRedColor();
 
     alert(
-        "your choice for flowers space - " +
+        "Your choice for flowers space - " +
             res1 +
             ", for red color space - " +
             res2
