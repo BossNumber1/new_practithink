@@ -37,7 +37,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 627px;
+    height: 382px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -48,8 +48,8 @@ body {
 
 .titlePage {
     top: 25px;
-    left: calc(50% - 561px / 2);
-    width: 561px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
     height: 22px;
     font-style: normal;
     font-weight: 600;
@@ -99,85 +99,15 @@ body {
     /* border: 1px solid gray; */
 }
 
-/* mans styles */
-
-.mans {
-    left: calc(50% - 330px / 2);
-    width: 330px;
-    height: 290px;
-    /* border: 1px solid gray; */
-}
-
-.friends {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    /* border: 1px solid gray; */
-}
-
-.friends div {
-    margin-right: 10px;
-}
-
-.JackConstructor {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.JackConstructor div {
-    margin-top: 0px;
-    margin-bottom: -10px;
-    /* border: 1px solid gray; */
-}
-
-.signatures {
-    /* border: 1px solid gray; */
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-left: 25px;
-    margin-right: 40px;
-}
-
-.signatures .name {
-    font-family: "Caveat", cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 38px;
-    text-align: center;
-    color: #333030;
-}
-
-/* btns styles */
-
-.btns {
-    top: 40px;
-    left: calc(50% - 570px / 2);
+.row {
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 130px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    width: 570px;
-    height: 45px;
-}
-
-.btnSelect {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 6px 16px;
-    position: static;
-    width: 170px;
-    height: 45px;
-    left: calc(50% - 170px / 2 - 200px);
-    top: calc(50% - 45px / 2);
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 30px;
+}
+
+.row img {
     cursor: pointer;
 }
