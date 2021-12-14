@@ -1,7 +1,7 @@
 // drag and drop implementation
 
-function dragStart(event) {
-    localStorage.setItem("idOriginal", event.target.id);
+function dragStart(e) {
+    localStorage.setItem("idOriginal", e.target.id);
 }
 
 function allowDrop(event) {
@@ -12,15 +12,29 @@ function drop(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idOriginal");
 
+    // получаем позицию области для вставки
+    let positionCircleArea = e.target.dataset.position;
+
     // получаем текущий id
     let currentId = e.target.id;
+    let currentClass = e.target.className;
 
     // получаем картинки
     let orig = document.getElementById(idFigure);
-    let currentElement = document.getElementById(currentId);
+    let currentElement = currentId
+        ? document.getElementById(currentId)
+        : currentClass === "background-circle" && positionCircleArea === "2"
+        ? document.getElementsByClassName("background-circle")[1]
+        : document.getElementsByClassName("circle-container")[
+              positionCircleArea
+          ];
 
     // начинаем уборку
-    if (currentId === "flowersPlace" || currentId === "redColorPlace") {
+    if (
+        currentClass === "circle-container" ||
+        currentClass === "circle-container right-circle-container" ||
+        currentClass === "background-circle"
+    ) {
         // добавляем объект в корзину
         let tray = document.createElement("div");
         tray.style.height = "50px";
@@ -28,15 +42,23 @@ function drop(e) {
         tray.style.position = "absolute";
         tray.style.marginTop = e.clientY - 270 + "px";
 
-        if (currentId === "flowersPlace") {
-            tray.style.marginLeft = e.clientX - 430 + "px";
-        } else {
+        if (currentClass === "circle-container") {
+            tray.style.marginLeft = e.clientX - 330 + "px";
+        } else if (currentClass === "background-circle") {
             tray.style.marginLeft = e.clientX - 600 + "px";
+            tray.style.marginTop = e.clientY - 145 + "px";
+        } else {
+            tray.style.marginLeft = e.clientX - 630 + "px";
+            tray.style.marginTop = e.clientY - 145 + "px";
         }
 
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
+
+        if (currentClass !== "circle-container") {
+            objectBeingCreated.style.transform = "rotate(180deg)";
+        }
 
         currentElement.appendChild(tray).appendChild(objectBeingCreated);
 
@@ -59,11 +81,13 @@ function checkFlowers() {
     const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
     let resultFor0 = [];
 
-    let length = document.getElementById("flowersPlace").children.length;
+    let length =
+        document.getElementsByClassName("circle-container")[0].children.length;
 
     for (let i = 1; i < length; i++) {
         resultFor0.push(
-            document.getElementById("flowersPlace").children[i].children[0].id
+            document.getElementsByClassName("circle-container")[0].children[i]
+                .children[0].id
         );
     }
 
@@ -87,35 +111,59 @@ function checkFlowers() {
 }
 
 function checkRedColor() {
-    const contentRedColorArea = ["redFlower", "socks", "ball", "car", "ruler"];
+    const contentRedColorArea = ["socks", "ball", "car", "ruler"];
     let resultFor = [];
 
-    let length2 = document.getElementById("redColorPlace").children.length;
+    let element = document.getElementsByClassName(
+        "circle-container right-circle-container"
+    )[0];
 
-    for (let i = 1; i < length2; i++) {
-        resultFor.push(
-            document.getElementById("redColorPlace").children[i].children[0].id
-        );
+    if (element.className === "circle-container right-circle-container") {
+        let length2 = element.children.length;
+
+        for (let i = 1; i < length2; i++) {
+            resultFor.push(
+                document.getElementsByClassName("circle-container")[1].children[
+                    i
+                ].children[0].id
+            );
+        }
+
+        if (length2 === 5) {
+            let resultatByFirstObject2 = contentRedColorArea.includes(
+                resultFor[0]
+            );
+            let resultatBySecondObject2 = contentRedColorArea.includes(
+                resultFor[1]
+            );
+            let resultatByThirdObject2 = contentRedColorArea.includes(
+                resultFor[2]
+            );
+            let resultatByFourthObject2 = contentRedColorArea.includes(
+                resultFor[3]
+            );
+
+            if (
+                resultatByFirstObject2 == true &&
+                resultatBySecondObject2 == true &&
+                resultatByThirdObject2 == true &&
+                resultatByFourthObject2 == true
+            ) {
+                return "right";
+            } else {
+                return "wrong";
+            }
+        } else {
+            return "not enough objects";
+        }
     }
+}
 
-    if (length2 === 6) {
-        let resultatByFirstObject2 = contentRedColorArea.includes(resultFor[0]);
-        let resultatBySecondObject2 = contentRedColorArea.includes(
-            resultFor[1]
-        );
-        let resultatByThirdObject2 = contentRedColorArea.includes(resultFor[2]);
-        let resultatByFourthObject2 = contentRedColorArea.includes(
-            resultFor[3]
-        );
-        let resultatByFifthObject2 = contentRedColorArea.includes(resultFor[4]);
+function checkIntersection() {
+    let element = document.getElementsByClassName("background-circle")[1];
 
-        if (
-            resultatByFirstObject2 == true &&
-            resultatBySecondObject2 == true &&
-            resultatByThirdObject2 == true &&
-            resultatByFourthObject2 == true &&
-            resultatByFifthObject2 == true
-        ) {
+    if (element.children.length === 1) {
+        if (element.children[0].children[0].id === "redFlower") {
             return "right";
         } else {
             return "wrong";
@@ -128,11 +176,14 @@ function checkRedColor() {
 document.getElementById("submit").onclick = function () {
     let res1 = checkFlowers();
     let res2 = checkRedColor();
+    let res3 = checkIntersection();
 
     alert(
         "Your choice for flowers space - " +
             res1 +
             ", for red color space - " +
-            res2
+            res2 +
+            ", for Intersection space - " +
+            res3
     );
 };

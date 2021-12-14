@@ -125,7 +125,7 @@ img:hover {
 
 /* circles styles */
 
-.circles {
+.circles0 {
     top: 75px;
     left: calc(50% - 466px / 2);
     width: 466px;
@@ -170,4 +170,49 @@ img:hover {
     text-align: center;
     color: #2f2f2f;
     /* position:; */
+}
+
+/* new styles */
+
+.circles {
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 466px;
+    height: 301px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.circle-container {
+    width: 301px;
+    height: 301px;
+    border: 1px solid #a1a6d9;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-circle {
+    width: 301px;
+    height: 301px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 170px;
+    cursor: pointer;
+}
+
+.cirle1 {
+    position: absolute;
+    left: 50px;
+    background-color: red;
+}
+
+.right-circle-container {
+    transform: rotate(180deg);
+    border: 1px solid #a1a6d9;
+    position: absolute;
+    left: 165px;
 }

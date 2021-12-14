@@ -93,7 +93,7 @@
                         />
                     </div>
                 </div>
-                <div class="circles">
+                <!-- <div class="circles">
                     <div
                         class="flowers"
                         id="flowersPlace"
@@ -111,6 +111,26 @@
                         ondragstart="dragStart(event)"
                     >
                         <div class="redColorHeader">Red color</div>
+                    </div>
+                </div> -->
+                <div class="circles">
+                    <div
+                        class="circle-container"
+                        ondrop="drop(event)"
+                        ondragover="allowDrop(event)"
+                        ondragstart="dragStart(event)"
+                        data-position="0"
+                    >
+                        <div class="background-circle"></div>
+                    </div>
+                    <div
+                        class="circle-container right-circle-container"
+                        ondrop="drop(event)"
+                        ondragover="allowDrop(event)"
+                        ondragstart="dragStart(event)"
+                        data-position="1"
+                    >
+                        <div class="background-circle" data-position="2"></div>
                     </div>
                 </div>
             </div>
