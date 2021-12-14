@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -96,4 +97,70 @@ body {
     width: 570px;
     height: 375px;
     border: 1px solid gray;
+}
+
+/* mans styles */
+
+.mans {
+    left: calc(50% - 330px / 2);
+    width: 330px;
+    height: 290px;
+    border: 1px solid gray;
+}
+
+.friends {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 1px solid gray;
+}
+
+.signatures {
+    border: 1px solid gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 25px;
+}
+
+.signatures .name {
+    font-family: "Caveat", cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: #333030;
+}
+
+/* btns styles */
+
+.btns {
+    top: 40px;
+    left: calc(50% - 570px / 2);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 570px;
+    height: 45px;
+}
+
+.btnSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 170px;
+    height: 45px;
+    left: calc(50% - 170px / 2 - 200px);
+    top: calc(50% - 45px / 2);
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
 }
