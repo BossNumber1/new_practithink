@@ -56,22 +56,21 @@ function drop(e) {
 // check implementation
 
 const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
+let resultFor0 = [];
 
 document.getElementById("flowersPlace").onclick = function () {
     let length = document.getElementById("flowersPlace").children.length;
 
-    let idObjectFirst =
-        document.getElementById("flowersPlace").children[1].children[0].id;
-    let idObjectSecond =
-        document.getElementById("flowersPlace").children[2].children[0].id;
-    let idObjectThird =
-        document.getElementById("flowersPlace").children[3].children[0].id;
+    for (let i = 1; i < length; i++) {
+        resultFor0.push(
+            document.getElementById("flowersPlace").children[i].children[0].id
+        );
+    }
 
     if (length === 4) {
-        let resultatByFirstObject = contentFlowersArea.includes(idObjectFirst);
-        let resultatBySecondObject =
-            contentFlowersArea.includes(idObjectSecond);
-        let resultatByThirdObject = contentFlowersArea.includes(idObjectThird);
+        let resultatByFirstObject = contentFlowersArea.includes(resultFor0[0]);
+        let resultatBySecondObject = contentFlowersArea.includes(resultFor0[1]);
+        let resultatByThirdObject = contentFlowersArea.includes(resultFor0[2]);
 
         if (
             resultatByFirstObject == true &&
@@ -87,6 +86,41 @@ document.getElementById("flowersPlace").onclick = function () {
     }
 };
 
+const contentRedColorArea = ["redFlower", "socks", "ball", "car", "ruler"];
+let resultFor = [];
+
 document.getElementById("redColorPlace").onclick = function () {
-    // alert("clicked to red color area");
+    let length2 = document.getElementById("redColorPlace").children.length;
+
+    for (let i = 1; i < length2; i++) {
+        resultFor.push(
+            document.getElementById("redColorPlace").children[i].children[0].id
+        );
+    }
+
+    if (length2 === 6) {
+        let resultatByFirstObject2 = contentRedColorArea.includes(resultFor[0]);
+        let resultatBySecondObject2 = contentRedColorArea.includes(
+            resultFor[1]
+        );
+        let resultatByThirdObject2 = contentRedColorArea.includes(resultFor[2]);
+        let resultatByFourthObject2 = contentRedColorArea.includes(
+            resultFor[3]
+        );
+        let resultatByFifthObject2 = contentRedColorArea.includes(resultFor[4]);
+
+        if (
+            resultatByFirstObject2 == true &&
+            resultatBySecondObject2 == true &&
+            resultatByThirdObject2 == true &&
+            resultatByFourthObject2 == true &&
+            resultatByFifthObject2 == true
+        ) {
+            alert("всё верно");
+        } else {
+            alert("неверная комбинация");
+        }
+    } else {
+        alert("neobchodimo echo");
+    }
 };
