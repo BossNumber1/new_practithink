@@ -40,16 +40,16 @@ function drop(e) {
         tray.style.height = "50px";
         tray.style.width = "50px";
         tray.style.position = "absolute";
-        tray.style.marginTop = e.clientY - 270 + "px";
+        tray.style.paddingTop = e.clientY - 170 + "px";
 
         if (currentClass === "circle-container") {
-            tray.style.marginLeft = e.clientX - 330 + "px";
+            tray.style.paddingLeft = e.clientX - 330 + "px";
         } else if (currentClass === "background-circle") {
-            tray.style.marginLeft = e.clientX - 600 + "px";
-            tray.style.marginTop = e.clientY - 145 + "px";
+            tray.style.paddingLeft = e.clientX - 600 + "px";
+            tray.style.paddingTop = e.clientY - 145 + "px";
         } else {
-            tray.style.marginLeft = e.clientX - 630 + "px";
-            tray.style.marginTop = e.clientY - 145 + "px";
+            tray.style.paddingLeft = e.clientX - 630 + "px";
+            tray.style.paddingTop = e.clientY - 145 + "px";
         }
 
         let objectBeingCreated = document.createElement("img");
