@@ -55,10 +55,10 @@ function drop(e) {
 
 // check implementation
 
-const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
-let resultFor0 = [];
+function checkFlowers() {
+    const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
+    let resultFor0 = [];
 
-document.getElementById("flowersPlace").onclick = function () {
     let length = document.getElementById("flowersPlace").children.length;
 
     for (let i = 1; i < length; i++) {
@@ -77,19 +77,19 @@ document.getElementById("flowersPlace").onclick = function () {
             resultatBySecondObject == true &&
             resultatByThirdObject == true
         ) {
-            alert("всё верно");
+            return "right";
         } else {
-            alert("неверная комбинация");
+            return "wrong";
         }
     } else {
-        alert("neobchodimo echo");
+        return "not enough objects";
     }
-};
+}
 
-const contentRedColorArea = ["redFlower", "socks", "ball", "car", "ruler"];
-let resultFor = [];
+function checkRedColor() {
+    const contentRedColorArea = ["redFlower", "socks", "ball", "car", "ruler"];
+    let resultFor = [];
 
-document.getElementById("redColorPlace").onclick = function () {
     let length2 = document.getElementById("redColorPlace").children.length;
 
     for (let i = 1; i < length2; i++) {
@@ -116,11 +116,23 @@ document.getElementById("redColorPlace").onclick = function () {
             resultatByFourthObject2 == true &&
             resultatByFifthObject2 == true
         ) {
-            alert("всё верно");
+            return "right";
         } else {
-            alert("неверная комбинация");
+            return "wrong";
         }
     } else {
-        alert("neobchodimo echo");
+        return "not enough objects";
     }
+}
+
+document.getElementById("submit").onclick = function () {
+    let res1 = checkFlowers();
+    let res2 = checkRedColor();
+
+    alert(
+        "your choice for flowers space - " +
+            res1 +
+            ", for red color space - " +
+            res2
+    );
 };
