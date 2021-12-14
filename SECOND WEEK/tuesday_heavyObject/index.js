@@ -2,42 +2,59 @@
 
 let selectBtn;
 
-document.getElementById("btnSelectTom").onclick = function () {
-    document.getElementById("btnSelectTom").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectTom").style.color = "white";
+let elements = document.getElementsByClassName("row");
+
+document.getElementById("balloon").onclick = function (e) {
+    document.getElementById("balloon").classList.add("selectedPicture");
 
     selectBtn = "wrong";
 
-    document.getElementById("btnSelectMike").style.backgroundColor = "white";
-    document.getElementById("btnSelectMike").style.color = "black";
-    document.getElementById("btnSelectJack").style.backgroundColor = "white";
-    document.getElementById("btnSelectJack").style.color = "black";
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
 };
 
-document.getElementById("btnSelectMike").onclick = function () {
-    document.getElementById("btnSelectMike").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectMike").style.color = "white";
-
-    selectBtn = "right";
-
-    document.getElementById("btnSelectTom").style.backgroundColor = "white";
-    document.getElementById("btnSelectTom").style.color = "black";
-    document.getElementById("btnSelectJack").style.backgroundColor = "white";
-    document.getElementById("btnSelectJack").style.color = "black";
-};
-
-document.getElementById("btnSelectJack").onclick = function () {
-    document.getElementById("btnSelectJack").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectJack").style.color = "white";
+document.getElementById("book").onclick = function (e) {
+    document.getElementById("book").classList.add("selectedPicture");
 
     selectBtn = "wrong";
 
-    document.getElementById("btnSelectTom").style.backgroundColor = "white";
-    document.getElementById("btnSelectTom").style.color = "black";
-    document.getElementById("btnSelectMike").style.backgroundColor = "white";
-    document.getElementById("btnSelectMike").style.color = "black";
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
 };
 
-document.getElementById("submit").onclick = function () {
-    alert("you made the " + selectBtn + " choice");
+document.getElementById("truck").onclick = function (e) {
+    document.getElementById("truck").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("feather").onclick = function (e) {
+    document.getElementById("feather").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("car").onclick = function (e) {
+    document.getElementById("car").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
 };
