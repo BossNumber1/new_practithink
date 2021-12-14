@@ -105,18 +105,33 @@ body {
     left: calc(50% - 330px / 2);
     width: 330px;
     height: 290px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .friends {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
+}
+
+.friends div {
+    margin-right: 10px;
+}
+
+.JackConstructor {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.JackConstructor div {
+    margin-top: 0px;
+    margin-bottom: -10px;
+    /* border: 1px solid gray; */
 }
 
 .signatures {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
