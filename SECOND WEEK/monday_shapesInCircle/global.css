@@ -196,7 +196,7 @@ img:hover {
 .background-circle {
     width: 301px;
     height: 301px;
-    background-color: orange;
+    /* background-color: orange; */
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -207,7 +207,7 @@ img:hover {
 .cirle1 {
     position: absolute;
     left: 50px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .right-circle-container {
