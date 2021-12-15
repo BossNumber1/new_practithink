@@ -45,6 +45,28 @@ function drop(e) {
 
 // check implementation
 
+// first part - check to input
+
+let valuesInputs = { tasselLength: "", pencilLength: "" };
+
+document.getElementById("tasselLength").onchange = function (e) {
+    if (e.target.value == 8) {
+        valuesInputs.tasselLength = "right";
+    } else {
+        valuesInputs.tasselLength = "wrong";
+    }
+};
+
+document.getElementById("pencilLength").onchange = function (e) {
+    if (e.target.value == 7) {
+        valuesInputs.pencilLength = "right";
+    } else {
+        valuesInputs.pencilLength = "wrong";
+    }
+};
+
+// second part - check the rest
+
 let selectBtn;
 
 document.getElementById("selectBrush").onclick = function () {
@@ -68,5 +90,11 @@ document.getElementById("selectPencil").onclick = function () {
 };
 
 document.getElementById("submit").onclick = function () {
-    alert("you made the " + selectBtn + " choice");
+    alert(
+        " 1. The value entered in the left field - " +
+            valuesInputs.tasselLength +
+            " and in the right field - " +
+            valuesInputs.pencilLength
+    );
+    alert("2. You made the " + selectBtn + " choice");
 };
