@@ -1,19 +1,30 @@
-// check implementation
-let answer = "";
+// drag and drop implementation
+function dragStart(event) {
+    localStorage.setItem("idOriginala", event.target.id);
+}
 
-document.getElementById("answer").onchange = function (e) {
-    // alert("e.target.value =" + e.target.value);
-    if (e.target.value == 2) {
-        answer = "right";
-    } else {
-        answer = "wrong";
-    }
-};
+function allowDrop(event) {
+    event.preventDefault();
+}
 
-document.getElementById("submit").onclick = function () {
-    if (answer == "") {
-        alert("you must fill in the field");
-    } else {
-        alert(answer + " the number");
-    }
-};
+function drop(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOriginala");
+    let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/" + nameObjectOrig + ".svg";
+    orig.src = "./pictures/" + nameObjectCurrent + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orig.id = currentId;
+}
