@@ -4,59 +4,18 @@ let selectBtn;
 
 let elements = document.getElementsByClassName("row");
 
-document.getElementById("balloon").onclick = function () {
-    document.getElementById("balloon").classList.add("selectedPicture");
+document.getElementById("hexagon").onclick = function () {
+    document.getElementById("hexagon").classList.toggle("selectedPicture");
+    document.getElementById("trapezoid").classList.remove("selectedPicture");
 
     selectBtn = "wrong";
-
-    document.getElementById("book").classList.remove("selectedPicture");
-    document.getElementById("truck").classList.remove("selectedPicture");
-    document.getElementById("feather").classList.remove("selectedPicture");
-    document.getElementById("car").classList.remove("selectedPicture");
 };
 
-document.getElementById("book").onclick = function () {
-    document.getElementById("book").classList.add("selectedPicture");
+document.getElementById("trapezoid").onclick = function () {
+    document.getElementById("trapezoid").classList.toggle("selectedPicture");
+    document.getElementById("hexagon").classList.remove("selectedPicture");
 
     selectBtn = "wrong";
-
-    document.getElementById("balloon").classList.remove("selectedPicture");
-    document.getElementById("truck").classList.remove("selectedPicture");
-    document.getElementById("feather").classList.remove("selectedPicture");
-    document.getElementById("car").classList.remove("selectedPicture");
-};
-
-document.getElementById("truck").onclick = function () {
-    document.getElementById("truck").classList.add("selectedPicture");
-
-    selectBtn = "wrong";
-
-    document.getElementById("balloon").classList.remove("selectedPicture");
-    document.getElementById("book").classList.remove("selectedPicture");
-    document.getElementById("feather").classList.remove("selectedPicture");
-    document.getElementById("car").classList.remove("selectedPicture");
-};
-
-document.getElementById("feather").onclick = function () {
-    document.getElementById("feather").classList.add("selectedPicture");
-
-    selectBtn = "wrong";
-
-    document.getElementById("balloon").classList.remove("selectedPicture");
-    document.getElementById("book").classList.remove("selectedPicture");
-    document.getElementById("truck").classList.remove("selectedPicture");
-    document.getElementById("car").classList.remove("selectedPicture");
-};
-
-document.getElementById("car").onclick = function () {
-    document.getElementById("car").classList.add("selectedPicture");
-
-    selectBtn = "right";
-
-    document.getElementById("balloon").classList.remove("selectedPicture");
-    document.getElementById("book").classList.remove("selectedPicture");
-    document.getElementById("truck").classList.remove("selectedPicture");
-    document.getElementById("feather").classList.remove("selectedPicture");
 };
 
 document.getElementById("submit").onclick = function () {
