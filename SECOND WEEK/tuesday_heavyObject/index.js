@@ -1,6 +1,6 @@
 // check implementation
 
-let selectBtn;
+let selectBtn = "right";
 
 let elements = document.getElementsByClassName("row");
 
