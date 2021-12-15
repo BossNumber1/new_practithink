@@ -15,6 +15,7 @@ function allowDrop(event) {
 function drop(e) {
     // получаем id взятого элемента и класс прародителя
     let idTakenNumber = localStorage.getItem("idTakenNumber");
+    let classGrandparent = localStorage.getItem("classGrandparent");
 
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
@@ -23,11 +24,16 @@ function drop(e) {
     let orig = document.getElementById(idTakenNumber);
     let currentElem = document.getElementById(currentId);
 
-    // меняем поля местами
+    // меняем местами
     currentElem.src = "./pictures/" + idTakenNumber + ".svg";
+
+    if (classGrandparent === "bottomRow") {
+        orig.src = "./pictures/emptyCircle.svg";
+    }
 
     // меняем id местами
     currentElem.id = idTakenNumber;
+    orig.id = currentId;
 }
 
 // check implementation
