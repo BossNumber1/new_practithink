@@ -206,6 +206,7 @@ body {
     order: 0;
     flex-grow: 0;
     margin-right: 30px;
+    text-align: center;
 }
 
 #selectInput {
