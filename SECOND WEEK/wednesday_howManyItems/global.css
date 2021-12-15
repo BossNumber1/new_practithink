@@ -110,6 +110,10 @@ body {
     /* border: 1px solid gray; */
 }
 
+.figures img {
+    cursor: grab;
+}
+
 /* places styles */
 
 .namePlace {
