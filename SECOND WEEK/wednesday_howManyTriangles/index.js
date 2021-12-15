@@ -1,23 +1,19 @@
 // check implementation
+let answer = "";
 
-let selectBtn = "right";
-
-let elements = document.getElementsByClassName("row");
-
-document.getElementById("hexagon").onclick = function () {
-    document.getElementById("hexagon").classList.toggle("selectedPicture");
-    document.getElementById("trapezoid").classList.remove("selectedPicture");
-
-    selectBtn = "right";
-};
-
-document.getElementById("trapezoid").onclick = function () {
-    document.getElementById("trapezoid").classList.toggle("selectedPicture");
-    document.getElementById("hexagon").classList.remove("selectedPicture");
-
-    selectBtn = "wrong";
+document.getElementById("answer").onchange = function (e) {
+    // alert("e.target.value =" + e.target.value);
+    if (e.target.value == 2) {
+        answer = "right";
+    } else {
+        answer = "wrong";
+    }
 };
 
 document.getElementById("submit").onclick = function () {
-    alert("you have selected the " + selectBtn + " figure");
+    if (answer == "") {
+        alert("you must fill in the field");
+    } else {
+        alert(answer + " the number");
+    }
 };
