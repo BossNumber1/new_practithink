@@ -674,3 +674,111 @@ body {
     flex-grow: 0;
     margin-right: 10px;
 }
+
+/* 7 QUESTION */
+
+.app7 {
+    width: 1170px;
+    height: 555px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage7 {
+    top: 26px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content7 {
+    top: 100px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 279.69px;
+}
+
+/* candies styles */
+
+.candies {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    left: calc(50% - 530px / 2);
+    width: 530px;
+    height: 50px;
+}
+
+.candy img {
+    position: static;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin-right: 30px;
+    cursor: grab;
+}
+
+/* mans styles */
+
+.mans {
+    width: 570px;
+    height: 160px;
+    margin-top: 67px;
+    margin-left: -1px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.bob {
+    width: 270px;
+    height: 160px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.dave {
+    width: 270px;
+    height: 160px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.header {
+    width: 271px;
+    height: 28px;
+    background: #205b64;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.textHeader {
+    width: 34px;
+    height: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    left: calc(50% - 34px / 2);
+    top: calc(50% - 20px / 2);
+    color: #ffffff;
+}
+
+.placeDropCandy {
+    width: 271px;
+    height: 133px;
+}
