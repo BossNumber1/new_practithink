@@ -94,19 +94,40 @@ document.getElementById("submit").onclick = function () {
     }
 
     if (basketSquare.children.length === 2) {
-        result.basketSquare = "right";
+        let rightCombination = ["window", "painting"];
+        let resultatSquare = common(basketSquare, rightCombination);
+
+        if (resultatSquare.length === 0) {
+            result.basketSquare = "right";
+        } else {
+            result.basketSquare = "wrong";
+        }
     } else {
         result.basketSquare = "wrong";
     }
 
     if (basketTriangle.children.length === 2) {
-        result.basketTriangle = "right";
+        let rightCombination = ["sign", "tool"];
+        let resultatTriangle = common(basketTriangle, rightCombination);
+
+        if (resultatTriangle.length === 0) {
+            result.basketTriangle = "right";
+        } else {
+            result.basketTriangle = "wrong";
+        }
     } else {
         result.basketTriangle = "wrong";
     }
 
     if (basketRectangle.children.length === 2) {
-        result.basketRectangle = "right";
+        let rightCombination = ["tv", "chocolate"];
+        let resultatTriangle = common(basketRectangle, rightCombination);
+
+        if (resultatTriangle.length === 0) {
+            result.basketRectangle = "right";
+        } else {
+            result.basketRectangle = "wrong";
+        }
     } else {
         result.basketRectangle = "wrong";
     }
