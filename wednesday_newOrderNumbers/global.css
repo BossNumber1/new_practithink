@@ -147,3 +147,7 @@ body {
     margin-right: 30px;
     cursor: grab;
 }
+
+.number:hover {
+    transform: scale(1.2);
+}
