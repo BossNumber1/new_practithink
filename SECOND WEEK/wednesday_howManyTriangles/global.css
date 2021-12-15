@@ -95,7 +95,69 @@ body {
     left: calc(50% - 480px / 2);
     width: 480px;
     height: 160px;
-    /* display: flex;
+    /* border: 1px solid gray; */
+}
+
+/* row styles */
+
+.row {
+    display: flex;
     align-items: flex-end;
-    justify-content: space-between; */
+    justify-content: space-between;
+    /* border: 1px solid gray; */
+}
+
+/* answer styles */
+
+.answer {
+    top: 43px;
+    left: calc(50% - 165px / 2);
+    width: 165px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid gray; */
+}
+
+.inputArea input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 70px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.text {
+    position: static;
+    width: 85px;
+    height: 22px;
+    left: 80px;
+    top: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
 }
