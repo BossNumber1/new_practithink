@@ -51,12 +51,14 @@ document.getElementById("submit").onclick = function () {
     let childrenTopRow = topRow[0].children;
 
     for (let i = 0; i < childrenTopRow.length; i++) {
-        if (childrenTopRow[i].children[0].id == correctOrder[i]) {
-            resultat.push("верно");
-        } else {
+        if (childrenTopRow[i].children[0].id != correctOrder[i]) {
             resultat.push("нет");
         }
     }
 
-    alert(resultat);
+    if (resultat.length === 0) {
+        alert("well done, the right choice");
+    } else {
+        alert("wrong, try again");
+    }
 };
