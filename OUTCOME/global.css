@@ -732,6 +732,10 @@ body {
     cursor: grab;
 }
 
+.candy img:hover {
+    transform: scale(1.2);
+}
+
 /* mans styles */
 
 .mans {
@@ -781,4 +785,114 @@ body {
 .placeDropCandy {
     width: 271px;
     height: 133px;
+}
+
+/* 8 QUESTION */
+
+.app8 {
+    width: 1170px;
+    height: 550px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage8 {
+    top: 26px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content8 {
+    top: 155px;
+    left: calc(50% - 505px / 2);
+    width: 505px;
+    height: 275px;
+}
+
+/* animals styles */
+
+.animals {
+    width: 505px;
+    height: 192.8px;
+}
+
+.rowJellyfish,
+.rowSeahorses {
+    display: flex;
+}
+
+.rowJellyfish div,
+.rowSeahorses div {
+    width: 100.33px;
+    height: 96.4px;
+    border: 2px solid #a1a6d9;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowJellyfish div:last-of-type,
+.rowSeahorses div:last-of-type {
+    border-right: 2px solid #a1a6d9;
+}
+
+.rowJellyfish div {
+    border-bottom: none;
+}
+
+/* inputs styles */
+
+.inputsCollection2 {
+    top: 49px;
+    left: calc(50% - 192px / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 30px;
+}
+
+.inputContent4 input {
+    position: static;
+    width: 50px;
+    height: 30px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 5px;
+    border: 1px solid #2f2f2f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sign {
+    position: static;
+    width: 11px;
+    height: 22px;
+    left: 55px;
+    top: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 5px;
 }
