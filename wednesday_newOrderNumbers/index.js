@@ -15,7 +15,6 @@ function allowDrop(event) {
 function drop(e) {
     // получаем id взятого элемента и класс прародителя
     let idTakenNumber = localStorage.getItem("idTakenNumber");
-    let classGrandparent = localStorage.getItem("classGrandparent");
 
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
@@ -25,43 +24,10 @@ function drop(e) {
     let currentElem = document.getElementById(currentId);
 
     // меняем поля местами
-    orig.id = currentId;
-
-    if (classGrandparent === "bottomRow") {
-        // let pele = orig.parentElement; // получаю родителя
-        // let pos = pele.dataset.position; // теперь его позицию
-
-        orig.parentElement.style.position = "relative";
-        orig.parentElement.style.display = "flex";
-
-        let objectBeingCreated = document.createElement("img");
-        objectBeingCreated.style.borderRadius = "50px";
-        objectBeingCreated.style.background = "#369cb7";
-        objectBeingCreated.style.position = "absolute";
-        objectBeingCreated.style.width = "50px";
-        objectBeingCreated.style.height = "50px";
-        objectBeingCreated.style.top = "0px";
-        objectBeingCreated.style.right = "0px";
-        objectBeingCreated.style.zIndex = 10;
-        // objectBeingCreated.id = "cape";
-
-        orig.parentElement.appendChild(objectBeingCreated);
-    } else {
-        orig.src = "./pictures/" + currentId + ".svg";
-    }
-
-    currentElem.id = idTakenNumber;
     currentElem.src = "./pictures/" + idTakenNumber + ".svg";
 
-    if (currentId === "square") {
-        e.target.parentElement.className = "number";
-    } else {
-        e.target.parentElement.className = "square";
-    }
-
-    if (classGrandparent !== "bottomRow") {
-        e.target.style.opacity = "1";
-    }
+    // меняем id местами
+    currentElem.id = idTakenNumber;
 }
 
 // check implementation
