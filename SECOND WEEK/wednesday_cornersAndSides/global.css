@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -37,7 +36,7 @@ body {
 
 .app {
     width: 1170px;
-    height: 382px;
+    height: 422px;
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -93,43 +92,22 @@ body {
 
 .content {
     top: 132px;
-    left: calc(50% - 570px / 2);
-    width: 570px;
-    height: 375px;
-    /* border: 1px solid gray; */
-}
-
-.row {
-    left: calc(50% - 770px / 2);
-    width: 770px;
-    height: 130px;
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 170px;
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.leftFigure,
+.rightFigure {
+    width: 170px;
+    height: 170px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
     align-items: center;
-}
-
-.row img {
+    justify-content: center;
     cursor: pointer;
-}
-
-.row div:not(.selectedPicture):hover {
-    margin: 0 30px;
-    width: 130px;
-    height: 130px;
-    background: #ffffff;
-    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
-    border-radius: 10px;
-}
-
-.selectedPicture {
-    position: static;
-    width: 130px;
-    height: 130px;
-    margin: 0 30px;
-    overflow: hidden;
-    background: #ffffff;
-    border: 1px solid #369cb7;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
-    border-radius: 10px;
 }
