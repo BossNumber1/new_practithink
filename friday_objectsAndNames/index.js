@@ -59,6 +59,21 @@ let result = {
     basketRectangle: 0,
 };
 
+function common(basketCircle, rightCombination) {
+    let resultat = [];
+    let childs = basketCircle.children;
+
+    for (let i = 0; i < childs.length; i++) {
+        let idChild = childs[i].children[0].id;
+
+        if (idChild.slice(0, -4) != rightCombination[i]) {
+            resultat.push("нет");
+        }
+    }
+
+    return resultat;
+}
+
 document.getElementById("submit").onclick = function () {
     let basketCircle = document.getElementById("basketCircle");
     let basketSquare = document.getElementById("basketSquare");
@@ -66,7 +81,14 @@ document.getElementById("submit").onclick = function () {
     let basketRectangle = document.getElementById("basketRectangle");
 
     if (basketCircle.children.length === 3) {
-        result.basketCircle = "right";
+        let rightCombination = ["clock", "cookie", "pizza"];
+        let resultatCircle = common(basketCircle, rightCombination);
+
+        if (resultatCircle.length === 0) {
+            result.basketCircle = "right";
+        } else {
+            result.basketCircle = "wrong";
+        }
     } else {
         result.basketCircle = "wrong";
     }
