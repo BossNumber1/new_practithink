@@ -94,7 +94,7 @@ body {
     left: calc(50% - 360px / 2);
     width: 360px;
     height: 265px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .figures,
@@ -107,12 +107,27 @@ body {
 .figures {
     width: 360px;
     height: 100px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
+}
+
+/* places styles */
+
+.namePlace {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #2f2f2f;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 5px 0px;
 }
 
 .places {
     top: 37px;
     width: 360px;
     height: 125px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
