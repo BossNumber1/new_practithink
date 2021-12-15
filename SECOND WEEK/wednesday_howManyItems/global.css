@@ -97,6 +97,8 @@ body {
     /* border: 1px solid gray; */
 }
 
+/* figures styles */
+
 .figures,
 .places {
     display: flex;
@@ -112,6 +114,19 @@ body {
 
 .figures img {
     cursor: grab;
+}
+
+.figures img:hover {
+    position: static;
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 30px;
 }
 
 /* places styles */
