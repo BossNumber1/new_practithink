@@ -28,3 +28,20 @@ function drop(e) {
     currentElement.id = idOrig;
     orig.id = currentId;
 }
+
+// check implementation
+document.getElementById("submit").onclick = function (e) {
+    let idChild0 = document.getElementById("place0").children[1].id;
+    let idChild1 = document.getElementById("place1").children[1].id;
+    let idChild2 = document.getElementById("place2").children[1].id;
+
+    if (
+        idChild0.slice(0, -1) === "stars" &&
+        idChild1.slice(0, -1) === "rectangles" &&
+        idChild2.slice(0, -1) === "pentagons"
+    ) {
+        alert("the right choice");
+    } else {
+        alert("the wrong choice");
+    }
+};
