@@ -2,7 +2,6 @@
 let answer = "";
 
 document.getElementById("answer").onchange = function (e) {
-    // alert("e.target.value =" + e.target.value);
     if (e.target.value == 2) {
         answer = "right";
     } else {
