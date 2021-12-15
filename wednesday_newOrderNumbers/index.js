@@ -26,10 +26,15 @@ function drop(e) {
 
     // меняем местами
     currentElem.src = "./pictures/" + idTakenNumber + ".svg";
+    currentElem.style.cursor = "grab";
 
     if (classGrandparent === "bottomRow") {
         orig.src = "./pictures/emptyCircle.svg";
+    } else {
+        orig.src = "./pictures/square.svg";
     }
+
+    orig.style.cursor = "default";
 
     // меняем id местами
     currentElem.id = idTakenNumber;
