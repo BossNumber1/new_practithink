@@ -8,7 +8,7 @@ document.getElementById("hexagon").onclick = function () {
     document.getElementById("hexagon").classList.toggle("selectedPicture");
     document.getElementById("trapezoid").classList.remove("selectedPicture");
 
-    selectBtn = "wrong";
+    selectBtn = "right";
 };
 
 document.getElementById("trapezoid").onclick = function () {
@@ -19,5 +19,5 @@ document.getElementById("trapezoid").onclick = function () {
 };
 
 document.getElementById("submit").onclick = function () {
-    alert("you have selected the " + selectBtn + " object");
+    alert("you have selected the " + selectBtn + " figure");
 };
