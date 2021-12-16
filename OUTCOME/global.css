@@ -1009,3 +1009,74 @@ body {
     flex-grow: 0;
     margin-right: 30px;
 }
+
+/* 10 QUESTION */
+
+.app10 {
+    width: 1170px;
+    height: 382px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage10 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+/* content styles */
+
+.content10 {
+    top: 132px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 375px;
+    /* border: 1px solid gray; */
+}
+
+.row {
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row img {
+    cursor: pointer;
+}
+
+.row div:not(.selectedPicture):hover {
+    margin: 0 30px;
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
+    border-radius: 10px;
+}
+
+.selectedPicture {
+    position: static;
+    width: 130px;
+    height: 130px;
+    margin: 0 30px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
+    border-radius: 10px;
+}
