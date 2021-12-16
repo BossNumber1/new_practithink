@@ -404,12 +404,12 @@ function drop13(e) {
 // 14 QUESTION
 
 function dragStart14(e) {
-    localStorage.setItem("idFigure", e.target.id);
+    localStorage.setItem("idFigure14", e.target.id);
 }
 
 function drop14(e) {
     // забираем данные из хранилища
-    let idFigure = localStorage.getItem("idFigure");
+    let idFigure = localStorage.getItem("idFigure14");
 
     // получаем текущий id
     let currentId = e.target.id;
@@ -419,7 +419,7 @@ function drop14(e) {
     let currentElement = document.getElementById(currentId);
 
     // начинаем уборку
-    if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
+    if (idFigure != "toyCar" && idFigure != "robot" && idFigure != "pyramid") {
         currentElement.src =
             "./pictures/14que/" + idFigure.slice(0, -1) + ".svg";
         currentElement.style.cursor = "grab";
