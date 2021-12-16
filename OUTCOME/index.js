@@ -116,9 +116,7 @@ function drop3(e) {
     orig.id = currentId;
 }
 
-// 4 QUESTION
-
-// without dnd
+// 4 QUESTION - without dnd
 
 // 5 QUESTION
 
@@ -275,9 +273,7 @@ function drop7(e) {
     }
 }
 
-// 8 QUESTION
-
-// without dnd
+// 8 QUESTION - without dnd
 
 // 9 QUESTION
 
@@ -306,4 +302,53 @@ function drop9(e) {
     e.target.id = idTakenCube;
     e.target.setAttribute("data-name", nameCube);
     e.target.parentElement.style.cursor = "grab";
+}
+
+// 10, 11 QUESTION - without dnd
+
+// 12 QUESTION
+
+function dragStart12(e) {
+    localStorage.setItem("idFigure", e.target.id);
+}
+
+function drop12(e) {
+    // забираем данные из хранилища
+    let idFigure = localStorage.getItem("idFigure");
+
+    // получаем класс предка предка
+    let grandparentClass = e.target.parentElement.parentElement.className;
+
+    // получаем текущий id
+    let currentId = e.target.id;
+
+    // начинаем ложить фигуру в корзину
+
+    let orig = document.getElementById(idFigure); // для начала получаем картинку для вставки
+
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.id = idFigure.slice(0, -1);
+    objectBeingCreated.src =
+        "./pictures/12que/" + idFigure.slice(0, -1) + ".svg";
+    objectBeingCreated.style.cursor = "grab";
+    objectBeingCreated.style.marginTop = "5px";
+    objectBeingCreated.style.marginLeft = "5px";
+
+    if (grandparentClass !== "topRow3" || grandparentClass !== "bottomRow3") {
+        document
+            .getElementById(currentId)
+            .appendChild(document.createElement("div"))
+            .appendChild(objectBeingCreated);
+
+        orig.src = "./pictures/12que/square.svg";
+        orig.style.cursor = "default";
+    }
+
+    // делаем возврат на место
+
+    if (grandparentClass === "topRow3" || grandparentClass === "bottomRow3") {
+        e.target.src = "./pictures/12que/" + idFigure + ".svg";
+        e.target.style.cursor = "grab";
+        orig.remove();
+    }
 }
