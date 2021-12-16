@@ -436,3 +436,48 @@ function drop14(e) {
     currentElement.id = idFigure;
     orig.id = currentId;
 }
+
+// 15 QUESTION - without dnd
+
+// 16 QUESTION
+
+function drag16(e) {
+    localStorage.setItem("idFigure16", e.target.id);
+}
+
+function drop16(e) {
+    // забираем данные из хранилища
+    let idFigure = localStorage.getItem("idFigure16");
+
+    // получаем текущий id
+    let currentId = e.target.id;
+
+    // получаем картинки
+    let orig = document.getElementById(idFigure);
+    let currentElement = document.getElementById(currentId);
+
+    // начинаем уборку
+    if (currentId === "placeFlat" || currentId === "placeSolid") {
+        // добавляем предмет в корзину
+        let tray = document.createElement("div");
+        tray.style.height = "60px";
+        tray.style.width = "60px";
+
+        let objectBeingCreated = document.createElement("img");
+        objectBeingCreated.src = "./pictures/16que/" + idFigure + ".svg";
+        objectBeingCreated.id = idFigure;
+
+        currentElement.appendChild(tray).appendChild(objectBeingCreated);
+
+        // заменяем место предмета на квадрат
+        orig.src = "./pictures/16que/emptyPlace.svg";
+        orig.style.cursor = "default";
+        orig.id = "emptyPlace";
+    } else {
+        currentElement.src = "./pictures/16que/" + idFigure + ".svg";
+        currentElement.style.cursor = "grab";
+        currentElement.id = idFigure;
+
+        orig.remove();
+    }
+}
