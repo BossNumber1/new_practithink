@@ -400,3 +400,39 @@ function drop13(e) {
         orig.remove();
     }
 }
+
+// 14 QUESTION
+
+function dragStart14(e) {
+    localStorage.setItem("idFigure", e.target.id);
+}
+
+function drop14(e) {
+    // забираем данные из хранилища
+    let idFigure = localStorage.getItem("idFigure");
+
+    // получаем текущий id
+    let currentId = e.target.id;
+
+    // получаем картинки
+    let orig = document.getElementById(idFigure);
+    let currentElement = document.getElementById(currentId);
+
+    // начинаем уборку
+    if (idFigure != "car" && idFigure != "robot" && idFigure != "pyramid") {
+        currentElement.src =
+            "./pictures/14que/" + idFigure.slice(0, -1) + ".svg";
+        currentElement.style.cursor = "grab";
+        orig.src = "./pictures/14que/" + idFigure + ".svg";
+        orig.style.cursor = "default";
+    } else {
+        currentElement.src = "./pictures/14que/" + idFigure + ".svg";
+        currentElement.style.cursor = "grab";
+        orig.src = "./pictures/14que/" + currentId.slice(0, -1) + ".svg";
+        orig.style.cursor = "default";
+    }
+
+    // поменять id для дальнейших переносок
+    currentElement.id = idFigure;
+    orig.id = currentId;
+}
