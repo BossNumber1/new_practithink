@@ -1,6 +1,7 @@
 /* common styles */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -1079,4 +1080,118 @@ body {
     box-sizing: border-box;
     box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
     border-radius: 10px;
+}
+
+/* 11 QUESTION */
+
+.app11 {
+    width: 1170px;
+    height: 627px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage11 {
+    top: 25px;
+    left: calc(50% - 561px / 2);
+    width: 561px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+/* content styles */
+
+.content11 {
+    top: 132px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 375px;
+}
+
+/* mans styles */
+
+.mans {
+    left: calc(50% - 330px / 2);
+    width: 330px;
+    height: 290px;
+}
+
+.friends {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.friends div {
+    margin-right: 10px;
+}
+
+.JackConstructor {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.JackConstructor div {
+    margin-top: 0px;
+    margin-bottom: -10px;
+}
+
+.signatures {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 40px;
+}
+
+.signatures .name {
+    font-family: "Caveat", cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: #333030;
+}
+
+/* btns styles */
+
+.btns2 {
+    top: 40px;
+    left: calc(50% - 570px / 2);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 570px;
+    height: 45px;
+}
+
+.btnSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 170px;
+    height: 45px;
+    left: calc(50% - 170px / 2 - 200px);
+    top: calc(50% - 45px / 2);
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+    cursor: pointer;
 }
