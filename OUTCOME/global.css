@@ -2076,3 +2076,204 @@ img:hover {
     left: 80%;
     height: 50px;
 }
+
+/* 20 QUESTION */
+
+.question20 {
+    top: 30px;
+}
+
+.app20 {
+    width: 1170px;
+    height: 857px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage20 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+/* content styles */
+
+.content20 {
+    top: 132px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 604.76px;
+}
+
+/* 1. cubes styles */
+
+.cubes2 {
+    left: calc(50% - 172px / 2);
+    width: 172px;
+    height: 330px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* columns styles */
+
+.leftColumn,
+.rightColumn {
+    display: flex;
+    top: -40px;
+    height: 222.01px;
+}
+
+.tool {
+    margin-right: 5px;
+}
+
+#tassel {
+    top: 50px;
+}
+
+#pencil {
+    top: 70px;
+}
+
+.column div {
+    margin: -10.7px 0;
+}
+
+.column {
+    margin-right: 6.7px;
+}
+
+/* inputs styles */
+
+.inputContent6 {
+    left: calc(50% - 70px / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 56px;
+}
+
+.inputContent6 input {
+    width: 50px;
+    height: 30px;
+    margin: 0px 5px;
+    border: 1.5px solid #2f2f2f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.about {
+    position: static;
+    width: 62px;
+    height: 16px;
+    left: 4px;
+    top: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+/* diceShop styles */
+
+.diceShop {
+    top: 68.99px;
+    left: calc(50% - 610px / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 610px;
+    height: 80.76px;
+}
+
+.topRow5,
+.bottomRow5 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.topRow5 div,
+.bottomRow5 div {
+    position: static;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 20px;
+    cursor: grab;
+}
+
+.bottomRow5 {
+    margin-top: 8px;
+}
+
+/* btns styles */
+
+.btnsAndQuestion {
+    margin-top: 95px;
+}
+
+.question2 {
+    width: 770px;
+    height: 22px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.btns3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 45px;
+}
+
+.btns3 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 170px;
+    height: 45px;
+    left: calc(50% - 170px / 2 - 100px);
+    top: calc(50% - 45px / 2);
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+    cursor: pointer;
+}
