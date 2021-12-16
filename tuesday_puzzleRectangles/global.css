@@ -56,12 +56,40 @@ body {
     color: #2f2f2f;
 }
 
+.clue {
+    top: 30px;
+    left: calc(50% - 293px / 2);
+    width: 293px;
+    /* height: 24px; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.clueText {
+    position: static;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #065b5b;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
 .lineUnderHeading {
     position: absolute;
     width: 1169px;
     height: 0px;
     /* left: 136px; */
-    top: 80px;
+    top: 100px;
     border-bottom: 1px solid #a8a8a8;
 }
 
