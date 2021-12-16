@@ -2,13 +2,13 @@
 
 // common commands
 
-function allowDrop(event) {
-    event.preventDefault();
+function allowDrop(e) {
+    e.preventDefault();
 }
 
 // 1 QUESTION
 
-function dragStart1(e) {
+function drag1(e) {
     localStorage.setItem("idTakenNumber", e.target.id);
     localStorage.setItem(
         "classGrandparent",
@@ -47,11 +47,11 @@ function drop1(e) {
 
 // 2 QUESTION
 
-function dragStart2(event) {
-    localStorage.setItem("idTakenDiv", event.target.id);
+function drag2(e) {
+    localStorage.setItem("idTakenDiv", e.target.id);
     localStorage.setItem(
         "classElementGrandparent",
-        event.target.parentElement.parentElement.className
+        e.target.parentElement.parentElement.className
     );
 }
 
@@ -90,8 +90,8 @@ function drop2(e) {
 
 // 3 QUESTION
 
-function dragStart3(event) {
-    localStorage.setItem("idOriginala", event.target.id);
+function drag3(e) {
+    localStorage.setItem("idOriginala", e.target.id);
 }
 
 function drop3(e) {
@@ -120,7 +120,7 @@ function drop3(e) {
 
 // 5 QUESTION
 
-function dragStart5(e) {
+function drag5(e) {
     localStorage.setItem("idSign", e.target.id);
     localStorage.setItem(
         "classGrandparentElement",
@@ -161,10 +161,10 @@ function drop5(e) {
 
 // 6 QUESTION
 
-function dragStart6(event) {
-    localStorage.setItem("appleIdStarted", event.target.id);
-    localStorage.setItem("positionAppleInRow", event.target.dataset.position);
-    localStorage.setItem("parentElementIdStart", event.target.parentElement.id);
+function drag6(e) {
+    localStorage.setItem("appleIdStarted", e.target.id);
+    localStorage.setItem("positionAppleInRow", e.target.dataset.position);
+    localStorage.setItem("parentElementIdStart", e.target.parentElement.id);
 }
 
 function drop6() {
@@ -216,13 +216,13 @@ function drop6() {
 
 // 7 QUESTION
 
-function dragStart7(event) {
-    localStorage.setItem("idTakenCandy", event.target.id);
+function drag7(e) {
+    localStorage.setItem("idTakenCandy", e.target.id);
     localStorage.setItem(
         "classElemGrandparent",
-        event.target.parentElement.parentElement.className
+        e.target.parentElement.parentElement.className
     );
-    localStorage.setItem("positionElem", event.target.dataset.position);
+    localStorage.setItem("positionElem", e.target.dataset.position);
 }
 
 function drop7(e) {
@@ -277,9 +277,9 @@ function drop7(e) {
 
 // 9 QUESTION
 
-function dragStart9(event) {
-    localStorage.setItem("idTakenCube", event.target.id);
-    localStorage.setItem("nameCube", event.target.dataset.name);
+function drag9(e) {
+    localStorage.setItem("idTakenCube", e.target.id);
+    localStorage.setItem("nameCube", e.target.dataset.name);
 }
 
 function drop9(e) {
@@ -308,7 +308,7 @@ function drop9(e) {
 
 // 12 QUESTION
 
-function dragStart12(e) {
+function drag12(e) {
     localStorage.setItem("idFigure", e.target.id);
 }
 
@@ -355,7 +355,7 @@ function drop12(e) {
 
 // 13 QUESTION
 
-function dragStart13(e) {
+function drag13(e) {
     localStorage.setItem("idFigure", e.target.id);
 }
 
@@ -403,7 +403,7 @@ function drop13(e) {
 
 // 14 QUESTION
 
-function dragStart14(e) {
+function drag14(e) {
     localStorage.setItem("idFigure14", e.target.id);
 }
 
@@ -556,8 +556,8 @@ function drop18(e) {
 
 // 20 QUESTION
 
-function drag20(event) {
-    localStorage.setItem("idOrig20", event.target.id);
+function drag20(e) {
+    localStorage.setItem("idOrig20", e.target.id);
 }
 
 function drop20(e) {
