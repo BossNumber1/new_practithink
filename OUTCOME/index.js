@@ -549,3 +549,48 @@ function drop18(e) {
         orig.remove();
     }
 }
+
+// 19 QUESTION
+
+// ТУТ БУДЕТ КОД
+
+// 20 QUESTION
+
+function drag20(event) {
+    localStorage.setItem("idOrig20", event.target.id);
+}
+
+function drop20(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrig20");
+    let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/20que/" + nameObjectOrig + ".svg";
+    currentElement.style.opacity = "1";
+    currentElement.style.cursor = "grab";
+
+    if (
+        orig.parentElement.parentElement.className === "topRow5" ||
+        orig.parentElement.parentElement.className === "bottomRow5"
+    ) {
+        orig.style.opacity = "0.5";
+    } else {
+        orig.src = "./pictures/20que/" + nameObjectCurrent + ".svg";
+    }
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orig.id = currentId;
+
+    // меняем вид курсора
+    orig.style.cursor = "default";
+}
