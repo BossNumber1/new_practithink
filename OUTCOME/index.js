@@ -352,3 +352,51 @@ function drop12(e) {
         orig.remove();
     }
 }
+
+// 13 QUESTION
+
+function dragStart13(e) {
+    localStorage.setItem("idFigure", e.target.id);
+}
+
+function drop13(e) {
+    // забираем данные из хранилища
+    let idFigure = localStorage.getItem("idFigure");
+
+    // получаем класс предка
+    let grandparentClass = e.target.parentElement.parentElement.className;
+
+    // получаем текущий id
+    let currentId = e.target.id;
+
+    // начинаем ложить объект в корзину
+    // получаем картинку для вставки
+    let orig = document.getElementById(idFigure);
+
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.id = idFigure + "temp";
+    objectBeingCreated.alt = idFigure;
+    objectBeingCreated.src = "./pictures/13que/" + idFigure + ".svg";
+    objectBeingCreated.style.cursor = "grab";
+    objectBeingCreated.style.marginTop = "5px";
+    objectBeingCreated.style.marginLeft = "3px";
+
+    if (grandparentClass !== "objects") {
+        document
+            .getElementById(currentId)
+            .appendChild(document.createElement("div"))
+            .appendChild(objectBeingCreated);
+
+        orig.src = "./pictures/13que/square.svg";
+        orig.style.cursor = "default";
+    }
+
+    // делаем возврат на место
+
+    if (grandparentClass === "objects") {
+        e.target.src = "./pictures/13que/" + orig.alt + ".svg";
+        e.target.id = orig.alt;
+        e.target.style.cursor = "grab";
+        orig.remove();
+    }
+}
