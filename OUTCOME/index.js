@@ -1,3 +1,5 @@
+// drag and drop implementation
+
 // common commands
 
 function allowDrop(event) {
@@ -5,8 +7,6 @@ function allowDrop(event) {
 }
 
 // 1 QUESTION
-
-// drag and drop implementation
 
 function dragStart1(e) {
     localStorage.setItem("idTakenNumber", e.target.id);
@@ -47,8 +47,6 @@ function drop1(e) {
 
 // 2 QUESTION
 
-// drag and drop implementation
-
 function dragStart2(event) {
     localStorage.setItem("idTakenDiv", event.target.id);
     localStorage.setItem(
@@ -88,4 +86,32 @@ function drop2(e) {
 
     // именно - после всех операций - удаляем содержимое изначального места
     orig.textContent = "";
+}
+
+// 3 QUESTION
+
+function dragStart3(event) {
+    localStorage.setItem("idOriginala", event.target.id);
+}
+
+function drop3(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOriginala");
+    let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/3que/" + nameObjectOrig + ".svg";
+    orig.src = "./pictures/3que/" + nameObjectCurrent + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orig.id = currentId;
 }
