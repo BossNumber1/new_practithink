@@ -79,10 +79,6 @@ function dragStart2(event) {
     );
 }
 
-// function allowDrop(event) {
-//     event.preventDefault();
-// }
-
 function drop2(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenDiv = localStorage.getItem("idTakenDiv");
@@ -98,7 +94,7 @@ function drop2(e) {
     orig.id = currentId;
 
     if (classElementGrandparent === "collectionFilledFields") {
-        orig.style.background = "#369cb7";
+        orig.style.background = "#3679b5";
         orig.style.opacity = "0.5";
     } else {
         orig.classList.remove("filledField");
