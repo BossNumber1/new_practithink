@@ -1442,3 +1442,103 @@ img:hover {
     height: 115px;
     display: flex;
 }
+
+/* 14 QUESTION */
+
+.app14 {
+    width: 1170px;
+    height: 625px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage14 {
+    top: 26px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content14 {
+    top: 131px;
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 350px;
+}
+
+/* closet styles */
+
+.closetSpace {
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 250px;
+    /* border: 1px solid black; */
+}
+
+.closet {
+    left: calc(50% - 198px / 2);
+    width: 198px;
+    height: 250px;
+}
+
+#bottomSeat,
+#centralSeat,
+#topSeat {
+    width: 60px;
+    height: 60px;
+}
+
+#topSeat {
+    top: -235px;
+    left: 195px;
+}
+
+#centralSeat {
+    top: -213px;
+    left: 195px;
+}
+
+#bottomSeat {
+    top: -193px;
+    left: 115px;
+}
+
+/* toys styles */
+
+.toys {
+    top: 39px;
+    left: calc(50% - 240px / 2);
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.toy {
+    width: 60px;
+    height: 60px;
+}
+
+.toy img {
+    cursor: grab;
+}
+
+.toy img:hover {
+    transform: scale(1.2);
+}
