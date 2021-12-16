@@ -115,3 +115,48 @@ function drop3(e) {
     currentElement.id = idOrig;
     orig.id = currentId;
 }
+
+// 4 QUESTION
+
+// without dnd
+
+// 5 QUESTION
+
+function dragStart5(e) {
+    localStorage.setItem("idSign", e.target.id);
+    localStorage.setItem(
+        "classGrandparentElement",
+        e.target.parentElement.className
+    );
+}
+
+function drop5(e) {
+    // получаем id взятого элемента и класс прародителя
+    let idSign = localStorage.getItem("idSign");
+    let classGrandparentElement = localStorage.getItem(
+        "classGrandparentElement"
+    );
+
+    let currentClassGrandparent = e.target.parentElement.className;
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orig = document.getElementById(idSign);
+    let currentElem = document.getElementById(currentId);
+
+    // меняем поля местами
+    currentElem.parentElement.className = classGrandparentElement;
+    currentElem.id = idSign;
+    currentElem.textContent = orig.textContent;
+    currentElem.setAttribute("draggable", true);
+
+    orig.textContent = "";
+    orig.id = currentId;
+    orig.parentElement.className = currentClassGrandparent;
+
+    if (orig.parentElement.parentElement.className !== "inputCollection") {
+        orig.style.background = "#c2e1e9";
+    }
+}
