@@ -1245,7 +1245,7 @@ body {
     height: 100px;
 }
 
-img:hover {
+.figures2 img:hover {
     transform: scale(1.2);
 }
 
