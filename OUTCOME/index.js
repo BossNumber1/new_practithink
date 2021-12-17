@@ -657,13 +657,19 @@ document.querySelector("input").onchange = function (e) {
 
 function question4() {
     if (countCookies) {
-        if (countCookies == 10) {
-            alert(" верно ");
+        if (countCookies != 10) {
+            document.querySelector("input").style.backgroundColor = "#ED7777";
+            document.querySelector("input").style.color = "white";
+            document.querySelector("input").style.border = "1px solid #ED7777";
         } else {
-            alert(" неверно ");
+            document.querySelector("input").style.backgroundColor = "#48B736";
+            document.querySelector("input").style.color = "white";
+            document.querySelector("input").style.border = "1px solid #48B736";
         }
     } else {
-        alert("стоит заполнить поле ввода");
+        document.querySelector("input").style.backgroundColor = "#ED7777";
+        document.querySelector("input").style.color = "white";
+        document.querySelector("input").style.border = "1px solid #ED7777";
     }
 }
 
