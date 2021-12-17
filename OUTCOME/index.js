@@ -587,35 +587,29 @@ function drop20(e) {
 
 // -------------------------------------------------------------common function---------------------------------------------------
 
-function succerror(elem, checkElement, ancestor) {
-    function objectCreation(status) {
-        let object = document.createElement("img");
-        object.style.marginLeft = "10px";
-
-        if (status === "success") {
-            object.src = "./pictures/successIcon.svg";
-        } else {
-            object.src = "./pictures/failureIcon.svg";
-        }
-
-        return object;
-    }
-
+function succerror(elem, checkElement) {
     if (checkElement) {
-        let img = objectCreation("failure");
-        ancestor[0].children[0].appendChild(img);
-
         elem.style.backgroundColor = "#ED7777";
         elem.style.color = "white";
         elem.style.border = "1px solid #ED7777";
     } else {
-        let img = objectCreation("success");
-        ancestor[0].children[0].appendChild(img);
-
         elem.style.backgroundColor = "#48B736";
         elem.style.color = "white";
         elem.style.border = "1px solid #48B736";
     }
+}
+
+function addImage(status, ancestor) {
+    let object = document.createElement("img");
+    object.style.marginLeft = "10px";
+
+    if (status === "success") {
+        object.src = "./pictures/successIcon.svg";
+    } else {
+        object.src = "./pictures/failureIcon.svg";
+    }
+
+    ancestor[0].children[0].appendChild(object);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -692,11 +686,8 @@ document.querySelector("input").onchange = function (e) {
 
 function question4() {
     if (countCookies) {
-        succerror(
-            document.querySelector("input"),
-            countCookies != 10,
-            document.getElementsByClassName("question4")
-        );
+        succerror(document.querySelector("input"), countCookies != 10);
+        addImage("success", document.getElementsByClassName("question4"));
     } else {
         document.querySelector("input").style.backgroundColor = "#ED7777";
         document.querySelector("input").style.color = "white";
@@ -731,22 +722,21 @@ function question5() {
 
     succerror(
         document.getElementById("amountIceCream"),
-        selected.amountIceCream === "wrong",
-        document.getElementsByClassName("question5")
+        selected.amountIceCream === "wrong"
     );
 
     succerror(
         document.getElementsByClassName("inputCollection")[0].children[1]
             .children[0],
-        selectedSign.replace(/\s/g, "") != "<",
-        document.getElementsByClassName("question5")
+        selectedSign.replace(/\s/g, "") != "<"
     );
 
     succerror(
         document.getElementById("amountFlowers"),
-        selected.amountFlowers === "wrong",
-        document.getElementsByClassName("question5")
+        selected.amountFlowers === "wrong"
     );
+
+    addImage("success", document.getElementsByClassName("question5"));
 }
 
 // 6 QUESTION
@@ -809,21 +799,20 @@ document.getElementById("result").onchange = function (e) {
 function question8() {
     succerror(
         document.getElementById("numberJellyfish"),
-        howManyCounted.jellyfish === "wrong",
-        document.getElementsByClassName("question8")
+        howManyCounted.jellyfish === "wrong"
     );
 
     succerror(
         document.getElementById("numberSeahorses"),
-        howManyCounted.seaHorse === "wrong",
-        document.getElementsByClassName("question8")
+        howManyCounted.seaHorse === "wrong"
     );
 
     succerror(
         document.getElementById("result"),
-        howManyCounted.result === "wrong",
-        document.getElementsByClassName("question8")
+        howManyCounted.result === "wrong"
     );
+
+    addImage("success", document.getElementsByClassName("question8"));
 }
 
 // 9 QUESTION
@@ -891,16 +880,15 @@ document.getElementById("eighteen").onclick = function () {
 function question9() {
     succerror(
         document.getElementById(selectedNameButton),
-        selectedButton === "wrong",
-        document.getElementsByClassName("question9")
+        selectedButton === "wrong"
     );
+
+    addImage("success", document.getElementsByClassName("question9"));
 }
 
 // 10 QUESTION
 
 let selectBtn = "right";
-
-let elements = document.getElementsByClassName("row");
 
 document.getElementById("balloon").onclick = function () {
     document.getElementById("balloon").classList.add("selectedPicture");
@@ -1017,11 +1005,8 @@ document.getElementById("btnSelectJack").onclick = function () {
 };
 
 function question11() {
-    succerror(
-        document.getElementById(selectedName),
-        selectBtn2 === "wrong",
-        document.getElementsByClassName("question11")
-    );
+    succerror(document.getElementById(selectedName), selectBtn2 === "wrong");
+    addImage("success", document.getElementsByClassName("question11"));
 }
 
 // 12 QUESTION
@@ -1055,21 +1040,20 @@ document.getElementById("numberRhombus").onchange = function (e) {
 function question12() {
     succerror(
         document.getElementById("numberHearts"),
-        answers.hearts === "wrong",
-        document.getElementsByClassName("question12")
+        answers.hearts === "wrong"
     );
 
     succerror(
         document.getElementById("numberStars"),
-        answers.stars === "wrong",
-        document.getElementsByClassName("question12")
+        answers.stars === "wrong"
     );
 
     succerror(
         document.getElementById("numberRhombus"),
-        answers.rhombus === "wrong",
-        document.getElementsByClassName("question12")
+        answers.rhombus === "wrong"
     );
+
+    addImage("success", document.getElementsByClassName("question12"));
 }
 
 // 13 QUESTION
@@ -1224,17 +1208,11 @@ document.getElementById("answer").onchange = function (e) {
 
 function question15() {
     if (answer == "") {
-        succerror(
-            document.getElementById("answer"),
-            answer === "",
-            document.getElementsByClassName("question15")
-        );
+        succerror(document.getElementById("answer"), answer === "");
+        addImage("failure", document.getElementsByClassName("question15"));
     } else {
-        succerror(
-            document.getElementById("answer"),
-            answer === "wrong",
-            document.getElementsByClassName("question15")
-        );
+        succerror(document.getElementById("answer"), answer === "wrong");
+        addImage("success", document.getElementsByClassName("question15"));
     }
 }
 
@@ -1456,21 +1434,17 @@ document.getElementById("selectPencil").onclick = function () {
 function question20() {
     succerror(
         document.getElementById("tasselLength"),
-        valuesInputs.tasselLength === "wrong",
-        document.getElementsByClassName("question20")
+        valuesInputs.tasselLength === "wrong"
     );
 
     succerror(
         document.getElementById("pencilLength"),
-        valuesInputs.pencilLength === "wrong",
-        document.getElementsByClassName("question20")
+        valuesInputs.pencilLength === "wrong"
     );
 
-    succerror(
-        document.getElementById(nameSelectedBtn),
-        selectBtn4 === "wrong",
-        document.getElementsByClassName("question20")
-    );
+    succerror(document.getElementById(nameSelectedBtn), selectBtn4 === "wrong");
+
+    addImage("success", document.getElementsByClassName("question20"));
 }
 
 // ------------------------------------------------------------------ALL SCRIPTS THE 19th QUESTION---------------------------------------------
