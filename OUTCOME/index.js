@@ -1019,13 +1019,19 @@ document.getElementById("numberRhombus").onchange = function (e) {
 };
 
 function question12() {
-    alert(
-        "your choice: for hearts - " +
-            answers.hearts +
-            ", for stars - " +
-            answers.stars +
-            ", for rhombus - " +
-            answers.rhombus
+    succerror(
+        document.getElementById("numberHearts"),
+        answers.hearts === "wrong"
+    );
+
+    succerror(
+        document.getElementById("numberStars"),
+        answers.stars === "wrong"
+    );
+
+    succerror(
+        document.getElementById("numberRhombus"),
+        answers.rhombus === "wrong"
     );
 }
 
@@ -1181,9 +1187,9 @@ document.getElementById("answer").onchange = function (e) {
 
 function question15() {
     if (answer == "") {
-        alert("you must fill in the field");
+        succerror(document.getElementById("answer"), answer === "");
     } else {
-        alert(answer + " the number");
+        succerror(document.getElementById("answer"), answer === "wrong");
     }
 }
 
@@ -1374,7 +1380,7 @@ document.getElementById("pencilLength").onchange = function (e) {
 
 // second part - check the rest
 
-let selectBtn4;
+let selectBtn4, nameSelectedBtn;
 
 document.getElementById("selectBrush").onclick = function () {
     document.getElementById("selectBrush").style.backgroundColor = "#bbedf4";
@@ -1382,6 +1388,7 @@ document.getElementById("selectBrush").onclick = function () {
     document.getElementById("selectBrush").style.border = "1px solid #BBEDF4";
 
     selectBtn4 = "right";
+    nameSelectedBtn = "selectBrush";
 
     document.getElementById("selectPencil").style.backgroundColor = "white";
     document.getElementById("selectPencil").style.color = "black";
@@ -1394,6 +1401,7 @@ document.getElementById("selectPencil").onclick = function () {
     document.getElementById("selectPencil").style.border = "1px solid #BBEDF4";
 
     selectBtn4 = "wrong";
+    nameSelectedBtn = "selectPencil";
 
     document.getElementById("selectBrush").style.backgroundColor = "white";
     document.getElementById("selectBrush").style.color = "black";
@@ -1401,13 +1409,17 @@ document.getElementById("selectPencil").onclick = function () {
 };
 
 function question20() {
-    alert(
-        " 1. The value entered in the left field - " +
-            valuesInputs.tasselLength +
-            " and in the right field - " +
-            valuesInputs.pencilLength
+    succerror(
+        document.getElementById("tasselLength"),
+        valuesInputs.tasselLength === "wrong"
     );
-    alert("2. You made the " + selectBtn4 + " choice");
+
+    succerror(
+        document.getElementById("pencilLength"),
+        valuesInputs.pencilLength === "wrong"
+    );
+
+    succerror(document.getElementById(nameSelectedBtn), selectBtn4 === "wrong");
 }
 
 // ------------------------------------------------------------------ALL SCRIPTS THE 19th QUESTION---------------------------------------------
