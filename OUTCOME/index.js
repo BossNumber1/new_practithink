@@ -905,7 +905,7 @@ function question10() {
 
 // 11 QUESTION
 
-let selectBtn2;
+let selectBtn2, selectedName;
 
 document.getElementById("btnSelectTom").onclick = function () {
     document.getElementById("btnSelectTom").style.backgroundColor = "#bbedf4";
@@ -913,6 +913,7 @@ document.getElementById("btnSelectTom").onclick = function () {
     document.getElementById("btnSelectTom").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "wrong";
+    selectedName = "btnSelectTom";
 
     document.getElementById("btnSelectMike").style.backgroundColor = "white";
     document.getElementById("btnSelectMike").style.color = "black";
@@ -929,6 +930,7 @@ document.getElementById("btnSelectMike").onclick = function () {
     document.getElementById("btnSelectMike").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "right";
+    selectedName = "btnSelectMike";
 
     document.getElementById("btnSelectTom").style.backgroundColor = "white";
     document.getElementById("btnSelectTom").style.color = "black";
@@ -945,6 +947,7 @@ document.getElementById("btnSelectJack").onclick = function () {
     document.getElementById("btnSelectJack").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "wrong";
+    selectedName = "btnSelectJack";
 
     document.getElementById("btnSelectTom").style.backgroundColor = "white";
     document.getElementById("btnSelectTom").style.color = "black";
@@ -956,7 +959,13 @@ document.getElementById("btnSelectJack").onclick = function () {
 };
 
 function question11() {
-    alert("you made the " + selectBtn2 + " choice");
+    if (selectBtn2 === "wrong") {
+        document.getElementById(selectedName).style.backgroundColor = "#ED7777";
+        document.getElementById(selectedName).style.color = "white";
+    } else {
+        document.getElementById(selectedName).style.backgroundColor = "#48B736";
+        document.getElementById(selectedName).style.color = "white";
+    }
 }
 
 // 12 QUESTION
