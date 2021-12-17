@@ -783,46 +783,55 @@ let selectedButton = "";
 document.getElementById("thirteen").onclick = function () {
     let clickedElement = document.getElementById("thirteen");
 
-    clickedElement.style.backgroundColor = "#369CB7";
-    clickedElement.style.color = "white";
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "wrong";
 
     document.getElementById("fourteen").style.backgroundColor = "white";
     document.getElementById("fourteen").style.color = "black";
+    document.getElementById("fourteen").style.border = "1px solid black";
 
     document.getElementById("eighteen").style.backgroundColor = "white";
     document.getElementById("eighteen").style.color = "black";
+    document.getElementById("eighteen").style.border = "1px solid black";
 };
 
 document.getElementById("fourteen").onclick = function () {
     let clickedElement = document.getElementById("fourteen");
 
-    clickedElement.style.backgroundColor = "#369CB7";
-    clickedElement.style.color = "white";
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "right";
 
     document.getElementById("thirteen").style.backgroundColor = "white";
     document.getElementById("thirteen").style.color = "black";
+    document.getElementById("thirteen").style.border = "1px solid black";
 
     document.getElementById("eighteen").style.backgroundColor = "white";
     document.getElementById("eighteen").style.color = "black";
+    document.getElementById("eighteen").style.border = "1px solid black";
 };
 
 document.getElementById("eighteen").onclick = function () {
     let clickedElement = document.getElementById("eighteen");
 
-    clickedElement.style.backgroundColor = "#369CB7";
-    clickedElement.style.color = "white";
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "wrong";
 
     document.getElementById("thirteen").style.backgroundColor = "white";
     document.getElementById("thirteen").style.color = "black";
+    document.getElementById("thirteen").style.border = "1px solid black";
 
     document.getElementById("fourteen").style.backgroundColor = "white";
     document.getElementById("fourteen").style.color = "black";
+    document.getElementById("fourteen").style.border = "1px solid black";
 };
 
 function question9() {
@@ -899,39 +908,51 @@ function question10() {
 let selectBtn2;
 
 document.getElementById("btnSelectTom").onclick = function () {
-    document.getElementById("btnSelectTom").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectTom").style.color = "white";
+    document.getElementById("btnSelectTom").style.backgroundColor = "#bbedf4";
+    document.getElementById("btnSelectTom").style.color = "#0e80a4";
+    document.getElementById("btnSelectTom").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "wrong";
 
     document.getElementById("btnSelectMike").style.backgroundColor = "white";
     document.getElementById("btnSelectMike").style.color = "black";
+    document.getElementById("btnSelectMike").style.border = "1px solid black";
+
     document.getElementById("btnSelectJack").style.backgroundColor = "white";
     document.getElementById("btnSelectJack").style.color = "black";
+    document.getElementById("btnSelectJack").style.border = "1px solid black";
 };
 
 document.getElementById("btnSelectMike").onclick = function () {
-    document.getElementById("btnSelectMike").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectMike").style.color = "white";
+    document.getElementById("btnSelectMike").style.backgroundColor = "#bbedf4";
+    document.getElementById("btnSelectMike").style.color = "#0e80a4";
+    document.getElementById("btnSelectMike").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "right";
 
     document.getElementById("btnSelectTom").style.backgroundColor = "white";
     document.getElementById("btnSelectTom").style.color = "black";
+    document.getElementById("btnSelectTom").style.border = "1px solid black";
+
     document.getElementById("btnSelectJack").style.backgroundColor = "white";
     document.getElementById("btnSelectJack").style.color = "black";
+    document.getElementById("btnSelectJack").style.border = "1px solid black";
 };
 
 document.getElementById("btnSelectJack").onclick = function () {
-    document.getElementById("btnSelectJack").style.backgroundColor = "#369CB7";
-    document.getElementById("btnSelectJack").style.color = "white";
+    document.getElementById("btnSelectJack").style.backgroundColor = "#bbedf4";
+    document.getElementById("btnSelectJack").style.color = "#0e80a4";
+    document.getElementById("btnSelectJack").style.border = "1px solid #BBEDF4";
 
     selectBtn2 = "wrong";
 
     document.getElementById("btnSelectTom").style.backgroundColor = "white";
     document.getElementById("btnSelectTom").style.color = "black";
+    document.getElementById("btnSelectTom").style.border = "1px solid black";
+
     document.getElementById("btnSelectMike").style.backgroundColor = "white";
     document.getElementById("btnSelectMike").style.color = "black";
+    document.getElementById("btnSelectMike").style.border = "1px solid black";
 };
 
 function question11() {
@@ -1325,23 +1346,27 @@ document.getElementById("pencilLength").onchange = function (e) {
 let selectBtn4;
 
 document.getElementById("selectBrush").onclick = function () {
-    document.getElementById("selectBrush").style.backgroundColor = "#369CB7";
-    document.getElementById("selectBrush").style.color = "white";
+    document.getElementById("selectBrush").style.backgroundColor = "#bbedf4";
+    document.getElementById("selectBrush").style.color = "#0e80a4";
+    document.getElementById("selectBrush").style.border = "1px solid #BBEDF4";
 
     selectBtn4 = "right";
 
     document.getElementById("selectPencil").style.backgroundColor = "white";
     document.getElementById("selectPencil").style.color = "black";
+    document.getElementById("selectPencil").style.border = "1px solid black";
 };
 
 document.getElementById("selectPencil").onclick = function () {
-    document.getElementById("selectPencil").style.backgroundColor = "#369CB7";
-    document.getElementById("selectPencil").style.color = "white";
+    document.getElementById("selectPencil").style.backgroundColor = "#bbedf4";
+    document.getElementById("selectPencil").style.color = "#0e80a4";
+    document.getElementById("selectPencil").style.border = "1px solid #BBEDF4";
 
     selectBtn4 = "wrong";
 
     document.getElementById("selectBrush").style.backgroundColor = "white";
     document.getElementById("selectBrush").style.color = "black";
+    document.getElementById("selectBrush").style.border = "1px solid black";
 };
 
 function question20() {

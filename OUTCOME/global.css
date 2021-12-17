@@ -1465,7 +1465,6 @@ body {
     left: calc(50% - 370px / 2);
     width: 370px;
     height: 250px;
-    /* border: 1px solid black; */
 }
 
 .closet {
