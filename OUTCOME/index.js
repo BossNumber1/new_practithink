@@ -669,7 +669,7 @@ function question4() {
 
 // 5 QUESTION
 
-let selected = { amountIceCream: 0, amountFlowers: 0, sign: "" };
+let selected = { amountIceCream: "", amountFlowers: "" };
 
 document.getElementById("amountIceCream").onchange = function (e) {
     if (e.target.value == 6) {
@@ -692,22 +692,49 @@ function question5() {
         document.getElementsByClassName("inputCollection")[0].children[1]
             .textContent;
 
-    selectedSign = selectedSign.replace(/\s/g, "");
-
-    if (selectedSign == "<") {
-        selected.sign = "right";
+    if (selected.amountIceCream === "wrong") {
+        document.getElementById("amountIceCream").style.backgroundColor =
+            "#ED7777";
+        document.getElementById("amountIceCream").style.color = "white";
+        document.getElementById("amountIceCream").style.border =
+            "1px solid #ED7777";
     } else {
-        selected.sign = "wrong";
+        document.getElementById("amountIceCream").style.backgroundColor =
+            "#48B736";
+        document.getElementById("amountIceCream").style.color = "white";
+        document.getElementById("amountIceCream").style.border =
+            "1px solid #48B736";
     }
 
-    alert(
-        "your result: by ice cream - " +
-            selected.amountIceCream +
-            ", by flowers - " +
-            selected.amountFlowers +
-            ", by sign - " +
-            selected.sign
-    );
+    if (selectedSign.replace(/\s/g, "") != "<") {
+        document.getElementsByClassName(
+            "inputCollection"
+        )[0].children[1].children[0].style.backgroundColor = "#ED7777";
+        document.getElementsByClassName(
+            "inputCollection"
+        )[0].children[1].children[0].style.border = "1px solid #ED7777";
+    } else {
+        document.getElementsByClassName(
+            "inputCollection"
+        )[0].children[1].children[0].style.backgroundColor = "#48B736";
+        document.getElementsByClassName(
+            "inputCollection"
+        )[0].children[1].children[0].style.border = "1px solid #48B736";
+    }
+
+    if (selected.amountFlowers === "wrong") {
+        document.getElementById("amountFlowers").style.backgroundColor =
+            "#ED7777";
+        document.getElementById("amountFlowers").style.color = "white";
+        document.getElementById("amountFlowers").style.border =
+            "1px solid #ED7777";
+    } else {
+        document.getElementById("amountFlowers").style.backgroundColor =
+            "#48B736";
+        document.getElementById("amountFlowers").style.color = "white";
+        document.getElementById("amountFlowers").style.border =
+            "1px solid #48B736";
+    }
 }
 
 // 6 QUESTION
