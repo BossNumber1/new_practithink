@@ -732,6 +732,19 @@ function question6() {
     }
 }
 
+// 7 QUESTION
+
+function question7() {
+    let basketBob = document.getElementById("placeDropCandyBob");
+    let basketDave = document.getElementById("placeDropCandyDave");
+
+    if (basketBob.children.length === 4 && basketDave.children.length === 3) {
+        alert(" well done, that's right ");
+    } else {
+        alert(" wrong try again ");
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -741,4 +754,5 @@ document.getElementById("submit").onclick = function () {
     question4();
     question5();
     question6();
+    question7();
 };
