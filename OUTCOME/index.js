@@ -1376,7 +1376,6 @@ const rotationFunctionForSecondTriangle = new Propeller(
 );
 
 function dragElement(element) {
-    // alert("exc");
     let pos1 = 0,
         pos2 = 0,
         pos3 = 0,
