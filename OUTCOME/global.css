@@ -312,7 +312,6 @@ body {
 }
 
 .titlePage4 {
-    position: relative;
     top: 26px;
     left: 335px;
     width: 770px;
@@ -329,7 +328,6 @@ body {
 /* 1. inputs styles */
 
 .inputContent2 {
-    position: relative;
     left: calc(50% - 153px / 2);
     top: 247px;
     display: flex;
@@ -341,7 +339,6 @@ body {
 }
 
 .inputContent2 input {
-    position: relative;
     width: 70px;
     height: 30px;
     margin: 0px 10px;
@@ -352,27 +349,21 @@ body {
 
 .cookies {
     left: calc(50% - 502px / 2);
-    position: relative;
     width: 502px;
     height: 61px;
     top: 133px;
 }
 
 .message {
-    position: relative;
     width: 770px;
     height: 44px;
     left: calc(50% - 770px / 2);
     top: 200px;
     font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #2f2f2f;
-}
-
-.question {
     font-weight: bold;
 }
 
