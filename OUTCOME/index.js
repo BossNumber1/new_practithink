@@ -1168,15 +1168,15 @@ function question16() {
 let selectBtn3 = "right";
 
 document.getElementById("hexagon").onclick = function () {
-    document.getElementById("hexagon").classList.toggle("selectedPicture");
-    document.getElementById("trapezoid").classList.remove("selectedPicture");
+    document.getElementById("hexagon").classList.toggle("selectedPicture2");
+    document.getElementById("trapezoid").classList.remove("selectedPicture2");
 
     selectBtn3 = "right";
 };
 
 document.getElementById("trapezoid").onclick = function () {
-    document.getElementById("trapezoid").classList.toggle("selectedPicture");
-    document.getElementById("hexagon").classList.remove("selectedPicture");
+    document.getElementById("trapezoid").classList.toggle("selectedPicture2");
+    document.getElementById("hexagon").classList.remove("selectedPicture2");
 
     selectBtn3 = "wrong";
 };
