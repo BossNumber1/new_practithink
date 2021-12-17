@@ -720,6 +720,18 @@ function question5() {
     );
 }
 
+// 6 QUESTION
+
+function question6() {
+    let basket = document.getElementsByClassName("appleInBasket2row")[0];
+
+    if (basket.children.length === 5) {
+        alert(" молодец! верный выбор ");
+    } else {
+        alert(" необходимо другое число яблок ");
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -728,4 +740,5 @@ document.getElementById("submit").onclick = function () {
     question3();
     question4();
     question5();
+    question6();
 };
