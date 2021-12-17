@@ -659,10 +659,31 @@ function question3() {
     }
 }
 
+// 4 QUESTION
+
+let countCookies;
+
+document.querySelector("input").onchange = function (e) {
+    countCookies = e.target.value;
+};
+
+function question4() {
+    if (countCookies) {
+        if (countCookies == 10) {
+            alert(" верно ");
+        } else {
+            alert(" неверно ");
+        }
+    } else {
+        alert("стоит заполнить поле ввода");
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
+    question4();
 };
