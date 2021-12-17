@@ -687,11 +687,12 @@ document.querySelector("input").onchange = function (e) {
 function question4() {
     if (countCookies) {
         succerror(document.querySelector("input"), countCookies != 10);
-        addImage("success", document.getElementsByClassName("question4"));
-    } else {
-        document.querySelector("input").style.backgroundColor = "#ED7777";
-        document.querySelector("input").style.color = "white";
-        document.querySelector("input").style.border = "1px solid #ED7777";
+
+        if (countCookies != 10) {
+            addImage("failure", document.getElementsByClassName("question4"));
+        } else {
+            addImage("success", document.getElementsByClassName("question4"));
+        }
     }
 }
 
@@ -716,27 +717,37 @@ document.getElementById("amountFlowers").onchange = function (e) {
 };
 
 function question5() {
-    let selectedSign =
-        document.getElementsByClassName("inputCollection")[0].children[1]
-            .textContent;
+    if (selected.amountFlowers != "" && selected.amountIceCream != "") {
+        let selectedSign =
+            document.getElementsByClassName("inputCollection")[0].children[1]
+                .textContent;
 
-    succerror(
-        document.getElementById("amountIceCream"),
-        selected.amountIceCream === "wrong"
-    );
+        succerror(
+            document.getElementById("amountIceCream"),
+            selected.amountIceCream === "wrong"
+        );
 
-    succerror(
-        document.getElementsByClassName("inputCollection")[0].children[1]
-            .children[0],
-        selectedSign.replace(/\s/g, "") != "<"
-    );
+        succerror(
+            document.getElementsByClassName("inputCollection")[0].children[1]
+                .children[0],
+            selectedSign.replace(/\s/g, "") != "<"
+        );
 
-    succerror(
-        document.getElementById("amountFlowers"),
-        selected.amountFlowers === "wrong"
-    );
+        succerror(
+            document.getElementById("amountFlowers"),
+            selected.amountFlowers === "wrong"
+        );
 
-    addImage("success", document.getElementsByClassName("question5"));
+        if (
+            selected.amountFlowers === "right" &&
+            selectedSign.replace(/\s/g, "") == "<" &&
+            selected.amountIceCream === "right"
+        ) {
+            addImage("success", document.getElementsByClassName("question5"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question5"));
+        }
+    }
 }
 
 // 6 QUESTION
@@ -767,9 +778,9 @@ function question7() {
 // 8 QUESTION
 
 let howManyCounted = {
-    jellyfish: "wrong",
-    seaHorse: "wrong",
-    result: "wrong",
+    jellyfish: "",
+    seaHorse: "",
+    result: "",
 };
 
 document.getElementById("numberJellyfish").onchange = function (e) {
@@ -797,22 +808,36 @@ document.getElementById("result").onchange = function (e) {
 };
 
 function question8() {
-    succerror(
-        document.getElementById("numberJellyfish"),
-        howManyCounted.jellyfish === "wrong"
-    );
+    if (
+        howManyCounted.jellyfish != "" &&
+        howManyCounted.seaHorse != "" &&
+        howManyCounted.result != ""
+    ) {
+        succerror(
+            document.getElementById("numberJellyfish"),
+            howManyCounted.jellyfish === "wrong"
+        );
 
-    succerror(
-        document.getElementById("numberSeahorses"),
-        howManyCounted.seaHorse === "wrong"
-    );
+        succerror(
+            document.getElementById("numberSeahorses"),
+            howManyCounted.seaHorse === "wrong"
+        );
 
-    succerror(
-        document.getElementById("result"),
-        howManyCounted.result === "wrong"
-    );
+        succerror(
+            document.getElementById("result"),
+            howManyCounted.result === "wrong"
+        );
 
-    addImage("success", document.getElementsByClassName("question8"));
+        if (
+            howManyCounted.jellyfish === "right" &&
+            howManyCounted.seaHorse === "right" &&
+            howManyCounted.result === "right"
+        ) {
+            addImage("success", document.getElementsByClassName("question8"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question8"));
+        }
+    }
 }
 
 // 9 QUESTION
@@ -878,12 +903,18 @@ document.getElementById("eighteen").onclick = function () {
 };
 
 function question9() {
-    succerror(
-        document.getElementById(selectedNameButton),
-        selectedButton === "wrong"
-    );
+    if (selectedButton != "") {
+        succerror(
+            document.getElementById(selectedNameButton),
+            selectedButton === "wrong"
+        );
 
-    addImage("success", document.getElementsByClassName("question9"));
+        if (selectedButton === "right") {
+            addImage("success", document.getElementsByClassName("question9"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question9"));
+        }
+    }
 }
 
 // 10 QUESTION
@@ -951,7 +982,8 @@ function question10() {
 
 // 11 QUESTION
 
-let selectBtn2, selectedName;
+let selectBtn2 = "",
+    selectedName;
 
 document.getElementById("btnSelectTom").onclick = function () {
     document.getElementById("btnSelectTom").style.backgroundColor = "#bbedf4";
@@ -1005,13 +1037,23 @@ document.getElementById("btnSelectJack").onclick = function () {
 };
 
 function question11() {
-    succerror(document.getElementById(selectedName), selectBtn2 === "wrong");
-    addImage("success", document.getElementsByClassName("question11"));
+    if (selectBtn2 != "") {
+        succerror(
+            document.getElementById(selectedName),
+            selectBtn2 === "wrong"
+        );
+
+        if (selectBtn2 === "right") {
+            addImage("success", document.getElementsByClassName("question11"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question11"));
+        }
+    }
 }
 
 // 12 QUESTION
 
-let answers = { hearts: 0, stars: 0, rhombus: 0 };
+let answers = { hearts: "", stars: "", rhombus: "" };
 
 document.getElementById("numberHearts").onchange = function (e) {
     if (e.target.value == 6) {
@@ -1038,22 +1080,32 @@ document.getElementById("numberRhombus").onchange = function (e) {
 };
 
 function question12() {
-    succerror(
-        document.getElementById("numberHearts"),
-        answers.hearts === "wrong"
-    );
+    if (answers.hearts != "" && answers.stars != "" && answers.rhombus != "") {
+        succerror(
+            document.getElementById("numberHearts"),
+            answers.hearts === "wrong"
+        );
 
-    succerror(
-        document.getElementById("numberStars"),
-        answers.stars === "wrong"
-    );
+        succerror(
+            document.getElementById("numberStars"),
+            answers.stars === "wrong"
+        );
 
-    succerror(
-        document.getElementById("numberRhombus"),
-        answers.rhombus === "wrong"
-    );
+        succerror(
+            document.getElementById("numberRhombus"),
+            answers.rhombus === "wrong"
+        );
 
-    addImage("success", document.getElementsByClassName("question12"));
+        if (
+            answers.hearts === "right" &&
+            answers.stars === "right" &&
+            answers.rhombus === "right"
+        ) {
+            addImage("success", document.getElementsByClassName("question12"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question12"));
+        }
+    }
 }
 
 // 13 QUESTION
@@ -1207,12 +1259,14 @@ document.getElementById("answer").onchange = function (e) {
 };
 
 function question15() {
-    if (answer == "") {
-        succerror(document.getElementById("answer"), answer === "");
-        addImage("failure", document.getElementsByClassName("question15"));
-    } else {
+    if (answer != "") {
         succerror(document.getElementById("answer"), answer === "wrong");
-        addImage("success", document.getElementsByClassName("question15"));
+
+        if (answer === "right") {
+            addImage("success", document.getElementsByClassName("question15"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question15"));
+        }
     }
 }
 
@@ -1432,19 +1486,32 @@ document.getElementById("selectPencil").onclick = function () {
 };
 
 function question20() {
-    succerror(
-        document.getElementById("tasselLength"),
-        valuesInputs.tasselLength === "wrong"
-    );
+    if (valuesInputs.tasselLength != "" && valuesInputs.pencilLength != "") {
+        succerror(
+            document.getElementById("tasselLength"),
+            valuesInputs.tasselLength === "wrong"
+        );
 
-    succerror(
-        document.getElementById("pencilLength"),
-        valuesInputs.pencilLength === "wrong"
-    );
+        succerror(
+            document.getElementById("pencilLength"),
+            valuesInputs.pencilLength === "wrong"
+        );
 
-    succerror(document.getElementById(nameSelectedBtn), selectBtn4 === "wrong");
+        succerror(
+            document.getElementById(nameSelectedBtn),
+            selectBtn4 === "wrong"
+        );
 
-    addImage("success", document.getElementsByClassName("question20"));
+        if (
+            valuesInputs.tasselLength === "right" &&
+            valuesInputs.pencilLength === "right" &&
+            valuesInputs.selectBtn4 === "right"
+        ) {
+            addImage("success", document.getElementsByClassName("question20"));
+        } else {
+            addImage("failure", document.getElementsByClassName("question20"));
+        }
+    }
 }
 
 // ------------------------------------------------------------------ALL SCRIPTS THE 19th QUESTION---------------------------------------------
