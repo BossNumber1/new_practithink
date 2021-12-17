@@ -1,4 +1,4 @@
-// drag and drop implementation
+//                                   --- DRAG AND DROP IMPLEMENTATION ---
 
 // common commands
 
@@ -594,3 +594,29 @@ function drop20(e) {
     // меняем вид курсора
     orig.style.cursor = "default";
 }
+
+//                                      --- OTHER SCRIPTS ---
+
+//                                   --- CHECK IMPLEMENTATION ---
+
+// 1 QUESTION
+
+let correctOrder = [23, 24, 25, 26, 27, 28];
+let resultat = [];
+
+document.getElementById("submit").onclick = function () {
+    let topRow = document.getElementsByClassName("topRow");
+    let childrenTopRow = topRow[0].children;
+
+    for (let i = 0; i < childrenTopRow.length; i++) {
+        if (childrenTopRow[i].children[0].id != correctOrder[i]) {
+            resultat.push("нет");
+        }
+    }
+
+    if (resultat.length === 0) {
+        alert("well done, the right choice");
+    } else {
+        alert("wrong, try again");
+    }
+};
