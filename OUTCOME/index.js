@@ -271,8 +271,6 @@ function drop7(e) {
     }
 }
 
-// 8 QUESTION - without dnd
-
 // 9 QUESTION
 
 function drag9(e) {
@@ -301,8 +299,6 @@ function drop9(e) {
     e.target.setAttribute("data-name", nameCube);
     e.target.parentElement.style.cursor = "grab";
 }
-
-// 10, 11 QUESTION - without dnd
 
 // 12 QUESTION
 
@@ -435,8 +431,6 @@ function drop14(e) {
     orig.id = currentId;
 }
 
-// 15 QUESTION - without dnd
-
 // 16 QUESTION
 
 function drag16(e) {
@@ -479,8 +473,6 @@ function drop16(e) {
         orig.remove();
     }
 }
-
-// 17 QUESTION - without dnd
 
 // 18 QUESTION
 
@@ -745,6 +737,629 @@ function question7() {
     }
 }
 
+// 8 QUESTION
+
+let howManyCounted = {
+    jellyfish: "wrong",
+    seaHorse: "wrong",
+    result: "wrong",
+};
+
+document.getElementById("numberJellyfish").onchange = function (e) {
+    if (e.target.value == 5) {
+        howManyCounted.jellyfish = "right";
+    } else {
+        howManyCounted.jellyfish = "wrong";
+    }
+};
+
+document.getElementById("numberSeahorses").onchange = function (e) {
+    if (e.target.value == 3) {
+        howManyCounted.seaHorse = "right";
+    } else {
+        howManyCounted.seaHorse = "wrong";
+    }
+};
+
+document.getElementById("result").onchange = function (e) {
+    if (e.target.value == 8) {
+        howManyCounted.result = "right";
+    } else {
+        howManyCounted.result = "wrong";
+    }
+};
+
+function question8() {
+    alert(
+        "your results: number of jellyfish - " +
+            howManyCounted.jellyfish +
+            ", number of sea horses - " +
+            howManyCounted.seaHorse +
+            ", total - " +
+            howManyCounted.result
+    );
+}
+
+// 9 QUESTION
+
+let selectedButton = "";
+
+document.getElementById("thirteen").onclick = function () {
+    let clickedElement = document.getElementById("thirteen");
+
+    clickedElement.style.backgroundColor = "#369CB7";
+    clickedElement.style.color = "white";
+
+    selectedButton = "wrong";
+
+    document.getElementById("fourteen").style.backgroundColor = "white";
+    document.getElementById("fourteen").style.color = "black";
+
+    document.getElementById("eighteen").style.backgroundColor = "white";
+    document.getElementById("eighteen").style.color = "black";
+};
+
+document.getElementById("fourteen").onclick = function () {
+    let clickedElement = document.getElementById("fourteen");
+
+    clickedElement.style.backgroundColor = "#369CB7";
+    clickedElement.style.color = "white";
+
+    selectedButton = "right";
+
+    document.getElementById("thirteen").style.backgroundColor = "white";
+    document.getElementById("thirteen").style.color = "black";
+
+    document.getElementById("eighteen").style.backgroundColor = "white";
+    document.getElementById("eighteen").style.color = "black";
+};
+
+document.getElementById("eighteen").onclick = function () {
+    let clickedElement = document.getElementById("eighteen");
+
+    clickedElement.style.backgroundColor = "#369CB7";
+    clickedElement.style.color = "white";
+
+    selectedButton = "wrong";
+
+    document.getElementById("thirteen").style.backgroundColor = "white";
+    document.getElementById("thirteen").style.color = "black";
+
+    document.getElementById("fourteen").style.backgroundColor = "white";
+    document.getElementById("fourteen").style.color = "black";
+};
+
+function question9() {
+    alert("you have the " + selectedButton + " answer");
+}
+
+// 10 QUESTION
+
+let selectBtn = "right";
+
+let elements = document.getElementsByClassName("row");
+
+document.getElementById("balloon").onclick = function () {
+    document.getElementById("balloon").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("book").onclick = function () {
+    document.getElementById("book").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("truck").onclick = function () {
+    document.getElementById("truck").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("feather").onclick = function () {
+    document.getElementById("feather").classList.add("selectedPicture");
+
+    selectBtn = "wrong";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("car").classList.remove("selectedPicture");
+};
+
+document.getElementById("car").onclick = function () {
+    document.getElementById("car").classList.add("selectedPicture");
+
+    selectBtn = "right";
+
+    document.getElementById("balloon").classList.remove("selectedPicture");
+    document.getElementById("book").classList.remove("selectedPicture");
+    document.getElementById("truck").classList.remove("selectedPicture");
+    document.getElementById("feather").classList.remove("selectedPicture");
+};
+
+function question10() {
+    alert("you have selected the " + selectBtn + " object");
+}
+
+// 11 QUESTION
+
+let selectBtn2;
+
+document.getElementById("btnSelectTom").onclick = function () {
+    document.getElementById("btnSelectTom").style.backgroundColor = "#369CB7";
+    document.getElementById("btnSelectTom").style.color = "white";
+
+    selectBtn2 = "wrong";
+
+    document.getElementById("btnSelectMike").style.backgroundColor = "white";
+    document.getElementById("btnSelectMike").style.color = "black";
+    document.getElementById("btnSelectJack").style.backgroundColor = "white";
+    document.getElementById("btnSelectJack").style.color = "black";
+};
+
+document.getElementById("btnSelectMike").onclick = function () {
+    document.getElementById("btnSelectMike").style.backgroundColor = "#369CB7";
+    document.getElementById("btnSelectMike").style.color = "white";
+
+    selectBtn2 = "right";
+
+    document.getElementById("btnSelectTom").style.backgroundColor = "white";
+    document.getElementById("btnSelectTom").style.color = "black";
+    document.getElementById("btnSelectJack").style.backgroundColor = "white";
+    document.getElementById("btnSelectJack").style.color = "black";
+};
+
+document.getElementById("btnSelectJack").onclick = function () {
+    document.getElementById("btnSelectJack").style.backgroundColor = "#369CB7";
+    document.getElementById("btnSelectJack").style.color = "white";
+
+    selectBtn2 = "wrong";
+
+    document.getElementById("btnSelectTom").style.backgroundColor = "white";
+    document.getElementById("btnSelectTom").style.color = "black";
+    document.getElementById("btnSelectMike").style.backgroundColor = "white";
+    document.getElementById("btnSelectMike").style.color = "black";
+};
+
+function question11() {
+    alert("you made the " + selectBtn2 + " choice");
+}
+
+// 12 QUESTION
+
+let answers = { hearts: 0, stars: 0, rhombus: 0 };
+
+document.getElementById("numberHearts").onchange = function (e) {
+    if (e.target.value == 6) {
+        answers.hearts = "right";
+    } else {
+        answers.hearts = "wrong";
+    }
+};
+
+document.getElementById("numberStars").onchange = function (e) {
+    if (e.target.value == 4) {
+        answers.stars = "right";
+    } else {
+        answers.stars = "wrong";
+    }
+};
+
+document.getElementById("numberRhombus").onchange = function (e) {
+    if (e.target.value == 4) {
+        answers.rhombus = "right";
+    } else {
+        answers.rhombus = "wrong";
+    }
+};
+
+function question12() {
+    alert(
+        "your choice: for hearts - " +
+            answers.hearts +
+            ", for stars - " +
+            answers.stars +
+            ", for rhombus - " +
+            answers.rhombus
+    );
+}
+
+// 13 QUESTION
+
+let result = {
+    basketCircle: 0,
+    basketSquare: 0,
+    basketTriangle: 0,
+    basketRectangle: 0,
+};
+
+function common(basketCircle, rightCombination) {
+    let resultat = [];
+    let childs = basketCircle.children;
+
+    for (let i = 0; i < childs.length; i++) {
+        let idChild = childs[i].children[0].id;
+
+        if (idChild.slice(0, -4) != rightCombination[i]) {
+            resultat.push("нет");
+        }
+    }
+
+    return resultat;
+}
+
+function question13() {
+    let basketCircle = document.getElementById("basketCircle");
+    let basketSquare = document.getElementById("basketSquare");
+    let basketTriangle = document.getElementById("basketTriangle");
+    let basketRectangle = document.getElementById("basketRectangle");
+
+    if (basketCircle.children.length === 3) {
+        let rightCombination = ["clock", "cookie", "pizza"];
+        let resultatCircle = common(basketCircle, rightCombination);
+
+        if (resultatCircle.length === 0) {
+            result.basketCircle = "right";
+        } else {
+            result.basketCircle = "wrong";
+        }
+    } else {
+        result.basketCircle = "wrong";
+    }
+
+    if (basketSquare.children.length === 2) {
+        let rightCombination = ["window", "painting"];
+        let resultatSquare = common(basketSquare, rightCombination);
+
+        if (resultatSquare.length === 0) {
+            result.basketSquare = "right";
+        } else {
+            result.basketSquare = "wrong";
+        }
+    } else {
+        result.basketSquare = "wrong";
+    }
+
+    if (basketTriangle.children.length === 2) {
+        let rightCombination = ["sign", "tool"];
+        let resultatTriangle = common(basketTriangle, rightCombination);
+
+        if (resultatTriangle.length === 0) {
+            result.basketTriangle = "right";
+        } else {
+            result.basketTriangle = "wrong";
+        }
+    } else {
+        result.basketTriangle = "wrong";
+    }
+
+    if (basketRectangle.children.length === 2) {
+        let rightCombination = ["tv", "chocolate"];
+        let resultatTriangle = common(basketRectangle, rightCombination);
+
+        if (resultatTriangle.length === 0) {
+            result.basketRectangle = "right";
+        } else {
+            result.basketRectangle = "wrong";
+        }
+    } else {
+        result.basketRectangle = "wrong";
+    }
+
+    alert(
+        "your answers: for circle - " +
+            result.basketCircle +
+            ", for square - " +
+            result.basketSquare +
+            ", for triangle - " +
+            result.basketTriangle +
+            ", for rectangle - " +
+            result.basketRectangle
+    );
+}
+
+// 14 QUESTION
+
+let choice = {
+    topSeat: "",
+    centralSeat: "",
+    bottomSeat: "",
+};
+
+function question14() {
+    let topSeat = document.getElementById("topSeat");
+    let centralSeat = document.getElementById("centralSeat");
+    let bottomSeat = document.getElementById("bottomSeat");
+
+    if (topSeat.children[0].id === "pyramid") {
+        choice.topSeat = "right";
+    } else {
+        choice.topSeat = "wrong";
+    }
+
+    if (centralSeat.children[0].id === "toyCar") {
+        choice.centralSeat = "right";
+    } else {
+        choice.centralSeat = "wrong";
+    }
+
+    if (bottomSeat.children[0].id === "robot") {
+        choice.bottomSeat = "right";
+    } else {
+        choice.bottomSeat = "wrong";
+    }
+
+    let numberCorrectlyPlacedToys = 0;
+
+    for (let index in choice) {
+        if (choice[index] === "right") numberCorrectlyPlacedToys++;
+    }
+
+    if (numberCorrectlyPlacedToys === 3) {
+        alert("you are great, everything is right");
+    } else {
+        alert("toys placed incorrectly, try again");
+    }
+}
+
+// 15 QUESTION
+
+let answer = "";
+
+document.getElementById("answer").onchange = function (e) {
+    if (e.target.value == 2) {
+        answer = "right";
+    } else {
+        answer = "wrong";
+    }
+};
+
+function question15() {
+    if (answer == "") {
+        alert("you must fill in the field");
+    } else {
+        alert(answer + " the number");
+    }
+}
+
+// 16 QUESTION
+
+let result2 = { basketFlat: "", basketSolid: "" };
+
+function question16() {
+    let basketFlat = document.getElementById("placeFlat");
+    let basketSolid = document.getElementById("placeSolid");
+
+    if (basketFlat.children.length === 5) {
+        result2.basketFlat = "right";
+    } else {
+        result2.basketFlat = "wrong";
+    }
+
+    if (basketSolid.children.length === 5) {
+        result2.basketSolid = "right";
+    } else {
+        result2.basketSolid = "wrong";
+    }
+
+    alert(
+        "you put in the basket for flat figures - " +
+            result2.basketFlat +
+            " and in the basket for solid figures - " +
+            result2.basketSolid
+    );
+}
+
+// 17 QUESTION
+
+let selectBtn3 = "right";
+
+document.getElementById("hexagon").onclick = function () {
+    document.getElementById("hexagon").classList.toggle("selectedPicture");
+    document.getElementById("trapezoid").classList.remove("selectedPicture");
+
+    selectBtn3 = "right";
+};
+
+document.getElementById("trapezoid").onclick = function () {
+    document.getElementById("trapezoid").classList.toggle("selectedPicture");
+    document.getElementById("hexagon").classList.remove("selectedPicture");
+
+    selectBtn3 = "wrong";
+};
+
+function question17() {
+    alert("you have selected the " + selectBtn3 + " figure");
+}
+
+// 18 QUESTION
+
+function checkFlowers() {
+    const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
+    let resultFor0 = [];
+
+    let length =
+        document.getElementsByClassName("circle-container")[0].children.length;
+
+    for (let i = 1; i < length; i++) {
+        resultFor0.push(
+            document.getElementsByClassName("circle-container")[0].children[i]
+                .children[0].id
+        );
+    }
+
+    if (length === 4) {
+        let resultatByFirstObject = contentFlowersArea.includes(resultFor0[0]);
+        let resultatBySecondObject = contentFlowersArea.includes(resultFor0[1]);
+        let resultatByThirdObject = contentFlowersArea.includes(resultFor0[2]);
+
+        if (
+            resultatByFirstObject == true &&
+            resultatBySecondObject == true &&
+            resultatByThirdObject == true
+        ) {
+            return "right";
+        } else {
+            return "wrong";
+        }
+    } else {
+        return "not enough objects";
+    }
+}
+
+function checkRedColor() {
+    const contentRedColorArea = ["socks", "ball", "car", "ruler"];
+    let resultFor = [];
+
+    let element = document.getElementsByClassName(
+        "circle-container right-circle-container"
+    )[0];
+
+    if (element.className === "circle-container right-circle-container") {
+        let length2 = element.children.length;
+
+        for (let i = 1; i < length2; i++) {
+            resultFor.push(
+                document.getElementsByClassName("circle-container")[1].children[
+                    i
+                ].children[0].id
+            );
+        }
+
+        if (length2 === 5) {
+            let resultatByFirstObject2 = contentRedColorArea.includes(
+                resultFor[0]
+            );
+            let resultatBySecondObject2 = contentRedColorArea.includes(
+                resultFor[1]
+            );
+            let resultatByThirdObject2 = contentRedColorArea.includes(
+                resultFor[2]
+            );
+            let resultatByFourthObject2 = contentRedColorArea.includes(
+                resultFor[3]
+            );
+
+            if (
+                resultatByFirstObject2 == true &&
+                resultatBySecondObject2 == true &&
+                resultatByThirdObject2 == true &&
+                resultatByFourthObject2 == true
+            ) {
+                return "right";
+            } else {
+                return "wrong";
+            }
+        } else {
+            return "not enough objects";
+        }
+    }
+}
+
+function checkIntersection() {
+    let element = document.getElementsByClassName("background-circle")[1];
+
+    if (element.children.length === 1) {
+        if (element.children[0].children[0].id === "redFlower") {
+            return "right";
+        } else {
+            return "wrong";
+        }
+    } else {
+        return "not enough objects";
+    }
+}
+
+function question18() {
+    let res1 = checkFlowers();
+    let res2 = checkRedColor();
+    let res3 = checkIntersection();
+
+    alert(
+        "Your choice for flowers space - " +
+            res1 +
+            ", for red color space - " +
+            res2 +
+            ", for Intersection space - " +
+            res3
+    );
+}
+
+// ------------------------------------------------------- для 19 место
+
+// 20 QUESTION
+
+// first part - check to input
+
+let valuesInputs = { tasselLength: "", pencilLength: "" };
+
+document.getElementById("tasselLength").onchange = function (e) {
+    if (e.target.value == 8) {
+        valuesInputs.tasselLength = "right";
+    } else {
+        valuesInputs.tasselLength = "wrong";
+    }
+};
+
+document.getElementById("pencilLength").onchange = function (e) {
+    if (e.target.value == 7) {
+        valuesInputs.pencilLength = "right";
+    } else {
+        valuesInputs.pencilLength = "wrong";
+    }
+};
+
+// second part - check the rest
+
+let selectBtn4;
+
+document.getElementById("selectBrush").onclick = function () {
+    document.getElementById("selectBrush").style.backgroundColor = "#369CB7";
+    document.getElementById("selectBrush").style.color = "white";
+
+    selectBtn4 = "right";
+
+    document.getElementById("selectPencil").style.backgroundColor = "white";
+    document.getElementById("selectPencil").style.color = "black";
+};
+
+document.getElementById("selectPencil").onclick = function () {
+    document.getElementById("selectPencil").style.backgroundColor = "#369CB7";
+    document.getElementById("selectPencil").style.color = "white";
+
+    selectBtn4 = "wrong";
+
+    document.getElementById("selectBrush").style.backgroundColor = "white";
+    document.getElementById("selectBrush").style.color = "black";
+};
+
+function question20() {
+    alert(
+        " 1. The value entered in the left field - " +
+            valuesInputs.tasselLength +
+            " and in the right field - " +
+            valuesInputs.pencilLength
+    );
+    alert("2. You made the " + selectBtn4 + " choice");
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -755,4 +1370,16 @@ document.getElementById("submit").onclick = function () {
     question5();
     question6();
     question7();
+    question8();
+    question9();
+    question10();
+    question11();
+    question12();
+    question13();
+    question14();
+    question15();
+    question16();
+    question17();
+    question18();
+    question20();
 };
