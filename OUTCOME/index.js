@@ -540,10 +540,6 @@ function drop18(e) {
     }
 }
 
-// 19 QUESTION
-
-// ТУТ БУДЕТ КОД
-
 // 20 QUESTION
 
 function drag20(e) {
@@ -1302,8 +1298,6 @@ function question18() {
     );
 }
 
-// ------------------------------------------------------- для 19 место
-
 // 20 QUESTION
 
 // first part - check to input
@@ -1360,7 +1354,197 @@ function question20() {
     alert("2. You made the " + selectBtn4 + " choice");
 }
 
-// RESULT
+// ------------------------------------------------------------------ALL SCRIPTS THE 19th QUESTION---------------------------------------------
+
+//  common and initialization
+
+dragElement(document.getElementsByClassName("firstTriangle")[0]);
+dragElement2(document.getElementsByClassName("secondTriangle")[0]);
+
+const rotationFunctionForFirstTriangle = new Propeller(
+    document.getElementsByClassName("firstTriangle")[0],
+    {
+        inertia: 0,
+    }
+);
+
+const rotationFunctionForSecondTriangle = new Propeller(
+    document.getElementsByClassName("secondTriangle")[0],
+    {
+        inertia: 0,
+    }
+);
+
+function dragElement(element) {
+    // alert("exc");
+    let pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+
+    element.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        element.style.top = element.offsetTop - pos2 + "px";
+        element.style.left = element.offsetLeft - pos1 + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+function dragElement2(element) {
+    // alert("exc!!");
+    let pos10 = 0,
+        pos20 = 0,
+        pos30 = 0,
+        pos40 = 0;
+
+    element.onmousedown = dragMouseDown2;
+
+    function dragMouseDown2(e) {
+        e = e || window.event;
+        // get the mouse cursor position at startup:
+        pos30 = e.clientX;
+        pos40 = e.clientY;
+        document.onmouseup = closeDragElement2;
+        document.onmousemove = elementDrag2;
+    }
+
+    function elementDrag2(e) {
+        // console.log("hhh");
+        e = e || window.event;
+        // calculate the new cursor position:
+        pos10 = pos30 - e.clientX;
+        pos20 = pos40 - e.clientY;
+        pos30 = e.clientX;
+        pos40 = e.clientY;
+        // set the element's new position:
+        element.style.top = element.offsetTop - pos20 + "px";
+        element.style.left = element.offsetLeft - pos10 + "px";
+    }
+
+    function closeDragElement2() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+// implementation of movement and rotation of the first triangle
+
+document
+    .getElementsByClassName("firstTriangle")[0]
+    .addEventListener("mousedown", (e) => {
+        if (
+            (e.target.className !== "topСorner" ||
+                e.target.className !== "bottomСorners") &&
+            e.target.className === "mainImg"
+        ) {
+            rotationFunctionForFirstTriangle.stop();
+            dragElement(document.getElementsByClassName("firstTriangle")[0]);
+        }
+
+        if (
+            (e.target.className === "topСorner" ||
+                e.target.className === "bottomСorners") &&
+            e.target.className !== "mainImg"
+        ) {
+            rotationFunctionForFirstTriangle.onRotated(e);
+        }
+    });
+
+// implementation of movement and rotation of the second triangle
+
+document
+    .getElementsByClassName("secondTriangle")[0]
+    .addEventListener("mousedown", (e) => {
+        // alert("exc");
+        if (
+            (e.target.className !== "leftCorners" ||
+                e.target.className !== "rightCorner") &&
+            e.target.className === "mainImgSecondTriangle"
+        ) {
+            // alert("god");
+            rotationFunctionForSecondTriangle.stop();
+            dragElement2(document.getElementsByClassName("secondTriangle")[0]);
+        }
+
+        if (
+            (e.target.className === "leftCorners" ||
+                e.target.className === "rightCorner") &&
+            e.target.className !== "mainImgSecondTriangle"
+        ) {
+            // alert("ogoo");
+            rotationFunctionForSecondTriangle.onRotated(e);
+        }
+    });
+
+function question19() {
+    // Дано:
+
+    // функция для получения координат фигуры
+
+    function getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset,
+        };
+    }
+
+    // Надо: ...
+
+    // Решение:
+
+    // 1. получаю координаты треугольников
+
+    // - беру первый треугольник
+    let firstTriangle = document.getElementsByClassName("firstTriangle")[0];
+    // - беру второй треугольник
+    let secondTriangle = document.getElementsByClassName("secondTriangle")[0];
+
+    // - получаю координаты первого
+    let coordElemFirst = getCoords(firstTriangle);
+    // - получаю координаты первого
+    let coordElemSecond = getCoords(secondTriangle);
+
+    // 2. сравниваю их с координатами прямоугольника
+    if (
+        coordElemFirst.left < 570 &&
+        coordElemFirst.left > 560 &&
+        coordElemFirst.top < 220 &&
+        coordElemFirst.top > 200 &&
+        coordElemSecond.left < 570 &&
+        coordElemSecond.left > 560 &&
+        coordElemSecond.top < 220 &&
+        coordElemSecond.top > 200
+    ) {
+        alert("молодец! всё верно :)");
+    } else {
+        alert("не верно");
+    }
+}
+
+// ---------------------------------------------------------------------- RESULT
 
 document.getElementById("submit").onclick = function () {
     question1();
@@ -1381,5 +1565,6 @@ document.getElementById("submit").onclick = function () {
     question16();
     question17();
     question18();
+    question19();
     question20();
 };
