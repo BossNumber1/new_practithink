@@ -585,6 +585,22 @@ function drop20(e) {
 
 //                                   --- CHECK IMPLEMENTATION ---
 
+// -------------------------------------------------------------common function---------------------------------------------------
+
+function succerror(elem, checkElement) {
+    if (checkElement) {
+        elem.style.backgroundColor = "#ED7777";
+        elem.style.color = "white";
+        elem.style.border = "1px solid #ED7777";
+    } else {
+        elem.style.backgroundColor = "#48B736";
+        elem.style.color = "white";
+        elem.style.border = "1px solid #48B736";
+    }
+}
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
 // 1 QUESTION
 
 let correctOrder = [23, 24, 25, 26, 27, 28];
@@ -657,15 +673,7 @@ document.querySelector("input").onchange = function (e) {
 
 function question4() {
     if (countCookies) {
-        if (countCookies != 10) {
-            document.querySelector("input").style.backgroundColor = "#ED7777";
-            document.querySelector("input").style.color = "white";
-            document.querySelector("input").style.border = "1px solid #ED7777";
-        } else {
-            document.querySelector("input").style.backgroundColor = "#48B736";
-            document.querySelector("input").style.color = "white";
-            document.querySelector("input").style.border = "1px solid #48B736";
-        }
+        succerror(document.querySelector("input"), countCookies != 10);
     } else {
         document.querySelector("input").style.backgroundColor = "#ED7777";
         document.querySelector("input").style.color = "white";
@@ -698,49 +706,21 @@ function question5() {
         document.getElementsByClassName("inputCollection")[0].children[1]
             .textContent;
 
-    if (selected.amountIceCream === "wrong") {
-        document.getElementById("amountIceCream").style.backgroundColor =
-            "#ED7777";
-        document.getElementById("amountIceCream").style.color = "white";
-        document.getElementById("amountIceCream").style.border =
-            "1px solid #ED7777";
-    } else {
-        document.getElementById("amountIceCream").style.backgroundColor =
-            "#48B736";
-        document.getElementById("amountIceCream").style.color = "white";
-        document.getElementById("amountIceCream").style.border =
-            "1px solid #48B736";
-    }
+    succerror(
+        document.getElementById("amountIceCream"),
+        selected.amountIceCream === "wrong"
+    );
 
-    if (selectedSign.replace(/\s/g, "") != "<") {
-        document.getElementsByClassName(
-            "inputCollection"
-        )[0].children[1].children[0].style.backgroundColor = "#ED7777";
-        document.getElementsByClassName(
-            "inputCollection"
-        )[0].children[1].children[0].style.border = "1px solid #ED7777";
-    } else {
-        document.getElementsByClassName(
-            "inputCollection"
-        )[0].children[1].children[0].style.backgroundColor = "#48B736";
-        document.getElementsByClassName(
-            "inputCollection"
-        )[0].children[1].children[0].style.border = "1px solid #48B736";
-    }
+    succerror(
+        document.getElementsByClassName("inputCollection")[0].children[1]
+            .children[0],
+        selectedSign.replace(/\s/g, "") != "<"
+    );
 
-    if (selected.amountFlowers === "wrong") {
-        document.getElementById("amountFlowers").style.backgroundColor =
-            "#ED7777";
-        document.getElementById("amountFlowers").style.color = "white";
-        document.getElementById("amountFlowers").style.border =
-            "1px solid #ED7777";
-    } else {
-        document.getElementById("amountFlowers").style.backgroundColor =
-            "#48B736";
-        document.getElementById("amountFlowers").style.color = "white";
-        document.getElementById("amountFlowers").style.border =
-            "1px solid #48B736";
-    }
+    succerror(
+        document.getElementById("amountFlowers"),
+        selected.amountFlowers === "wrong"
+    );
 }
 
 // 6 QUESTION
@@ -801,13 +781,19 @@ document.getElementById("result").onchange = function (e) {
 };
 
 function question8() {
-    alert(
-        "your results: number of jellyfish - " +
-            howManyCounted.jellyfish +
-            ", number of sea horses - " +
-            howManyCounted.seaHorse +
-            ", total - " +
-            howManyCounted.result
+    succerror(
+        document.getElementById("numberJellyfish"),
+        howManyCounted.jellyfish === "wrong"
+    );
+
+    succerror(
+        document.getElementById("numberSeahorses"),
+        howManyCounted.seaHorse === "wrong"
+    );
+
+    succerror(
+        document.getElementById("result"),
+        howManyCounted.result === "wrong"
     );
 }
 
@@ -874,15 +860,10 @@ document.getElementById("eighteen").onclick = function () {
 };
 
 function question9() {
-    if (selectedButton === "wrong") {
-        document.getElementById(selectedNameButton).style.backgroundColor =
-            "#ED7777";
-        document.getElementById(selectedNameButton).style.color = "white";
-    } else {
-        document.getElementById(selectedNameButton).style.backgroundColor =
-            "#48B736";
-        document.getElementById(selectedNameButton).style.color = "white";
-    }
+    succerror(
+        document.getElementById(selectedNameButton),
+        selectedButton === "wrong"
+    );
 }
 
 // 10 QUESTION
@@ -1006,13 +987,7 @@ document.getElementById("btnSelectJack").onclick = function () {
 };
 
 function question11() {
-    if (selectBtn2 === "wrong") {
-        document.getElementById(selectedName).style.backgroundColor = "#ED7777";
-        document.getElementById(selectedName).style.color = "white";
-    } else {
-        document.getElementById(selectedName).style.backgroundColor = "#48B736";
-        document.getElementById(selectedName).style.color = "white";
-    }
+    succerror(document.getElementById(selectedName), selectBtn2 === "wrong");
 }
 
 // 12 QUESTION
