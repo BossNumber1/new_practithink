@@ -275,7 +275,6 @@ body {
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 0px 30px;
 }
 
 /* places styles */
@@ -622,6 +621,10 @@ body {
     flex-grow: 0;
     margin-right: 31px;
     cursor: grab;
+}
+
+.applesRow div:hover {
+    transform: scale(1.2);
 }
 
 .textBasket {
@@ -1039,7 +1042,7 @@ body {
 }
 
 .row div:not(.selectedPicture):hover {
-    margin: 0 30px;
+    margin-right: 30px;
     width: 130px;
     height: 130px;
     background: #ffffff;
@@ -1234,14 +1237,11 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    cursor: grab;
 }
 
 .bottomRow3 {
     top: 17px;
-}
-
-.topRow3 div {
-    cursor: grab;
 }
 
 /* collections styles */
@@ -1677,6 +1677,11 @@ body {
     top: 12px;
 }
 
+.topRow4 div:hover,
+.bottomRow4 div:hover {
+    transform: scale(1.2);
+}
+
 /* baskets styles */
 
 .baskets {
@@ -1786,7 +1791,6 @@ body {
 }
 
 .content17 div:not(.selectedPicture2):hover {
-    margin: 0 30px;
     width: 170px;
     height: 170px;
     background: #ffffff;
@@ -2201,6 +2205,11 @@ body {
     flex-grow: 0;
     margin-right: 20px;
     cursor: grab;
+}
+
+.topRow5 div:hover,
+.bottomRow5 div:hover {
+    transform: scale(1.2);
 }
 
 .bottomRow5 {
