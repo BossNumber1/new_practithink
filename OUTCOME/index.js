@@ -780,7 +780,8 @@ function question8() {
 
 // 9 QUESTION
 
-let selectedButton = "";
+let selectedButton = "",
+    selectedNameButton;
 
 document.getElementById("thirteen").onclick = function () {
     let clickedElement = document.getElementById("thirteen");
@@ -790,6 +791,7 @@ document.getElementById("thirteen").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "wrong";
+    selectedNameButton = "thirteen";
 
     document.getElementById("fourteen").style.backgroundColor = "white";
     document.getElementById("fourteen").style.color = "black";
@@ -808,6 +810,7 @@ document.getElementById("fourteen").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "right";
+    selectedNameButton = "fourteen";
 
     document.getElementById("thirteen").style.backgroundColor = "white";
     document.getElementById("thirteen").style.color = "black";
@@ -826,6 +829,7 @@ document.getElementById("eighteen").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton = "wrong";
+    selectedNameButton = "eighteen";
 
     document.getElementById("thirteen").style.backgroundColor = "white";
     document.getElementById("thirteen").style.color = "black";
@@ -837,7 +841,15 @@ document.getElementById("eighteen").onclick = function () {
 };
 
 function question9() {
-    alert("you have the " + selectedButton + " answer");
+    if (selectedButton === "wrong") {
+        document.getElementById(selectedNameButton).style.backgroundColor =
+            "#ED7777";
+        document.getElementById(selectedNameButton).style.color = "white";
+    } else {
+        document.getElementById(selectedNameButton).style.backgroundColor =
+            "#48B736";
+        document.getElementById(selectedNameButton).style.color = "white";
+    }
 }
 
 // 10 QUESTION
