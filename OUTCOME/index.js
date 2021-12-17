@@ -617,14 +617,16 @@ function question2() {
     let chil = firstRow[0].children;
 
     for (let i = 0; i < chil.length; i++) {
-        if (chil[i].innerText == correctOrder2[i]) {
-            resultat2.push("верно");
-        } else {
+        if (chil[i].innerText != correctOrder2[i]) {
             resultat2.push("нет");
         }
     }
 
-    alert(resultat2);
+    if (resultat2.length === 0) {
+        alert("well done, the right choice");
+    } else {
+        alert("wrong, try again");
+    }
 }
 
 // 3 QUESTION
