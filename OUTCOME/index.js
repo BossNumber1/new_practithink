@@ -604,7 +604,7 @@ function drop20(e) {
 let correctOrder = [23, 24, 25, 26, 27, 28];
 let resultat = [];
 
-document.getElementById("submit").onclick = function () {
+function question1() {
     let topRow = document.getElementsByClassName("topRow");
     let childrenTopRow = topRow[0].children;
 
@@ -619,4 +619,31 @@ document.getElementById("submit").onclick = function () {
     } else {
         alert("wrong, try again");
     }
+}
+
+// 2 QUESTION
+
+let correctOrder2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+let resultat2 = [];
+
+function question2() {
+    let firstRow = document.getElementsByClassName("inputsCollection");
+    let chil = firstRow[0].children;
+
+    for (let i = 0; i < chil.length; i++) {
+        if (chil[i].innerText == correctOrder2[i]) {
+            resultat2.push("верно");
+        } else {
+            resultat2.push("нет");
+        }
+    }
+
+    alert(resultat2);
+}
+
+// RESULT
+
+document.getElementById("submit").onclick = function () {
+    question1();
+    question2();
 };
