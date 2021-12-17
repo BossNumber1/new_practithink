@@ -587,12 +587,31 @@ function drop20(e) {
 
 // -------------------------------------------------------------common function---------------------------------------------------
 
-function succerror(elem, checkElement) {
+function succerror(elem, checkElement, ancestor) {
+    function objectCreation(status) {
+        let object = document.createElement("img");
+        object.style.marginLeft = "10px";
+
+        if (status === "success") {
+            object.src = "./pictures/successIcon.svg";
+        } else {
+            object.src = "./pictures/failureIcon.svg";
+        }
+
+        return object;
+    }
+
     if (checkElement) {
+        let img = objectCreation("failure");
+        ancestor[0].children[0].appendChild(img);
+
         elem.style.backgroundColor = "#ED7777";
         elem.style.color = "white";
         elem.style.border = "1px solid #ED7777";
     } else {
+        let img = objectCreation("success");
+        ancestor[0].children[0].appendChild(img);
+
         elem.style.backgroundColor = "#48B736";
         elem.style.color = "white";
         elem.style.border = "1px solid #48B736";
@@ -673,7 +692,11 @@ document.querySelector("input").onchange = function (e) {
 
 function question4() {
     if (countCookies) {
-        succerror(document.querySelector("input"), countCookies != 10);
+        succerror(
+            document.querySelector("input"),
+            countCookies != 10,
+            document.getElementsByClassName("question4")
+        );
     } else {
         document.querySelector("input").style.backgroundColor = "#ED7777";
         document.querySelector("input").style.color = "white";
@@ -708,18 +731,21 @@ function question5() {
 
     succerror(
         document.getElementById("amountIceCream"),
-        selected.amountIceCream === "wrong"
+        selected.amountIceCream === "wrong",
+        document.getElementsByClassName("question5")
     );
 
     succerror(
         document.getElementsByClassName("inputCollection")[0].children[1]
             .children[0],
-        selectedSign.replace(/\s/g, "") != "<"
+        selectedSign.replace(/\s/g, "") != "<",
+        document.getElementsByClassName("question5")
     );
 
     succerror(
         document.getElementById("amountFlowers"),
-        selected.amountFlowers === "wrong"
+        selected.amountFlowers === "wrong",
+        document.getElementsByClassName("question5")
     );
 }
 
@@ -783,17 +809,20 @@ document.getElementById("result").onchange = function (e) {
 function question8() {
     succerror(
         document.getElementById("numberJellyfish"),
-        howManyCounted.jellyfish === "wrong"
+        howManyCounted.jellyfish === "wrong",
+        document.getElementsByClassName("question8")
     );
 
     succerror(
         document.getElementById("numberSeahorses"),
-        howManyCounted.seaHorse === "wrong"
+        howManyCounted.seaHorse === "wrong",
+        document.getElementsByClassName("question8")
     );
 
     succerror(
         document.getElementById("result"),
-        howManyCounted.result === "wrong"
+        howManyCounted.result === "wrong",
+        document.getElementsByClassName("question8")
     );
 }
 
@@ -862,7 +891,8 @@ document.getElementById("eighteen").onclick = function () {
 function question9() {
     succerror(
         document.getElementById(selectedNameButton),
-        selectedButton === "wrong"
+        selectedButton === "wrong",
+        document.getElementsByClassName("question9")
     );
 }
 
@@ -987,7 +1017,11 @@ document.getElementById("btnSelectJack").onclick = function () {
 };
 
 function question11() {
-    succerror(document.getElementById(selectedName), selectBtn2 === "wrong");
+    succerror(
+        document.getElementById(selectedName),
+        selectBtn2 === "wrong",
+        document.getElementsByClassName("question11")
+    );
 }
 
 // 12 QUESTION
@@ -1021,17 +1055,20 @@ document.getElementById("numberRhombus").onchange = function (e) {
 function question12() {
     succerror(
         document.getElementById("numberHearts"),
-        answers.hearts === "wrong"
+        answers.hearts === "wrong",
+        document.getElementsByClassName("question12")
     );
 
     succerror(
         document.getElementById("numberStars"),
-        answers.stars === "wrong"
+        answers.stars === "wrong",
+        document.getElementsByClassName("question12")
     );
 
     succerror(
         document.getElementById("numberRhombus"),
-        answers.rhombus === "wrong"
+        answers.rhombus === "wrong",
+        document.getElementsByClassName("question12")
     );
 }
 
@@ -1187,9 +1224,17 @@ document.getElementById("answer").onchange = function (e) {
 
 function question15() {
     if (answer == "") {
-        succerror(document.getElementById("answer"), answer === "");
+        succerror(
+            document.getElementById("answer"),
+            answer === "",
+            document.getElementsByClassName("question15")
+        );
     } else {
-        succerror(document.getElementById("answer"), answer === "wrong");
+        succerror(
+            document.getElementById("answer"),
+            answer === "wrong",
+            document.getElementsByClassName("question15")
+        );
     }
 }
 
@@ -1411,15 +1456,21 @@ document.getElementById("selectPencil").onclick = function () {
 function question20() {
     succerror(
         document.getElementById("tasselLength"),
-        valuesInputs.tasselLength === "wrong"
+        valuesInputs.tasselLength === "wrong",
+        document.getElementsByClassName("question20")
     );
 
     succerror(
         document.getElementById("pencilLength"),
-        valuesInputs.pencilLength === "wrong"
+        valuesInputs.pencilLength === "wrong",
+        document.getElementsByClassName("question20")
     );
 
-    succerror(document.getElementById(nameSelectedBtn), selectBtn4 === "wrong");
+    succerror(
+        document.getElementById(nameSelectedBtn),
+        selectBtn4 === "wrong",
+        document.getElementsByClassName("question20")
+    );
 }
 
 // ------------------------------------------------------------------ALL SCRIPTS THE 19th QUESTION---------------------------------------------
