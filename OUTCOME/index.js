@@ -599,14 +599,24 @@ function succerror(elem, checkElement) {
     }
 }
 
-function addImage(status, ancestor) {
+function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
 
     if (status === "success") {
         object.src = "./pictures/successIcon.svg";
+        document.getElementsByClassName(appClass)[0].style.border =
+            "1px solid #9DD765";
+        document.getElementsByClassName("lineUnderHeading")[
+            position - 1
+        ].style.borderBottom = "1px solid #9DD765";
     } else {
         object.src = "./pictures/failureIcon.svg";
+        document.getElementsByClassName(appClass)[0].style.border =
+            "1px solid #FFB47D";
+        document.getElementsByClassName("lineUnderHeading")[
+            position - 1
+        ].style.borderBottom = "1px solid #FFB47D";
     }
 
     ancestor[0].children[0].appendChild(object);
@@ -689,9 +699,19 @@ function question4() {
         succerror(document.querySelector("input"), countCookies != 10);
 
         if (countCookies != 10) {
-            addImage("failure", document.getElementsByClassName("question4"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
         } else {
-            addImage("success", document.getElementsByClassName("question4"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
         }
     }
 }
@@ -743,9 +763,19 @@ function question5() {
             selectedSign.replace(/\s/g, "") == "<" &&
             selected.amountIceCream === "right"
         ) {
-            addImage("success", document.getElementsByClassName("question5"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question5"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
+            );
         }
     }
 }
@@ -833,9 +863,19 @@ function question8() {
             howManyCounted.seaHorse === "right" &&
             howManyCounted.result === "right"
         ) {
-            addImage("success", document.getElementsByClassName("question8"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question8"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
         }
     }
 }
@@ -910,9 +950,19 @@ function question9() {
         );
 
         if (selectedButton === "right") {
-            addImage("success", document.getElementsByClassName("question9"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question9"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
+            );
         }
     }
 }
@@ -1044,9 +1094,19 @@ function question11() {
         );
 
         if (selectBtn2 === "right") {
-            addImage("success", document.getElementsByClassName("question11"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question11"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
         }
     }
 }
@@ -1101,9 +1161,19 @@ function question12() {
             answers.stars === "right" &&
             answers.rhombus === "right"
         ) {
-            addImage("success", document.getElementsByClassName("question12"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question12"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
+            );
         }
     }
 }
@@ -1263,9 +1333,19 @@ function question15() {
         succerror(document.getElementById("answer"), answer === "wrong");
 
         if (answer === "right") {
-            addImage("success", document.getElementsByClassName("question15"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question15"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
+            );
         }
     }
 }
@@ -1507,9 +1587,19 @@ function question20() {
             valuesInputs.pencilLength === "right" &&
             valuesInputs.selectBtn4 === "right"
         ) {
-            addImage("success", document.getElementsByClassName("question20"));
+            addImage(
+                "success",
+                document.getElementsByClassName("question20"),
+                "app20",
+                16
+            );
         } else {
-            addImage("failure", document.getElementsByClassName("question20"));
+            addImage(
+                "failure",
+                document.getElementsByClassName("question20"),
+                "app20",
+                16
+            );
         }
     }
 }
