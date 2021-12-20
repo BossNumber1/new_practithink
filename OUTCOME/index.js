@@ -674,6 +674,15 @@ function addMiniIcon(elem, status) {
     elementParent.insertBefore(objDiv, elem);
 }
 
+// делаем появление мини-иконок над областью проверки
+
+function createMiniIcon(property, id) {
+    if (property === "right") {
+        addMiniIcon(document.getElementById(id), "success");
+    } else {
+        addMiniIcon(document.getElementById(id), "failure");
+    }
+}
 // -----------------------------------------------------------------------------------------------------------------------------
 
 // 1 QUESTION
@@ -812,11 +821,7 @@ function question5() {
             selected.amountFlowers === "wrong"
         );
 
-        if (selected.amountFlowers === "right") {
-            addMiniIcon(document.getElementById("amountFlowers"), "success");
-        } else {
-            addMiniIcon(document.getElementById("amountFlowers"), "failure");
-        }
+        // расставляем мини-иконки
 
         if (selectedSign.replace(/\s/g, "") == "<") {
             addMiniIcon(
@@ -832,11 +837,10 @@ function question5() {
             );
         }
 
-        if (selected.amountIceCream === "right") {
-            addMiniIcon(document.getElementById("amountIceCream"), "success");
-        } else {
-            addMiniIcon(document.getElementById("amountIceCream"), "failure");
-        }
+        createMiniIcon(selected.amountFlowers, "amountFlowers");
+        createMiniIcon(selected.amountIceCream, "amountIceCream");
+
+        // выносим общий статус к номеру вопроса
 
         if (
             selected.amountFlowers === "right" &&
@@ -938,17 +942,7 @@ function question8() {
             howManyCounted.result === "wrong"
         );
 
-        // общая функция
-
-        function createMiniIcon(property, id) {
-            if (property === "right") {
-                addMiniIcon(document.getElementById(id), "success");
-            } else {
-                addMiniIcon(document.getElementById(id), "failure");
-            }
-        }
-
-        // ставим мини-иконки как наглядный статус
+        // расставляем мини-иконки
 
         createMiniIcon(howManyCounted.jellyfish, "numberJellyfish");
         createMiniIcon(howManyCounted.seaHorse, "numberSeahorses");
