@@ -765,6 +765,7 @@ function question4() {
                 "app4",
                 4
             );
+            addMiniIcon(document.querySelector("input"), "success");
         }
     }
 }
@@ -811,6 +812,32 @@ function question5() {
             selected.amountFlowers === "wrong"
         );
 
+        if (selected.amountFlowers === "right") {
+            addMiniIcon(document.getElementById("amountFlowers"), "success");
+        } else {
+            addMiniIcon(document.getElementById("amountFlowers"), "failure");
+        }
+
+        if (selectedSign.replace(/\s/g, "") == "<") {
+            addMiniIcon(
+                document.getElementsByClassName("inputCollection")[0]
+                    .children[1].children[0],
+                "success"
+            );
+        } else {
+            addMiniIcon(
+                document.getElementsByClassName("inputCollection")[0]
+                    .children[1].children[0],
+                "failure"
+            );
+        }
+
+        if (selected.amountIceCream === "right") {
+            addMiniIcon(document.getElementById("amountIceCream"), "success");
+        } else {
+            addMiniIcon(document.getElementById("amountIceCream"), "failure");
+        }
+
         if (
             selected.amountFlowers === "right" &&
             selectedSign.replace(/\s/g, "") == "<" &&
@@ -829,14 +856,6 @@ function question5() {
                 "app5",
                 5
             );
-
-            addMiniIcon(document.getElementById("amountIceCream"), "failure");
-            addMiniIcon(
-                document.getElementsByClassName("inputCollection")[0]
-                    .children[1].children[0],
-                "failure"
-            );
-            addMiniIcon(document.getElementById("amountFlowers"), "failure");
         }
     }
 }
