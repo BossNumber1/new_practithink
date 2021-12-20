@@ -644,10 +644,13 @@ function addIcon(elem) {
 
     // устанавливаем её нашему блоку
     objDiv.style.width = wid;
-    objDiv.style.border = "1px solid gray";
+    // objDiv.style.border = "1px solid gray";
 
     objDiv.style.marginLeft = margaLeft;
     objDiv.style.marginRight = margaRight;
+
+    // objDiv.style.paddingTop = "10px";
+    objDiv.style.paddingBottom = "10px";
 
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
@@ -657,7 +660,7 @@ function addIcon(elem) {
     obj.src = "./pictures/failureMiniIcon.svg";
 
     objDiv.appendChild(obj);
-    objDiv.style.marginTop = "-13px";
+    objDiv.style.marginTop = "-23px";
 
     // устаанавливаем её в нужное место
     let pele = elem.parentElement;
