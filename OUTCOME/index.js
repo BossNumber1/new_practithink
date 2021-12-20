@@ -1286,6 +1286,17 @@ function question12() {
             answers.rhombus === "wrong"
         );
 
+        // расставляем мини-иконки
+
+        createMiniIcon(answers.hearts, document.getElementById("numberHearts"));
+        createMiniIcon(answers.stars, document.getElementById("numberStars"));
+        createMiniIcon(
+            answers.rhombus,
+            document.getElementById("numberRhombus")
+        );
+
+        // выносим общий статус к номеру вопроса
+
         if (
             answers.hearts === "right" &&
             answers.stars === "right" &&
