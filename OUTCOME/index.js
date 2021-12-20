@@ -1741,16 +1741,6 @@ function question20() {
 
         // расставляем мини-иконки
 
-        createMiniIcon(
-            valuesInputs.tasselLength,
-            document.getElementById("tasselLength")
-        );
-
-        createMiniIcon(
-            valuesInputs.pencilLength,
-            document.getElementById("pencilLength")
-        );
-
         createMiniIcon(selectBtn4, document.getElementById(nameSelectedBtn));
 
         // выносим общий статус к номеру вопроса
