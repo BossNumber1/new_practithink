@@ -628,21 +628,21 @@ function addImage(status, ancestor, appClass, position) {
 
 function addIcon(elem) {
     // создаём мини-иконку
+    let objDiv = document.createElement("div");
+    objDiv.style.display = "flex";
+    objDiv.style.justifyContent = "center";
+    objDiv.style.alignItems = "center";
+
     let obj = document.createElement("img");
     obj.src = "./pictures/failureMiniIcon.svg";
-    // obj.style.position = "inherit";
-    // obj.style.textAlign = "center";
 
-    let leftDistance = elem.getBoundingClientRect().width / 2;
-    // let topDistance = elem.getBoundingClientRect().top;
+    objDiv.appendChild(obj);
 
-    obj.style.left = leftDistance + "px";
-    // obj.style.top = 240 + "px";
-    // obj.style.marginTop = topDistance - 140 + "px";
+    objDiv.style.marginTop = "-13px";
 
     // устаанавливаем её в нужное место
     let pele = elem.parentElement;
-    pele.insertBefore(obj, elem);
+    pele.insertBefore(objDiv, elem);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
