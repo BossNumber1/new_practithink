@@ -646,7 +646,13 @@ function addMiniIcon(elem, status) {
     objDiv.style.width = widthAdjacentElement;
     objDiv.style.marginLeft = leftIndent;
     objDiv.style.marginRight = rightIndent;
-    objDiv.style.paddingBottom = "10px";
+
+    if (elem.parentElement.parentElement.className === "btns3") {
+        objDiv.style.paddingBottom = "0px";
+    } else {
+        objDiv.style.paddingBottom = "10px";
+    }
+
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
@@ -663,7 +669,8 @@ function addMiniIcon(elem, status) {
 
     if (
         elem.parentElement.className === "buttonContent" ||
-        elem.parentElement.parentElement.className === "btns"
+        elem.parentElement.parentElement.className === "btns" ||
+        elem.parentElement.parentElement.className === "btns3"
     ) {
         objDiv.style.backgroundColor = "white";
         objDiv.style.border = "none";
@@ -675,6 +682,9 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-30px";
     } else if (elem.parentElement.parentElement.className === "btns") {
         objDiv.style.marginTop = "-45px";
+    } else if (elem.parentElement.parentElement.className === "btns3") {
+        objDiv.style.marginTop = "-45px";
+        document.getElementsByClassName("question2")[0].style.zIndex = "2";
     }
 
     // устаанавливаем её в нужное место
@@ -1728,6 +1738,22 @@ function question20() {
             document.getElementById(nameSelectedBtn),
             selectBtn4 === "wrong"
         );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            valuesInputs.tasselLength,
+            document.getElementById("tasselLength")
+        );
+
+        createMiniIcon(
+            valuesInputs.pencilLength,
+            document.getElementById("pencilLength")
+        );
+
+        createMiniIcon(selectBtn4, document.getElementById(nameSelectedBtn));
+
+        // выносим общий статус к номеру вопроса
 
         if (
             valuesInputs.tasselLength === "right" &&
