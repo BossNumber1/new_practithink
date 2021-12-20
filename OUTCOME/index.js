@@ -629,6 +629,26 @@ function addImage(status, ancestor, appClass, position) {
 function addIcon(elem) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
+
+    // получаем ширину элемента, чтобы выровнять по горизонтали
+    let wid = elem.getBoundingClientRect().width;
+
+    // получаем отступы элемента, для того же
+    let margaLeft = window
+        .getComputedStyle(elem, null)
+        .getPropertyValue("margin-left");
+
+    let margaRight = window
+        .getComputedStyle(elem, null)
+        .getPropertyValue("margin-right");
+
+    // устанавливаем её нашему блоку
+    objDiv.style.width = wid;
+    objDiv.style.border = "1px solid gray";
+
+    objDiv.style.marginLeft = margaLeft;
+    objDiv.style.marginRight = margaRight;
+
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
@@ -637,7 +657,6 @@ function addIcon(elem) {
     obj.src = "./pictures/failureMiniIcon.svg";
 
     objDiv.appendChild(obj);
-
     objDiv.style.marginTop = "-13px";
 
     // устаанавливаем её в нужное место
