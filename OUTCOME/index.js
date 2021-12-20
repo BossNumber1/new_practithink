@@ -661,12 +661,20 @@ function addMiniIcon(elem, status) {
 
     objDiv.appendChild(obj);
 
-    if (elem.parentElement.className === "buttonContent") {
+    if (
+        elem.parentElement.className === "buttonContent" ||
+        elem.parentElement.parentElement.className === "btns"
+    ) {
         objDiv.style.backgroundColor = "white";
         objDiv.style.border = "none";
-        objDiv.style.marginTop = "-30px";
     } else {
         objDiv.style.marginTop = "-23px";
+    }
+
+    if (elem.parentElement.className === "buttonContent") {
+        objDiv.style.marginTop = "-30px";
+    } else if (elem.parentElement.parentElement.className === "btns") {
+        objDiv.style.marginTop = "-45px";
     }
 
     // устаанавливаем её в нужное место
@@ -676,11 +684,11 @@ function addMiniIcon(elem, status) {
 
 // делаем появление мини-иконок над областью проверки
 
-function createMiniIcon(property, id) {
+function createMiniIcon(property, element) {
     if (property === "right") {
-        addMiniIcon(document.getElementById(id), "success");
+        addMiniIcon(element, "success");
     } else {
-        addMiniIcon(document.getElementById(id), "failure");
+        addMiniIcon(element, "failure");
     }
 }
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -837,8 +845,14 @@ function question5() {
             );
         }
 
-        createMiniIcon(selected.amountFlowers, "amountFlowers");
-        createMiniIcon(selected.amountIceCream, "amountIceCream");
+        createMiniIcon(
+            selected.amountFlowers,
+            document.getElementById("amountFlowers")
+        );
+        createMiniIcon(
+            selected.amountIceCream,
+            document.getElementById("amountIceCream")
+        );
 
         // выносим общий статус к номеру вопроса
 
@@ -944,9 +958,18 @@ function question8() {
 
         // расставляем мини-иконки
 
-        createMiniIcon(howManyCounted.jellyfish, "numberJellyfish");
-        createMiniIcon(howManyCounted.seaHorse, "numberSeahorses");
-        createMiniIcon(howManyCounted.result, "result");
+        createMiniIcon(
+            howManyCounted.jellyfish,
+            document.getElementById("numberJellyfish")
+        );
+        createMiniIcon(
+            howManyCounted.seaHorse,
+            document.getElementById("numberSeahorses")
+        );
+        createMiniIcon(
+            howManyCounted.result,
+            document.getElementById("result")
+        );
 
         // выносим общий статус к номеру вопроса
 
@@ -1040,6 +1063,15 @@ function question9() {
             document.getElementById(selectedNameButton),
             selectedButton === "wrong"
         );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            selectedButton,
+            document.getElementById(selectedNameButton)
+        );
+
+        // выносим общий статус к номеру вопроса
 
         if (selectedButton === "right") {
             addImage(
