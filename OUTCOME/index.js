@@ -626,45 +626,52 @@ function addImage(status, ancestor, appClass, position) {
 
 // добавляем крестик или галочку над областью результата
 
-function addIcon(elem) {
+function addMiniIcon(elem, status) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
 
     // получаем ширину элемента, чтобы выровнять по горизонтали
-    let wid = elem.getBoundingClientRect().width;
+    let widthAdjacentElement = elem.getBoundingClientRect().width;
 
     // получаем отступы элемента, для того же
-    let margaLeft = window
+    let leftIndent = window
         .getComputedStyle(elem, null)
         .getPropertyValue("margin-left");
 
-    let margaRight = window
+    let rightIndent = window
         .getComputedStyle(elem, null)
         .getPropertyValue("margin-right");
 
     // устанавливаем её нашему блоку
-    objDiv.style.width = wid;
-    // objDiv.style.border = "1px solid gray";
-
-    objDiv.style.marginLeft = margaLeft;
-    objDiv.style.marginRight = margaRight;
-
-    // objDiv.style.paddingTop = "10px";
+    objDiv.style.width = widthAdjacentElement;
+    objDiv.style.marginLeft = leftIndent;
+    objDiv.style.marginRight = rightIndent;
     objDiv.style.paddingBottom = "10px";
-
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
 
     let obj = document.createElement("img");
-    obj.src = "./pictures/failureMiniIcon.svg";
+
+    if (status === "success") {
+        obj.src = "./pictures/successMiniIcon.svg";
+    } else {
+        obj.src = "./pictures/failureMiniIcon.svg";
+    }
 
     objDiv.appendChild(obj);
-    objDiv.style.marginTop = "-23px";
+
+    if (elem.parentElement.className === "buttonContent") {
+        objDiv.style.backgroundColor = "white";
+        objDiv.style.border = "none";
+        objDiv.style.marginTop = "-30px";
+    } else {
+        objDiv.style.marginTop = "-23px";
+    }
 
     // устаанавливаем её в нужное место
-    let pele = elem.parentElement;
-    pele.insertBefore(objDiv, elem);
+    let elementParent = elem.parentElement;
+    elementParent.insertBefore(objDiv, elem);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -750,7 +757,7 @@ function question4() {
                 "app4",
                 4
             );
-            addIcon(document.querySelector("input"));
+            addMiniIcon(document.querySelector("input"), "failure");
         } else {
             addImage(
                 "success",
@@ -822,7 +829,14 @@ function question5() {
                 "app5",
                 5
             );
-            addIcon(document.getElementById("amountIceCream"));
+
+            addMiniIcon(document.getElementById("amountIceCream"), "failure");
+            addMiniIcon(
+                document.getElementsByClassName("inputCollection")[0]
+                    .children[1].children[0],
+                "failure"
+            );
+            addMiniIcon(document.getElementById("amountFlowers"), "failure");
         }
     }
 }
