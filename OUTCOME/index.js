@@ -1748,7 +1748,7 @@ function question20() {
         if (
             valuesInputs.tasselLength === "right" &&
             valuesInputs.pencilLength === "right" &&
-            valuesInputs.selectBtn4 === "right"
+            selectBtn4 === "right"
         ) {
             addImage(
                 "success",
