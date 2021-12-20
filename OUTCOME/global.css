@@ -327,7 +327,7 @@ body {
 
 /* 1. inputs styles */
 
-.inputContent2 div {
+.inputContent2 {
     left: calc(50% - 153px / 2);
     top: 247px;
     display: flex;

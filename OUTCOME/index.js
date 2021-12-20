@@ -630,18 +630,19 @@ function addIcon(elem) {
     // создаём мини-иконку
     let obj = document.createElement("img");
     obj.src = "./pictures/failureMiniIcon.svg";
-    obj.style.position = "inherit";
+    // obj.style.position = "inherit";
+    // obj.style.textAlign = "center";
 
-    let leftDistance = elem.getBoundingClientRect().left;
+    let leftDistance = elem.getBoundingClientRect().width / 2;
     // let topDistance = elem.getBoundingClientRect().top;
 
-    obj.style.left = leftDistance - 15 + "px";
-    obj.style.top = 240 + "px";
+    obj.style.left = leftDistance + "px";
+    // obj.style.top = 240 + "px";
     // obj.style.marginTop = topDistance - 140 + "px";
 
     // устаанавливаем её в нужное место
-    let pele = elem.parentElement.parentElement;
-    pele.insertBefore(obj, elem.parentElement);
+    let pele = elem.parentElement;
+    pele.insertBefore(obj, elem);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -799,6 +800,7 @@ function question5() {
                 "app5",
                 5
             );
+            addIcon(document.getElementById("amountIceCream"));
         }
     }
 }
