@@ -1217,6 +1217,12 @@ function question11() {
             selectBtn2 === "wrong"
         );
 
+        // расставляем мини-иконки
+
+        createMiniIcon(selectBtn2, document.getElementById(selectedName));
+
+        // выносим общий статус к номеру вопроса
+
         if (selectBtn2 === "right") {
             addImage(
                 "success",
