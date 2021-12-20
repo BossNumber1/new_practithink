@@ -938,6 +938,24 @@ function question8() {
             howManyCounted.result === "wrong"
         );
 
+        // общая функция
+
+        function createMiniIcon(property, id) {
+            if (property === "right") {
+                addMiniIcon(document.getElementById(id), "success");
+            } else {
+                addMiniIcon(document.getElementById(id), "failure");
+            }
+        }
+
+        // ставим мини-иконки как наглядный статус
+
+        createMiniIcon(howManyCounted.jellyfish, "numberJellyfish");
+        createMiniIcon(howManyCounted.seaHorse, "numberSeahorses");
+        createMiniIcon(howManyCounted.result, "result");
+
+        // выносим общий статус к номеру вопроса
+
         if (
             howManyCounted.jellyfish === "right" &&
             howManyCounted.seaHorse === "right" &&
