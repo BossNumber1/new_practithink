@@ -1473,6 +1473,12 @@ function question15() {
     if (answer != "") {
         succerror(document.getElementById("answer"), answer === "wrong");
 
+        // расставляем мини-иконки
+
+        createMiniIcon(answer, document.getElementById("answer"));
+
+        // выносим общий статус к номеру вопроса
+
         if (answer === "right") {
             addImage(
                 "success",
