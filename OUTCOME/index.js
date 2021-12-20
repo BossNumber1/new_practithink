@@ -599,6 +599,8 @@ function succerror(elem, checkElement) {
     }
 }
 
+// добавляем иконку статуса после номера вопроса
+
 function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
@@ -620,6 +622,26 @@ function addImage(status, ancestor, appClass, position) {
     }
 
     ancestor[0].children[0].appendChild(object);
+}
+
+// добавляем крестик или галочку над областью результата
+
+function addIcon(elem) {
+    // создаём мини-иконку
+    let obj = document.createElement("img");
+    obj.src = "./pictures/failureMiniIcon.svg";
+    obj.style.position = "inherit";
+
+    let leftDistance = elem.getBoundingClientRect().left;
+    // let topDistance = elem.getBoundingClientRect().top;
+
+    obj.style.left = leftDistance - 15 + "px";
+    obj.style.top = 240 + "px";
+    // obj.style.marginTop = topDistance - 140 + "px";
+
+    // устаанавливаем её в нужное место
+    let pele = elem.parentElement.parentElement;
+    pele.insertBefore(obj, elem.parentElement);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -705,6 +727,7 @@ function question4() {
                 "app4",
                 4
             );
+            addIcon(document.querySelector("input"));
         } else {
             addImage(
                 "success",
