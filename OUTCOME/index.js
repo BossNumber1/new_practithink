@@ -713,15 +713,30 @@ function question1() {
     let childrenTopRow = topRow[0].children;
 
     for (let i = 0; i < childrenTopRow.length; i++) {
-        if (childrenTopRow[i].children[0].id != correctOrder[i]) {
-            resultat.push("нет");
+        let child = childrenTopRow[i].children[0].id;
+
+        if (child > 20 && child == correctOrder[i]) {
+            childrenTopRow[i].className = "numberSuccess";
+        } else if (child > 20 && child != correctOrder[i]) {
+            childrenTopRow[i].className = "numberError";
+            resultat.push("wrong");
         }
     }
 
-    if (resultat.length === 0) {
-        alert("well done, the right choice");
+    if (resultat.length !== 0) {
+        addImage(
+            "failure",
+            document.getElementsByClassName("question1"),
+            "app1",
+            1
+        );
     } else {
-        alert("wrong, try again");
+        addImage(
+            "success",
+            document.getElementsByClassName("question1"),
+            "app1",
+            1
+        );
     }
 }
 
