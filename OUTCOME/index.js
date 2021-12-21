@@ -750,8 +750,15 @@ function question2() {
     let chil = firstRow[0].children;
 
     for (let i = 0; i < chil.length; i++) {
-        if (chil[i].innerText != correctOrder2[i]) {
-            resultat2.push("нет");
+        let child = chil[i].innerText;
+        // console.log("child =", child);
+        if (child != "" && child == correctOrder2[i]) {
+            console.log("chil[i].parentElement == ", chil[i].parentElement);
+            chil[i].className = "inputContentSuccess";
+        } else if (child != "" && child != correctOrder2[i]) {
+            console.log("chil[i].parentElement != ", chil[i].parentElement);
+            chil[i].className = "inputContentError";
+            resultat2.push("wrong");
         }
     }
 
