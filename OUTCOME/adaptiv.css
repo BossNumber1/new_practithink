@@ -1,0 +1,33 @@
+/* @media (min-width: 710px) and (orientation: landscape) {
+    body {
+        background-color: yellow;
+    }
+} */
+/* @media screen and (orientation: landscape) { */
+@media screen and (max-width: 810px), screen and (orientation: landscape) {
+    /* нужно запретить портретную ориентацию */
+
+    /* body {
+        background-color: orange;
+    } */
+
+    /* .titlePage6 { */
+    /* display: flex;
+        align-items: center;
+        justify-content: center; */
+    /* text-align: center;
+    } */
+
+    /* @media screen and (max-width: 810px) {
+        body {
+            background-color: orange;
+        }
+    } */
+
+    /* @media screen and (max-width: 900px) {
+        body {
+            background-color: yellow;
+        }
+    } */
+}
+/* @media (min-width: 30em) and (orientation: landscape) { ... 695 ... } */
