@@ -336,6 +336,16 @@ body {
     height: 125px;
 }
 
+.figure3success {
+    border: 4px solid #9dd765 !important;
+    border-radius: 5px;
+}
+
+.figure3error {
+    border: 4px solid #ffb47d !important;
+    border-radius: 5px;
+}
+
 /* 4 QUESTION */
 
 .app4 {

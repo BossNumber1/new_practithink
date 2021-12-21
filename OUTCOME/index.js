@@ -780,18 +780,67 @@ function question2() {
 // 3 QUESTION
 
 function question3() {
-    let idChild0 = document.getElementById("place0").children[1].id;
-    let idChild1 = document.getElementById("place1").children[1].id;
-    let idChild2 = document.getElementById("place2").children[1].id;
+    let idChild0 = document
+        .getElementById("place0")
+        .children[1].children[0].id.trim();
+    let idChild1 = document
+        .getElementById("place1")
+        .children[1].children[0].id.trim();
+    let idChild2 = document
+        .getElementById("place2")
+        .children[1].children[0].id.trim();
 
-    if (
-        idChild0.slice(0, -1) === "stars" &&
-        idChild1.slice(0, -1) === "rectangles" &&
+    if (idChild0.slice(0, -1) === "stars") {
+        document.getElementById("place0").children[1].className =
+            "figure3success";
+    } else if (
+        idChild0.slice(0, -1) === "rectangles" ||
+        idChild0.slice(0, -1) === "pentagons"
+    ) {
+        document.getElementById("place0").children[1].className =
+            "figure3error";
+    }
+
+    if (idChild1.slice(0, -1) === "rectangles") {
+        document.getElementById("place1").children[1].className =
+            "figure3success";
+    } else if (
+        idChild1.slice(0, -1) === "stars" ||
         idChild2.slice(0, -1) === "pentagons"
     ) {
-        alert("the right choice");
+        document.getElementById("place1").children[1].className =
+            "figure3error";
+    }
+
+    if (idChild2.slice(0, -1) === "pentagons") {
+        document.getElementById("place2").children[1].className =
+            "figure3success";
+    } else if (
+        idChild2.slice(0, -1) === "rectangles" ||
+        idChild2.slice(0, -1) === "stars"
+    ) {
+        document.getElementById("place2").children[1].className =
+            "figure3error";
+    }
+
+    if (
+        idChild0.slice(0, -1) !== "stars" &&
+        idChild1.slice(0, -1) !== "rectangles" &&
+        idChild2.slice(0, -1) !== "pentagons"
+    ) {
+        addImage(
+            "failure",
+            document.getElementsByClassName("question3"),
+            "app3",
+            3
+        );
     } else {
-        alert("the wrong choice");
+        addImage(
+            "success",
+            document.getElementsByClassName("question3"),
+            "app3",
+            3
+        );
     }
 }
 
