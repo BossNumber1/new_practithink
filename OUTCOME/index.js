@@ -751,21 +751,29 @@ function question2() {
 
     for (let i = 0; i < chil.length; i++) {
         let child = chil[i].innerText;
-        // console.log("child =", child);
+
         if (child != "" && child == correctOrder2[i]) {
-            console.log("chil[i].parentElement == ", chil[i].parentElement);
             chil[i].className = "inputContentSuccess";
         } else if (child != "" && child != correctOrder2[i]) {
-            console.log("chil[i].parentElement != ", chil[i].parentElement);
             chil[i].className = "inputContentError";
             resultat2.push("wrong");
         }
     }
 
-    if (resultat2.length === 0) {
-        alert("well done, the right choice");
+    if (resultat2.length !== 0) {
+        addImage(
+            "failure",
+            document.getElementsByClassName("questionclass2"),
+            "app2",
+            2
+        );
     } else {
-        alert("wrong, try again");
+        addImage(
+            "success",
+            document.getElementsByClassName("questionclass2"),
+            "app2",
+            2
+        );
     }
 }
 
