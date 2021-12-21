@@ -1250,28 +1250,30 @@ document.getElementById("car").onclick = function () {
 };
 
 function question10() {
-    if (selectBtn === "right") {
-        document.getElementById(btnSelectedName).className = "que10success";
-    } else {
-        document.getElementById(btnSelectedName).className = "que10error";
-    }
+    if (btnSelectedName) {
+        if (selectBtn === "right") {
+            document.getElementById(btnSelectedName).className = "que10success";
+        } else {
+            document.getElementById(btnSelectedName).className = "que10error";
+        }
 
-    createMiniIcon(selectBtn, document.getElementById(btnSelectedName));
+        createMiniIcon(selectBtn, document.getElementById(btnSelectedName));
 
-    if (selectBtn !== "right") {
-        addImage(
-            "failure",
-            document.getElementsByClassName("question10"),
-            "app10",
-            10
-        );
-    } else {
-        addImage(
-            "success",
-            document.getElementsByClassName("question10"),
-            "app10",
-            10
-        );
+        if (selectBtn !== "right") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        }
     }
 }
 
@@ -1648,13 +1650,15 @@ function question16() {
 
 // 17 QUESTION
 
-let selectBtn3 = "right";
+let selectBtn3 = "right",
+    btnSelectedName2;
 
 document.getElementById("hexagon").onclick = function () {
     document.getElementById("hexagon").classList.toggle("selectedPicture2");
     document.getElementById("trapezoid").classList.remove("selectedPicture2");
 
     selectBtn3 = "right";
+    btnSelectedName2 = "hexagon";
 };
 
 document.getElementById("trapezoid").onclick = function () {
@@ -1662,10 +1666,39 @@ document.getElementById("trapezoid").onclick = function () {
     document.getElementById("hexagon").classList.remove("selectedPicture2");
 
     selectBtn3 = "wrong";
+    btnSelectedName2 = "trapezoid";
 };
 
 function question17() {
-    alert("you have selected the " + selectBtn3 + " figure");
+    if (btnSelectedName2) {
+        if (selectBtn3 === "right") {
+            document
+                .getElementById(btnSelectedName2)
+                .classList.toggle("que17success");
+        } else {
+            document
+                .getElementById(btnSelectedName2)
+                .classList.toggle("que17error");
+        }
+
+        createMiniIcon(selectBtn3, document.getElementById(btnSelectedName2));
+
+        if (selectBtn3 !== "right") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
+            );
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
+            );
+        }
+    }
 }
 
 // 18 QUESTION

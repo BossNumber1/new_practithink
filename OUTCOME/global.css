@@ -1103,13 +1103,15 @@ body {
     border-radius: 10px;
 }
 
-.que10success {
-    border: 4px solid #9dd765;
+.que10success,
+.que17success {
+    border: 4px solid #9dd765 !important;
     border-radius: 5px;
 }
 
-.que10error {
-    border: 4px solid #ffb47d;
+.que10error,
+.que17error {
+    border: 4px solid #ffb47d !important;
     border-radius: 5px;
 }
 
