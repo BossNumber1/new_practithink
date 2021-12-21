@@ -630,6 +630,10 @@ function addMiniIcon(elem, status) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
 
+    if (elem.parentElement.className === "row") {
+        objDiv.classList.add("miniIcon");
+    }
+
     // получаем ширину элемента, чтобы выровнять по горизонтали
     let widthAdjacentElement = elem.getBoundingClientRect().width;
 
@@ -1182,12 +1186,14 @@ function question9() {
 
 // 10 QUESTION
 
-let selectBtn = "right";
+let selectBtn = "right",
+    btnSelectedName;
 
 document.getElementById("balloon").onclick = function () {
     document.getElementById("balloon").classList.add("selectedPicture");
 
     selectBtn = "wrong";
+    btnSelectedName = "balloon";
 
     document.getElementById("book").classList.remove("selectedPicture");
     document.getElementById("truck").classList.remove("selectedPicture");
@@ -1199,6 +1205,7 @@ document.getElementById("book").onclick = function () {
     document.getElementById("book").classList.add("selectedPicture");
 
     selectBtn = "wrong";
+    btnSelectedName = "book";
 
     document.getElementById("balloon").classList.remove("selectedPicture");
     document.getElementById("truck").classList.remove("selectedPicture");
@@ -1210,6 +1217,7 @@ document.getElementById("truck").onclick = function () {
     document.getElementById("truck").classList.add("selectedPicture");
 
     selectBtn = "wrong";
+    btnSelectedName = "truck";
 
     document.getElementById("balloon").classList.remove("selectedPicture");
     document.getElementById("book").classList.remove("selectedPicture");
@@ -1221,6 +1229,7 @@ document.getElementById("feather").onclick = function () {
     document.getElementById("feather").classList.add("selectedPicture");
 
     selectBtn = "wrong";
+    btnSelectedName = "feather";
 
     document.getElementById("balloon").classList.remove("selectedPicture");
     document.getElementById("book").classList.remove("selectedPicture");
@@ -1232,6 +1241,7 @@ document.getElementById("car").onclick = function () {
     document.getElementById("car").classList.add("selectedPicture");
 
     selectBtn = "right";
+    btnSelectedName = "car";
 
     document.getElementById("balloon").classList.remove("selectedPicture");
     document.getElementById("book").classList.remove("selectedPicture");
@@ -1240,7 +1250,29 @@ document.getElementById("car").onclick = function () {
 };
 
 function question10() {
-    alert("you have selected the " + selectBtn + " object");
+    if (selectBtn === "right") {
+        document.getElementById(btnSelectedName).className = "que10success";
+    } else {
+        document.getElementById(btnSelectedName).className = "que10error";
+    }
+
+    createMiniIcon(selectBtn, document.getElementById(btnSelectedName));
+
+    if (selectBtn !== "right") {
+        addImage(
+            "failure",
+            document.getElementsByClassName("question10"),
+            "app10",
+            10
+        );
+    } else {
+        addImage(
+            "success",
+            document.getElementsByClassName("question10"),
+            "app10",
+            10
+        );
+    }
 }
 
 // 11 QUESTION

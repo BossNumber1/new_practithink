@@ -1081,7 +1081,7 @@ body {
     cursor: pointer;
 }
 
-.row div:not(.selectedPicture):hover {
+.row div:not(.selectedPicture, .miniIcon):hover {
     margin-right: 30px;
     width: 130px;
     height: 130px;
@@ -1101,6 +1101,16 @@ body {
     box-sizing: border-box;
     box-shadow: 2px 2px 20px 1px rgba(54, 156, 183, 0.29);
     border-radius: 10px;
+}
+
+.que10success {
+    border: 4px solid #9dd765;
+    border-radius: 5px;
+}
+
+.que10error {
+    border: 4px solid #ffb47d;
+    border-radius: 5px;
 }
 
 /* 11 QUESTION */
