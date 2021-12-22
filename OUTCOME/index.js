@@ -1701,7 +1701,7 @@ function question16() {
     for (let i = 0; i < basketFlat.children.length; i++) {
         let selectedChild = basketFlat.children[i];
 
-        if (selectedChild.children[0].id === contentBasketFlat[i]) {
+        if (contentBasketFlat.indexOf(selectedChild.children[0].id) != "-1") {
             selectedChild.style.border = "4px solid green";
             resultFlat.push(selectedChild);
         } else {
