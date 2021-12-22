@@ -1720,13 +1720,11 @@ function question16() {
     for (let i = 0; i < basketSolid.children.length; i++) {
         let selectedChild = basketSolid.children[i];
 
-        if (selectedChild.children[0].id === contentBasketSolid[i]) {
+        if (contentBasketSolid.indexOf(selectedChild.children[0].id) != "-1") {
             selectedChild.style.border = "4px solid green";
             resultSolid.push(selectedChild);
-            debugger;
         } else {
             selectedChild.style.border = "4px solid red";
-            debugger;
         }
     }
 
