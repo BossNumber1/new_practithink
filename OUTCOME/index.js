@@ -2116,17 +2116,21 @@ function question19() {
     // 2. сравниваю их с координатами прямоугольника
     if (
         coordElemFirst.left < 570 &&
-        coordElemFirst.left > 560 &&
-        coordElemFirst.top < 220 &&
-        coordElemFirst.top > 200 &&
+        coordElemFirst.left > 550 &&
+        coordElemFirst.top < 11200 &&
+        coordElemFirst.top > 11100 &&
         coordElemSecond.left < 570 &&
-        coordElemSecond.left > 560 &&
-        coordElemSecond.top < 220 &&
-        coordElemSecond.top > 200
+        coordElemSecond.left > 550 &&
+        coordElemSecond.top < 11200 &&
+        coordElemSecond.top > 11100
     ) {
-        alert("молодец! всё верно :)");
+        document.getElementsByClassName(
+            "parentResetField"
+        )[0].style.backgroundColor = "#9dd765";
     } else {
-        alert("не верно");
+        document.getElementsByClassName(
+            "parentResetField"
+        )[0].style.backgroundColor = "#ffb47d";
     }
 }
 

@@ -2044,14 +2044,28 @@ body {
     height: 171px;
 }
 
+.resetField,
+.parentResetField {
+    box-sizing: border-box;
+}
+
 .resetField {
+    top: 4px;
+    opacity: 0.3;
+    background: #dc97f4;
     width: 170px;
     height: 90px;
-    top: 35px;
-    background: #dc97f4;
-    opacity: 0.3;
+    margin-top: -8px;
     border: 0.5px dashed #064c5b;
-    box-sizing: border-box;
+}
+
+.parentResetField {
+    top: 31px;
+    width: 178px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* triangles styles */
