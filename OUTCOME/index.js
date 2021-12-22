@@ -1581,19 +1581,19 @@ function question14() {
 
     if (topSeat.children[0].id === "pyramid") {
         choice.topSeat = "right";
-    } else {
+    } else if (topSeat.children[0].id !== "square0") {
         choice.topSeat = "wrong";
     }
 
     if (centralSeat.children[0].id === "toyCar") {
         choice.centralSeat = "right";
-    } else {
+    } else if (topSeat.children[0].id !== "square1") {
         choice.centralSeat = "wrong";
     }
 
     if (bottomSeat.children[0].id === "robot") {
         choice.bottomSeat = "right";
-    } else {
+    } else if (topSeat.children[0].id !== "square2") {
         choice.bottomSeat = "wrong";
     }
 
@@ -1603,19 +1603,39 @@ function question14() {
         if (choice[index] === "right") numberCorrectlyPlacedToys++;
     }
 
-    if (numberCorrectlyPlacedToys === 3) {
-        document.getElementsByClassName("closet")[0].className =
-            "closetSuccess";
-        addMiniIcon(
-            document.getElementsByClassName("closetSuccess")[0],
-            "success"
-        );
-    } else {
-        document.getElementsByClassName("closet")[0].className = "closetError";
-        addMiniIcon(
-            document.getElementsByClassName("closetError")[0],
-            "failure"
-        );
+    if (
+        choice.topSeat !== "" &&
+        choice.centralSeat !== "" &&
+        choice.bottomSeat !== ""
+    ) {
+        debugger;
+        if (numberCorrectlyPlacedToys === 3) {
+            document.getElementsByClassName("closet")[0].className =
+                "closetSuccess";
+            addMiniIcon(
+                document.getElementsByClassName("closetSuccess")[0],
+                "success"
+            );
+            addImage(
+                "success",
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
+            );
+        } else {
+            document.getElementsByClassName("closet")[0].className =
+                "closetError";
+            addMiniIcon(
+                document.getElementsByClassName("closetError")[0],
+                "failure"
+            );
+            addImage(
+                "failure",
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
+            );
+        }
     }
 }
 
