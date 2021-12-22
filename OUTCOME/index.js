@@ -709,8 +709,9 @@ function createMiniIcon(property, element) {
 
 // 1 QUESTION
 
-let correctOrder = [23, 24, 25, 26, 27, 28];
-let resultat = [];
+let correctOrder = [23, 24, 25, 26, 27, 28],
+    wasThereAmismatch = "false",
+    whetherSomethingWasChosen = "false";
 
 function question1() {
     let topRow = document.getElementsByClassName("topRow");
@@ -721,26 +722,29 @@ function question1() {
 
         if (child > 20 && child == correctOrder[i]) {
             childrenTopRow[i].className = "numberSuccess";
+            whetherSomethingWasChosen = "true";
         } else if (child > 20 && child != correctOrder[i]) {
             childrenTopRow[i].className = "numberError";
-            resultat.push("wrong");
+            wasThereAmismatch = "true";
         }
     }
 
-    if (resultat.length !== 0) {
-        addImage(
-            "failure",
-            document.getElementsByClassName("question1"),
-            "app1",
-            1
-        );
-    } else {
-        addImage(
-            "success",
-            document.getElementsByClassName("question1"),
-            "app1",
-            1
-        );
+    if (whetherSomethingWasChosen === "true") {
+        if (wasThereAmismatch === "true") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question1"),
+                "app1",
+                1
+            );
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question1"),
+                "app1",
+                1
+            );
+        }
     }
 }
 
