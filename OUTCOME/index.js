@@ -715,16 +715,16 @@ function question1() {
         whetherSomethingWasChosen = "false";
 
     let topRow = document.getElementsByClassName("topRow");
-    let childrenTopRow = topRow[0].children;
+    let children1and2 = topRow[0].children;
 
-    for (let i = 0; i < childrenTopRow.length; i++) {
-        let child = childrenTopRow[i].children[0].id;
+    for (let i = 0; i < children1and2.length; i++) {
+        let childrenId = children1and2[i].children[0].id;
 
-        if (child > 20 && child == correctOrder[i]) {
-            childrenTopRow[i].className = "numberSuccess";
+        if (childrenId > 20 && childrenId == correctOrder[i]) {
+            children1and2[i].className = "numberSuccess";
             whetherSomethingWasChosen = "true";
-        } else if (child > 20 && child != correctOrder[i]) {
-            childrenTopRow[i].className = "numberError";
+        } else if (childrenId > 20 && childrenId != correctOrder[i]) {
+            children1and2[i].className = "numberError";
             wasThereAmismatch = "true";
         }
     }
@@ -750,38 +750,45 @@ function question1() {
 
 // 2 QUESTION
 
-let correctOrder2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-let resultat2 = [];
-
 function question2() {
+    let correctOrder = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+        wasThereAmismatch = "false",
+        whetherSomethingWasChosen = "false";
+
     let firstRow = document.getElementsByClassName("inputsCollection");
-    let chil = firstRow[0].children;
+    let children1and2 = firstRow[0].children;
 
-    for (let i = 0; i < chil.length; i++) {
-        let child = chil[i].innerText;
+    for (let i = 0; i < children1and2.length; i++) {
+        let childrenInnerText = children1and2[i].innerText;
 
-        if (child != "" && child == correctOrder2[i]) {
-            chil[i].className = "inputContentSuccess";
-        } else if (child != "" && child != correctOrder2[i]) {
-            chil[i].className = "inputContentError";
-            resultat2.push("wrong");
+        if (childrenInnerText != "" && childrenInnerText == correctOrder[i]) {
+            children1and2[i].className = "inputContentSuccess";
+            whetherSomethingWasChosen = "true";
+        } else if (
+            childrenInnerText != "" &&
+            childrenInnerText != correctOrder[i]
+        ) {
+            children1and2[i].className = "inputContentError";
+            wasThereAmismatch = "true";
         }
     }
 
-    if (resultat2.length !== 0) {
-        addImage(
-            "failure",
-            document.getElementsByClassName("questionclass2"),
-            "app2",
-            2
-        );
-    } else {
-        addImage(
-            "success",
-            document.getElementsByClassName("questionclass2"),
-            "app2",
-            2
-        );
+    if (whetherSomethingWasChosen === "true") {
+        if (wasThereAmismatch === "true") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("questionclass2"),
+                "app2",
+                2
+            );
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("questionclass2"),
+                "app2",
+                2
+            );
+        }
     }
 }
 
