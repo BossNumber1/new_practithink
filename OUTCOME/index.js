@@ -2113,6 +2113,7 @@ function question19() {
     // - получаю координаты первого
     let coordElemSecond = getCoords(secondTriangle);
 
+    console.log("hello =", document.getElementsByClassName("resetField")[0]);
     // 2. сравниваю их с координатами прямоугольника
     if (
         coordElemFirst.left < 570 &&
@@ -2127,10 +2128,18 @@ function question19() {
         document.getElementsByClassName(
             "parentResetField"
         )[0].style.backgroundColor = "#9dd765";
+        addMiniIcon(
+            document.getElementsByClassName("parentResetField")[0],
+            "success"
+        );
     } else {
         document.getElementsByClassName(
             "parentResetField"
-        )[0].style.backgroundColor = "#ffb47d";
+        ).style.backgroundColor = "#ffb47d";
+        addMiniIcon(
+            document.getElementsByClassName("parentResetField")[0],
+            "failure"
+        );
     }
 }
 

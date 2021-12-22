@@ -2045,7 +2045,8 @@ body {
 }
 
 .resetField,
-.parentResetField {
+.parentResetField,
+.grandParentResetField {
     box-sizing: border-box;
 }
 
@@ -2060,12 +2061,17 @@ body {
 }
 
 .parentResetField {
-    top: 31px;
     width: 178px;
     height: 98px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.grandParentResetField {
+    top: 31px;
+    width: 178px;
+    height: 98px;
 }
 
 /* triangles styles */
