@@ -1519,10 +1519,20 @@ body {
     height: 250px;
 }
 
-.closet {
+.closet,
+.closetSuccess,
+.closetError {
     left: calc(50% - 198px / 2);
     width: 198px;
     height: 250px;
+}
+
+.closetSuccess {
+    border: 4px solid #4ac636;
+}
+
+.closetError {
+    border: 4px solid #fd0f0f;
 }
 
 #bottomSeat,

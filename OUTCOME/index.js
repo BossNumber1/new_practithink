@@ -1604,9 +1604,10 @@ function question14() {
     }
 
     if (numberCorrectlyPlacedToys === 3) {
-        alert("you are great, everything is right");
+        document.getElementsByClassName("closet")[0].className =
+            "closetSuccess";
     } else {
-        alert("toys placed incorrectly, try again");
+        document.getElementsByClassName("closet")[0].className = "closetError";
     }
 }
 
@@ -2113,45 +2114,46 @@ function question19() {
     // - получаю координаты первого
     let coordElemSecond = getCoords(secondTriangle);
 
-    console.log("hello =", document.getElementsByClassName("resetField")[0]);
     // 2. сравниваю их с координатами прямоугольника
-    if (
-        coordElemFirst.left < 570 &&
-        coordElemFirst.left > 550 &&
-        coordElemFirst.top < 11200 &&
-        coordElemFirst.top > 11100 &&
-        coordElemSecond.left < 570 &&
-        coordElemSecond.left > 550 &&
-        coordElemSecond.top < 11200 &&
-        coordElemSecond.top > 11100
-    ) {
-        document.getElementsByClassName(
-            "parentResetField"
-        )[0].style.backgroundColor = "#9dd765";
-        addMiniIcon(
-            document.getElementsByClassName("parentResetField")[0],
-            "success"
-        );
-        addImage(
-            "success",
-            document.getElementsByClassName("question19"),
-            "app19",
-            19
-        );
-    } else {
-        document.getElementsByClassName(
-            "parentResetField"
-        ).style.backgroundColor = "#ffb47d";
-        addMiniIcon(
-            document.getElementsByClassName("parentResetField")[0],
-            "failure"
-        );
-        addImage(
-            "failure",
-            document.getElementsByClassName("question19"),
-            "app19",
-            19
-        );
+    if (coordElemFirst.left < 700 && coordElemSecond.left < 900) {
+        if (
+            coordElemFirst.left < 570 &&
+            coordElemFirst.left > 550 &&
+            coordElemFirst.top < 11200 &&
+            coordElemFirst.top > 11100 &&
+            coordElemSecond.left < 570 &&
+            coordElemSecond.left > 550 &&
+            coordElemSecond.top < 11200 &&
+            coordElemSecond.top > 11100
+        ) {
+            document.getElementsByClassName(
+                "parentResetField"
+            )[0].style.backgroundColor = "#9dd765";
+            addMiniIcon(
+                document.getElementsByClassName("parentResetField")[0],
+                "success"
+            );
+            addImage(
+                "success",
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
+            );
+        } else {
+            document.getElementsByClassName(
+                "parentResetField"
+            ).style.backgroundColor = "#ffb47d";
+            addMiniIcon(
+                document.getElementsByClassName("parentResetField")[0],
+                "failure"
+            );
+            addImage(
+                "failure",
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
+            );
+        }
     }
 }
 
