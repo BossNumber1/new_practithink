@@ -1606,8 +1606,16 @@ function question14() {
     if (numberCorrectlyPlacedToys === 3) {
         document.getElementsByClassName("closet")[0].className =
             "closetSuccess";
+        addMiniIcon(
+            document.getElementsByClassName("closetSuccess")[0],
+            "success"
+        );
     } else {
         document.getElementsByClassName("closet")[0].className = "closetError";
+        addMiniIcon(
+            document.getElementsByClassName("closetError")[0],
+            "failure"
+        );
     }
 }
 
