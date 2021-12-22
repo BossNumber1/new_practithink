@@ -852,23 +852,29 @@ function question3() {
     }
 
     if (
-        idChild0.slice(0, -1) !== "stars" &&
-        idChild1.slice(0, -1) !== "rectangles" &&
-        idChild2.slice(0, -1) !== "pentagons"
+        idChild0.slice(0, -1) !== "freePlace" &&
+        idChild1.slice(0, -1) !== "freePlace" &&
+        idChild2.slice(0, -1) !== "freePlace"
     ) {
-        addImage(
-            "failure",
-            document.getElementsByClassName("question3"),
-            "app3",
-            3
-        );
-    } else {
-        addImage(
-            "success",
-            document.getElementsByClassName("question3"),
-            "app3",
-            3
-        );
+        if (
+            idChild0.slice(0, -1) !== "stars" &&
+            idChild1.slice(0, -1) !== "rectangles" &&
+            idChild2.slice(0, -1) !== "pentagons"
+        ) {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
+            );
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
+            );
+        }
     }
 }
 
