@@ -1693,14 +1693,19 @@ function question16() {
     let contentBasketSolid = ["cube", "cone", "roof", "pyramid", "ball"];
 
     // задание места для хранения результата выборки
-    let resultFlat = [];
-    let resultSolid = [];
+    let resultFlat = [],
+        resultSolid = [];
 
     // for basketFlat
 
     for (let i = 0; i < basketFlat.children.length; i++) {
-        if (basketFlat.children[i].children[0].id === contentBasketFlat[i]) {
-            resultFlat.push(basketFlat.children[i]);
+        let selectedChild = basketFlat.children[i];
+
+        if (selectedChild.children[0].id === contentBasketFlat[i]) {
+            selectedChild.style.border = "4px solid green";
+            resultFlat.push(selectedChild);
+        } else {
+            selectedChild.style.border = "4px solid red";
         }
     }
 
@@ -1713,8 +1718,15 @@ function question16() {
     // for basketSolid
 
     for (let i = 0; i < basketSolid.children.length; i++) {
-        if (basketSolid.children[i].children[0].id === contentBasketSolid[i]) {
-            resultSolid.push(basketSolid.children[i]);
+        let selectedChild = basketSolid.children[i];
+
+        if (selectedChild.children[0].id === contentBasketSolid[i]) {
+            selectedChild.style.border = "4px solid green";
+            resultSolid.push(selectedChild);
+            debugger;
+        } else {
+            selectedChild.style.border = "4px solid red";
+            debugger;
         }
     }
 
@@ -1726,12 +1738,7 @@ function question16() {
 
     // подведение итогов
 
-    alert(
-        "16 16 16 --- you put in the basket for flat figures - " +
-            result2.basketFlat +
-            " and in the basket for solid figures - " +
-            result2.basketSolid
-    );
+    // тут добавить, как минимум, статус к номеру вопроса
 }
 
 // 17 QUESTION
