@@ -709,11 +709,11 @@ function createMiniIcon(property, element) {
 
 // 1 QUESTION
 
-let correctOrder = [23, 24, 25, 26, 27, 28],
-    wasThereAmismatch = "false",
-    whetherSomethingWasChosen = "false";
-
 function question1() {
+    let correctOrder = [23, 24, 25, 26, 27, 28],
+        wasThereAmismatch = "false",
+        whetherSomethingWasChosen = "false";
+
     let topRow = document.getElementsByClassName("topRow");
     let childrenTopRow = topRow[0].children;
 
