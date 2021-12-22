@@ -1684,23 +1684,50 @@ function question15() {
 let result2 = { basketFlat: "", basketSolid: "" };
 
 function question16() {
+    // получение текущего содержимого обеих корзин
     let basketFlat = document.getElementById("placeFlat");
     let basketSolid = document.getElementById("placeSolid");
 
-    if (basketFlat.children.length === 5) {
-        result2.basketFlat = "right";
-    } else {
-        result2.basketFlat = "wrong";
+    // получение массива необходимого содержимого
+    let contentBasketFlat = ["star", "circle", "triangle", "square", "cube2d"];
+    let contentBasketSolid = ["cube", "cone", "roof", "pyramid", "ball"];
+
+    // задание места для хранения результата выборки
+    let resultFlat = [];
+    let resultSolid = [];
+
+    // for basketFlat
+
+    for (let i = 0; i < basketFlat.children.length; i++) {
+        if (basketFlat.children[i].children[0].id === contentBasketFlat[i]) {
+            resultFlat.push(basketFlat.children[i]);
+        }
     }
 
-    if (basketSolid.children.length === 5) {
-        result2.basketSolid = "right";
+    if (resultFlat.length === 5) {
+        result2.basketFlat = "right 2";
     } else {
-        result2.basketSolid = "wrong";
+        result2.basketFlat = "wrong 2";
     }
+
+    // for basketSolid
+
+    for (let i = 0; i < basketSolid.children.length; i++) {
+        if (basketSolid.children[i].children[0].id === contentBasketSolid[i]) {
+            resultSolid.push(basketSolid.children[i]);
+        }
+    }
+
+    if (resultSolid.length === 5) {
+        result2.basketSolid = "RIGHT";
+    } else {
+        result2.basketSolid = "WRONG";
+    }
+
+    // подведение итогов
 
     alert(
-        "you put in the basket for flat figures - " +
+        "16 16 16 --- you put in the basket for flat figures - " +
             result2.basketFlat +
             " and in the basket for solid figures - " +
             result2.basketSolid
