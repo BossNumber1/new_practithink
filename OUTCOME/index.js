@@ -1710,9 +1710,7 @@ function question16() {
     }
 
     if (resultFlat.length === 5) {
-        result2.basketFlat = "right 2";
-    } else {
-        result2.basketFlat = "wrong 2";
+        result2.basketFlat = "right";
     }
 
     // for basketSolid
@@ -1729,14 +1727,26 @@ function question16() {
     }
 
     if (resultSolid.length === 5) {
-        result2.basketSolid = "RIGHT";
-    } else {
-        result2.basketSolid = "WRONG";
+        result2.basketSolid = "right";
     }
 
     // подведение итогов
 
-    // тут добавить, как минимум, статус к номеру вопроса
+    if (result2.basketFlat === "right" && result2.basketSolid === "right") {
+        addImage(
+            "success",
+            document.getElementsByClassName("question16"),
+            "app16",
+            16
+        );
+    } else {
+        addImage(
+            "failure",
+            document.getElementsByClassName("question16"),
+            "app16",
+            16
+        );
+    }
 }
 
 // 17 QUESTION
