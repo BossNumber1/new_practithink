@@ -2132,6 +2132,12 @@ function question19() {
             document.getElementsByClassName("parentResetField")[0],
             "success"
         );
+        addImage(
+            "success",
+            document.getElementsByClassName("question19"),
+            "app19",
+            19
+        );
     } else {
         document.getElementsByClassName(
             "parentResetField"
@@ -2139,6 +2145,12 @@ function question19() {
         addMiniIcon(
             document.getElementsByClassName("parentResetField")[0],
             "failure"
+        );
+        addImage(
+            "failure",
+            document.getElementsByClassName("question19"),
+            "app19",
+            19
         );
     }
 }
