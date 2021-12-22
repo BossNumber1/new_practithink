@@ -1732,20 +1732,22 @@ function question16() {
 
     // подведение итогов
 
-    if (result2.basketFlat === "right" && result2.basketSolid === "right") {
-        addImage(
-            "success",
-            document.getElementsByClassName("question16"),
-            "app16",
-            16
-        );
-    } else {
-        addImage(
-            "failure",
-            document.getElementsByClassName("question16"),
-            "app16",
-            16
-        );
+    if (result2.basketFlat != "" && result2.basketSolid != "") {
+        if (result2.basketFlat === "right" && result2.basketSolid === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
+            );
+        }
     }
 }
 
