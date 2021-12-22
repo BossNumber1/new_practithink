@@ -1702,10 +1702,10 @@ function question16() {
         let selectedChild = basketFlat.children[i];
 
         if (contentBasketFlat.indexOf(selectedChild.children[0].id) != "-1") {
-            selectedChild.style.border = "4px solid green";
             resultFlat.push(selectedChild);
         } else {
-            selectedChild.style.border = "4px solid red";
+            selectedChild.style.border = "1px solid #ffb47d";
+            selectedChild.style.borderRadius = "5px";
         }
     }
 
@@ -1721,10 +1721,10 @@ function question16() {
         let selectedChild = basketSolid.children[i];
 
         if (contentBasketSolid.indexOf(selectedChild.children[0].id) != "-1") {
-            selectedChild.style.border = "4px solid green";
             resultSolid.push(selectedChild);
         } else {
-            selectedChild.style.border = "4px solid red";
+            selectedChild.style.border = "1px solid #ffb47d";
+            selectedChild.style.borderRadius = "5px";
         }
     }
 
