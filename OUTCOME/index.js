@@ -753,23 +753,36 @@ function question1() {
 function question2() {
     let correctOrder = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
         wasThereAmismatch = "false",
-        whetherSomethingWasChosen = "false";
+        whetherSomethingWasChosen = "false",
+        arrayFilledFields = [];
 
     let firstRow = document.getElementsByClassName("inputsCollection");
     let children1and2 = firstRow[0].children;
 
+    // проверка на заполненность вопроса
     for (let i = 0; i < children1and2.length; i++) {
         let childrenInnerText = children1and2[i].innerText;
+        childrenInnerText && arrayFilledFields.push(childrenInnerText);
+    }
 
-        if (childrenInnerText != "" && childrenInnerText == correctOrder[i]) {
-            children1and2[i].className = "inputContentSuccess";
-            whetherSomethingWasChosen = "true";
-        } else if (
-            childrenInnerText != "" &&
-            childrenInnerText != correctOrder[i]
-        ) {
-            children1and2[i].className = "inputContentError";
-            wasThereAmismatch = "true";
+    // изменение класса и управление показом статуса
+    for (let i = 0; i < children1and2.length; i++) {
+        if (arrayFilledFields.length > 2) {
+            let childrenInnerText = children1and2[i].innerText;
+
+            if (
+                childrenInnerText != "" &&
+                childrenInnerText == correctOrder[i]
+            ) {
+                children1and2[i].className = "inputContentSuccess";
+                whetherSomethingWasChosen = "true";
+            } else if (
+                childrenInnerText != "" &&
+                childrenInnerText != correctOrder[i]
+            ) {
+                children1and2[i].className = "inputContentError";
+                wasThereAmismatch = "true";
+            }
         }
     }
 
