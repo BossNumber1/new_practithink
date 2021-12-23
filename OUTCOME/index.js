@@ -1019,10 +1019,39 @@ function question7() {
     let basketBob = document.getElementById("placeDropCandyBob");
     let basketDave = document.getElementById("placeDropCandyDave");
 
-    if (basketBob.children.length === 4 && basketDave.children.length === 3) {
-        alert(" well done, that's right ");
-    } else {
-        alert(" wrong try again ");
+    if (basketBob.children.length > 4) {
+        for (let i = 4; i < basketBob.children.length; i++) {
+            basketBob.children[i].style.border = "1px solid #FFB47D";
+            basketBob.children[i].style.borderRadius = "5px";
+        }
+    }
+
+    if (basketDave.children.length > 3) {
+        for (let i = 3; i < basketDave.children.length; i++) {
+            basketDave.children[i].style.border = "1px solid #FFB47D";
+            basketDave.children[i].style.borderRadius = "5px";
+        }
+    }
+
+    if (basketBob.children.length > 0 && basketDave.children.length > 0) {
+        if (
+            basketBob.children.length === 4 &&
+            basketDave.children.length === 3
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
+            );
+        }
     }
 }
 
