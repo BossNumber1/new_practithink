@@ -1604,26 +1604,11 @@ function question12() {
 // 13 QUESTION
 
 let result = {
-    basketCircle: 0,
-    basketSquare: 0,
-    basketTriangle: 0,
-    basketRectangle: 0,
+    basketCircle: "",
+    basketSquare: "",
+    basketTriangle: "",
+    basketRectangle: "",
 };
-
-function common(basketCircle, rightCombination) {
-    let resultat = [];
-    let childs = basketCircle.children;
-
-    for (let i = 0; i < childs.length; i++) {
-        let idChild = childs[i].children[0].id;
-
-        if (idChild.slice(0, -4) != rightCombination[i]) {
-            resultat.push("нет");
-        }
-    }
-
-    return resultat;
-}
 
 function question13() {
     let basketCircle = document.getElementById("basketCircle");
@@ -1631,68 +1616,128 @@ function question13() {
     let basketTriangle = document.getElementById("basketTriangle");
     let basketRectangle = document.getElementById("basketRectangle");
 
-    if (basketCircle.children.length === 3) {
-        let rightCombination = ["clock", "cookie", "pizza"];
-        let resultatCircle = common(basketCircle, rightCombination);
+    // таможня Сердечек
+    let contentCircleBasket = basketCircle.children;
+    let amountContent = contentCircleBasket.length;
 
-        if (resultatCircle.length === 0) {
-            result.basketCircle = "right";
-        } else {
-            result.basketCircle = "wrong";
+    if (amountContent > 0) {
+        for (let i = 0; i < amountContent; i++) {
+            let selectedChildId = contentCircleBasket[i].children[0].id;
+
+            if (
+                selectedChildId === "clocktemp" ||
+                selectedChildId === "cookietemp" ||
+                selectedChildId === "pizzatemp"
+            ) {
+                result.basketCircle = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result.basketCircle = "wrong";
+            }
         }
-    } else {
-        result.basketCircle = "wrong";
     }
 
-    if (basketSquare.children.length === 2) {
-        let rightCombination = ["window", "painting"];
-        let resultatSquare = common(basketSquare, rightCombination);
+    // таможня Квадратов
+    let contentSquaresBasket = basketSquare.children;
+    let amountContentSB = contentSquaresBasket.length;
 
-        if (resultatSquare.length === 0) {
-            result.basketSquare = "right";
-        } else {
-            result.basketSquare = "wrong";
+    if (amountContentSB > 0) {
+        for (let i = 0; i < amountContentSB; i++) {
+            let selectedChildId = contentSquaresBasket[i].children[0].id;
+
+            if (
+                selectedChildId === "windowtemp" ||
+                selectedChildId === "paintingtemp"
+            ) {
+                result.basketSquare = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result.basketSquare = "wrong";
+            }
         }
-    } else {
-        result.basketSquare = "wrong";
     }
 
-    if (basketTriangle.children.length === 2) {
-        let rightCombination = ["sign", "tool"];
-        let resultatTriangle = common(basketTriangle, rightCombination);
+    // таможня Треугольников
+    let contentTrianglesBasket = basketTriangle.children;
+    let amountContentTB = contentTrianglesBasket.length;
 
-        if (resultatTriangle.length === 0) {
-            result.basketTriangle = "right";
-        } else {
-            result.basketTriangle = "wrong";
+    if (amountContentTB > 0) {
+        for (let i = 0; i < amountContentTB; i++) {
+            let selectedChildId = contentTrianglesBasket[i].children[0].id;
+
+            if (
+                selectedChildId === "signtemp" ||
+                selectedChildId === "tooltemp"
+            ) {
+                result.basketTriangle = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result.basketTriangle = "wrong";
+            }
         }
-    } else {
-        result.basketTriangle = "wrong";
     }
 
-    if (basketRectangle.children.length === 2) {
-        let rightCombination = ["tv", "chocolate"];
-        let resultatTriangle = common(basketRectangle, rightCombination);
+    // таможня Прямоугольников
+    let contentRectanglesBasket = basketRectangle.children;
+    let amountContentRB = contentRectanglesBasket.length;
 
-        if (resultatTriangle.length === 0) {
-            result.basketRectangle = "right";
-        } else {
-            result.basketRectangle = "wrong";
+    if (amountContentRB > 0) {
+        for (let i = 0; i < amountContentRB; i++) {
+            let selectedChildId = contentRectanglesBasket[i].children[0].id;
+
+            if (
+                selectedChildId === "tvtemp" ||
+                selectedChildId === "chocolatetemp"
+            ) {
+                result.basketRectangle = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result.basketRectangle = "wrong";
+            }
         }
-    } else {
-        result.basketRectangle = "wrong";
     }
 
-    alert(
-        "your answers: for circle - " +
-            result.basketCircle +
-            ", for square - " +
-            result.basketSquare +
-            ", for triangle - " +
-            result.basketTriangle +
-            ", for rectangle - " +
-            result.basketRectangle
-    );
+    // показ статуса
+
+    if (
+        result.basketCircle !== "" &&
+        result.basketRectangle !== "" &&
+        result.basketSquare !== "" &&
+        result.basketTriangle !== ""
+    ) {
+        if (
+            result.basketCircle === "right" &&
+            result.basketRectangle === "right" &&
+            result.basketSquare === "right" &&
+            result.basketTriangle === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
+            );
+        }
+    }
 }
 
 // 14 QUESTION
@@ -1737,7 +1782,6 @@ function question14() {
         choice.centralSeat !== "" &&
         choice.bottomSeat !== ""
     ) {
-        debugger;
         if (numberCorrectlyPlacedToys === 3) {
             document.getElementsByClassName("closet")[0].className =
                 "closetSuccess";
