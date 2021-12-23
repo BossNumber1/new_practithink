@@ -1884,6 +1884,8 @@ function question16() {
 
     if (resultFlat.length === 5) {
         result2.basketFlat = "right";
+    } else if (resultFlat.length > 0) {
+        result2.basketFlat = "wrong";
     }
 
     // for basketSolid
@@ -1901,6 +1903,8 @@ function question16() {
 
     if (resultSolid.length === 5) {
         result2.basketSolid = "right";
+    } else if (resultSolid.length > 0) {
+        result2.basketSolid = "wrong";
     }
 
     // подведение итогов
