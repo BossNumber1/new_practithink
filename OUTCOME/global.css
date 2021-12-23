@@ -624,7 +624,8 @@ body {
 
 .content6 {
     left: calc(50% - 382.71px / 2);
-    top: calc(50% - 269.69px / 2);
+    top: 120px;
+    /* top: calc(50% - 269.69px / 2); */
     width: 382.71px;
     height: 269.69px;
 }
@@ -2425,6 +2426,7 @@ body {
 .correctAnswer3,
 .correctAnswer4,
 .correctAnswer5,
+.correctAnswer6,
 .correctAnswer8,
 .correctAnswer9,
 .correctAnswer11,
@@ -2449,7 +2451,8 @@ body {
 }
 
 .correctAnswer3,
-.correctAnswer20 {
+.correctAnswer20,
+.correctAnswer6 {
     top: 70px;
 }
 
@@ -2476,7 +2479,8 @@ body {
 }
 
 .contentCorrectAnswer,
-.contentCorrectAnswer3 {
+.contentCorrectAnswer3,
+.contentCorrectAnswer6 {
     display: flex;
     /* flex-direction: row;
     align-items: flex-start; */
@@ -2493,4 +2497,8 @@ body {
 
 .contentCorrectAnswer3 {
     top: 60px;
+}
+
+.contentCorrectAnswer6 {
+    top: 80px;
 }
