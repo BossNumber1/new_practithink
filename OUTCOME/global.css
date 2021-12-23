@@ -51,6 +51,7 @@ body {
 .app1 {
     width: 1170px;
     height: 403px;
+    /* 503 */
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -152,7 +153,7 @@ body {
     top: 10px;
     left: calc(50% - 1170px / 2);
     width: 1170px;
-    height: 342px;
+    height: 342px; /*  413 */
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
     border: 0.5px solid #a8a8a8;
     border-radius: 7px;
@@ -2417,13 +2418,25 @@ body {
 
 /* correct answer styles */
 
-.correctAnswer {
+.correctAnswer1,
+.correctAnswer2 {
     top: 100px;
     left: calc(50% - 450px / 2);
     width: 450px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     height: 94px;
     /* border: 1px solid gray; */
 }
+
+/* .correctAnswer1 {
+    top: 100px;
+}
+
+.correctAnswer2 {
+    top: 100px;
+} */
 
 .headerCorrectAnswer {
     left: calc(50% - 237px / 2);
@@ -2442,9 +2455,11 @@ body {
 .contentCorrectAnswer {
     top: 20px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 450px;
+    /* flex-direction: row;
+    align-items: flex-start; */
+    justify-content: center;
+    align-items: center;
+    /* width: 450px; */
     height: 50px;
     /* border: 1px solid violet; */
 }
