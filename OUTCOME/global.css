@@ -2428,6 +2428,7 @@ body {
 .correctAnswer8,
 .correctAnswer9,
 .correctAnswer11,
+.correctAnswer15,
 .correctAnswer20 {
     left: calc(50% - 450px / 2);
     width: 450px;
@@ -2442,7 +2443,8 @@ body {
 .correctAnswer2,
 .correctAnswer8,
 .correctAnswer9,
-.correctAnswer11 {
+.correctAnswer11,
+.correctAnswer15 {
     top: 100px;
 }
 

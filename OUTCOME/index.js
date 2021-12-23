@@ -2539,6 +2539,18 @@ function question11addCorrectAnswer() {
     );
 }
 
+// --- 12, 13, 14
+
+function question15addCorrectAnswer() {
+    document.getElementsByClassName("app15")[0].style.height = "507px";
+    addCorrectAnswer(
+        "correctAnswer15",
+        "15que",
+        "content15",
+        "contentCorrectAnswer"
+    );
+}
+
 // --- ...
 
 function question20addCorrectAnswer() {
@@ -2577,6 +2589,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     question15();
+    question15addCorrectAnswer();
     question16();
     question17();
     question18();
