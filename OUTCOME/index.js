@@ -2426,10 +2426,43 @@ function question19() {
     }
 }
 
+// ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
+
+function question1addCorrectAnswer() {
+    document.getElementsByClassName("app1")[0].style.height = "503px";
+
+    let newElement = document.createElement("div");
+    newElement.className = "correctAnswer";
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = "contentCorrectAnswer";
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/1que/correctAnswer.svg";
+    contentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+
+    document.getElementsByClassName("content1")[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName("correctAnswer")[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName("correctAnswer")[0]
+        .appendChild(secondChildNewElement);
+}
+
 // ---------------------------------------------------------------------- RESULT
 
 document.getElementById("submit").onclick = function () {
     question1();
+    question1addCorrectAnswer();
+
     question2();
     question3();
     question4();
