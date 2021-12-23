@@ -2423,10 +2423,12 @@ body {
 .correctAnswer1,
 .correctAnswer2,
 .correctAnswer3,
+.correctAnswer4,
 .correctAnswer5,
 .correctAnswer8,
 .correctAnswer9,
-.correctAnswer11 {
+.correctAnswer11,
+.correctAnswer20 {
     left: calc(50% - 450px / 2);
     width: 450px;
     /* display: flex;
@@ -2444,8 +2446,13 @@ body {
     top: 100px;
 }
 
-.correctAnswer3 {
+.correctAnswer3,
+.correctAnswer20 {
     top: 70px;
+}
+
+.correctAnswer4 {
+    top: 320px;
 }
 
 .correctAnswer5 {

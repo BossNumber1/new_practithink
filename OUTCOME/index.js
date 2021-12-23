@@ -2490,7 +2490,15 @@ function question3addCorrectAnswer() {
     );
 }
 
-// ---4---
+function question4addCorrectAnswer() {
+    document.getElementsByClassName("app4")[0].style.height = "657px";
+    addCorrectAnswer(
+        "correctAnswer4",
+        "4que",
+        "content4",
+        "contentCorrectAnswer"
+    );
+}
 
 function question5addCorrectAnswer() {
     document.getElementsByClassName("app5")[0].style.height = "657px";
@@ -2531,6 +2539,18 @@ function question11addCorrectAnswer() {
     );
 }
 
+// --- ...
+
+function question20addCorrectAnswer() {
+    document.getElementsByClassName("app20")[0].style.height = "1017px";
+    addCorrectAnswer(
+        "correctAnswer20",
+        "20que",
+        "content20",
+        "contentCorrectAnswer"
+    );
+}
+
 // ---------------------------------------------------------------------- RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -2541,6 +2561,7 @@ document.getElementById("submit").onclick = function () {
     question3();
     question3addCorrectAnswer();
     question4();
+    question4addCorrectAnswer();
     question5();
     question5addCorrectAnswer();
     question6();
@@ -2561,4 +2582,5 @@ document.getElementById("submit").onclick = function () {
     question18();
     question19();
     question20();
+    question20addCorrectAnswer();
 };
