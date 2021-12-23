@@ -308,7 +308,9 @@ function drag12(e) {
 
 function drop12(e) {
     // забираем данные из хранилища
-    let idFigure = localStorage.getItem("idFigure");
+    let figureId = localStorage.getItem("idFigure");
+    let figureName = figureId.slice(0, -1);
+    let lastChar = figureId.charAt(figureId.length - 1);
 
     // получаем класс предка предка
     let grandparentClass = e.target.parentElement.parentElement.className;
@@ -316,34 +318,38 @@ function drop12(e) {
     // получаем текущий id
     let currentId = e.target.id;
 
+    // получаем элементы
+    let originalElement = document.getElementById(figureId);
+    let currentElement = document.getElementById(currentId);
+
     // начинаем ложить фигуру в корзину
 
-    let orig = document.getElementById(idFigure); // для начала получаем картинку для вставки
-
     let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.id = idFigure.slice(0, -1);
-    objectBeingCreated.src =
-        "./pictures/12que/" + idFigure.slice(0, -1) + ".svg";
+    objectBeingCreated.id = figureId;
+    objectBeingCreated.src = "./pictures/12que/" + figureName + ".svg";
     objectBeingCreated.style.cursor = "grab";
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "5px";
 
     if (grandparentClass !== "topRow3" || grandparentClass !== "bottomRow3") {
-        document
-            .getElementById(currentId)
+        currentElement
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
 
-        orig.src = "./pictures/12que/square.svg";
-        orig.style.cursor = "default";
+        originalElement.src = "./pictures/12que/square.svg";
+        originalElement.id = "square" + lastChar;
+        originalElement.style.transform = "none";
+        originalElement.style.cursor = "default";
     }
 
     // делаем возврат на место
 
     if (grandparentClass === "topRow3" || grandparentClass === "bottomRow3") {
-        e.target.src = "./pictures/12que/" + idFigure + ".svg";
-        e.target.style.cursor = "grab";
-        orig.remove();
+        currentElement.src = "./pictures/12que/" + figureName + ".svg";
+        currentElement.id = figureName + lastChar;
+        currentElement.style.cursor = "grab";
+
+        originalElement.remove();
     }
 }
 
@@ -1471,6 +1477,69 @@ document.getElementById("numberRhombus").onchange = function (e) {
 };
 
 function question12() {
+    // таможня Сердечек
+    let contentHeartsBasket =
+        document.getElementsByClassName("heart")[0].children[1];
+
+    // console.log(
+    //     "gg =",
+    //     document.getElementsByClassName("heart")[0].children[0]
+    // );
+    let chilrensHeart = contentHeartsBasket.children;
+
+    for (let i = 0; i < chilrensHeart.length; i++) {
+        let selectedChildId = chilrensHeart[i].children[0].id;
+
+        if (
+            selectedChildId.slice(0, -1) !== "heart" &&
+            document.getElementsByClassName("heart")[0].children[0]
+                .className === "headerHeart"
+        ) {
+            document.getElementById(selectedChildId).style.border =
+                "1px solid #FFB47D";
+            document.getElementById(selectedChildId).style.borderRadius = "5px";
+        }
+    }
+
+    // таможня Звёзд
+    let contentStarsBasket =
+        document.getElementsByClassName("star")[0].children[1];
+    let chilrensStar = contentStarsBasket.children;
+
+    for (let i = 0; i < chilrensStar.length; i++) {
+        let selectedChildId = chilrensStar[i].children[0].id;
+
+        if (
+            selectedChildId.slice(0, -1) !== "star" &&
+            document.getElementsByClassName("star")[0].children[0].className ===
+                "headerStar"
+        ) {
+            document.getElementById(selectedChildId).style.border =
+                "1px solid #FFB47D";
+            document.getElementById(selectedChildId).style.borderRadius = "5px";
+        }
+    }
+
+    // таможня Ромбов
+    let contentRhombusBasket =
+        document.getElementsByClassName("rhombus")[0].children[1];
+    let chilrensRhombus = contentRhombusBasket.children;
+
+    for (let i = 0; i < chilrensRhombus.length; i++) {
+        let selectedChildId = chilrensRhombus[i].children[0].id;
+
+        if (
+            selectedChildId.slice(0, -1) !== "rhombus" &&
+            document.getElementsByClassName("rhombus")[0].children[0]
+                .className === "headerRhombus"
+        ) {
+            document.getElementById(selectedChildId).style.border =
+                "1px solid #FFB47D";
+            document.getElementById(selectedChildId).style.borderRadius = "5px";
+        }
+    }
+
+    // прежнее
     if (answers.hearts != "" && answers.stars != "" && answers.rhombus != "") {
         succerror(
             document.getElementById("numberHearts"),
