@@ -1481,10 +1481,6 @@ function question12() {
     let contentHeartsBasket =
         document.getElementsByClassName("heart")[0].children[1];
 
-    // console.log(
-    //     "gg =",
-    //     document.getElementsByClassName("heart")[0].children[0]
-    // );
     let chilrensHeart = contentHeartsBasket.children;
 
     for (let i = 0; i < chilrensHeart.length; i++) {
