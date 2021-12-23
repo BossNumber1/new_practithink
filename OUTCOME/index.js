@@ -1979,84 +1979,65 @@ function question17() {
 
 // 18 QUESTION
 
+let result18 = {
+    areaFlowers: "",
+    areaRedColor: "",
+    intersection: "",
+};
+
 function checkFlowers() {
-    const contentFlowersArea = ["blueFlower", "greenFlower", "violetFlower"];
-    let resultFor0 = [];
+    let areaFlowers = document.getElementsByClassName("circle-container")[0];
 
-    let length =
-        document.getElementsByClassName("circle-container")[0].children.length;
+    // таможня Левого круга
+    let contentFlowersArea = areaFlowers.children;
+    let amountFlowersArea = contentFlowersArea.length;
 
-    for (let i = 1; i < length; i++) {
-        resultFor0.push(
-            document.getElementsByClassName("circle-container")[0].children[i]
-                .children[0].id
-        );
-    }
+    if (amountFlowersArea > 1) {
+        for (let i = 1; i < amountFlowersArea; i++) {
+            let selectedChildId = contentFlowersArea[i].children[0].id;
 
-    if (length === 4) {
-        let resultatByFirstObject = contentFlowersArea.includes(resultFor0[0]);
-        let resultatBySecondObject = contentFlowersArea.includes(resultFor0[1]);
-        let resultatByThirdObject = contentFlowersArea.includes(resultFor0[2]);
-
-        if (
-            resultatByFirstObject == true &&
-            resultatBySecondObject == true &&
-            resultatByThirdObject == true
-        ) {
-            return "right";
-        } else {
-            return "wrong";
+            if (
+                selectedChildId === "blueFlower" ||
+                selectedChildId === "greenFlower" ||
+                selectedChildId === "violetFlower"
+            ) {
+                result18.areaFlowers = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result18.areaFlowers = "wrong";
+            }
         }
-    } else {
-        return "not enough objects";
     }
 }
 
 function checkRedColor() {
-    const contentRedColorArea = ["socks", "ball", "car", "ruler"];
-    let resultFor = [];
+    let areaRedColor = document.getElementsByClassName("circle-container")[1];
 
-    let element = document.getElementsByClassName(
-        "circle-container right-circle-container"
-    )[0];
+    // таможня Правого круга
+    let contentRedColorArea = areaRedColor.children;
+    let amountRedColorArea = contentRedColorArea.length;
 
-    if (element.className === "circle-container right-circle-container") {
-        let length2 = element.children.length;
-
-        for (let i = 1; i < length2; i++) {
-            resultFor.push(
-                document.getElementsByClassName("circle-container")[1].children[
-                    i
-                ].children[0].id
-            );
-        }
-
-        if (length2 === 5) {
-            let resultatByFirstObject2 = contentRedColorArea.includes(
-                resultFor[0]
-            );
-            let resultatBySecondObject2 = contentRedColorArea.includes(
-                resultFor[1]
-            );
-            let resultatByThirdObject2 = contentRedColorArea.includes(
-                resultFor[2]
-            );
-            let resultatByFourthObject2 = contentRedColorArea.includes(
-                resultFor[3]
-            );
+    if (amountRedColorArea > 1) {
+        for (let i = 1; i < amountRedColorArea; i++) {
+            let selectedChildId = contentRedColorArea[i].children[0].id;
 
             if (
-                resultatByFirstObject2 == true &&
-                resultatBySecondObject2 == true &&
-                resultatByThirdObject2 == true &&
-                resultatByFourthObject2 == true
+                selectedChildId === "socks" ||
+                selectedChildId === "ball" ||
+                selectedChildId === "redCar" ||
+                selectedChildId === "ruler"
             ) {
-                return "right";
+                result18.areaRedColor = "right";
             } else {
-                return "wrong";
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result18.areaRedColor = "wrong";
             }
-        } else {
-            return "not enough objects";
         }
     }
 }
@@ -2066,28 +2047,50 @@ function checkIntersection() {
 
     if (element.children.length === 1) {
         if (element.children[0].children[0].id === "redFlower") {
-            return "right";
+            result18.intersection = "right";
         } else {
-            return "wrong";
+            document.getElementById(
+                element.children[0].children[0].id
+            ).style.border = "1px solid #FFB47D";
+            document.getElementById(
+                element.children[0].children[0].id
+            ).style.borderRadius = "5px";
+
+            result18.intersection = "wrong";
         }
-    } else {
-        return "not enough objects";
     }
 }
 
 function question18() {
-    let res1 = checkFlowers();
-    let res2 = checkRedColor();
-    let res3 = checkIntersection();
+    checkFlowers();
+    checkRedColor();
+    checkIntersection();
 
-    alert(
-        "Your choice for flowers space - " +
-            res1 +
-            ", for red color space - " +
-            res2 +
-            ", for Intersection space - " +
-            res3
-    );
+    if (
+        result18.areaFlowers !== "" &&
+        result18.areaRedColor !== "" &&
+        result18.intersection !== ""
+    ) {
+        if (
+            result18.areaFlowers === "right" &&
+            result18.areaRedColor === "right" &&
+            result18.intersection === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
+            );
+        }
+    }
 }
 
 // 20 QUESTION
