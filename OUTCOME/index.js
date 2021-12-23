@@ -1451,6 +1451,11 @@ function question11() {
 // 12 QUESTION
 
 let answers = { hearts: "", stars: "", rhombus: "" };
+let desiredContent = {
+    hearts: "",
+    stars: "",
+    rhombus: "",
+};
 
 document.getElementById("numberHearts").onchange = function (e) {
     if (e.target.value == 6) {
@@ -1517,6 +1522,8 @@ function question12() {
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
+
+                desiredContent.hearts = "wrong";
             }
         }
 
@@ -1533,6 +1540,8 @@ function question12() {
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
+
+                desiredContent.stars = "wrong";
             }
         }
 
@@ -1549,6 +1558,8 @@ function question12() {
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
+
+                desiredContent.rhombus = "right";
             }
         }
 
@@ -1582,7 +1593,13 @@ function question12() {
         if (
             answers.hearts === "right" &&
             answers.stars === "right" &&
-            answers.rhombus === "right"
+            answers.rhombus === "right" &&
+            desiredContent.hearts !== "wrong" &&
+            desiredContent.hearts !== "" &&
+            desiredContent.stars !== "wrong" &&
+            desiredContent.stars !== "" &&
+            desiredContent.rhombus !== "wrong" &&
+            desiredContent.rhombus !== ""
         ) {
             addImage(
                 "success",
