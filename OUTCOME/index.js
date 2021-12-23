@@ -1006,10 +1006,29 @@ function question5() {
 function question6() {
     let basket = document.getElementsByClassName("appleInBasket2row")[0];
 
-    if (basket.children.length === 5) {
-        alert(" молодец! верный выбор ");
-    } else {
-        alert(" необходимо другое число яблок ");
+    if (basket.children.length > 5) {
+        for (let i = 5; i < basket.children.length; i++) {
+            basket.children[i].style.border = "1px solid #FFB47D";
+            basket.children[i].style.borderRadius = "5px";
+        }
+    }
+
+    if (basket.children.length > 1) {
+        if (basket.children.length === 5) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question6"),
+                "app6",
+                6
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question6"),
+                "app6",
+                6
+            );
+        }
     }
 }
 
