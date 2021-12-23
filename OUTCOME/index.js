@@ -1483,60 +1483,76 @@ function question12() {
 
     let chilrensHeart = contentHeartsBasket.children;
 
-    for (let i = 0; i < chilrensHeart.length; i++) {
-        let selectedChildId = chilrensHeart[i].children[0].id;
-
-        if (
-            selectedChildId.slice(0, -1) !== "heart" &&
-            document.getElementsByClassName("heart")[0].children[0]
-                .className === "headerHeart"
-        ) {
-            document.getElementById(selectedChildId).style.border =
-                "1px solid #FFB47D";
-            document.getElementById(selectedChildId).style.borderRadius = "5px";
-        }
-    }
-
     // таможня Звёзд
     let contentStarsBasket =
         document.getElementsByClassName("star")[0].children[1];
     let chilrensStar = contentStarsBasket.children;
-
-    for (let i = 0; i < chilrensStar.length; i++) {
-        let selectedChildId = chilrensStar[i].children[0].id;
-
-        if (
-            selectedChildId.slice(0, -1) !== "star" &&
-            document.getElementsByClassName("star")[0].children[0].className ===
-                "headerStar"
-        ) {
-            document.getElementById(selectedChildId).style.border =
-                "1px solid #FFB47D";
-            document.getElementById(selectedChildId).style.borderRadius = "5px";
-        }
-    }
 
     // таможня Ромбов
     let contentRhombusBasket =
         document.getElementsByClassName("rhombus")[0].children[1];
     let chilrensRhombus = contentRhombusBasket.children;
 
-    for (let i = 0; i < chilrensRhombus.length; i++) {
-        let selectedChildId = chilrensRhombus[i].children[0].id;
+    // проверка полей
+    if (
+        chilrensHeart.length > 0 &&
+        answers.hearts != "" &&
+        chilrensStar.length > 0 &&
+        answers.stars != "" &&
+        chilrensRhombus.length > 0 &&
+        answers.rhombus != ""
+    ) {
+        // проверка корзин
 
-        if (
-            selectedChildId.slice(0, -1) !== "rhombus" &&
-            document.getElementsByClassName("rhombus")[0].children[0]
-                .className === "headerRhombus"
-        ) {
-            document.getElementById(selectedChildId).style.border =
-                "1px solid #FFB47D";
-            document.getElementById(selectedChildId).style.borderRadius = "5px";
+        // таможня Сердец
+        for (let i = 0; i < chilrensHeart.length; i++) {
+            let selectedChildId = chilrensHeart[i].children[0].id;
+
+            if (
+                selectedChildId.slice(0, -1) !== "heart" &&
+                document.getElementsByClassName("heart")[0].children[0]
+                    .className === "headerHeart"
+            ) {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+            }
         }
-    }
 
-    // прежнее
-    if (answers.hearts != "" && answers.stars != "" && answers.rhombus != "") {
+        // таможня Звёзд
+        for (let i = 0; i < chilrensStar.length; i++) {
+            let selectedChildId = chilrensStar[i].children[0].id;
+
+            if (
+                selectedChildId.slice(0, -1) !== "star" &&
+                document.getElementsByClassName("star")[0].children[0]
+                    .className === "headerStar"
+            ) {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+            }
+        }
+
+        // таможня Ромбов
+        for (let i = 0; i < chilrensRhombus.length; i++) {
+            let selectedChildId = chilrensRhombus[i].children[0].id;
+
+            if (
+                selectedChildId.slice(0, -1) !== "rhombus" &&
+                document.getElementsByClassName("rhombus")[0].children[0]
+                    .className === "headerRhombus"
+            ) {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+            }
+        }
+
+        // проверка самих же полей
         succerror(
             document.getElementById("numberHearts"),
             answers.hearts === "wrong"
