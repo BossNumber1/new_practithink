@@ -2428,7 +2428,12 @@ function question19() {
 
 // ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
 
-function addCorrectAnswer(numberCorrectAnswer, numberQue, numberContent) {
+function addCorrectAnswer(
+    numberCorrectAnswer,
+    numberQue,
+    numberContent,
+    numberContentCorrectAnswer
+) {
     let newElement = document.createElement("div");
     newElement.className = numberCorrectAnswer;
 
@@ -2437,7 +2442,7 @@ function addCorrectAnswer(numberCorrectAnswer, numberQue, numberContent) {
     childNewElement.textContent = "Correct answer";
 
     let secondChildNewElement = document.createElement("div"); // сосед 2
-    secondChildNewElement.className = "contentCorrectAnswer";
+    secondChildNewElement.className = numberContentCorrectAnswer;
 
     let contentContent = document.createElement("img");
     contentContent.src = "./pictures/" + numberQue + "/correctAnswer.svg";
@@ -2457,12 +2462,32 @@ function addCorrectAnswer(numberCorrectAnswer, numberQue, numberContent) {
 
 function question1addCorrectAnswer() {
     document.getElementsByClassName("app1")[0].style.height = "503px";
-    addCorrectAnswer("correctAnswer1", "1que", "content1");
+    addCorrectAnswer(
+        "correctAnswer1",
+        "1que",
+        "content1",
+        "contentCorrectAnswer"
+    );
 }
 
 function question2addCorrectAnswer() {
     document.getElementsByClassName("app2")[0].style.height = "413px";
-    addCorrectAnswer("correctAnswer2", "2que", "content2");
+    addCorrectAnswer(
+        "correctAnswer2",
+        "2que",
+        "content2",
+        "contentCorrectAnswer"
+    );
+}
+
+function question3addCorrectAnswer() {
+    document.getElementsByClassName("app3")[0].style.height = "657px";
+    addCorrectAnswer(
+        "correctAnswer3",
+        "3que",
+        "content3",
+        "contentCorrectAnswer3"
+    );
 }
 
 // ---------------------------------------------------------------------- RESULT
@@ -2473,6 +2498,7 @@ document.getElementById("submit").onclick = function () {
     question2();
     question2addCorrectAnswer();
     question3();
+    question3addCorrectAnswer();
     question4();
     question5();
     question6();
