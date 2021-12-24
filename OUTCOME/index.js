@@ -2359,7 +2359,6 @@ function dragElement(element) {
 }
 
 function dragElement2(element) {
-    // alert("exc!!");
     let pos10 = 0,
         pos20 = 0,
         pos30 = 0,
@@ -2377,7 +2376,6 @@ function dragElement2(element) {
     }
 
     function elementDrag2(e) {
-        // console.log("hhh");
         e = e || window.event;
         // calculate the new cursor position:
         pos10 = pos30 - e.clientX;
@@ -2423,13 +2421,11 @@ document
 document
     .getElementsByClassName("secondTriangle")[0]
     .addEventListener("mousedown", (e) => {
-        // alert("exc");
         if (
             (e.target.className !== "leftCorners" ||
                 e.target.className !== "rightCorner") &&
             e.target.className === "mainImgSecondTriangle"
         ) {
-            // alert("god");
             rotationFunctionForSecondTriangle.stop();
             dragElement2(document.getElementsByClassName("secondTriangle")[0]);
         }
@@ -2439,7 +2435,6 @@ document
                 e.target.className === "rightCorner") &&
             e.target.className !== "mainImgSecondTriangle"
         ) {
-            // alert("ogoo");
             rotationFunctionForSecondTriangle.onRotated(e);
         }
     });
@@ -2514,6 +2509,9 @@ function question19() {
                 19
             );
         }
+    } else {
+        document.getElementsByClassName("resetField")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
