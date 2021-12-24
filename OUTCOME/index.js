@@ -1409,6 +1409,14 @@ function question10() {
                 10
             );
         }
+    } else {
+        let requiredElement = document.getElementsByClassName("row")[0];
+        let childs = requiredElement.children;
+
+        for (let i = 0; i < childs.length; i++) {
+            childs[i].children[0].style.border = "2px solid #FFB47D";
+            childs[i].children[0].style.borderRadius = "5px";
+        }
     }
 }
 
