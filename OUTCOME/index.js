@@ -821,7 +821,7 @@ function question2() {
         let childs = requiredElement.children;
 
         for (let i = 0; i < childs.length; i++) {
-            childs[i].children[0].style.border = "1px solid #FFB47D";
+            childs[i].children[0].style.border = "2px solid #FFB47D";
         }
     }
 }
@@ -938,7 +938,7 @@ function question4() {
         }
     } else {
         let requiredElement = document.getElementById("inputQuestion4");
-        requiredElement.style.border = "1px solid #FFB47D";
+        requiredElement.style.border = "2px solid #FFB47D";
     }
 }
 
@@ -1030,6 +1030,13 @@ function question5() {
                 5
             );
         }
+    } else {
+        document.getElementById("amountIceCream").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("selectInput").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("amountFlowers").style.border =
+            "2px solid #FFB47D";
     }
 }
 
