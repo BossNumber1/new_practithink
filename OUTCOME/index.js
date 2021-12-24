@@ -815,6 +815,14 @@ function question2() {
                 2
             );
         }
+    } else {
+        let requiredElement =
+            document.getElementsByClassName("inputsCollection")[0];
+        let childs = requiredElement.children;
+
+        for (let i = 0; i < childs.length; i++) {
+            childs[i].children[0].style.border = "1px solid #FFB47D";
+        }
     }
 }
 
