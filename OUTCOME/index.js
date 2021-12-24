@@ -2213,6 +2213,12 @@ function question18() {
                 18
             );
         }
+    } else {
+        document.getElementsByClassName("circle-container")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName(
+            "circle-container right-circle-container"
+        )[0].style.border = "2px solid #FFB47D";
     }
 }
 
