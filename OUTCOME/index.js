@@ -2258,7 +2258,11 @@ document.getElementById("selectPencil").onclick = function () {
 };
 
 function question20() {
-    if (valuesInputs.tasselLength != "" && valuesInputs.pencilLength != "") {
+    if (
+        valuesInputs.tasselLength != "" &&
+        valuesInputs.pencilLength != "" &&
+        selectBtn4
+    ) {
         succerror(
             document.getElementById("tasselLength"),
             valuesInputs.tasselLength === "wrong"
@@ -2299,6 +2303,15 @@ function question20() {
                 16
             );
         }
+    } else {
+        document.getElementById("selectBrush").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("selectPencil").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("tasselLength").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("pencilLength").style.border =
+            "2px solid #FFB47D";
     }
 }
 
