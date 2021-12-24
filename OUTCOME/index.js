@@ -1504,6 +1504,21 @@ function question11() {
                 11
             );
         }
+
+        document.getElementById("stool").remove();
+
+        let stoolParent = document.createElement("div");
+        stoolParent.style.zIndex = "1";
+        stoolParent.id = "stool";
+
+        let stool = document.createElement("img");
+        stool.src = "./pictures/11que/stool.svg";
+        stool.alt = "stool";
+
+        document
+            .getElementsByClassName("friends")[0]
+            .appendChild(stoolParent)
+            .appendChild(stool);
     } else {
         document.getElementById("btnSelectTom").style.border =
             "2px solid #FFB47D";
