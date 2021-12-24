@@ -2437,6 +2437,7 @@ body {
 .correctAnswer15,
 .correctAnswer16,
 .correctAnswer17,
+.correctAnswer18,
 .correctAnswer20 {
     left: calc(50% - 450px / 2);
     width: 450px;
@@ -2469,7 +2470,8 @@ body {
 }
 
 .correctAnswer5,
-.correctAnswer16 {
+.correctAnswer16,
+.correctAnswer18 {
     top: 120px;
 }
 
@@ -2502,7 +2504,8 @@ body {
 .contentCorrectAnswer6,
 .contentCorrectAnswer7,
 .contentCorrectAnswer16,
-.contentCorrectAnswer17 {
+.contentCorrectAnswer17,
+.contentCorrectAnswer18 {
     display: flex;
     /* flex-direction: row;
     align-items: flex-start; */
@@ -2527,4 +2530,8 @@ body {
 .contentCorrectAnswer17,
 .contentCorrectAnswer16 {
     top: 80px;
+}
+
+.contentCorrectAnswer18 {
+    top: 160px;
 }
