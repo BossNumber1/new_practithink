@@ -1907,6 +1907,9 @@ function question14() {
                 14
             );
         }
+    } else {
+        document.getElementsByClassName("closet")[0].style.border =
+            "2px solid red";
     }
 }
 
