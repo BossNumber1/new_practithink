@@ -1662,6 +1662,31 @@ function question12() {
                 12
             );
         }
+    } else {
+        document.getElementsByClassName("headerHeart")[0].style.width = "165px";
+        document.getElementsByClassName("headerStar")[0].style.width = "165px";
+        document.getElementsByClassName("headerRhombus")[0].style.width =
+            "165px";
+
+        document.getElementsByClassName("heart")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("headerHeart")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("star")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("headerStar")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("rhombus")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("headerRhombus")[0].style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("numberHearts").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("numberStars").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("numberRhombus").style.border =
+            "2px solid #FFB47D";
     }
 }
 
