@@ -2428,6 +2428,8 @@ function question19() {
 
 // ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
 
+// для одной картинки
+
 function addCorrectAnswer(
     numberCorrectAnswer,
     numberQue,
@@ -2449,6 +2451,46 @@ function addCorrectAnswer(
     contentContent.alt = "correct answer";
 
     secondChildNewElement.appendChild(contentContent);
+
+    document.getElementsByClassName(numberContent)[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(secondChildNewElement);
+}
+
+// для нескольких
+
+function addDoubleCorrectAnswer(
+    numberCorrectAnswer,
+    pathQueOne,
+    pathQueTwo,
+    numberContent,
+    numberContentCorrectAnswer
+) {
+    let newElement = document.createElement("div");
+    newElement.className = numberCorrectAnswer;
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = numberContentCorrectAnswer;
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/" + pathQueOne;
+    contentContent.alt = "correct answer";
+
+    let secondContentContent = document.createElement("img");
+    secondContentContent.src = "./pictures/" + pathQueTwo;
+    secondContentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+    secondChildNewElement.appendChild(secondContentContent);
 
     document.getElementsByClassName(numberContent)[0].appendChild(newElement);
 
@@ -2515,7 +2557,16 @@ function question6addCorrectAnswer() {
     );
 }
 
-// --- 7
+function question7addCorrectAnswer() {
+    document.getElementsByClassName("app7")[0].style.height = "777px";
+    addDoubleCorrectAnswer(
+        "correctAnswer7",
+        "7que/correctAnswerBob.svg",
+        "7que/correctAnswerDave.svg",
+        "content7",
+        "contentCorrectAnswer7"
+    );
+}
 
 function question8addCorrectAnswer() {
     document.getElementsByClassName("app8")[0].style.height = "657px";
@@ -2609,6 +2660,7 @@ document.getElementById("submit").onclick = function () {
     question6();
     question6addCorrectAnswer();
     question7();
+    question7addCorrectAnswer();
     question8();
     question8addCorrectAnswer();
     question9();

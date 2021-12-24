@@ -706,6 +706,7 @@ body {
 .app7 {
     width: 1170px;
     height: 555px;
+    /* 777 */
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -2428,6 +2429,7 @@ body {
 .correctAnswer4,
 .correctAnswer5,
 .correctAnswer6,
+.correctAnswer7,
 .correctAnswer8,
 .correctAnswer9,
 .correctAnswer10,
@@ -2456,6 +2458,7 @@ body {
 .correctAnswer3,
 .correctAnswer20,
 .correctAnswer6,
+.correctAnswer7,
 .correctAnswer10 {
     top: 70px;
 }
@@ -2470,6 +2473,10 @@ body {
 
 .correctAnswer17 {
     top: 180px;
+}
+
+.correctAnswer7 img:not(:last-child) {
+    margin-right: 30px;
 }
 
 .headerCorrectAnswer {
@@ -2490,6 +2497,7 @@ body {
 .contentCorrectAnswer3,
 .contentCorrectAnswer10,
 .contentCorrectAnswer6,
+.contentCorrectAnswer7,
 .contentCorrectAnswer17 {
     display: flex;
     /* flex-direction: row;
@@ -2511,6 +2519,7 @@ body {
 }
 
 .contentCorrectAnswer6,
+.contentCorrectAnswer7,
 .contentCorrectAnswer17 {
     top: 80px;
 }
