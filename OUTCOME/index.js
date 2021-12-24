@@ -936,6 +936,9 @@ function question4() {
             );
             addMiniIcon(document.querySelector("input"), "success");
         }
+    } else {
+        let requiredElement = document.getElementById("inputQuestion4");
+        requiredElement.style.border = "1px solid #FFB47D";
     }
 }
 
