@@ -2608,7 +2608,67 @@ function question11addCorrectAnswer() {
     );
 }
 
-// --- 12, 13, 14
+function question12addCorrectAnswer() {
+    document.getElementsByClassName("app12")[0].style.height = "907px";
+
+    let newElement = document.createElement("div");
+    newElement.className = "correctAnswer12";
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = "contentCorrectAnswer12";
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/12que/correctAnswerHearts.svg";
+    contentContent.alt = "correct answer";
+
+    let secondContentContent = document.createElement("img");
+    secondContentContent.src = "./pictures/12que/correctAnswerStars.svg";
+    secondContentContent.alt = "correct answer";
+
+    let thirdContentContent = document.createElement("img");
+    thirdContentContent.src = "./pictures/12que/correctAnswerRhombus.svg";
+    thirdContentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+    secondChildNewElement.appendChild(secondContentContent);
+    secondChildNewElement.appendChild(thirdContentContent);
+
+    document.getElementsByClassName("content12")[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName("correctAnswer12")[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName("correctAnswer12")[0]
+        .appendChild(secondChildNewElement);
+
+    let input1 = document.createElement("div");
+    input1.textContent = "6";
+    input1.className = "inputCorrectAnswer";
+
+    let input2 = document.createElement("div");
+    input2.textContent = "4";
+    input2.className = "inputCorrectAnswer";
+
+    let input3 = document.createElement("div");
+    input3.textContent = "4";
+    input3.className = "inputCorrectAnswer";
+
+    let inputsHome = document.createElement("div");
+    inputsHome.className = "inputsHome";
+
+    inputsHome.appendChild(input1);
+    inputsHome.appendChild(input2);
+    inputsHome.appendChild(input3);
+
+    newElement.appendChild(inputsHome);
+}
+
+// --- 13, 14
 
 function question15addCorrectAnswer() {
     document.getElementsByClassName("app15")[0].style.height = "507px";
@@ -2689,6 +2749,7 @@ document.getElementById("submit").onclick = function () {
     question11();
     question11addCorrectAnswer();
     question12();
+    question12addCorrectAnswer();
     question13();
     question14();
     question15();
