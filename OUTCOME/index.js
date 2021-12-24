@@ -2097,6 +2097,11 @@ function question17() {
                 17
             );
         }
+    } else {
+        document.getElementsByClassName("leftFigure")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("rightFigure")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
