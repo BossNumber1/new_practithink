@@ -896,6 +896,14 @@ function question3() {
                 3
             );
         }
+    } else {
+        let requiredElement = document.getElementsByClassName("places")[0];
+        let childs = requiredElement.children;
+
+        for (let i = 0; i < childs.length; i++) {
+            childs[i].children[1].children[0].src =
+                "./pictures/3que/unselectedBlock.svg";
+        }
     }
 }
 
