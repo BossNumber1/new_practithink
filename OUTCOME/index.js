@@ -1068,6 +1068,9 @@ function question6() {
                 6
             );
         }
+    } else {
+        document.getElementsByClassName("basket")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
