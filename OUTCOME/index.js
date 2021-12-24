@@ -1496,6 +1496,13 @@ function question11() {
                 11
             );
         }
+    } else {
+        document.getElementById("btnSelectTom").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("btnSelectMike").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("btnSelectJack").style.border =
+            "2px solid #FFB47D";
     }
 }
 
