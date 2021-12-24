@@ -1826,6 +1826,15 @@ function question13() {
                 13
             );
         }
+    } else {
+        document.getElementsByClassName("circle")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("square2")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("triangle")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("rectangle")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
