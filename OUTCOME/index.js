@@ -1210,6 +1210,12 @@ function question8() {
                 8
             );
         }
+    } else {
+        document.getElementById("numberJellyfish").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("numberSeahorses").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("result").style.border = "2px solid #FFB47D";
     }
 }
 
