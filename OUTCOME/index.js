@@ -1950,6 +1950,8 @@ function question15() {
                 15
             );
         }
+    } else {
+        document.getElementById("answer").style.border = "2px solid #FFB47D";
     }
 }
 
@@ -2026,6 +2028,11 @@ function question16() {
                 16
             );
         }
+    } else {
+        document.getElementsByClassName("basketFlat")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("basketSolid")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
