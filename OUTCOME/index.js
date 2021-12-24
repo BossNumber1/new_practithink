@@ -1113,6 +1113,11 @@ function question7() {
                 7
             );
         }
+    } else {
+        document.getElementsByClassName("bob")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName("dave")[0].style.border =
+            "2px solid #FFB47D";
     }
 }
 
