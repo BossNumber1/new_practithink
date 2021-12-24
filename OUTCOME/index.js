@@ -2620,7 +2620,16 @@ function question15addCorrectAnswer() {
     );
 }
 
-// --- 16
+function question16addCorrectAnswer() {
+    document.getElementsByClassName("app16")[0].style.height = "877px";
+    addDoubleCorrectAnswer(
+        "correctAnswer16",
+        "16que/correctAnswerFlat.svg",
+        "16que/correctAnswerSolid.svg",
+        "content16",
+        "contentCorrectAnswer16"
+    );
+}
 
 function question17addCorrectAnswer() {
     document.getElementsByClassName("app17")[0].style.height = "657px";
@@ -2675,6 +2684,7 @@ document.getElementById("submit").onclick = function () {
     question15();
     question15addCorrectAnswer();
     question16();
+    question16addCorrectAnswer();
     question17();
     question17addCorrectAnswer();
     question18();
