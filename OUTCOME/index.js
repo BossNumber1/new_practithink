@@ -2668,7 +2668,51 @@ function question12addCorrectAnswer() {
     newElement.appendChild(inputsHome);
 }
 
-// --- 13, 14
+function question13addCorrectAnswer() {
+    document.getElementsByClassName("app13")[0].style.height = "807px";
+
+    let newElement = document.createElement("div");
+    newElement.className = "correctAnswer13";
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = "contentCorrectAnswer13";
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/13que/correctAnswerCircles.svg";
+    contentContent.alt = "correct answer";
+
+    let secondContentContent = document.createElement("img");
+    secondContentContent.src = "./pictures/13que/correctAnswerSquares.svg";
+    secondContentContent.alt = "correct answer";
+
+    let thirdContentContent = document.createElement("img");
+    thirdContentContent.src = "./pictures/13que/correctAnswerTriangles.svg";
+    thirdContentContent.alt = "correct answer";
+
+    let fourthContentContent = document.createElement("img");
+    fourthContentContent.src = "./pictures/13que/correctAnswerRectangles.svg";
+    fourthContentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+    secondChildNewElement.appendChild(secondContentContent);
+    secondChildNewElement.appendChild(thirdContentContent);
+    secondChildNewElement.appendChild(fourthContentContent);
+
+    document.getElementsByClassName("content13")[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName("correctAnswer13")[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName("correctAnswer13")[0]
+        .appendChild(secondChildNewElement);
+}
+
+// --- 14
 
 function question15addCorrectAnswer() {
     document.getElementsByClassName("app15")[0].style.height = "507px";
@@ -2751,6 +2795,7 @@ document.getElementById("submit").onclick = function () {
     question12();
     question12addCorrectAnswer();
     question13();
+    question13addCorrectAnswer();
     question14();
     question15();
     question15addCorrectAnswer();

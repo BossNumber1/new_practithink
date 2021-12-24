@@ -2439,7 +2439,8 @@ body {
 .correctAnswer16,
 .correctAnswer17,
 .correctAnswer18,
-.correctAnswer20 {
+.correctAnswer20,
+.correctAnswer13 {
     left: calc(50% - 450px / 2);
     width: 450px;
     /* display: flex;
@@ -2472,7 +2473,8 @@ body {
 
 .correctAnswer5,
 .correctAnswer16,
-.correctAnswer18 {
+.correctAnswer18,
+.correctAnswer13 {
     top: 120px;
 }
 
@@ -2486,6 +2488,7 @@ body {
 
 .correctAnswer7 img:not(:last-child),
 .correctAnswer12 img:not(:last-child),
+.correctAnswer13 img:not(:last-child),
 .correctAnswer16 img:not(:last-child) {
     margin-right: 30px;
 }
@@ -2511,6 +2514,7 @@ body {
 .contentCorrectAnswer7,
 .contentCorrectAnswer16,
 .contentCorrectAnswer12,
+.contentCorrectAnswer13,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18 {
     display: flex;
@@ -2536,7 +2540,8 @@ body {
 .contentCorrectAnswer7,
 .contentCorrectAnswer12,
 .contentCorrectAnswer17,
-.contentCorrectAnswer16 {
+.contentCorrectAnswer16,
+.contentCorrectAnswer13 {
     top: 80px;
 }
 
