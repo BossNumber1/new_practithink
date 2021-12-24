@@ -2712,7 +2712,15 @@ function question13addCorrectAnswer() {
         .appendChild(secondChildNewElement);
 }
 
-// --- 14
+function question14addCorrectAnswer() {
+    document.getElementsByClassName("app14")[0].style.height = "907px";
+    addCorrectAnswer(
+        "correctAnswer14",
+        "14que",
+        "content14",
+        "contentCorrectAnswer14"
+    );
+}
 
 function question15addCorrectAnswer() {
     document.getElementsByClassName("app15")[0].style.height = "507px";
@@ -2797,6 +2805,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question13addCorrectAnswer();
     question14();
+    question14addCorrectAnswer();
     question15();
     question15addCorrectAnswer();
     question16();
