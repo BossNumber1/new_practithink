@@ -751,6 +751,13 @@ function question1() {
                 1
             );
         }
+    } else {
+        let requiredElement = document.getElementsByClassName("topRow")[0];
+        let childs = requiredElement.children;
+
+        for (let i = 0; i < childs.length; i++) {
+            childs[i].children[0].src = "./pictures/1que/unselectedBlock.svg";
+        }
     }
 }
 
