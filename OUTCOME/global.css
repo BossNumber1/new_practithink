@@ -2566,10 +2566,21 @@ body {
     justify-content: center;
 }
 
-.inputsHome {
-    top: 160px;
-    width: 450px;
+.inputsHome,
+.inputsHome2 {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+.inputsHome {
+    top: 160px;
+    width: 450px;
+}
+
+.inputsHome2 {
+    top: 60px;
+    left: calc(50% - 170px / 2);
+    width: 170px;
+    /* border: 1px solid gray; */
 }

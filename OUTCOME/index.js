@@ -2773,6 +2773,24 @@ function question20addCorrectAnswer() {
         "content20",
         "contentCorrectAnswer"
     );
+
+    let input1 = document.createElement("div");
+    input1.textContent = "8";
+    input1.className = "inputCorrectAnswer";
+
+    let input2 = document.createElement("div");
+    input2.textContent = "7";
+    input2.className = "inputCorrectAnswer";
+
+    let inputsHome = document.createElement("div");
+    inputsHome.className = "inputsHome2";
+
+    inputsHome.appendChild(input1);
+    inputsHome.appendChild(input2);
+
+    document
+        .getElementsByClassName("correctAnswer20")[0]
+        .appendChild(inputsHome);
 }
 
 // ---------------------------------------------------------------------- RESULT
