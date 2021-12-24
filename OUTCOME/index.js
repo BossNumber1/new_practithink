@@ -1312,6 +1312,10 @@ function question9() {
                 9
             );
         }
+    } else {
+        document.getElementById("thirteen").style.border = "2px solid #FFB47D";
+        document.getElementById("fourteen").style.border = "2px solid #FFB47D";
+        document.getElementById("eighteen").style.border = "2px solid #FFB47D";
     }
 }
 
