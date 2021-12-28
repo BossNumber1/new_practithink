@@ -1,34 +1,26 @@
-@media (min-width: 650px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
     body {
         background-color: red;
+        position: absolute;
+        margin: 0;
     }
 
-    .titlePage1,
-    .titlePage3,
-    .titlePage4,
-    .titlePage12,
-    .titlePage14 {
-        width: 600px;
-        left: calc(50% - 600px / 2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    html {
+        background-color: #fff;
     }
 
-    .titlePage6 {
-        width: 600px;
-        left: calc(50% - 600px / 2);
-        margin-top: -15px;
+    .app {
+        background-color: orange;
+        position: relative;
+        top: 20px;
     }
 
-    .row {
-        width: 600px;
-        left: calc(50% - 600px / 2);
+    .app1 {
+        background-color: blue;
     }
 }
 
-@media (min-width: 770px) and (orientation: landscape) {
+@media (min-width: 1024px) and (orientation: landscape) {
     body {
         background-color: orange;
     }
