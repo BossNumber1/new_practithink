@@ -19,41 +19,9 @@
     } */
 }
 
-@media (min-width: 425px) and (orientation: landscape) {
-    body {
-        background-color: white;
-    }
-}
-
-@media (min-width: 550px) and (orientation: landscape) {
-    body {
-        background-color: white;
-    }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-    body {
-        background-color: white;
-    }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-    body {
-        background-color: white;
-    }
-}
-
 @media (min-width: 1200px) and (orientation: landscape) {
     body {
         background-color: white;
         position: relative;
-    }
-
-    .app {
-        background-color: white;
-    }
-
-    .app1 {
-        background-color: white;
     }
 }
