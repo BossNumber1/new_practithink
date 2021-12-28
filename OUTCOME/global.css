@@ -7,6 +7,13 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-areas: "app";
+    grid-template-columns: 99%;
+}
+
+.app {
+    grid-area: app;
 }
 
 * {
