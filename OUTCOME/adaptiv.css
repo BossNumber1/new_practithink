@@ -1,33 +1,35 @@
-/* @media (min-width: 710px) and (orientation: landscape) {
+@media (min-width: 650px) and (orientation: landscape) {
     body {
-        background-color: yellow;
+        background-color: red;
     }
-} */
-/* @media screen and (orientation: landscape) { */
-@media screen and (max-width: 810px), screen and (orientation: landscape) {
-    /* нужно запретить портретную ориентацию */
 
-    /* body {
-        background-color: orange;
-    } */
-
-    /* .titlePage6 { */
-    /* display: flex;
+    .titlePage1,
+    .titlePage3,
+    .titlePage4,
+    .titlePage12,
+    .titlePage14 {
+        width: 600px;
+        left: calc(50% - 600px / 2);
+        display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: center; */
-    /* text-align: center;
-    } */
+        text-align: center;
+    }
 
-    /* @media screen and (max-width: 810px) {
-        body {
-            background-color: orange;
-        }
-    } */
+    .titlePage6 {
+        width: 600px;
+        left: calc(50% - 600px / 2);
+        margin-top: -15px;
+    }
 
-    /* @media screen and (max-width: 900px) {
-        body {
-            background-color: yellow;
-        }
-    } */
+    .row {
+        width: 600px;
+        left: calc(50% - 600px / 2);
+    }
 }
-/* @media (min-width: 30em) and (orientation: landscape) { ... 695 ... } */
+
+@media (min-width: 770px) and (orientation: landscape) {
+    body {
+        background-color: orange;
+    }
+}
