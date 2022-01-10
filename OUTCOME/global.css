@@ -2428,7 +2428,7 @@ body {
     margin: 0px 10px;
 }
 
-/* correct answer styles */
+/* ----------------------------------------------------------------------------------- CORRECT ANSWER STYLES --------------------------------- */
 
 .correctAnswer1,
 .correctAnswer2,
@@ -2442,20 +2442,17 @@ body {
 .correctAnswer10,
 .correctAnswer11,
 .correctAnswer12,
+.correctAnswer13,
 .correctAnswer14,
 .correctAnswer15,
 .correctAnswer16,
 .correctAnswer17,
 .correctAnswer18,
-.correctAnswer20,
-.correctAnswer13 {
+.correctAnswer19,
+.correctAnswer20 {
     left: calc(50% - 450px / 2);
     width: 450px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: 94px;
-    /* border: 1px solid gray; */
 }
 
 .correctAnswer1,
@@ -2466,14 +2463,6 @@ body {
 .correctAnswer14,
 .correctAnswer15 {
     top: 100px;
-}
-
-.correctAnswer3,
-.correctAnswer20,
-.correctAnswer6,
-.correctAnswer7,
-.correctAnswer10 {
-    top: 70px;
 }
 
 .correctAnswer4 {
@@ -2491,7 +2480,8 @@ body {
     top: 160px;
 }
 
-.correctAnswer17 {
+.correctAnswer17,
+.correctAnswer19 {
     top: 180px;
 }
 
@@ -2516,25 +2506,24 @@ body {
     color: #2f2f2f;
 }
 
+/* ----------------------------------------------------------------------------- CONTENT CORRECT ANSWER STYLES --------------------------------- */
+
 .contentCorrectAnswer,
 .contentCorrectAnswer3,
-.contentCorrectAnswer10,
 .contentCorrectAnswer6,
 .contentCorrectAnswer7,
-.contentCorrectAnswer16,
+.contentCorrectAnswer10,
 .contentCorrectAnswer12,
 .contentCorrectAnswer13,
 .contentCorrectAnswer14,
+.contentCorrectAnswer16,
 .contentCorrectAnswer17,
-.contentCorrectAnswer18 {
+.contentCorrectAnswer18,
+.contentCorrectAnswer19 {
     display: flex;
-    /* flex-direction: row;
-    align-items: flex-start; */
     justify-content: center;
     align-items: center;
-    /* width: 450px; */
     height: 50px;
-    /* border: 1px solid violet; */
 }
 
 .contentCorrectAnswer {
@@ -2542,7 +2531,8 @@ body {
 }
 
 .contentCorrectAnswer3,
-.contentCorrectAnswer10 {
+.contentCorrectAnswer10,
+.contentCorrectAnswer19 {
     top: 60px;
 }
 

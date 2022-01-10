@@ -926,7 +926,15 @@ function question18addCorrectAnswer() {
     );
 }
 
-// --- 19
+function question19addCorrectAnswer() {
+    document.getElementsByClassName("app19")[0].style.height = "600px";
+    addCorrectAnswer(
+        "correctAnswer19",
+        "19que",
+        "app19",
+        "contentCorrectAnswer19"
+    );
+}
 
 function question20addCorrectAnswer() {
     document.getElementsByClassName("app20")[0].style.height = "1017px";
@@ -2960,7 +2968,8 @@ function question19() {
         } else {
             document.getElementsByClassName(
                 "parentResetField"
-            ).style.backgroundColor = "#ffb47d";
+            )[0].style.backgroundColor = "#ffb47d";
+
             addMiniIcon(
                 document.getElementsByClassName("parentResetField")[0],
                 "failure"
@@ -3000,5 +3009,6 @@ document.getElementById("submit").onclick = function () {
     question17();
     question18();
     question19();
+    question19addCorrectAnswer();
     question20();
 };
