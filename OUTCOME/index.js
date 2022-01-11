@@ -937,7 +937,7 @@ function question19addCorrectAnswer() {
 }
 
 function question20addCorrectAnswer() {
-    document.getElementsByClassName("app20")[0].style.height = "1017px";
+    document.getElementsByClassName("app20")[0].style.height = "1317px";
     addCorrectAnswer(
         "correctAnswer20",
         "20que",
@@ -945,19 +945,13 @@ function question20addCorrectAnswer() {
         "contentCorrectAnswer"
     );
 
-    let input1 = document.createElement("div");
-    input1.textContent = "8";
-    input1.className = "inputCorrectAnswer";
-
-    let input2 = document.createElement("div");
-    input2.textContent = "7";
-    input2.className = "inputCorrectAnswer";
+    let input1 = document.createElement("img");
+    input1.src = "./pictures/20que/correctAnswer2.svg";
 
     let inputsHome = document.createElement("div");
     inputsHome.className = "inputsHome2";
 
     inputsHome.appendChild(input1);
-    inputsHome.appendChild(input2);
 
     document
         .getElementsByClassName("correctAnswer20")[0]
@@ -986,20 +980,36 @@ function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
 
+    let correctPosition = position !== "lineUnderHeading2" && position - 1;
+
     if (status === "success") {
         object.src = "./pictures/successIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #9DD765";
-        document.getElementsByClassName("lineUnderHeading")[
-            position - 1
-        ].style.borderBottom = "1px solid #9DD765";
+
+        if (position === "lineUnderHeading2") {
+            document.getElementsByClassName(
+                "lineUnderHeading2"
+            )[0].style.borderBottom = "1px solid #9DD765";
+        } else {
+            document.getElementsByClassName("lineUnderHeading")[
+                correctPosition
+            ].style.borderBottom = "1px solid #9DD765";
+        }
     } else {
         object.src = "./pictures/failureIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #FFB47D";
-        document.getElementsByClassName("lineUnderHeading")[
-            position - 1
-        ].style.borderBottom = "1px solid #FFB47D";
+
+        if (position === "lineUnderHeading2") {
+            document.getElementsByClassName(
+                "lineUnderHeading2"
+            )[0].style.borderBottom = "1px solid #FFB47D";
+        } else {
+            document.getElementsByClassName("lineUnderHeading")[
+                correctPosition
+            ].style.borderBottom = "1px solid #FFB47D";
+        }
     }
 
     ancestor[0].children[0].appendChild(object);
@@ -2749,17 +2759,17 @@ function question20() {
                 "success",
                 document.getElementsByClassName("question20"),
                 "app20",
-                20
+                19
             );
         } else {
             addImage(
                 "failure",
                 document.getElementsByClassName("question20"),
                 "app20",
-                20
+                19
             );
 
-            question20addCorrectAnswer();
+            // question20addCorrectAnswer();
         }
     } else {
         document.getElementById("selectBrush").style.border =
@@ -2955,15 +2965,17 @@ function question19() {
             document.getElementsByClassName(
                 "parentResetField"
             )[0].style.backgroundColor = "#9dd765";
+
             addMiniIcon(
                 document.getElementsByClassName("parentResetField")[0],
                 "success"
             );
+
             addImage(
                 "success",
                 document.getElementsByClassName("question19"),
                 "app19",
-                19
+                "lineUnderHeading2"
             );
         } else {
             document.getElementsByClassName(
@@ -2974,12 +2986,15 @@ function question19() {
                 document.getElementsByClassName("parentResetField")[0],
                 "failure"
             );
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question19"),
                 "app19",
-                19
+                "lineUnderHeading2"
             );
+
+            question19addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("resetField")[0].style.border =
@@ -3009,6 +3024,6 @@ document.getElementById("submit").onclick = function () {
     question17();
     question18();
     question19();
-    question19addCorrectAnswer();
     question20();
+    question20addCorrectAnswer();
 };

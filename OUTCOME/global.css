@@ -2485,6 +2485,10 @@ body {
     top: 180px;
 }
 
+.correctAnswer20 {
+    top: 50px;
+}
+
 .correctAnswer7 img:not(:last-child),
 .correctAnswer12 img:not(:last-child),
 .correctAnswer13 img:not(:last-child),
@@ -2556,7 +2560,7 @@ body {
 .inputCorrectAnswer {
     width: 70px;
     height: 30px;
-    background-color: #9dd765;
+    background-color: #48b736;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -2580,4 +2584,5 @@ body {
     left: calc(50% - 170px / 2);
     width: 170px;
     /* border: 1px solid gray; */
+    color: white;
 }
