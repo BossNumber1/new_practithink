@@ -2769,7 +2769,7 @@ function question20() {
                 19
             );
 
-            // question20addCorrectAnswer();
+            question20addCorrectAnswer();
         }
     } else {
         document.getElementById("selectBrush").style.border =
@@ -3025,5 +3025,4 @@ document.getElementById("submit").onclick = function () {
     question18();
     question19();
     question20();
-    question20addCorrectAnswer();
 };
