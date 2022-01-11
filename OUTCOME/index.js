@@ -2695,7 +2695,8 @@ document.getElementById("pencilLength").onchange = function (e) {
 
 // second part - check the rest
 
-let selectBtn4, nameSelectedBtn;
+let selectBtn4 = "",
+    nameSelectedBtn = "";
 
 document.getElementById("selectBrush").onclick = function () {
     document.getElementById("selectBrush").style.backgroundColor = "#bbedf4";
@@ -2725,9 +2726,9 @@ document.getElementById("selectPencil").onclick = function () {
 
 function question20() {
     if (
-        valuesInputs.tasselLength != "" &&
-        valuesInputs.pencilLength != "" &&
-        selectBtn4
+        valuesInputs.tasselLength !== "" &&
+        valuesInputs.pencilLength !== "" &&
+        selectBtn4 !== ""
     ) {
         succerror(
             document.getElementById("tasselLength"),
@@ -2772,14 +2773,22 @@ function question20() {
             question20addCorrectAnswer();
         }
     } else {
-        document.getElementById("selectBrush").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("selectPencil").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("tasselLength").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("pencilLength").style.border =
-            "2px solid #FFB47D";
+        if (valuesInputs.tasselLength === "") {
+            document.getElementById("tasselLength").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (valuesInputs.pencilLength === "") {
+            document.getElementById("pencilLength").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (selectBtn4 === "") {
+            document.getElementById("selectPencil").style.border =
+                "2px solid #FFB47D";
+            document.getElementById("selectBrush").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
