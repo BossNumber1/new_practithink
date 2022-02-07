@@ -480,13 +480,13 @@ function drop16(e) {
     }
 }
 
-// 18 QUESTION
+// 20 QUESTION
 
-function drag18(e) {
+function drag20(e) {
     localStorage.setItem("idOriginal", e.target.id);
 }
 
-function drop18(e) {
+function drop20(e) {
     e = e || window.event;
 
     // забираем данные из хранилища
@@ -524,7 +524,7 @@ function drop18(e) {
         tray.style.marginLeft = e.offsetX + "px";
 
         let objectBeingCreated = document.createElement("img");
-        objectBeingCreated.src = "./pictures/18que/" + idFigure + ".svg";
+        objectBeingCreated.src = "./pictures/20que/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
 
         if (currentClass !== "circle-container") {
@@ -534,11 +534,11 @@ function drop18(e) {
         currentElement.appendChild(tray).appendChild(objectBeingCreated);
 
         // заменяем место объекта на квадрат
-        orig.src = "./pictures/18que/emptyPlace.svg";
+        orig.src = "./pictures/20que/emptyPlace.svg";
         orig.style.cursor = "default";
         orig.id = "emptyPlace";
     } else {
-        currentElement.src = "./pictures/18que/" + idFigure + ".svg";
+        currentElement.src = "./pictures/20que/" + idFigure + ".svg";
         currentElement.style.cursor = "grab";
         currentElement.id = idFigure;
 
@@ -916,13 +916,13 @@ function question17addCorrectAnswer() {
     );
 }
 
-function question18addCorrectAnswer() {
-    document.getElementsByClassName("app18")[0].style.height = "1017px";
+function question20addCorrectAnswer() {
+    document.getElementsByClassName("app20")[0].style.height = "1117px";
     addCorrectAnswer(
-        "correctAnswer18",
-        "18que",
-        "content18",
-        "contentCorrectAnswer18"
+        "correctAnswer20",
+        "20que",
+        "content20",
+        "contentCorrectAnswer20"
     );
 }
 
@@ -2531,9 +2531,9 @@ function question17() {
     }
 }
 
-// 18 QUESTION
+// 20 QUESTION
 
-let result18 = {
+let result20 = {
     areaFlowers: "",
     areaRedColor: "",
     intersection: "",
@@ -2555,7 +2555,7 @@ function checkFlowers() {
                 selectedChildId === "greenFlower" ||
                 selectedChildId === "violetFlower"
             ) {
-                result18.areaFlowers = "right";
+                result20.areaFlowers = "right";
             } else {
                 document.getElementById(selectedChildId).style.border =
                     "1px solid #FFB47D";
@@ -2584,13 +2584,13 @@ function checkRedColor() {
                 selectedChildId === "redCar" ||
                 selectedChildId === "ruler"
             ) {
-                result18.areaRedColor = "right";
+                result20.areaRedColor = "right";
             } else {
                 document.getElementById(selectedChildId).style.border =
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
-                result18.areaRedColor = "wrong";
+                result20.areaRedColor = "wrong";
             }
         }
     }
@@ -2601,7 +2601,7 @@ function checkIntersection() {
 
     if (element.children.length === 1) {
         if (element.children[0].children[0].id === "redFlower") {
-            result18.intersection = "right";
+            result20.intersection = "right";
         } else {
             document.getElementById(
                 element.children[0].children[0].id
@@ -2610,41 +2610,41 @@ function checkIntersection() {
                 element.children[0].children[0].id
             ).style.borderRadius = "5px";
 
-            result18.intersection = "wrong";
+            result20.intersection = "wrong";
         }
     }
 }
 
-function question18() {
+function question20() {
     checkFlowers();
     checkRedColor();
     checkIntersection();
 
     if (
-        result18.areaFlowers !== "" &&
-        result18.areaRedColor !== "" &&
-        result18.intersection !== ""
+        result20.areaFlowers !== "" &&
+        result20.areaRedColor !== "" &&
+        result20.intersection !== ""
     ) {
         if (
-            result18.areaFlowers === "right" &&
-            result18.areaRedColor === "right" &&
-            result18.intersection === "right"
+            result20.areaFlowers === "right" &&
+            result20.areaRedColor === "right" &&
+            result20.intersection === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question18"),
-                "app18",
-                18
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question18"),
-                "app18",
-                18
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
             );
 
-            question18addCorrectAnswer();
+            question20addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("circle-container")[0].style.border =
@@ -3015,7 +3015,7 @@ document.getElementById("submit").onclick = function () {
     question15();
     question16();
     question17();
-    question18();
+    question20();
     question21();
     question22();
 };

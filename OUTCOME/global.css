@@ -204,6 +204,10 @@ body {
     top: 100px;
 }
 
+.correctAnswer20 {
+    top: 150px;
+}
+
 .correctAnswer4 {
     top: 320px;
 }
@@ -283,6 +287,10 @@ body {
 .contentCorrectAnswer10,
 .contentCorrectAnswer19 {
     top: 60px;
+}
+
+.contentCorrectAnswer20 {
+    top: 175px;
 }
 
 .contentCorrectAnswer6,
