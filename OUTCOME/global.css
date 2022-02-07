@@ -45,7 +45,8 @@ body {
     margin: 0 0 5px 40px;
 }
 
-.lineUnderHeading {
+.lineUnderHeading,
+.lineUnderHeading6 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -370,7 +371,7 @@ body {
 
 .titlePage4 {
     top: 26px;
-    left: 335px;
+    left: calc(50% - 770px / 2);
     width: 770px;
     height: 22px;
     font-style: normal;
@@ -378,6 +379,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #2f2f2f;
+    text-align: center;
 }
 
 /* content styles */
@@ -597,6 +599,7 @@ body {
     margin-right: 30px;
     color: white;
     cursor: grab;
+    font-size: 30px;
 }
 
 /* 6 QUESTION */
@@ -615,16 +618,13 @@ body {
 .titlePage6 {
     top: 25px;
     width: 1170px;
-    height: 44px;
+    height: 22px;
     font-style: normal;
     font-size: 18px;
     line-height: 22px;
     color: #2f2f2f;
     text-align: center;
-}
-
-.excretion {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* content styles */
@@ -651,6 +651,10 @@ body {
     background: #205b64;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.lineUnderHeading6 {
+    top: 90px;
 }
 
 .applesRow {
@@ -919,7 +923,7 @@ body {
     top: 4px;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 22px;
     display: flex;
     align-items: center;
@@ -2241,14 +2245,14 @@ body {
     flex-direction: column;
     align-items: center;
     width: 70px;
-    height: 56px;
+    /* height: 56px; */
 }
 
 .inputContent6 input {
     width: 50px;
-    height: 30px;
+    height: 25px;
     margin: 0px 5px;
-    border: 1.5px solid #2f2f2f;
+    border: 1px solid #2f2f2f;
     border-radius: 5px;
     text-align: center;
 }
