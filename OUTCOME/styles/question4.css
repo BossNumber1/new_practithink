@@ -1,0 +1,68 @@
+.app4 {
+    width: 1170px;
+    height: 477px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage4 {
+    top: 26px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+/* content styles */
+
+/* 1. inputs styles */
+
+.inputContent2 {
+    left: calc(50% - 153px / 2);
+    top: 247px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.inputContent2 input {
+    width: 70px;
+    height: 30px;
+    margin: 0px 10px;
+    border: 1.5px solid #2f2f2f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cookies {
+    left: calc(50% - 502px / 2);
+    width: 502px;
+    height: 61px;
+    top: 133px;
+}
+
+.message {
+    width: 770px;
+    height: 44px;
+    left: calc(50% - 770px / 2);
+    top: 200px;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+    font-weight: bold;
+}

@@ -546,15 +546,15 @@ function drop18(e) {
     }
 }
 
-// 20 QUESTION
+// 22 QUESTION
 
-function drag20(e) {
-    localStorage.setItem("idOrig20", e.target.id);
+function drag22(e) {
+    localStorage.setItem("idOrig22", e.target.id);
 }
 
-function drop20(e) {
+function drop22(e) {
     // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOrig20");
+    let idOrig = localStorage.getItem("idOrig22");
     let nameObjectOrig = idOrig.slice(0, -1);
 
     // получаем имя и id, на который кладём элемент
@@ -566,7 +566,7 @@ function drop20(e) {
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/20que/" + nameObjectOrig + ".svg";
+    currentElement.src = "./pictures/22que/" + nameObjectOrig + ".svg";
     currentElement.style.opacity = "1";
     currentElement.style.cursor = "grab";
 
@@ -576,7 +576,7 @@ function drop20(e) {
     ) {
         orig.style.opacity = "0.5";
     } else {
-        orig.src = "./pictures/20que/" + nameObjectCurrent + ".svg";
+        orig.src = "./pictures/22que/" + nameObjectCurrent + ".svg";
     }
 
     // меняем id местами
@@ -936,17 +936,17 @@ function question19addCorrectAnswer() {
     );
 }
 
-function question20addCorrectAnswer() {
-    document.getElementsByClassName("app20")[0].style.height = "1317px";
+function question22addCorrectAnswer() {
+    document.getElementsByClassName("app22")[0].style.height = "1317px";
     addCorrectAnswer(
-        "correctAnswer20",
-        "20que",
-        "content20",
+        "correctAnswer22",
+        "22que",
+        "content22",
         "contentCorrectAnswer"
     );
 
     let input1 = document.createElement("img");
-    input1.src = "./pictures/20que/correctAnswer2.svg";
+    input1.src = "./pictures/22que/correctAnswer2.svg";
 
     let inputsHome = document.createElement("div");
     inputsHome.className = "inputsHome2";
@@ -954,7 +954,7 @@ function question20addCorrectAnswer() {
     inputsHome.appendChild(input1);
 
     document
-        .getElementsByClassName("correctAnswer20")[0]
+        .getElementsByClassName("correctAnswer22")[0]
         .appendChild(inputsHome);
 }
 
@@ -980,36 +980,20 @@ function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
 
-    let correctPosition = position !== "lineUnderHeading2" && position - 1;
-
     if (status === "success") {
         object.src = "./pictures/successIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #9DD765";
-
-        if (position === "lineUnderHeading2") {
-            document.getElementsByClassName(
-                "lineUnderHeading2"
-            )[0].style.borderBottom = "1px solid #9DD765";
-        } else {
-            document.getElementsByClassName("lineUnderHeading")[
-                correctPosition
-            ].style.borderBottom = "1px solid #9DD765";
-        }
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #9DD765";
     } else {
         object.src = "./pictures/failureIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #FFB47D";
-
-        if (position === "lineUnderHeading2") {
-            document.getElementsByClassName(
-                "lineUnderHeading2"
-            )[0].style.borderBottom = "1px solid #FFB47D";
-        } else {
-            document.getElementsByClassName("lineUnderHeading")[
-                correctPosition
-            ].style.borderBottom = "1px solid #FFB47D";
-        }
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #FFB47D";
     }
 
     ancestor[0].children[0].appendChild(object);
@@ -1190,7 +1174,7 @@ function question2() {
         if (wasThereAmismatch === "true") {
             addImage(
                 "failure",
-                document.getElementsByClassName("questionclass2"),
+                document.getElementsByClassName("question2"),
                 "app2",
                 2
             );
@@ -1199,7 +1183,7 @@ function question2() {
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("questionclass2"),
+                document.getElementsByClassName("question2"),
                 "app2",
                 2
             );
@@ -2724,7 +2708,7 @@ document.getElementById("selectPencil").onclick = function () {
     document.getElementById("selectBrush").style.border = "1px solid black";
 };
 
-function question20() {
+function question22() {
     if (
         valuesInputs.tasselLength !== "" &&
         valuesInputs.pencilLength !== "" &&
@@ -2758,19 +2742,19 @@ function question20() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question20"),
-                "app20",
-                19
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question20"),
-                "app20",
-                19
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
             );
 
-            question20addCorrectAnswer();
+            question22addCorrectAnswer();
         }
     } else {
         if (valuesInputs.tasselLength === "") {
@@ -2984,7 +2968,7 @@ function question19() {
                 "success",
                 document.getElementsByClassName("question19"),
                 "app19",
-                "lineUnderHeading2"
+                19
             );
         } else {
             document.getElementsByClassName(
@@ -3000,7 +2984,7 @@ function question19() {
                 "failure",
                 document.getElementsByClassName("question19"),
                 "app19",
-                "lineUnderHeading2"
+                19
             );
 
             question19addCorrectAnswer();
@@ -3033,5 +3017,5 @@ document.getElementById("submit").onclick = function () {
     question17();
     question18();
     question19();
-    question20();
+    question22();
 };

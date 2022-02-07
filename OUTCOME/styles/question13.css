@@ -1,0 +1,97 @@
+.app13 {
+    width: 1170px;
+    height: 554px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage13 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content13 {
+    top: 132px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 302px;
+}
+
+/* objects styles */
+
+.objects {
+    left: calc(50% - 743px / 2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 743px;
+    height: 55px;
+}
+
+.objects img {
+    cursor: grab;
+}
+
+.objects img:hover {
+    transform: scale(1.2);
+}
+
+/* collections styles */
+
+.mergingCollections2 {
+    top: 77px;
+    width: 770px;
+    height: 168px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.circle,
+.square2,
+.triangle,
+.rectangle {
+    width: 170px;
+    height: 168px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.headerCircle,
+.headerSquare,
+.headerTriangle,
+.headerRectangle {
+    width: 170px;
+    height: 28px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #205b64;
+    color: white;
+}
+
+.placeDroppingFigures2 {
+    width: 169px;
+    height: 115px;
+    display: flex;
+}

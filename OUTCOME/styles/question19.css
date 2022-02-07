@@ -1,0 +1,152 @@
+.app19 {
+    width: 1170px;
+    height: 424px;
+    top: 10px;
+    left: calc(50% - 1170px / 2);
+    border: 0.5px solid #369cb7;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+}
+
+.titlePage19 {
+    top: 29px;
+    text-align: center;
+    width: 1170px;
+    height: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2f2f2f;
+}
+
+.clue {
+    top: 30px;
+    left: calc(50% - 293px / 2);
+    width: 293px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.clueText {
+    position: static;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #065b5b;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.lineUnderHeading2 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 100px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content19 {
+    display: flex;
+    top: 103px;
+    left: 510px;
+    width: 504px;
+    height: 171px;
+}
+
+.resetField,
+.parentResetField,
+.grandParentResetField {
+    box-sizing: border-box;
+}
+
+.resetField {
+    top: 4px;
+    opacity: 0.3;
+    background: #dc97f4;
+    width: 170px;
+    height: 90px;
+    margin-top: -8px;
+    border: 0.5px dashed #064c5b;
+}
+
+.parentResetField {
+    width: 178px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grandParentResetField {
+    top: 31px;
+    width: 178px;
+    height: 98px;
+}
+
+/* triangles styles */
+
+.triangles {
+    position: absolute;
+    left: 41px;
+}
+
+.firstTriangle,
+.secondTriangle {
+    cursor: grab;
+    position: absolute;
+}
+
+.firstTriangle {
+    left: 195px;
+}
+
+.secondTriangle {
+    left: 315px;
+    top: 80px;
+}
+
+/* edges styles */
+
+.topСorner,
+.bottomСorners {
+    display: flex;
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.bottomСorners {
+    top: 70%;
+}
+
+/* for second triangle */
+
+.leftCorners,
+.rightCorner {
+    display: flex;
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.rightCorner {
+    top: 50px;
+    left: 80%;
+    height: 50px;
+}

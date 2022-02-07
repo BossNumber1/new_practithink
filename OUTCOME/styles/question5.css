@@ -1,0 +1,172 @@
+.app5 {
+    width: 1170px;
+    height: 527px;
+    /* 657 */
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage5 {
+    top: 14px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content5 {
+    top: 63px;
+    left: calc(50% - 571px / 2);
+    width: 571px;
+    height: 264.2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ice cream styles */
+
+.iceCream {
+    width: 270px;
+    height: 134px;
+}
+
+.topRow2,
+.bottomRow2,
+.topRowFlower,
+.bottomRowFlower {
+    display: flex;
+}
+
+.topRow2 div,
+.bottomRow2 div {
+    margin-right: 40px;
+    width: 37.33px;
+    height: 60px;
+}
+
+.topRow2 {
+    margin-left: 40px;
+}
+
+.bottomRow2 {
+    margin-left: 20px;
+}
+
+/* flowers styles */
+
+.flowers {
+    width: 270px;
+    height: 134px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.topRowFlower,
+.bottomRowFlower {
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.topRowFlower div,
+.bottomRowFlower div {
+    width: 42px;
+    height: 39px;
+}
+
+/* addition styles */
+
+.additionInTheFormInputs {
+    top: 67px;
+    left: calc(50% - 222px / 2);
+    width: 222px;
+    height: 90px;
+}
+
+.inputCollection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 222px;
+    height: 30.2px;
+    margin-bottom: 30px;
+}
+
+.inputContent3 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 54px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: rotate(-0.21deg);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+    text-align: center;
+}
+
+#selectInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 54px;
+    height: 30px;
+    background: #f4f4f4;
+    border: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-right: 30px;
+}
+
+.btnsCollection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 222px;
+    height: 30px;
+}
+
+.buttonContent div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 54px;
+    height: 30px;
+    background: #369cb7;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+    color: white;
+    cursor: grab;
+    font-size: 30px;
+}
