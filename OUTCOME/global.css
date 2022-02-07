@@ -186,6 +186,8 @@ body {
 .correctAnswer17,
 .correctAnswer18,
 .correctAnswer19,
+.correctAnswer20,
+.correctAnswer21,
 .correctAnswer22 {
     left: calc(50% - 450px / 2);
     width: 450px;
@@ -219,6 +221,10 @@ body {
 
 .correctAnswer17,
 .correctAnswer19 {
+    top: 180px;
+}
+
+.correctAnswer21 {
     top: 180px;
 }
 
@@ -260,7 +266,9 @@ body {
 .contentCorrectAnswer16,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
-.contentCorrectAnswer19 {
+.contentCorrectAnswer19,
+.contentCorrectAnswer20,
+.contentCorrectAnswer21 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,6 +300,10 @@ body {
 
 .contentCorrectAnswer18 {
     top: 160px;
+}
+
+.contentCorrectAnswer21 {
+    top: 50px;
 }
 
 .inputCorrectAnswer {

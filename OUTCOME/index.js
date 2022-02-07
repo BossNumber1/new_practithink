@@ -926,13 +926,13 @@ function question18addCorrectAnswer() {
     );
 }
 
-function question19addCorrectAnswer() {
-    document.getElementsByClassName("app19")[0].style.height = "600px";
+function question21addCorrectAnswer() {
+    document.getElementsByClassName("app21")[0].style.height = "600px";
     addCorrectAnswer(
-        "correctAnswer19",
-        "19que",
-        "app19",
-        "contentCorrectAnswer19"
+        "correctAnswer21",
+        "21que",
+        "app21",
+        "contentCorrectAnswer21"
     );
 }
 
@@ -2913,7 +2913,7 @@ document
         }
     });
 
-function question19() {
+function question21() {
     // Дано:
 
     // функция для получения координат фигуры
@@ -2966,9 +2966,9 @@ function question19() {
 
             addImage(
                 "success",
-                document.getElementsByClassName("question19"),
-                "app19",
-                19
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
             );
         } else {
             document.getElementsByClassName(
@@ -2982,12 +2982,12 @@ function question19() {
 
             addImage(
                 "failure",
-                document.getElementsByClassName("question19"),
-                "app19",
-                19
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
             );
 
-            question19addCorrectAnswer();
+            question21addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("resetField")[0].style.border =
@@ -3016,6 +3016,6 @@ document.getElementById("submit").onclick = function () {
     question16();
     question17();
     question18();
-    question19();
+    question21();
     question22();
 };
