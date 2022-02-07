@@ -284,9 +284,12 @@ body {
 }
 
 .contentCorrectAnswer3,
-.contentCorrectAnswer10,
-.contentCorrectAnswer19 {
+.contentCorrectAnswer10 {
     top: 60px;
+}
+
+.contentCorrectAnswer19 {
+    top: 80px;
 }
 
 .contentCorrectAnswer20 {

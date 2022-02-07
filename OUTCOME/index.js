@@ -906,13 +906,13 @@ function question16addCorrectAnswer() {
     );
 }
 
-function question17addCorrectAnswer() {
-    document.getElementsByClassName("app17")[0].style.height = "657px";
+function question19addCorrectAnswer() {
+    document.getElementsByClassName("app19")[0].style.height = "657px";
     addCorrectAnswer(
-        "correctAnswer17",
-        "17que",
-        "app17",
-        "contentCorrectAnswer17"
+        "correctAnswer19",
+        "19que",
+        "app19",
+        "contentCorrectAnswer19"
     );
 }
 
@@ -2492,16 +2492,16 @@ document.getElementById("trapezoid").onclick = function () {
     btnSelectedName2 = "trapezoid";
 };
 
-function question17() {
+function question19() {
     if (btnSelectedName2) {
         if (selectBtn3 === "right") {
             document
                 .getElementById(btnSelectedName2)
-                .classList.toggle("que17success");
+                .classList.toggle("que19success");
         } else {
             document
                 .getElementById(btnSelectedName2)
-                .classList.toggle("que17error");
+                .classList.toggle("que19error");
         }
 
         createMiniIcon(selectBtn3, document.getElementById(btnSelectedName2));
@@ -2509,18 +2509,18 @@ function question17() {
         if (selectBtn3 !== "right") {
             addImage(
                 "failure",
-                document.getElementsByClassName("question17"),
-                "app17",
-                17
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
             );
 
-            question17addCorrectAnswer();
+            question19addCorrectAnswer();
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("question17"),
-                "app17",
-                17
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
             );
         }
     } else {
@@ -3014,7 +3014,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
-    question17();
+    question19();
     question20();
     question21();
     question22();
