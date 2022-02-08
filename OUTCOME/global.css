@@ -223,7 +223,10 @@ body {
     top: 160px;
 }
 
-.correctAnswer17,
+.correctAnswer17 {
+    top: 100px;
+}
+
 .correctAnswer19 {
     top: 180px;
 }

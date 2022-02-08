@@ -888,12 +888,12 @@ function question14addCorrectAnswer() {
     );
 }
 
-function question15addCorrectAnswer() {
-    document.getElementsByClassName("app15")[0].style.height = "507px";
+function question17addCorrectAnswer() {
+    document.getElementsByClassName("app17")[0].style.height = "507px";
     addCorrectAnswer(
-        "correctAnswer15",
-        "15que",
-        "content15",
+        "correctAnswer17",
+        "17que",
+        "content17",
         "contentCorrectAnswer"
     );
 }
@@ -2359,7 +2359,7 @@ document.getElementById("answer").onchange = function (e) {
     }
 };
 
-function question15() {
+function question17() {
     if (answer != "") {
         succerror(document.getElementById("answer"), answer === "wrong");
 
@@ -2372,19 +2372,19 @@ function question15() {
         if (answer === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question15"),
-                "app15",
-                15
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question15"),
-                "app15",
-                15
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
             );
 
-            question15addCorrectAnswer();
+            question17addCorrectAnswer();
         }
     } else {
         document.getElementById("answer").style.border = "2px solid #FFB47D";
@@ -3020,7 +3020,7 @@ document.getElementById("submit").onclick = function () {
     question12();
     question13();
     question14();
-    question15();
+    question17();
     question18();
     question19();
     question20();
