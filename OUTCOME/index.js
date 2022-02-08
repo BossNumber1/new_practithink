@@ -764,12 +764,12 @@ function question10addCorrectAnswer() {
     );
 }
 
-function question11addCorrectAnswer() {
-    document.getElementsByClassName("app11")[0].style.height = "757px";
+function question13addCorrectAnswer() {
+    document.getElementsByClassName("app13")[0].style.height = "757px";
     addCorrectAnswer(
-        "correctAnswer11",
-        "11que",
-        "content11",
+        "correctAnswer13",
+        "13que",
+        "content13",
         "contentCorrectAnswer"
     );
 }
@@ -1728,7 +1728,7 @@ function question10() {
     }
 }
 
-// 11 QUESTION
+// 13 QUESTION
 
 let selectBtn2 = "",
     selectedName;
@@ -1784,7 +1784,7 @@ document.getElementById("btnSelectJack").onclick = function () {
     document.getElementById("btnSelectMike").style.border = "1px solid black";
 };
 
-function question11() {
+function question13() {
     if (selectBtn2 != "") {
         succerror(
             document.getElementById(selectedName),
@@ -1800,19 +1800,19 @@ function question11() {
         if (selectBtn2 === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question11"),
-                "app11",
-                11
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question11"),
-                "app11",
-                11
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
             );
 
-            question11addCorrectAnswer();
+            question13addCorrectAnswer();
         }
 
         document.getElementById("stool").remove();
@@ -1822,7 +1822,7 @@ function question11() {
         stoolParent.id = "stool";
 
         let stool = document.createElement("img");
-        stool.src = "./pictures/11que/stool.svg";
+        stool.src = "./pictures/13que/stool.svg";
         stool.alt = "stool";
 
         document
@@ -2980,7 +2980,7 @@ document.getElementById("submit").onclick = function () {
     question8();
     question9();
     question10();
-    question11();
+    question13();
     question14();
     question15();
     question16();
