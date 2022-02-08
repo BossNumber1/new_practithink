@@ -401,15 +401,15 @@ function drop13(e) {
     }
 }
 
-// 14 QUESTION
+// 16 QUESTION
 
-function drag14(e) {
-    localStorage.setItem("idFigure14", e.target.id);
+function drag16(e) {
+    localStorage.setItem("idFigure16", e.target.id);
 }
 
-function drop14(e) {
+function drop16(e) {
     // забираем данные из хранилища
-    let idFigure = localStorage.getItem("idFigure14");
+    let idFigure = localStorage.getItem("idFigure16");
 
     // получаем текущий id
     let currentId = e.target.id;
@@ -421,14 +421,14 @@ function drop14(e) {
     // начинаем уборку
     if (idFigure != "toyCar" && idFigure != "robot" && idFigure != "pyramid") {
         currentElement.src =
-            "./pictures/14que/" + idFigure.slice(0, -1) + ".svg";
+            "./pictures/16que/" + idFigure.slice(0, -1) + ".svg";
         currentElement.style.cursor = "grab";
-        orig.src = "./pictures/14que/" + idFigure + ".svg";
+        orig.src = "./pictures/16que/" + idFigure + ".svg";
         orig.style.cursor = "default";
     } else {
-        currentElement.src = "./pictures/14que/" + idFigure + ".svg";
+        currentElement.src = "./pictures/16que/" + idFigure + ".svg";
         currentElement.style.cursor = "grab";
-        orig.src = "./pictures/14que/" + currentId.slice(0, -1) + ".svg";
+        orig.src = "./pictures/16que/" + currentId.slice(0, -1) + ".svg";
         orig.style.cursor = "default";
     }
 
@@ -878,13 +878,13 @@ function question13addCorrectAnswer() {
         .appendChild(secondChildNewElement);
 }
 
-function question14addCorrectAnswer() {
-    document.getElementsByClassName("app14")[0].style.height = "907px";
+function question16addCorrectAnswer() {
+    document.getElementsByClassName("app16")[0].style.height = "950px";
     addCorrectAnswer(
-        "correctAnswer14",
-        "14que",
-        "content14",
-        "contentCorrectAnswer14"
+        "correctAnswer16",
+        "16que",
+        "content16",
+        "contentCorrectAnswer16"
     );
 }
 
@@ -2270,7 +2270,7 @@ function question13() {
     }
 }
 
-// 14 QUESTION
+// 16 QUESTION
 
 let choice = {
     topSeat: "",
@@ -2278,7 +2278,7 @@ let choice = {
     bottomSeat: "",
 };
 
-function question14() {
+function question16() {
     let topSeat = document.getElementById("topSeat");
     let centralSeat = document.getElementById("centralSeat");
     let bottomSeat = document.getElementById("bottomSeat");
@@ -2321,9 +2321,9 @@ function question14() {
             );
             addImage(
                 "success",
-                document.getElementsByClassName("question14"),
-                "app14",
-                14
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
             );
         } else {
             document.getElementsByClassName("closet")[0].className =
@@ -2334,12 +2334,12 @@ function question14() {
             );
             addImage(
                 "failure",
-                document.getElementsByClassName("question14"),
-                "app14",
-                14
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
             );
 
-            question14addCorrectAnswer();
+            question16addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("closet")[0].style.border =
@@ -3019,7 +3019,7 @@ document.getElementById("submit").onclick = function () {
     question11();
     question12();
     question13();
-    question14();
+    question16();
     question17();
     question18();
     question19();

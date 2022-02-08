@@ -303,9 +303,12 @@ body {
 .contentCorrectAnswer7,
 .contentCorrectAnswer12,
 .contentCorrectAnswer17,
-.contentCorrectAnswer16,
 .contentCorrectAnswer13 {
     top: 80px;
+}
+
+.contentCorrectAnswer16 {
+    top: 140px;
 }
 
 .contentCorrectAnswer14 {

@@ -1,4 +1,4 @@
-.app14 {
+.app16 {
     width: 1170px;
     height: 625px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage14 {
+.titlePage16 {
     top: 26px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -27,7 +27,7 @@
 
 /* content styles */
 
-.content14 {
+.content16 {
     top: 131px;
     left: calc(50% - 370px / 2);
     width: 370px;
