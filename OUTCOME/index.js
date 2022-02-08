@@ -353,13 +353,13 @@ function drop12(e) {
     }
 }
 
-// 13 QUESTION
+// 15 QUESTION
 
-function drag13(e) {
+function drag15(e) {
     localStorage.setItem("idFigure", e.target.id);
 }
 
-function drop13(e) {
+function drop15(e) {
     // забираем данные из хранилища
     let idFigure = localStorage.getItem("idFigure");
 
@@ -376,7 +376,7 @@ function drop13(e) {
     let objectBeingCreated = document.createElement("img");
     objectBeingCreated.id = idFigure + "temp";
     objectBeingCreated.alt = idFigure;
-    objectBeingCreated.src = "./pictures/13que/" + idFigure + ".svg";
+    objectBeingCreated.src = "./pictures/15que/" + idFigure + ".svg";
     objectBeingCreated.style.cursor = "grab";
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "3px";
@@ -387,14 +387,14 @@ function drop13(e) {
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
 
-        orig.src = "./pictures/13que/square.svg";
+        orig.src = "./pictures/15que/square.svg";
         orig.style.cursor = "default";
     }
 
     // делаем возврат на место
 
     if (grandparentClass === "objects") {
-        e.target.src = "./pictures/13que/" + orig.alt + ".svg";
+        e.target.src = "./pictures/15que/" + orig.alt + ".svg";
         e.target.id = orig.alt;
         e.target.style.cursor = "grab";
         orig.remove();
@@ -834,48 +834,14 @@ function question12addCorrectAnswer() {
     newElement.appendChild(inputsHome);
 }
 
-function question13addCorrectAnswer() {
-    document.getElementsByClassName("app13")[0].style.height = "807px";
-
-    let newElement = document.createElement("div");
-    newElement.className = "correctAnswer13";
-
-    let childNewElement = document.createElement("div"); // сосед 1
-    childNewElement.className = "headerCorrectAnswer";
-    childNewElement.textContent = "Correct answer";
-
-    let secondChildNewElement = document.createElement("div"); // сосед 2
-    secondChildNewElement.className = "contentCorrectAnswer13";
-
-    let contentContent = document.createElement("img");
-    contentContent.src = "./pictures/13que/correctAnswerCircles.svg";
-    contentContent.alt = "correct answer";
-
-    let secondContentContent = document.createElement("img");
-    secondContentContent.src = "./pictures/13que/correctAnswerSquares.svg";
-    secondContentContent.alt = "correct answer";
-
-    let thirdContentContent = document.createElement("img");
-    thirdContentContent.src = "./pictures/13que/correctAnswerTriangles.svg";
-    thirdContentContent.alt = "correct answer";
-
-    let fourthContentContent = document.createElement("img");
-    fourthContentContent.src = "./pictures/13que/correctAnswerRectangles.svg";
-    fourthContentContent.alt = "correct answer";
-
-    secondChildNewElement.appendChild(contentContent);
-    secondChildNewElement.appendChild(secondContentContent);
-    secondChildNewElement.appendChild(thirdContentContent);
-    secondChildNewElement.appendChild(fourthContentContent);
-
-    document.getElementsByClassName("content13")[0].appendChild(newElement);
-
-    document
-        .getElementsByClassName("correctAnswer13")[0]
-        .appendChild(childNewElement);
-    document
-        .getElementsByClassName("correctAnswer13")[0]
-        .appendChild(secondChildNewElement);
+function question15addCorrectAnswer() {
+    document.getElementsByClassName("app15")[0].style.height = "807px";
+    addCorrectAnswer(
+        "correctAnswer15",
+        "15que",
+        "content15",
+        "contentCorrectAnswer15"
+    );
 }
 
 function question16addCorrectAnswer() {
@@ -2120,7 +2086,7 @@ function question12() {
     }
 }
 
-// 13 QUESTION
+// 15 QUESTION
 
 let result = {
     basketCircle: "",
@@ -2129,11 +2095,16 @@ let result = {
     basketRectangle: "",
 };
 
-function question13() {
+function question15() {
     let basketCircle = document.getElementById("basketCircle");
     let basketSquare = document.getElementById("basketSquare");
     let basketTriangle = document.getElementById("basketTriangle");
     let basketRectangle = document.getElementById("basketRectangle");
+
+    let selectedChildId,
+        selectedChildIdSB,
+        selectedChildIdTB,
+        selectedChildIdRB;
 
     // таможня Сердечек
     let contentCircleBasket = basketCircle.children;
@@ -2141,7 +2112,7 @@ function question13() {
 
     if (amountContent > 0) {
         for (let i = 0; i < amountContent; i++) {
-            let selectedChildId = contentCircleBasket[i].children[0].id;
+            selectedChildId = contentCircleBasket[i].children[0].id;
 
             if (
                 selectedChildId === "clocktemp" ||
@@ -2150,10 +2121,6 @@ function question13() {
             ) {
                 result.basketCircle = "right";
             } else {
-                document.getElementById(selectedChildId).style.border =
-                    "1px solid #FFB47D";
-                document.getElementById(selectedChildId).style.borderRadius =
-                    "5px";
                 result.basketCircle = "wrong";
             }
         }
@@ -2165,18 +2132,14 @@ function question13() {
 
     if (amountContentSB > 0) {
         for (let i = 0; i < amountContentSB; i++) {
-            let selectedChildId = contentSquaresBasket[i].children[0].id;
+            selectedChildIdSB = contentSquaresBasket[i].children[0].id;
 
             if (
-                selectedChildId === "windowtemp" ||
-                selectedChildId === "paintingtemp"
+                selectedChildIdSB === "windowtemp" ||
+                selectedChildIdSB === "paintingtemp"
             ) {
                 result.basketSquare = "right";
             } else {
-                document.getElementById(selectedChildId).style.border =
-                    "1px solid #FFB47D";
-                document.getElementById(selectedChildId).style.borderRadius =
-                    "5px";
                 result.basketSquare = "wrong";
             }
         }
@@ -2188,18 +2151,14 @@ function question13() {
 
     if (amountContentTB > 0) {
         for (let i = 0; i < amountContentTB; i++) {
-            let selectedChildId = contentTrianglesBasket[i].children[0].id;
+            selectedChildIdTB = contentTrianglesBasket[i].children[0].id;
 
             if (
-                selectedChildId === "signtemp" ||
-                selectedChildId === "tooltemp"
+                selectedChildIdTB === "signtemp" ||
+                selectedChildIdTB === "tooltemp"
             ) {
                 result.basketTriangle = "right";
             } else {
-                document.getElementById(selectedChildId).style.border =
-                    "1px solid #FFB47D";
-                document.getElementById(selectedChildId).style.borderRadius =
-                    "5px";
                 result.basketTriangle = "wrong";
             }
         }
@@ -2211,18 +2170,14 @@ function question13() {
 
     if (amountContentRB > 0) {
         for (let i = 0; i < amountContentRB; i++) {
-            let selectedChildId = contentRectanglesBasket[i].children[0].id;
+            selectedChildIdRB = contentRectanglesBasket[i].children[0].id;
 
             if (
-                selectedChildId === "tvtemp" ||
-                selectedChildId === "chocolatetemp"
+                selectedChildIdRB === "tvtemp" ||
+                selectedChildIdRB === "chocolatetemp"
             ) {
                 result.basketRectangle = "right";
             } else {
-                document.getElementById(selectedChildId).style.border =
-                    "1px solid #FFB47D";
-                document.getElementById(selectedChildId).style.borderRadius =
-                    "5px";
                 result.basketRectangle = "wrong";
             }
         }
@@ -2244,29 +2199,68 @@ function question13() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question13"),
-                "app13",
-                13
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
             );
         } else {
+            if (result.basketCircle === "wrong") {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+            }
+
+            if (result.basketSquare === "wrong") {
+                document.getElementById(selectedChildIdSB).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildIdSB).style.borderRadius =
+                    "5px";
+            }
+
+            if (result.basketTriangle === "wrong") {
+                document.getElementById(selectedChildIdTB).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildIdTB).style.borderRadius =
+                    "5px";
+            }
+
+            if (result.basketRectangle === "wrong") {
+                document.getElementById(selectedChildIdRB).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildIdRB).style.borderRadius =
+                    "5px";
+            }
+
             addImage(
                 "failure",
-                document.getElementsByClassName("question13"),
-                "app13",
-                13
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
             );
 
-            question13addCorrectAnswer();
+            question15addCorrectAnswer();
         }
     } else {
-        document.getElementsByClassName("circle")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("square2")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("triangle")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("rectangle")[0].style.border =
-            "2px solid #FFB47D";
+        if (result.basketCircle === "") {
+            document.getElementsByClassName("circle")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (result.basketSquare === "") {
+            document.getElementsByClassName("square2")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (result.basketTriangle === "") {
+            document.getElementsByClassName("triangle")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (result.basketRectangle === "") {
+            document.getElementsByClassName("rectangle")[0].style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
@@ -3018,7 +3012,7 @@ document.getElementById("submit").onclick = function () {
     question10();
     question11();
     question12();
-    question13();
+    question15();
     question16();
     question17();
     question18();

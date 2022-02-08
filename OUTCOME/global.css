@@ -199,9 +199,12 @@ body {
 .correctAnswer8,
 .correctAnswer9,
 .correctAnswer11,
-.correctAnswer14,
-.correctAnswer15 {
+.correctAnswer14 {
     top: 100px;
+}
+
+.correctAnswer15 {
+    top: 120px;
 }
 
 .correctAnswer20 {
@@ -270,6 +273,7 @@ body {
 .contentCorrectAnswer12,
 .contentCorrectAnswer13,
 .contentCorrectAnswer14,
+.contentCorrectAnswer15,
 .contentCorrectAnswer16,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
@@ -289,6 +293,10 @@ body {
 .contentCorrectAnswer3,
 .contentCorrectAnswer10 {
     top: 60px;
+}
+
+.contentCorrectAnswer15 {
+    top: 100px;
 }
 
 .contentCorrectAnswer19 {
