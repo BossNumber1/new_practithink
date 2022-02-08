@@ -300,13 +300,13 @@ function drop9(e) {
     e.target.parentElement.style.cursor = "grab";
 }
 
-// 12 QUESTION
+// 14 QUESTION
 
-function drag12(e) {
+function drag14(e) {
     localStorage.setItem("idFigure", e.target.id);
 }
 
-function drop12(e) {
+function drop14(e) {
     // забираем данные из хранилища
     let figureId = localStorage.getItem("idFigure");
     let figureName = figureId.slice(0, -1);
@@ -326,7 +326,7 @@ function drop12(e) {
 
     let objectBeingCreated = document.createElement("img");
     objectBeingCreated.id = figureId;
-    objectBeingCreated.src = "./pictures/12que/" + figureName + ".svg";
+    objectBeingCreated.src = "./pictures/14que/" + figureName + ".svg";
     objectBeingCreated.style.cursor = "grab";
     objectBeingCreated.style.marginTop = "5px";
     objectBeingCreated.style.marginLeft = "5px";
@@ -336,7 +336,7 @@ function drop12(e) {
             .appendChild(document.createElement("div"))
             .appendChild(objectBeingCreated);
 
-        originalElement.src = "./pictures/12que/square.svg";
+        originalElement.src = "./pictures/14que/square.svg";
         originalElement.id = "square" + lastChar;
         originalElement.style.transform = "none";
         originalElement.style.cursor = "default";
@@ -345,7 +345,7 @@ function drop12(e) {
     // делаем возврат на место
 
     if (grandparentClass === "topRow3" || grandparentClass === "bottomRow3") {
-        currentElement.src = "./pictures/12que/" + figureName + ".svg";
+        currentElement.src = "./pictures/14que/" + figureName + ".svg";
         currentElement.id = figureName + lastChar;
         currentElement.style.cursor = "grab";
 
@@ -774,64 +774,14 @@ function question11addCorrectAnswer() {
     );
 }
 
-function question12addCorrectAnswer() {
-    document.getElementsByClassName("app12")[0].style.height = "907px";
-
-    let newElement = document.createElement("div");
-    newElement.className = "correctAnswer12";
-
-    let childNewElement = document.createElement("div"); // сосед 1
-    childNewElement.className = "headerCorrectAnswer";
-    childNewElement.textContent = "Correct answer";
-
-    let secondChildNewElement = document.createElement("div"); // сосед 2
-    secondChildNewElement.className = "contentCorrectAnswer12";
-
-    let contentContent = document.createElement("img");
-    contentContent.src = "./pictures/12que/correctAnswerHearts.svg";
-    contentContent.alt = "correct answer";
-
-    let secondContentContent = document.createElement("img");
-    secondContentContent.src = "./pictures/12que/correctAnswerStars.svg";
-    secondContentContent.alt = "correct answer";
-
-    let thirdContentContent = document.createElement("img");
-    thirdContentContent.src = "./pictures/12que/correctAnswerRhombus.svg";
-    thirdContentContent.alt = "correct answer";
-
-    secondChildNewElement.appendChild(contentContent);
-    secondChildNewElement.appendChild(secondContentContent);
-    secondChildNewElement.appendChild(thirdContentContent);
-
-    document.getElementsByClassName("content12")[0].appendChild(newElement);
-
-    document
-        .getElementsByClassName("correctAnswer12")[0]
-        .appendChild(childNewElement);
-    document
-        .getElementsByClassName("correctAnswer12")[0]
-        .appendChild(secondChildNewElement);
-
-    let input1 = document.createElement("div");
-    input1.textContent = "6";
-    input1.className = "inputCorrectAnswer";
-
-    let input2 = document.createElement("div");
-    input2.textContent = "4";
-    input2.className = "inputCorrectAnswer";
-
-    let input3 = document.createElement("div");
-    input3.textContent = "4";
-    input3.className = "inputCorrectAnswer";
-
-    let inputsHome = document.createElement("div");
-    inputsHome.className = "inputsHome";
-
-    inputsHome.appendChild(input1);
-    inputsHome.appendChild(input2);
-    inputsHome.appendChild(input3);
-
-    newElement.appendChild(inputsHome);
+function question14addCorrectAnswer() {
+    document.getElementsByClassName("app14")[0].style.height = "957px";
+    addCorrectAnswer(
+        "correctAnswer14",
+        "14que",
+        "content14",
+        "contentCorrectAnswer14"
+    );
 }
 
 function question15addCorrectAnswer() {
@@ -1922,7 +1872,7 @@ document.getElementById("numberRhombus").onchange = function (e) {
     }
 };
 
-function question12() {
+function question14() {
     // таможня Сердечек
     let contentHeartsBasket =
         document.getElementsByClassName("heart")[0].children[1];
@@ -2044,45 +1994,65 @@ function question12() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question12"),
-                "app12",
-                12
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question12"),
-                "app12",
-                12
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
             );
 
-            question12addCorrectAnswer();
+            question14addCorrectAnswer();
         }
     } else {
-        document.getElementsByClassName("headerHeart")[0].style.width = "165px";
-        document.getElementsByClassName("headerStar")[0].style.width = "165px";
-        document.getElementsByClassName("headerRhombus")[0].style.width =
-            "165px";
+        if (chilrensHeart.length === 0) {
+            document.getElementsByClassName("headerHeart")[0].style.width =
+                "165px";
 
-        document.getElementsByClassName("heart")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("headerHeart")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("star")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("headerStar")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("rhombus")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("headerRhombus")[0].style.border =
-            "2px solid #FFB47D";
+            document.getElementsByClassName("heart")[0].style.border =
+                "2px solid #FFB47D";
+            document.getElementsByClassName("headerHeart")[0].style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("numberHearts").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("numberStars").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("numberRhombus").style.border =
-            "2px solid #FFB47D";
+        if (answers.hearts === "") {
+            document.getElementById("numberHearts").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (chilrensStar.length === 0) {
+            document.getElementsByClassName("headerStar")[0].style.width =
+                "165px";
+
+            document.getElementsByClassName("star")[0].style.border =
+                "2px solid #FFB47D";
+            document.getElementsByClassName("headerStar")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (answers.stars === "") {
+            document.getElementById("numberStars").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (chilrensRhombus.length === 0) {
+            document.getElementsByClassName("headerRhombus")[0].style.width =
+                "165px";
+
+            document.getElementsByClassName("rhombus")[0].style.border =
+                "2px solid #FFB47D";
+            document.getElementsByClassName("headerRhombus")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (answers.rhombus === "") {
+            document.getElementById("numberRhombus").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
@@ -3011,7 +2981,7 @@ document.getElementById("submit").onclick = function () {
     question9();
     question10();
     question11();
-    question12();
+    question14();
     question15();
     question16();
     question17();
