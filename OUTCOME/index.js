@@ -754,13 +754,13 @@ function question9addCorrectAnswer() {
     );
 }
 
-function question10addCorrectAnswer() {
-    document.getElementsByClassName("app10")[0].style.height = "657px";
+function question12addCorrectAnswer() {
+    document.getElementsByClassName("app12")[0].style.height = "607px";
     addCorrectAnswer(
-        "correctAnswer10",
-        "10que",
-        "content10",
-        "contentCorrectAnswer10"
+        "correctAnswer12",
+        "12que",
+        "content12",
+        "contentCorrectAnswer12"
     );
 }
 
@@ -1690,12 +1690,12 @@ document.getElementById("car").onclick = function () {
     document.getElementById("feather").classList.remove("selectedPicture");
 };
 
-function question10() {
+function question12() {
     if (btnSelectedName) {
         if (selectBtn === "right") {
-            document.getElementById(btnSelectedName).className = "que10success";
+            document.getElementById(btnSelectedName).className = "que12success";
         } else {
-            document.getElementById(btnSelectedName).className = "que10error";
+            document.getElementById(btnSelectedName).className = "que12error";
         }
 
         createMiniIcon(selectBtn, document.getElementById(btnSelectedName));
@@ -1703,18 +1703,18 @@ function question10() {
         if (selectBtn !== "right") {
             addImage(
                 "failure",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
             );
 
-            question10addCorrectAnswer();
+            question12addCorrectAnswer();
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("question10"),
-                "app10",
-                10
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
             );
         }
     } else {
@@ -2979,7 +2979,7 @@ document.getElementById("submit").onclick = function () {
     question7();
     question8();
     question9();
-    question10();
+    question12();
     question13();
     question14();
     question15();

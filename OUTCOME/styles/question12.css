@@ -1,4 +1,4 @@
-.app10 {
+.app12 {
     width: 1170px;
     height: 382px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage10 {
+.titlePage12 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -24,7 +24,7 @@
 
 /* content styles */
 
-.content10 {
+.content12 {
     top: 132px;
     left: calc(50% - 570px / 2);
     width: 570px;
@@ -67,13 +67,13 @@
     border-radius: 10px;
 }
 
-.que10success,
+.que12success,
 .que17success {
     border: 4px solid #9dd765 !important;
     border-radius: 5px;
 }
 
-.que10error,
+.que12error,
 .que17error {
     border: 4px solid #ffb47d !important;
     border-radius: 5px;
