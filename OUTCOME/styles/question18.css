@@ -1,4 +1,4 @@
-.app16 {
+.app18 {
     width: 1170px;
     height: 611px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage16 {
+.titlePage18 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -27,7 +27,7 @@
 
 /* content styles */
 
-.content16 {
+.content18 {
     top: 132px;
     left: calc(50% - 570px / 2);
     width: 570px;
@@ -82,7 +82,7 @@
 
 .headerFlat,
 .headerSolid {
-    width: 271px;
+    width: 272px;
     height: 28px;
     background: #205b64;
     border-top-left-radius: 5px;
@@ -107,4 +107,5 @@
     width: 270px;
     height: 150px;
     display: flex;
+    flex-wrap: wrap;
 }

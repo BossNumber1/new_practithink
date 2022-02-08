@@ -437,15 +437,15 @@ function drop14(e) {
     orig.id = currentId;
 }
 
-// 16 QUESTION
+// 18 QUESTION
 
-function drag16(e) {
-    localStorage.setItem("idFigure16", e.target.id);
+function drag18(e) {
+    localStorage.setItem("idFigure18", e.target.id);
 }
 
-function drop16(e) {
+function drop18(e) {
     // забираем данные из хранилища
-    let idFigure = localStorage.getItem("idFigure16");
+    let idFigure = localStorage.getItem("idFigure18");
 
     // получаем текущий id
     let currentId = e.target.id;
@@ -457,22 +457,24 @@ function drop16(e) {
     // начинаем уборку
     if (currentId === "placeFlat" || currentId === "placeSolid") {
         // добавляем предмет в корзину
-        let tray = document.createElement("div");
-        tray.style.height = "60px";
-        tray.style.width = "60px";
+        let createdDiv = document.createElement("div");
+        createdDiv.style.height = "60px";
+        createdDiv.style.width = "60px";
 
         let objectBeingCreated = document.createElement("img");
-        objectBeingCreated.src = "./pictures/16que/" + idFigure + ".svg";
+        objectBeingCreated.src = "./pictures/18que/" + idFigure + ".svg";
+        objectBeingCreated.style.top = "10px";
+        objectBeingCreated.style.left = "10px";
         objectBeingCreated.id = idFigure;
 
-        currentElement.appendChild(tray).appendChild(objectBeingCreated);
+        currentElement.appendChild(createdDiv).appendChild(objectBeingCreated);
 
         // заменяем место предмета на квадрат
-        orig.src = "./pictures/16que/emptyPlace.svg";
+        orig.src = "./pictures/18que/emptyPlace.svg";
         orig.style.cursor = "default";
         orig.id = "emptyPlace";
     } else {
-        currentElement.src = "./pictures/16que/" + idFigure + ".svg";
+        currentElement.src = "./pictures/18que/" + idFigure + ".svg";
         currentElement.style.cursor = "grab";
         currentElement.id = idFigure;
 
@@ -647,6 +649,7 @@ function addDoubleCorrectAnswer(
     let contentContent = document.createElement("img");
     contentContent.src = "./pictures/" + pathQueOne;
     contentContent.alt = "correct answer";
+    contentContent.style.marginRight = "20px";
 
     let secondContentContent = document.createElement("img");
     secondContentContent.src = "./pictures/" + pathQueTwo;
@@ -895,14 +898,14 @@ function question15addCorrectAnswer() {
     );
 }
 
-function question16addCorrectAnswer() {
-    document.getElementsByClassName("app16")[0].style.height = "877px";
+function question18addCorrectAnswer() {
+    document.getElementsByClassName("app18")[0].style.height = "877px";
     addDoubleCorrectAnswer(
-        "correctAnswer16",
-        "16que/correctAnswerFlat.svg",
-        "16que/correctAnswerSolid.svg",
-        "content16",
-        "contentCorrectAnswer16"
+        "correctAnswer18",
+        "18que/correctAnswerFlat.svg",
+        "18que/correctAnswerSolid.svg",
+        "content18",
+        "contentCorrectAnswer18"
     );
 }
 
@@ -2392,7 +2395,7 @@ function question15() {
 
 let result2 = { basketFlat: "", basketSolid: "" };
 
-function question16() {
+function question18() {
     // получение текущего содержимого обеих корзин
     let basketFlat = document.getElementById("placeFlat");
     let basketSolid = document.getElementById("placeSolid");
@@ -2449,25 +2452,30 @@ function question16() {
         if (result2.basketFlat === "right" && result2.basketSolid === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question16"),
-                "app16",
-                16
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question16"),
-                "app16",
-                16
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
             );
 
-            question16addCorrectAnswer();
+            question18addCorrectAnswer();
         }
     } else {
-        document.getElementsByClassName("basketFlat")[0].style.border =
-            "2px solid #FFB47D";
-        document.getElementsByClassName("basketSolid")[0].style.border =
-            "2px solid #FFB47D";
+        if (resultFlat.length === 0) {
+            document.getElementsByClassName("basketFlat")[0].style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (resultSolid.length === 0) {
+            document.getElementsByClassName("basketSolid")[0].style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
@@ -3013,7 +3021,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     question15();
-    question16();
+    question18();
     question19();
     question20();
     question21();
