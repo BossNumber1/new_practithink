@@ -271,14 +271,14 @@ function drop7(e) {
     }
 }
 
-// 9 QUESTION
+// 11 QUESTION
 
-function drag9(e) {
+function drag11(e) {
     localStorage.setItem("idTakenCube", e.target.id);
     localStorage.setItem("nameCube", e.target.dataset.name);
 }
 
-function drop9(e) {
+function drop11(e) {
     // получаем id и имя несомого элемента
     let idTakenCube = localStorage.getItem("idTakenCube");
     let nameCube = localStorage.getItem("nameCube");
@@ -289,12 +289,12 @@ function drop9(e) {
 
     // меняем картинки местами
     let orig = document.getElementById(idTakenCube);
-    orig.src = "./pictures/9que/" + currentName + ".svg";
+    orig.src = "./pictures/11que/" + currentName + ".svg";
     orig.id = currentId;
     orig.setAttribute("data-name", currentName);
     orig.parentElement.style.cursor = "default";
 
-    e.target.src = "./pictures/9que/" + nameCube + ".svg";
+    e.target.src = "./pictures/11que/" + nameCube + ".svg";
     e.target.id = idTakenCube;
     e.target.setAttribute("data-name", nameCube);
     e.target.parentElement.style.cursor = "grab";
@@ -744,12 +744,12 @@ function question8addCorrectAnswer() {
     );
 }
 
-function question9addCorrectAnswer() {
-    document.getElementsByClassName("app9")[0].style.height = "657px";
+function question11addCorrectAnswer() {
+    document.getElementsByClassName("app11")[0].style.height = "657px";
     addCorrectAnswer(
-        "correctAnswer9",
-        "9que",
-        "content9",
+        "correctAnswer11",
+        "11que",
+        "content11",
         "contentCorrectAnswer"
     );
 }
@@ -1523,7 +1523,7 @@ function question8() {
     }
 }
 
-// 9 QUESTION
+// 11 QUESTION
 
 let selectedButton = "",
     selectedNameButton;
@@ -1585,7 +1585,7 @@ document.getElementById("eighteen").onclick = function () {
     document.getElementById("fourteen").style.border = "1px solid black";
 };
 
-function question9() {
+function question11() {
     if (selectedButton != "") {
         succerror(
             document.getElementById(selectedNameButton),
@@ -1604,19 +1604,19 @@ function question9() {
         if (selectedButton === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question9"),
-                "app9",
-                9
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question9"),
-                "app9",
-                9
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
             );
 
-            question9addCorrectAnswer();
+            question11addCorrectAnswer();
         }
     } else {
         document.getElementById("thirteen").style.border = "2px solid #FFB47D";
@@ -2978,7 +2978,7 @@ document.getElementById("submit").onclick = function () {
     question6();
     question7();
     question8();
-    question9();
+    question11();
     question12();
     question13();
     question14();
