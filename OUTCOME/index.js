@@ -460,11 +460,11 @@ function drop18(e) {
         let createdDiv = document.createElement("div");
         createdDiv.style.height = "60px";
         createdDiv.style.width = "60px";
+        createdDiv.style.top = "10px";
+        createdDiv.style.left = "10px";
 
         let objectBeingCreated = document.createElement("img");
         objectBeingCreated.src = "./pictures/18que/" + idFigure + ".svg";
-        objectBeingCreated.style.top = "10px";
-        objectBeingCreated.style.left = "10px";
         objectBeingCreated.id = idFigure;
 
         currentElement.appendChild(createdDiv).appendChild(objectBeingCreated);
@@ -2402,7 +2402,7 @@ function question18() {
 
     // получение массива необходимого содержимого
     let contentBasketFlat = ["star", "circle", "triangle", "square", "cube2d"];
-    let contentBasketSolid = ["cube", "cone", "roof", "pyramid", "ball"];
+    let contentBasketSolid = ["cube", "cone", "roof", "18pyramid", "ball"];
 
     // задание места для хранения результата выборки
     let resultFlat = [],
