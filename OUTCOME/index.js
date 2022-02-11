@@ -734,12 +734,12 @@ function question7addCorrectAnswer() {
     );
 }
 
-function question8addCorrectAnswer() {
-    document.getElementsByClassName("app8")[0].style.height = "657px";
+function question10addCorrectAnswer() {
+    document.getElementsByClassName("app10")[0].style.height = "657px";
     addCorrectAnswer(
-        "correctAnswer8",
-        "8que",
-        "content8",
+        "correctAnswer10",
+        "10que",
+        "content10",
         "contentCorrectAnswer"
     );
 }
@@ -1423,7 +1423,7 @@ function question7() {
     }
 }
 
-// 8 QUESTION
+// 10 QUESTION
 
 let howManyCounted = {
     jellyfish: "",
@@ -1455,7 +1455,7 @@ document.getElementById("result").onchange = function (e) {
     }
 };
 
-function question8() {
+function question10() {
     if (
         howManyCounted.jellyfish != "" &&
         howManyCounted.seaHorse != "" &&
@@ -1500,19 +1500,19 @@ function question8() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
             );
 
-            question8addCorrectAnswer();
+            question10addCorrectAnswer();
         }
     } else {
         document.getElementById("numberJellyfish").style.border =
@@ -2977,7 +2977,7 @@ document.getElementById("submit").onclick = function () {
     question5();
     question6();
     question7();
-    question8();
+    question10();
     question11();
     question12();
     question13();
