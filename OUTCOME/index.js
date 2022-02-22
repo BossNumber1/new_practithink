@@ -212,9 +212,9 @@ function drop6() {
     }
 }
 
-// 7 QUESTION
+// 9 QUESTION
 
-function drag7(e) {
+function drag9(e) {
     localStorage.setItem("idTakenCandy", e.target.id);
     localStorage.setItem(
         "classElemGrandparent",
@@ -223,7 +223,7 @@ function drag7(e) {
     localStorage.setItem("positionElem", e.target.dataset.position);
 }
 
-function drop7(e) {
+function drop9(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenElement = localStorage.getItem("idTakenCandy");
     let objectName = idTakenElement.slice(0, -1);
@@ -244,7 +244,7 @@ function drop7(e) {
 
     // создаём новый объект
     let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.src = "./pictures/7que/" + objectName + ".svg";
+    objectBeingCreated.src = "./pictures/9que/" + objectName + ".svg";
     objectBeingCreated.style.marginLeft = "10px";
     objectBeingCreated.style.marginTop = "10px";
     objectBeingCreated.id = objectName;
@@ -723,14 +723,14 @@ function question6addCorrectAnswer() {
     );
 }
 
-function question7addCorrectAnswer() {
-    document.getElementsByClassName("app7")[0].style.height = "777px";
+function question9addCorrectAnswer() {
+    document.getElementsByClassName("app9")[0].style.height = "777px";
     addDoubleCorrectAnswer(
-        "correctAnswer7",
-        "7que/correctAnswerBob.svg",
-        "7que/correctAnswerDave.svg",
-        "content7",
-        "contentCorrectAnswer7"
+        "correctAnswer9",
+        "9que/correctAnswerBob.svg",
+        "9que/correctAnswerDave.svg",
+        "content9",
+        "contentCorrectAnswer9"
     );
 }
 
@@ -1374,9 +1374,9 @@ function question6() {
     }
 }
 
-// 7 QUESTION
+// 9 QUESTION
 
-function question7() {
+function question9() {
     let basketBob = document.getElementById("placeDropCandyBob");
     let basketDave = document.getElementById("placeDropCandyDave");
 
@@ -1401,19 +1401,19 @@ function question7() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question7"),
-                "app7",
-                7
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question7"),
-                "app7",
-                7
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
             );
 
-            question7addCorrectAnswer();
+            question9addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("bob")[0].style.border =
@@ -2976,7 +2976,7 @@ document.getElementById("submit").onclick = function () {
     question4();
     question5();
     question6();
-    question7();
+    question9();
     question10();
     question11();
     question12();
