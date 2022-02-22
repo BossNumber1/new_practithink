@@ -97,6 +97,10 @@ body {
     border-bottom: 1px solid #a8a8a8;
 }
 
+.lineUnderHeading8 {
+    top: 100px;
+}
+
 .lineUnderHeading9 {
     top: 95px;
 }

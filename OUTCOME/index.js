@@ -157,17 +157,16 @@ function drop5(e) {
     }
 }
 
-// 6 QUESTION
+// 8 QUESTION
 
-function drag6(e) {
+function drag8(e) {
     localStorage.setItem("appleIdStarted", e.target.id);
     localStorage.setItem("positionAppleInRow", e.target.dataset.position);
     localStorage.setItem("parentElementIdStart", e.target.parentElement.id);
 }
 
-function drop6() {
+function drop8() {
     // забираем данные из хранилища
-
     let parentElementIdStart = localStorage.getItem("parentElementIdStart");
     let figureId = localStorage.getItem("appleIdStarted");
     let positionAppleInRow = localStorage.getItem("positionAppleInRow");
@@ -188,7 +187,7 @@ function drop6() {
         // создаём копию и ставим на место оригинала
 
         let copyBeingCreated = document.createElement("img");
-        copyBeingCreated.src = "./pictures/6que/apple.svg";
+        copyBeingCreated.src = "./pictures/8que/apple.svg";
         copyBeingCreated.id = figureId;
         copyBeingCreated.setAttribute("data-position", positionAppleInRow);
         copyBeingCreated.style.opacity = "0.5";
@@ -713,13 +712,13 @@ function question5addCorrectAnswer() {
     addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer");
 }
 
-function question6addCorrectAnswer() {
-    document.getElementsByClassName("app6")[0].style.height = "757px";
+function question8addCorrectAnswer() {
+    document.getElementsByClassName("app8")[0].style.height = "757px";
     addCorrectAnswer(
-        "correctAnswer6",
-        "6que",
-        "content6",
-        "contentCorrectAnswer6"
+        "correctAnswer8",
+        "8que",
+        "content8",
+        "contentCorrectAnswer8"
     );
 }
 
@@ -1338,9 +1337,9 @@ function question5() {
     }
 }
 
-// 6 QUESTION
+// 8 QUESTION
 
-function question6() {
+function question8() {
     let basket = document.getElementsByClassName("appleInBasket2row")[0];
 
     if (basket.children.length > 5) {
@@ -1354,19 +1353,19 @@ function question6() {
         if (basket.children.length === 5) {
             addImage(
                 "success",
-                document.getElementsByClassName("question6"),
-                "app6",
-                6
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question6"),
-                "app6",
-                6
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
             );
 
-            question6addCorrectAnswer();
+            question8addCorrectAnswer();
         }
     } else {
         document.getElementsByClassName("basket")[0].style.border =
@@ -2975,7 +2974,7 @@ document.getElementById("submit").onclick = function () {
     question3();
     question4();
     question5();
-    question6();
+    question8();
     question9();
     question10();
     question11();

@@ -1,4 +1,4 @@
-.app6 {
+.app8 {
     width: 1170px;
     height: 544px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage6 {
+.titlePage8 {
     top: 25px;
     width: 1170px;
     height: 22px;
@@ -23,10 +23,9 @@
 
 /* content styles */
 
-.content6 {
+.content8 {
     left: calc(50% - 382.71px / 2);
-    top: 120px;
-    /* top: calc(50% - 269.69px / 2); */
+    top: 150px;
     width: 382.71px;
     height: 269.69px;
 }
@@ -45,10 +44,6 @@
     background: #205b64;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-
-.lineUnderHeading6 {
-    top: 90px;
 }
 
 .applesRow {
