@@ -88,13 +88,13 @@ function drop2(e) {
     orig.textContent = "";
 }
 
-// 3 QUESTION
+// 5 QUESTION
 
-function drag3(e) {
+function drag5(e) {
     localStorage.setItem("idOriginala", e.target.id);
 }
 
-function drop3(e) {
+function drop5(e) {
     // получаем имя и id взятого элемента
     let idOrig = localStorage.getItem("idOriginala");
     let nameObjectOrig = idOrig.slice(0, -1);
@@ -108,17 +108,17 @@ function drop3(e) {
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/3que/" + nameObjectOrig + ".svg";
-    orig.src = "./pictures/3que/" + nameObjectCurrent + ".svg";
+    currentElement.src = "./pictures/5que/" + nameObjectOrig + ".svg";
+    orig.src = "./pictures/5que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
     orig.id = currentId;
 }
 
-// 5 QUESTION
+// 7 QUESTION
 
-function drag5(e) {
+function drag7(e) {
     localStorage.setItem("idSign", e.target.id);
     localStorage.setItem(
         "classGrandparentElement",
@@ -126,7 +126,7 @@ function drag5(e) {
     );
 }
 
-function drop5(e) {
+function drop7(e) {
     // получаем id взятого элемента и класс прародителя
     let idSign = localStorage.getItem("idSign");
     let classGrandparentElement = localStorage.getItem(
@@ -687,13 +687,13 @@ function question2addCorrectAnswer() {
     );
 }
 
-function question3addCorrectAnswer() {
-    document.getElementsByClassName("app3")[0].style.height = "657px";
+function question5addCorrectAnswer() {
+    document.getElementsByClassName("app5")[0].style.height = "657px";
     addCorrectAnswer(
-        "correctAnswer3",
-        "3que",
-        "content3",
-        "contentCorrectAnswer3"
+        "correctAnswer5",
+        "5que",
+        "content5",
+        "contentCorrectAnswer5"
     );
 }
 
@@ -1117,9 +1117,9 @@ function question2() {
     }
 }
 
-// 3 QUESTION
+// 5 QUESTION
 
-function question3() {
+function question5() {
     let idChild0 = document
         .getElementById("place0")
         .children[1].children[0].id.trim();
@@ -1132,35 +1132,35 @@ function question3() {
 
     if (idChild0.slice(0, -1) === "stars") {
         document.getElementById("place0").children[1].className =
-            "figure3success";
+            "figure5success";
     } else if (
         idChild0.slice(0, -1) === "rectangles" ||
         idChild0.slice(0, -1) === "pentagons"
     ) {
         document.getElementById("place0").children[1].className =
-            "figure3error";
+            "figure5error";
     }
 
     if (idChild1.slice(0, -1) === "rectangles") {
         document.getElementById("place1").children[1].className =
-            "figure3success";
+            "figure5success";
     } else if (
         idChild1.slice(0, -1) === "stars" ||
         idChild2.slice(0, -1) === "pentagons"
     ) {
         document.getElementById("place1").children[1].className =
-            "figure3error";
+            "figure5error";
     }
 
     if (idChild2.slice(0, -1) === "pentagons") {
         document.getElementById("place2").children[1].className =
-            "figure3success";
+            "figure5success";
     } else if (
         idChild2.slice(0, -1) === "rectangles" ||
         idChild2.slice(0, -1) === "stars"
     ) {
         document.getElementById("place2").children[1].className =
-            "figure3error";
+            "figure5error";
     }
 
     if (
@@ -1175,18 +1175,18 @@ function question3() {
         ) {
             addImage(
                 "failure",
-                document.getElementsByClassName("question3"),
-                "app3",
-                3
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
             );
 
-            question3addCorrectAnswer();
+            question5addCorrectAnswer();
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("question3"),
-                "app3",
-                3
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
             );
         }
     } else {
@@ -1195,7 +1195,7 @@ function question3() {
 
         for (let i = 0; i < childs.length; i++) {
             childs[i].children[1].children[0].src =
-                "./pictures/3que/unselectedBlock.svg";
+                "./pictures/5que/unselectedBlock.svg";
         }
     }
 }
