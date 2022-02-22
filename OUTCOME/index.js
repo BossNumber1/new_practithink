@@ -45,9 +45,9 @@ function drop1(e) {
     orig.id = currentId;
 }
 
-// 2 QUESTION
+// 3 QUESTION
 
-function drag2(e) {
+function drag3(e) {
     localStorage.setItem("idTakenDiv", e.target.id);
     localStorage.setItem(
         "classElementGrandparent",
@@ -55,7 +55,7 @@ function drag2(e) {
     );
 }
 
-function drop2(e) {
+function drop3(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenDiv = localStorage.getItem("idTakenDiv");
     let classElementGrandparent = localStorage.getItem(
@@ -677,12 +677,12 @@ function question1addCorrectAnswer() {
     );
 }
 
-function question2addCorrectAnswer() {
-    document.getElementsByClassName("app2")[0].style.height = "413px";
+function question3addCorrectAnswer() {
+    document.getElementsByClassName("app3")[0].style.height = "413px";
     addCorrectAnswer(
-        "correctAnswer2",
-        "2que",
-        "content2",
+        "correctAnswer3",
+        "3que",
+        "content3",
         "contentCorrectAnswer"
     );
 }
@@ -1050,9 +1050,9 @@ function question1() {
     }
 }
 
-// 2 QUESTION
+// 3 QUESTION
 
-function question2() {
+function question3() {
     let correctOrder = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
         wasThereAmismatch = "false",
         whetherSomethingWasChosen = "false",
@@ -1092,18 +1092,18 @@ function question2() {
         if (wasThereAmismatch === "true") {
             addImage(
                 "failure",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
             );
 
-            question2addCorrectAnswer();
+            question3addCorrectAnswer();
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
             );
         }
     } else {
@@ -2972,6 +2972,8 @@ document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
+    question4();
+    question5();
     question6();
     question7();
     question8();
