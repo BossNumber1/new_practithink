@@ -210,8 +210,11 @@ body {
     top: 120px;
 }
 
+.correctAnswer2 {
+    top: 70px;
+}
+
 .correctAnswer1,
-.correctAnswer2,
 .correctAnswer8,
 .correctAnswer11 {
     top: 100px;

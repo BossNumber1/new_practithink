@@ -677,6 +677,16 @@ function question1addCorrectAnswer() {
     );
 }
 
+function question2addCorrectAnswer() {
+    document.getElementsByClassName("app2")[0].style.height = "500px";
+    addCorrectAnswer(
+        "correctAnswer2",
+        "2que",
+        "content2",
+        "contentCorrectAnswer"
+    );
+}
+
 function question3addCorrectAnswer() {
     document.getElementsByClassName("app3")[0].style.height = "413px";
     addCorrectAnswer(
@@ -1000,6 +1010,276 @@ function createMiniIcon(property, element) {
 }
 // -----------------------------------------------------------------------------------------------------------------------------
 
+function gettingDataFromFields(
+    countId,
+    correctNumbers,
+    numberQuestion,
+    number
+) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            debugger;
+            document.getElementById("firstNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        alert("100");
+                        number.firstNumber = "right";
+                    } else {
+                        alert("200");
+                        number.firstNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 1) {
+            document.getElementById("secondNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.secondNumber = "right";
+                    } else {
+                        number.secondNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 2) {
+            document.getElementById("thirdNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.thirdNumber = "right";
+                    } else {
+                        number.thirdNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 3) {
+            document.getElementById("fourthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.fourthNumber = "right";
+                    } else {
+                        number.fourthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 4) {
+            document.getElementById("fifthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.fifthNumber = "right";
+                    } else {
+                        number.fifthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 5) {
+            document.getElementById("sixthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.sixthNumber = "right";
+                    } else {
+                        number.sixthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 6) {
+            document.getElementById("seventhNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.seventhNumber = "right";
+                    } else {
+                        number.seventhNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 7) {
+            document.getElementById("eighthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.eighthNumber = "right";
+                    } else {
+                        number.eighthNumber = "wrong";
+                    }
+                };
+        }
+    }
+}
+
+function succerrorAndCreateMiniIcon(countId, numberQuestion, number) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            succerror(
+                document.getElementById("firstNumber" + numberQuestion),
+                number.firstNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.firstNumber,
+                document.getElementById("firstNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 1) {
+            succerror(
+                document.getElementById("secondNumber" + numberQuestion),
+                number.secondNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.secondNumber,
+                document.getElementById("secondNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 2) {
+            succerror(
+                document.getElementById("thirdNumber" + numberQuestion),
+                number.thirdNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.thirdNumber,
+                document.getElementById("thirdNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 3) {
+            succerror(
+                document.getElementById("fourthNumber" + numberQuestion),
+                number.fourthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.fourthNumber,
+                document.getElementById("fourthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 4) {
+            succerror(
+                document.getElementById("fifthNumber" + numberQuestion),
+                number.fifthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.fifthNumber,
+                document.getElementById("fifthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 5) {
+            succerror(
+                document.getElementById("sixthNumber" + numberQuestion),
+                number.sixthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.sixthNumber,
+                document.getElementById("sixthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 6) {
+            succerror(
+                document.getElementById("seventhNumber" + numberQuestion),
+                number.seventhNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.seventhNumber,
+                document.getElementById("seventhNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 7) {
+            succerror(
+                document.getElementById("eighthNumber" + numberQuestion),
+                number.eighthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.eighthNumber,
+                document.getElementById("eighthNumber" + numberQuestion)
+            );
+        }
+    }
+}
+
+function highlightUnselectedBlocks(countId, numberQuestion, number) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            if (number.firstNumber === "") {
+                document.getElementById(
+                    "firstNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 1) {
+            if (number.secondNumber === "") {
+                document.getElementById(
+                    "secondNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 2) {
+            if (number.thirdNumber === "") {
+                document.getElementById(
+                    "thirdNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 3) {
+            if (number.fourthNumber === "") {
+                document.getElementById(
+                    "fourthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 4) {
+            if (number.fifthNumber === "") {
+                document.getElementById(
+                    "fifthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 5) {
+            if (number.sixthNumber === "") {
+                document.getElementById(
+                    "sixthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 6) {
+            if (number.seventhNumber === "") {
+                document.getElementById(
+                    "seventhNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 7) {
+            if (number.eighthNumber === "") {
+                document.getElementById(
+                    "eighthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------
+
 // 1 QUESTION
 
 function question1() {
@@ -1047,6 +1327,78 @@ function question1() {
         for (let i = 0; i < childs.length; i++) {
             childs[i].children[0].src = "./pictures/1que/unselectedBlock.svg";
         }
+    }
+}
+
+// 2 QUESTION
+
+// let numbers2 = {
+//     firstNumber: "",
+// };
+
+// gettingDataFromFields(1, [17], 2, numbers2);
+
+function question200() {
+    // let t = numbers2.firstNumber;
+
+    // debugger;
+    if (numbers2.firstNumber !== "") {
+        // alert("1");
+        succerrorAndCreateMiniIcon(1, 2, numbers2);
+
+        // выносим общий статус к номеру вопроса
+
+        if (numbers2.firstNumber === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+
+            addCorrectAnswerQuestion2();
+        }
+    } else {
+        alert("2");
+        highlightUnselectedBlocks(1, 2, numbers2);
+    }
+}
+
+function question2() {
+    let obj = document.getElementById("firstNumber2");
+    let value = obj.value;
+
+    if (value !== "") {
+        if (value !== "17") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+
+            question2addCorrectAnswer();
+
+            obj.style.border = "2px solid #ED7777";
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+
+            obj.style.border = "2px solid #48B736";
+        }
+    } else {
+        obj.style.border = "2px solid #FFB47D";
     }
 }
 
