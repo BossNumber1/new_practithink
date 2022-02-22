@@ -1,7 +1,6 @@
-.app5 {
+.app7 {
     width: 1170px;
     height: 527px;
-    /* 657 */
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -10,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage5 {
+.titlePage7 {
     top: 14px;
     font-style: normal;
     font-weight: 600;
@@ -22,8 +21,8 @@
 
 /* content styles */
 
-.content5 {
-    top: 63px;
+.content7 {
+    top: 50px;
     left: calc(50% - 571px / 2);
     width: 571px;
     height: 264.2px;

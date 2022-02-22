@@ -707,9 +707,9 @@ function question4addCorrectAnswer() {
     );
 }
 
-function question5addCorrectAnswer() {
-    document.getElementsByClassName("app5")[0].style.height = "657px";
-    addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer");
+function question7addCorrectAnswer() {
+    document.getElementsByClassName("app7")[0].style.height = "657px";
+    addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer");
 }
 
 function question8addCorrectAnswer() {
@@ -1237,7 +1237,7 @@ function question4() {
     }
 }
 
-// 5 QUESTION
+// 7 QUESTION
 
 let selected = { amountIceCream: "", amountFlowers: "" };
 
@@ -1257,7 +1257,7 @@ document.getElementById("amountFlowers").onchange = function (e) {
     }
 };
 
-function question5() {
+function question7() {
     if (selected.amountFlowers != "" && selected.amountIceCream != "") {
         let selectedSign =
             document.getElementsByClassName("inputCollection")[0].children[1]
@@ -1313,19 +1313,19 @@ function question5() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question5"),
-                "app5",
-                5
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question5"),
-                "app5",
-                5
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
             );
 
-            question5addCorrectAnswer();
+            question7addCorrectAnswer();
         }
     } else {
         document.getElementById("amountIceCream").style.border =
@@ -2973,7 +2973,7 @@ document.getElementById("submit").onclick = function () {
     question2();
     question3();
     question4();
-    question5();
+    question7();
     question8();
     question9();
     question10();
