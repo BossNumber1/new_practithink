@@ -697,12 +697,12 @@ function question3addCorrectAnswer() {
     );
 }
 
-function question4addCorrectAnswer() {
-    document.getElementsByClassName("app4")[0].style.height = "657px";
+function question6addCorrectAnswer() {
+    document.getElementsByClassName("app6")[0].style.height = "657px";
     addCorrectAnswer(
-        "correctAnswer4",
-        "4que",
-        "content4",
+        "correctAnswer6",
+        "6que",
+        "content6",
         "contentCorrectAnswer"
     );
 }
@@ -1200,7 +1200,7 @@ function question3() {
     }
 }
 
-// 4 QUESTION
+// 6 QUESTION
 
 let countCookies;
 
@@ -1208,31 +1208,31 @@ document.querySelector("input").onchange = function (e) {
     countCookies = e.target.value;
 };
 
-function question4() {
+function question6() {
     if (countCookies) {
         succerror(document.querySelector("input"), countCookies != 10);
 
         if (countCookies != 10) {
             addImage(
                 "failure",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
+                document.getElementsByClassName("question6"),
+                "app6",
+                6
             );
             addMiniIcon(document.querySelector("input"), "failure");
 
-            question4addCorrectAnswer();
+            question6addCorrectAnswer();
         } else {
             addImage(
                 "success",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
+                document.getElementsByClassName("question6"),
+                "app6",
+                6
             );
             addMiniIcon(document.querySelector("input"), "success");
         }
     } else {
-        let requiredElement = document.getElementById("inputQuestion4");
+        let requiredElement = document.getElementById("inputQuestion6");
         requiredElement.style.border = "2px solid #FFB47D";
     }
 }
@@ -2972,7 +2972,7 @@ document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
-    question4();
+    question6();
     question7();
     question8();
     question9();
