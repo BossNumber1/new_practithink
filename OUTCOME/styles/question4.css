@@ -1,0 +1,53 @@
+.app4 {
+    top: 10px;
+    left: calc(50% - 1170px / 2);
+    width: 1170px;
+    height: 307px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage4 {
+    top: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+/* content styles */
+
+.content4 {
+    top: 132px;
+    left: calc(50% - 698px / 2);
+    width: 698px;
+    height: 55px;
+}
+
+.content4 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#firstNumber4 {
+    top: -25px;
+    left: 123px;
+}
+
+#secondNumber4 {
+    top: -55px;
+    left: 590px;
+}
