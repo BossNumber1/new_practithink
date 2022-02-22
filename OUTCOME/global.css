@@ -97,6 +97,10 @@ body {
     border-bottom: 1px solid #a8a8a8;
 }
 
+.lineUnderHeading10 {
+    top: 100px;
+}
+
 /* STYLES THE END PAGE */
 
 .btnsEnd {
@@ -192,6 +196,10 @@ body {
     left: calc(50% - 450px / 2);
     width: 450px;
     height: 94px;
+}
+
+.correctAnswer10 {
+    top: 120px;
 }
 
 .correctAnswer1,

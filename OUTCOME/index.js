@@ -735,7 +735,7 @@ function question7addCorrectAnswer() {
 }
 
 function question10addCorrectAnswer() {
-    document.getElementsByClassName("app10")[0].style.height = "657px";
+    document.getElementsByClassName("app10")[0].style.height = "700px";
     addCorrectAnswer(
         "correctAnswer10",
         "10que",
