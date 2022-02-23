@@ -697,6 +697,16 @@ function question3addCorrectAnswer() {
     );
 }
 
+function question4addCorrectAnswer() {
+    document.getElementsByClassName("app4")[0].style.height = "500px";
+    addCorrectAnswer(
+        "correctAnswer4",
+        "4que",
+        "content4",
+        "contentCorrectAnswer"
+    );
+}
+
 function question5addCorrectAnswer() {
     document.getElementsByClassName("app5")[0].style.height = "657px";
     addCorrectAnswer(
@@ -1332,51 +1342,12 @@ function question1() {
 
 // 2 QUESTION
 
-// let numbers2 = {
-//     firstNumber: "",
-// };
-
-// gettingDataFromFields(1, [17], 2, numbers2);
-
-function question200() {
-    // let t = numbers2.firstNumber;
-
-    // debugger;
-    if (numbers2.firstNumber !== "") {
-        // alert("1");
-        succerrorAndCreateMiniIcon(1, 2, numbers2);
-
-        // выносим общий статус к номеру вопроса
-
-        if (numbers2.firstNumber === "right") {
-            addImage(
-                "success",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
-            );
-        } else {
-            addImage(
-                "failure",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
-            );
-
-            addCorrectAnswerQuestion2();
-        }
-    } else {
-        alert("2");
-        highlightUnselectedBlocks(1, 2, numbers2);
-    }
-}
-
 function question2() {
-    let obj = document.getElementById("firstNumber2");
-    let value = obj.value;
+    let firstNumber = document.getElementById("firstNumber2");
+    let firstValue = firstNumber.value;
 
-    if (value !== "") {
-        if (value !== "17") {
+    if (firstValue !== "") {
+        if (firstValue !== "17") {
             addImage(
                 "failure",
                 document.getElementsByClassName("question2"),
@@ -1386,7 +1357,7 @@ function question2() {
 
             question2addCorrectAnswer();
 
-            obj.style.border = "2px solid #ED7777";
+            firstNumber.style.border = "2px solid #ED7777";
         } else {
             addImage(
                 "success",
@@ -1395,10 +1366,10 @@ function question2() {
                 2
             );
 
-            obj.style.border = "2px solid #48B736";
+            firstNumber.style.border = "2px solid #48B736";
         }
     } else {
-        obj.style.border = "2px solid #FFB47D";
+        firstNumber.style.border = "2px solid #FFB47D";
     }
 }
 
@@ -1465,6 +1436,49 @@ function question3() {
 
         for (let i = 0; i < childs.length; i++) {
             childs[i].children[0].style.border = "2px solid #FFB47D";
+        }
+    }
+}
+
+// 4 QUESTION
+
+function question4() {
+    let firstNumber = document.getElementById("firstNumber4");
+    let secondNumber = document.getElementById("secondNumber4");
+    let firstValue = firstNumber.value;
+    let secondValue = secondNumber.value;
+
+    if (firstValue !== "" && secondValue !== "") {
+        if (firstValue !== "6" && secondValue !== "12") {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+
+            question4addCorrectAnswer();
+
+            firstNumber.style.border = "2px solid #ED7777";
+            secondNumber.style.border = "2px solid #ED7777";
+        } else {
+            addImage(
+                "success",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+
+            firstNumber.style.border = "2px solid #48B736";
+            secondNumber.style.border = "2px solid #48B736";
+        }
+    } else {
+        if (firstValue === "") {
+            firstNumber.style.border = "2px solid #FFB47D";
+        }
+
+        if (secondValue === "") {
+            secondNumber.style.border = "2px solid #FFB47D";
         }
     }
 }
