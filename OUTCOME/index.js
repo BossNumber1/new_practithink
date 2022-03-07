@@ -4103,8 +4103,8 @@ document.getElementById("clear").onclick = function () {
     // 19 QUESTION
 
     function check19question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        let firstFigure19 = document.getElementById("hexagon");
+        let secondFigure19 = document.getElementById("trapezoid");
 
         document.getElementsByClassName("correctAnswer19")[0].remove();
         document.getElementsByClassName("app19")[0].style.height = "422px";
@@ -4114,9 +4114,11 @@ document.getElementById("clear").onclick = function () {
             "lineUnderHeading19"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
 
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
+        firstFigure19.style.boxShadow = "none";
+        secondFigure19.style.boxShadow = "none";
+
+        firstFigure19.classList.add("selectedPicture2");
+        secondFigure19.classList.remove("selectedPicture2");
     }
 
     document.getElementsByClassName("correctAnswer19")[0] && check19question();
