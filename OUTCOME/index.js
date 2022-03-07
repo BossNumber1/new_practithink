@@ -3636,9 +3636,48 @@ document.getElementById("clear").onclick = function () {
     // 5 QUESTION
 
     function check5question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let emptyPlace50 = document.getElementById("emptyPlace50");
+        let emptyPlace51 = document.getElementById("emptyPlace51");
+        let emptyPlace52 = document.getElementById("emptyPlace52");
 
+        let emptyPlace0 = emptyPlace50.children[0];
+        let emptyPlace1 = emptyPlace51.children[0];
+        let emptyPlace2 = emptyPlace52.children[0];
+
+        let figure50 = document.getElementById("figure50").children[0];
+        let figure51 = document.getElementById("figure51").children[0];
+        let figure52 = document.getElementById("figure52").children[0];
+
+        // меняем содержимое
+        figure50.src = "./pictures/5que/pentagons.svg";
+        figure51.src = "./pictures/5que/stars.svg";
+        figure52.src = "./pictures/5que/rectangles.svg";
+
+        emptyPlace0.src = "./pictures/5que/freePlace.svg";
+        emptyPlace1.src = "./pictures/5que/freePlace.svg";
+        emptyPlace2.src = "./pictures/5que/freePlace.svg";
+
+        // убираем выделение блоков
+        if (emptyPlace50.className === "figure5error") {
+            emptyPlace50.classList.remove("figure5error");
+        } else {
+            emptyPlace50.classList.remove("figure5success");
+        }
+
+        if (emptyPlace51.className === "figure5error") {
+            emptyPlace51.classList.remove("figure5error");
+        } else {
+            emptyPlace51.classList.remove("figure5success");
+        }
+
+        if (emptyPlace52.className === "figure5error") {
+            emptyPlace52.classList.remove("figure5error");
+        } else {
+            emptyPlace52.classList.remove("figure5success");
+        }
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer5")[0].remove();
         document.getElementsByClassName("app5")[0].style.height = "517px";
         document.getElementsByClassName("app5")[0].style.border =
@@ -3646,10 +3685,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading5"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer5")[0] && check5question();
