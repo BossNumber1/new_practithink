@@ -4004,9 +4004,34 @@ document.getElementById("clear").onclick = function () {
     // 18 QUESTION
 
     function check18question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let figure180 = document.getElementById("figure180").children[0];
+        let figure181 = document.getElementById("figure181").children[0];
+        let figure182 = document.getElementById("figure182").children[0];
+        let figure183 = document.getElementById("figure183").children[0];
+        let figure184 = document.getElementById("figure184").children[0];
+        let figure185 = document.getElementById("figure185").children[0];
+        let figure186 = document.getElementById("figure186").children[0];
+        let figure187 = document.getElementById("figure187").children[0];
+        let figure188 = document.getElementById("figure188").children[0];
+        let figure189 = document.getElementById("figure189").children[0];
 
+        // меняем содержимое
+        figure180.src = "./pictures/18que/cube.svg";
+        figure181.src = "./pictures/18que/star.svg";
+        figure182.src = "./pictures/18que/cone.svg";
+        figure183.src = "./pictures/18que/circle.svg";
+        figure184.src = "./pictures/18que/roof.svg";
+        figure185.src = "./pictures/18que/triangle.svg";
+        figure186.src = "./pictures/18que/18pyramid.svg";
+        figure187.src = "./pictures/18que/square.svg";
+        figure188.src = "./pictures/18que/ball.svg";
+        figure189.src = "./pictures/18que/cube2d.svg";
+
+        document.getElementById("placeFlat").innerHTML = "";
+        document.getElementById("placeSolid").innerHTML = "";
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer18")[0].remove();
         document.getElementsByClassName("app18")[0].style.height = "611px";
         document.getElementsByClassName("app18")[0].style.border =
@@ -4014,10 +4039,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading18"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer18")[0] && check18question();
