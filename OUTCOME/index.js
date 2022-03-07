@@ -917,6 +917,7 @@ function succerror(elem, checkElement) {
 function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
+    object.classList.add("statusIcon");
 
     if (status === "success") {
         object.src = "./pictures/successIcon.svg";
@@ -942,6 +943,7 @@ function addImage(status, ancestor, appClass, position) {
 function addMiniIcon(elem, status) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
+    objDiv.classList.add("miniIcon");
 
     if (elem.parentElement.className === "row") {
         objDiv.classList.add("miniIcon");
