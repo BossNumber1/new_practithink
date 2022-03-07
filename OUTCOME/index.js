@@ -3378,6 +3378,27 @@ document.getElementById("clear").onclick = function () {
         }
     }
 
+    // 1 QUESTION
+
+    function check1question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer1")[0].remove();
+        document.getElementsByClassName("app1")[0].style.height = "403px";
+        document.getElementsByClassName("app1")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading1"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer1")[0] && check1question();
+
     // 2 QUESTION
 
     function check2question() {
@@ -3398,6 +3419,27 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer2")[0] && check2question();
+
+    // 3 QUESTION
+
+    function check3question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer3")[0].remove();
+        document.getElementsByClassName("app3")[0].style.height = "342px";
+        document.getElementsByClassName("app3")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading3"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer3")[0] && check3question();
 
     // 4 QUESTION
 
@@ -3426,6 +3468,27 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer4")[0] && check4question();
+
+    // 5 QUESTION
+
+    function check5question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer5")[0].remove();
+        document.getElementsByClassName("app5")[0].style.height = "517px";
+        document.getElementsByClassName("app5")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading5"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer5")[0] && check5question();
 
     // 6 QUESTION
 
@@ -3476,6 +3539,48 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer7")[0] && check7question();
 
+    // 8 QUESTION
+
+    function check8question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer8")[0].remove();
+        document.getElementsByClassName("app8")[0].style.height = "544px";
+        document.getElementsByClassName("app8")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading8"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer8")[0] && check8question();
+
+    // 9 QUESTION
+
+    function check9question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer9")[0].remove();
+        document.getElementsByClassName("app9")[0].style.height = "555px";
+        document.getElementsByClassName("app9")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading9"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer9")[0] && check9question();
+
     // 10 QUESTION
 
     function check10question() {
@@ -3509,6 +3614,69 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer10")[0] && check10question();
+
+    // 11 QUESTION
+
+    function check11question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer11")[0].remove();
+        document.getElementsByClassName("app11")[0].style.height = "525px";
+        document.getElementsByClassName("app11")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading11"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer11")[0] && check11question();
+
+    // 12 QUESTION
+
+    function check12question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer12")[0].remove();
+        document.getElementsByClassName("app12")[0].style.height = "382px";
+        document.getElementsByClassName("app12")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading12"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer12")[0] && check12question();
+
+    // 13 QUESTION
+
+    function check13question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer13")[0].remove();
+        document.getElementsByClassName("app13")[0].style.height = "627px";
+        document.getElementsByClassName("app13")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading13"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer13")[0] && check13question();
 
     // 14 QUESTION
 
@@ -3544,6 +3712,48 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer14")[0] && check14question();
 
+    // 15 QUESTION
+
+    function check15question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer15")[0].remove();
+        document.getElementsByClassName("app15")[0].style.height = "554px";
+        document.getElementsByClassName("app15")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading15"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer15")[0] && check15question();
+
+    // 16 QUESTION
+
+    function check16question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer16")[0].remove();
+        document.getElementsByClassName("app16")[0].style.height = "625px";
+        document.getElementsByClassName("app16")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading16"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer16")[0] && check16question();
+
     // 17 QUESTION
 
     function check17question() {
@@ -3565,6 +3775,90 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer17")[0] && check17question();
 
+    // 18 QUESTION
+
+    function check18question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer18")[0].remove();
+        document.getElementsByClassName("app18")[0].style.height = "611px";
+        document.getElementsByClassName("app18")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading18"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer18")[0] && check18question();
+
+    // 19 QUESTION
+
+    function check19question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer19")[0].remove();
+        document.getElementsByClassName("app19")[0].style.height = "422px";
+        document.getElementsByClassName("app19")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading19"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer19")[0] && check19question();
+
+    // 20 QUESTION
+
+    function check20question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer20")[0].remove();
+        document.getElementsByClassName("app20")[0].style.height = "680px";
+        document.getElementsByClassName("app20")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading20"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer20")[0] && check20question();
+
+    // 21 QUESTION
+
+    function check21question() {
+        // let firstNumber2 = document.getElementById("firstNumber2");
+        // firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer21")[0].remove();
+        document.getElementsByClassName("app21")[0].style.height = "424px";
+        document.getElementsByClassName("app21")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading21"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        // firstNumber2.style.backgroundColor = "white";
+        // firstNumber2.style.color = "black";
+        // firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer21")[0] && check21question();
+
     // 22 QUESTION
 
     function check22question() {
@@ -3575,7 +3869,7 @@ document.getElementById("clear").onclick = function () {
         secondNumber22.value = "";
 
         document.getElementsByClassName("correctAnswer22")[0].remove();
-        document.getElementsByClassName("app22")[0].style.height = "412px";
+        document.getElementsByClassName("app22")[0].style.height = "857px";
         document.getElementsByClassName("app22")[0].style.border =
             "0.5px solid #a8a8a8";
         document.getElementsByClassName(
