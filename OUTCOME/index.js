@@ -3358,3 +3358,73 @@ document.getElementById("submit").onclick = function () {
     question21();
     question22();
 };
+
+document.getElementById("clear").onclick = function () {
+    let allInputs = document.querySelectorAll("input");
+    let allStatusIcons = document.getElementsByClassName("statusIcon");
+    let allMiniIcons = document.getElementsByClassName("miniIcon");
+
+    for (let i = 0; i < allInputs.length; i++) {
+        allInputs[i].style.border = "1px solid";
+    }
+
+    for (let i = 0; i < allStatusIcons.length; i++) {
+        allStatusIcons[i].remove();
+    }
+
+    for (let i = 0; i < allMiniIcons.length; i) {
+        if (allMiniIcons.length) {
+            allMiniIcons[i].remove();
+        }
+    }
+
+    // 2 QUESTION
+
+    function check2question() {
+        let firstNumber2 = document.getElementById("firstNumber2");
+
+        firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer2")[0].remove();
+        document.getElementsByClassName("app2")[0].style.height = "307px";
+        document.getElementsByClassName("app2")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading2"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber2.style.backgroundColor = "white";
+        firstNumber2.style.color = "black";
+        firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer2")[0] && check2question();
+
+    // 4 QUESTION
+
+    function check4question() {
+        let firstNumber4 = document.getElementById("firstNumber4");
+        let secondNumber4 = document.getElementById("secondNumber4");
+
+        firstNumber4.value = "";
+        secondNumber4.value = "";
+
+        document.getElementsByClassName("correctAnswer4")[0].remove();
+        document.getElementsByClassName("app4")[0].style.height = "307px";
+        document.getElementsByClassName("app4")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading4"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber4.style.backgroundColor = "white";
+        firstNumber4.style.color = "black";
+        firstNumber4.style.border = "1px solid";
+
+        secondNumber4.style.backgroundColor = "white";
+        secondNumber4.style.color = "black";
+        secondNumber4.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer4")[0] && check4question();
+};
