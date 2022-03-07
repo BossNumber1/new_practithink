@@ -3941,9 +3941,34 @@ document.getElementById("clear").onclick = function () {
     // 15 QUESTION
 
     function check15question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let figure150 = document.getElementById("figure150").children[0];
+        let figure151 = document.getElementById("figure151").children[0];
+        let figure152 = document.getElementById("figure152").children[0];
+        let figure153 = document.getElementById("figure153").children[0];
+        let figure154 = document.getElementById("figure154").children[0];
+        let figure155 = document.getElementById("figure155").children[0];
+        let figure156 = document.getElementById("figure156").children[0];
+        let figure157 = document.getElementById("figure157").children[0];
+        let figure158 = document.getElementById("figure158").children[0];
 
+        // меняем содержимое
+        figure150.src = "./pictures/15que/clock.svg";
+        figure151.src = "./pictures/15que/window.svg";
+        figure152.src = "./pictures/15que/cookie.svg";
+        figure153.src = "./pictures/15que/painting.svg";
+        figure154.src = "./pictures/15que/pizza.svg";
+        figure155.src = "./pictures/15que/sign.svg";
+        figure156.src = "./pictures/15que/tv.svg";
+        figure157.src = "./pictures/15que/tool.svg";
+        figure158.src = "./pictures/15que/chocolate.svg";
+
+        document.getElementById("basketCircle").innerHTML = "";
+        document.getElementById("basketSquare").innerHTML = "";
+        document.getElementById("basketTriangle").innerHTML = "";
+        document.getElementById("basketRectangle").innerHTML = "";
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer15")[0].remove();
         document.getElementsByClassName("app15")[0].style.height = "554px";
         document.getElementsByClassName("app15")[0].style.border =
@@ -3951,10 +3976,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading15"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer15")[0] && check15question();
