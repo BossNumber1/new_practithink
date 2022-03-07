@@ -3501,8 +3501,98 @@ document.getElementById("clear").onclick = function () {
     // 3 QUESTION
 
     function check3question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        let emptyPlace30 = document.getElementById("emptyPlace30");
+        let emptyPlace31 = document.getElementById("emptyPlace31");
+        let emptyPlace32 = document.getElementById("emptyPlace32");
+        let emptyPlace33 = document.getElementById("emptyPlace33");
+        let emptyPlace34 = document.getElementById("emptyPlace34");
+        let emptyPlace35 = document.getElementById("emptyPlace35");
+        let emptyPlace36 = document.getElementById("emptyPlace36");
+        let emptyPlace37 = document.getElementById("emptyPlace37");
+
+        let emptyPlace0 = emptyPlace30.children[0];
+        let emptyPlace1 = emptyPlace31.children[0];
+        let emptyPlace2 = emptyPlace32.children[0];
+        let emptyPlace3 = emptyPlace33.children[0];
+        let emptyPlace4 = emptyPlace34.children[0];
+        let emptyPlace5 = emptyPlace35.children[0];
+        let emptyPlace6 = emptyPlace36.children[0];
+        let emptyPlace7 = emptyPlace37.children[0];
+
+        let number0 = document.getElementById("number30").children[0];
+        let number1 = document.getElementById("number31").children[0];
+        let number2 = document.getElementById("number32").children[0];
+        let number3 = document.getElementById("number33").children[0];
+        let number4 = document.getElementById("number34").children[0];
+        let number5 = document.getElementById("number35").children[0];
+        let number6 = document.getElementById("number36").children[0];
+        let number7 = document.getElementById("number37").children[0];
+
+        let arrEmptyPlace = [
+            emptyPlace0,
+            emptyPlace1,
+            emptyPlace2,
+            emptyPlace3,
+            emptyPlace4,
+            emptyPlace5,
+            emptyPlace6,
+            emptyPlace7,
+        ];
+
+        arrEmptyPlace.forEach((el) => {
+            el.classList.remove("filledField");
+            el.id = "empty";
+            el.setAttribute("draggable", "true");
+            el.textContent = "";
+            el.parentElement.className = "inputContent";
+        });
+
+        document.getElementById("twenty").parentElement.className =
+            "inputContent";
+        document.getElementById("ninety").parentElement.className =
+            "inputContent";
+
+        let arrNumbers = [
+            number0,
+            number1,
+            number2,
+            number3,
+            number4,
+            number5,
+            number6,
+            number7,
+        ];
+
+        arrNumbers.forEach((el) => {
+            el.style.backgroundColor = "#369cb7";
+            el.style.opacity = "1";
+            el.classList.add("filledField");
+            el.setAttribute("draggable", "true");
+        });
+
+        number0.id = "ten";
+        number0.textContent = "10";
+
+        number1.id = "eighty";
+        number1.textContent = "80";
+
+        number2.id = "thirty";
+        number2.textContent = "30";
+
+        number3.id = "forty";
+        number3.textContent = "40";
+
+        number4.id = "sixty";
+        number4.textContent = "60";
+
+        number5.id = "seventy";
+        number5.textContent = "70";
+
+        number6.id = "fifty";
+        number6.textContent = "50";
+
+        number7.id = "oneHundred";
+        number7.textContent = "100";
 
         document.getElementsByClassName("correctAnswer3")[0].remove();
         document.getElementsByClassName("app3")[0].style.height = "342px";
@@ -3511,10 +3601,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading3"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer3")[0] && check3question();
