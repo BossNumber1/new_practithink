@@ -3832,8 +3832,17 @@ document.getElementById("clear").onclick = function () {
     // 11 QUESTION
 
     function check11question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        document.getElementById("thirteen").style.backgroundColor = "white";
+        document.getElementById("thirteen").style.color = "black";
+        document.getElementById("thirteen").style.border = "1px solid";
+
+        document.getElementById("fourteen").style.backgroundColor = "white";
+        document.getElementById("fourteen").style.color = "black";
+        document.getElementById("fourteen").style.border = "1px solid";
+
+        document.getElementById("eighteen").style.backgroundColor = "white";
+        document.getElementById("eighteen").style.color = "black";
+        document.getElementById("eighteen").style.border = "1px solid";
 
         document.getElementsByClassName("correctAnswer11")[0].remove();
         document.getElementsByClassName("app11")[0].style.height = "525px";
@@ -3842,10 +3851,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading11"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer11")[0] && check11question();
