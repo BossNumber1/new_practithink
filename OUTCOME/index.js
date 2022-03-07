@@ -4160,9 +4160,41 @@ document.getElementById("clear").onclick = function () {
     // 20 QUESTION
 
     function check20question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let figure200 = document.getElementById("figure200").children[0];
+        let figure201 = document.getElementById("figure201").children[0];
+        let figure202 = document.getElementById("figure202").children[0];
+        let figure203 = document.getElementById("figure203").children[0];
+        let figure204 = document.getElementById("figure204").children[0];
+        let figure205 = document.getElementById("figure205").children[0];
+        let figure206 = document.getElementById("figure206").children[0];
+        let figure207 = document.getElementById("figure207").children[0];
 
+        // меняем содержимое
+        figure200.src = "./pictures/20que/blueFlower.svg";
+        figure201.src = "./pictures/20que/redFlower.svg";
+        figure202.src = "./pictures/20que/socks.svg";
+        figure203.src = "./pictures/20que/greenFlower.svg";
+        figure204.src = "./pictures/20que/ball.svg";
+        figure205.src = "./pictures/20que/redCar.svg";
+        figure206.src = "./pictures/20que/violetFlower.svg";
+        figure207.src = "./pictures/20que/ruler.svg";
+
+        // document.getElementById("placeFlat").innerHTML = "";
+        // document.getElementById("placeSolid").innerHTML = "";
+
+        document.getElementsByClassName("circles")[0].children[0].innerHTML =
+            "";
+        document.getElementsByClassName("circles")[0].children[1].innerHTML =
+            "";
+
+        // document.getElementsByClassName("background-circle")[0].innerHTML = "";
+        // document.getElementsByClassName("background-circle")[1].innerHTML = "";
+
+        // circle - container;
+        // circle - container right-circle-container
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer20")[0].remove();
         document.getElementsByClassName("app20")[0].style.height = "680px";
         document.getElementsByClassName("app20")[0].style.border =
@@ -4170,10 +4202,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading20"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer20")[0] && check20question();
