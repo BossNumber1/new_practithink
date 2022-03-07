@@ -3382,7 +3382,6 @@ document.getElementById("clear").onclick = function () {
 
     function check2question() {
         let firstNumber2 = document.getElementById("firstNumber2");
-
         firstNumber2.value = "";
 
         document.getElementsByClassName("correctAnswer2")[0].remove();
@@ -3427,4 +3426,53 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer4")[0] && check4question();
+
+    // 6 QUESTION
+
+    function check6question() {
+        let firstNumber6 = document.getElementById("inputQuestion6");
+        firstNumber6.value = "";
+
+        document.getElementsByClassName("correctAnswer6")[0].remove();
+        document.getElementsByClassName("app6")[0].style.height = "477px";
+        document.getElementsByClassName("app6")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading6"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber6.style.backgroundColor = "white";
+        firstNumber6.style.color = "black";
+        firstNumber6.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer6")[0] && check6question();
+
+    // 7 QUESTION
+
+    function check7question() {
+        let firstNumber7 = document.getElementById("amountIceCream");
+        let secondNumber7 = document.getElementById("amountFlowers");
+
+        firstNumber7.value = "";
+        secondNumber7.value = "";
+
+        document.getElementsByClassName("correctAnswer7")[0].remove();
+        document.getElementsByClassName("app7")[0].style.height = "527px";
+        document.getElementsByClassName("app7")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading7"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber7.style.backgroundColor = "white";
+        firstNumber7.style.color = "black";
+        firstNumber7.style.border = "1px solid";
+
+        secondNumber7.style.backgroundColor = "white";
+        secondNumber7.style.color = "black";
+        secondNumber7.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer7")[0] && check7question();
 };
