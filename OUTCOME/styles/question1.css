@@ -71,6 +71,7 @@
     transform: scale(1.2);
 }
 
+.number1,
 .numberError,
 .numberSuccess {
     position: static;

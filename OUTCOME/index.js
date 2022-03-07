@@ -3383,8 +3383,88 @@ document.getElementById("clear").onclick = function () {
     // 1 QUESTION
 
     function check1question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        let emptyPlace10 = document.getElementById("emptyPlace10");
+        let emptyPlace11 = document.getElementById("emptyPlace11");
+        let emptyPlace12 = document.getElementById("emptyPlace12");
+        let emptyPlace13 = document.getElementById("emptyPlace13");
+        let emptyPlace14 = document.getElementById("emptyPlace14");
+        let emptyPlace15 = document.getElementById("emptyPlace15");
+
+        let emptyPlace0 = emptyPlace10.children[0];
+        let emptyPlace1 = emptyPlace11.children[0];
+        let emptyPlace2 = emptyPlace12.children[0];
+        let emptyPlace3 = emptyPlace13.children[0];
+        let emptyPlace4 = emptyPlace14.children[0];
+        let emptyPlace5 = emptyPlace15.children[0];
+
+        let number0 = document.getElementById("number10").children[0];
+        let number1 = document.getElementById("number11").children[0];
+        let number2 = document.getElementById("number12").children[0];
+        let number3 = document.getElementById("number13").children[0];
+        let number4 = document.getElementById("number14").children[0];
+        let number5 = document.getElementById("number15").children[0];
+
+        emptyPlace0.src = "./pictures/1que/0.svg";
+        emptyPlace1.src = "./pictures/1que/1.svg";
+        emptyPlace2.src = "./pictures/1que/2.svg";
+        emptyPlace3.src = "./pictures/1que/3.svg";
+        emptyPlace4.src = "./pictures/1que/4.svg";
+        emptyPlace5.src = "./pictures/1que/5.svg";
+
+        number0.src = "./pictures/1que/26.svg";
+        number1.src = "./pictures/1que/23.svg";
+        number2.src = "./pictures/1que/28.svg";
+        number3.src = "./pictures/1que/25.svg";
+        number4.src = "./pictures/1que/27.svg";
+        number5.src = "./pictures/1que/24.svg";
+
+        if (emptyPlace10.className === "numberError") {
+            emptyPlace10.classList.remove("numberError");
+            emptyPlace10.classList.add("number1");
+        } else {
+            emptyPlace10.classList.remove("numberSuccess");
+            emptyPlace10.classList.add("number1");
+        }
+
+        if (emptyPlace11.className === "numberError") {
+            emptyPlace11.classList.remove("numberError");
+            emptyPlace11.classList.add("number1");
+        } else {
+            emptyPlace11.classList.remove("numberSuccess");
+            emptyPlace11.classList.add("number1");
+        }
+
+        if (emptyPlace12.className === "numberError") {
+            emptyPlace12.classList.remove("numberError");
+            emptyPlace12.classList.add("number1");
+        } else {
+            emptyPlace12.classList.remove("numberSuccess");
+            emptyPlace12.classList.add("number1");
+        }
+
+        if (emptyPlace13.className === "numberError") {
+            emptyPlace13.classList.remove("numberError");
+            emptyPlace13.classList.add("number1");
+        } else {
+            emptyPlace13.classList.remove("numberSuccess");
+            emptyPlace13.classList.add("number1");
+        }
+
+        if (emptyPlace14.className === "numberError") {
+            emptyPlace14.classList.remove("numberError");
+            emptyPlace14.classList.add("number1");
+        } else {
+            emptyPlace14.classList.remove("numberSuccess");
+            emptyPlace14.classList.add("number1");
+        }
+
+        if (emptyPlace15.className === "numberError") {
+            emptyPlace15.classList.remove("numberError");
+            emptyPlace15.classList.add("number1");
+        } else {
+            emptyPlace15.classList.remove("numberSuccess");
+            emptyPlace15.classList.add("number1");
+        }
 
         document.getElementsByClassName("correctAnswer1")[0].remove();
         document.getElementsByClassName("app1")[0].style.height = "403px";
@@ -3393,10 +3473,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading1"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer1")[0] && check1question();
