@@ -3475,4 +3475,38 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer7")[0] && check7question();
+
+    // 10 QUESTION
+
+    function check10question() {
+        let firstNumber10 = document.getElementById("numberJellyfish");
+        let secondNumber10 = document.getElementById("numberSeahorses");
+        let thirdNumber10 = document.getElementById("result");
+
+        firstNumber10.value = "";
+        secondNumber10.value = "";
+        thirdNumber10.value = "";
+
+        document.getElementsByClassName("correctAnswer10")[0].remove();
+        document.getElementsByClassName("app10")[0].style.height = "550px";
+        document.getElementsByClassName("app10")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading10"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber10.style.backgroundColor = "white";
+        firstNumber10.style.color = "black";
+        firstNumber10.style.border = "1px solid";
+
+        secondNumber10.style.backgroundColor = "white";
+        secondNumber10.style.color = "black";
+        secondNumber10.style.border = "1px solid";
+
+        thirdNumber10.style.backgroundColor = "white";
+        thirdNumber10.style.color = "black";
+        thirdNumber10.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer10")[0] && check10question();
 };
