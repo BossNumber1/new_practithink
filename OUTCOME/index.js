@@ -3879,8 +3879,19 @@ document.getElementById("clear").onclick = function () {
     // 13 QUESTION
 
     function check13question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        document.getElementById("btnSelectTom").style.backgroundColor = "white";
+        document.getElementById("btnSelectTom").style.color = "black";
+        document.getElementById("btnSelectTom").style.border = "1px solid";
+
+        document.getElementById("btnSelectMike").style.backgroundColor =
+            "white";
+        document.getElementById("btnSelectMike").style.color = "black";
+        document.getElementById("btnSelectMike").style.border = "1px solid";
+
+        document.getElementById("btnSelectJack").style.backgroundColor =
+            "white";
+        document.getElementById("btnSelectJack").style.color = "black";
+        document.getElementById("btnSelectJack").style.border = "1px solid";
 
         document.getElementsByClassName("correctAnswer13")[0].remove();
         document.getElementsByClassName("app13")[0].style.height = "627px";
@@ -3889,10 +3900,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading13"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer13")[0] && check13question();
