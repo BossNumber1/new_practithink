@@ -3858,8 +3858,30 @@ document.getElementById("clear").onclick = function () {
     // 12 QUESTION
 
     function check12question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let firstFigure12 = document.getElementById("balloon");
+        let secondFigure12 = document.getElementById("book");
+        let thirdFigure12 = document.getElementById("truck");
+        let fourthFigure12 = document.getElementById("feather");
+        let fifthFigure12 = document.getElementById("car");
+
+        // возвращаем в дефолт
+        firstFigure12.style.boxShadow = "none";
+        secondFigure12.style.boxShadow = "none";
+        thirdFigure12.style.boxShadow = "none";
+        fourthFigure12.style.boxShadow = "none";
+        fifthFigure12.style.boxShadow = "none";
+
+        firstFigure12.classList.remove("selectedPicture");
+        firstFigure12.classList.remove("que12error");
+        secondFigure12.classList.remove("selectedPicture");
+        secondFigure12.classList.remove("que12error");
+        thirdFigure12.classList.remove("selectedPicture");
+        thirdFigure12.classList.remove("que12error");
+        fourthFigure12.classList.remove("selectedPicture");
+        fourthFigure12.classList.remove("que12error");
+        fifthFigure12.classList.add("selectedPicture");
+        fifthFigure12.classList.remove("que12error");
 
         document.getElementsByClassName("correctAnswer12")[0].remove();
         document.getElementsByClassName("app12")[0].style.height = "382px";
@@ -3868,10 +3890,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading12"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer12")[0] && check12question();
@@ -4103,8 +4121,16 @@ document.getElementById("clear").onclick = function () {
     // 19 QUESTION
 
     function check19question() {
+        // получаем объекты
         let firstFigure19 = document.getElementById("hexagon");
         let secondFigure19 = document.getElementById("trapezoid");
+
+        // возвращаем в дефолт
+        firstFigure19.style.boxShadow = "none";
+        secondFigure19.style.boxShadow = "none";
+
+        firstFigure19.classList.add("selectedPicture2");
+        secondFigure19.classList.remove("selectedPicture2");
 
         document.getElementsByClassName("correctAnswer19")[0].remove();
         document.getElementsByClassName("app19")[0].style.height = "422px";
@@ -4113,12 +4139,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading19"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        firstFigure19.style.boxShadow = "none";
-        secondFigure19.style.boxShadow = "none";
-
-        firstFigure19.classList.add("selectedPicture2");
-        secondFigure19.classList.remove("selectedPicture2");
     }
 
     document.getElementsByClassName("correctAnswer19")[0] && check19question();
