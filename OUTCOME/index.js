@@ -3509,4 +3509,87 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer10")[0] && check10question();
+
+    // 14 QUESTION
+
+    function check14question() {
+        let firstNumber14 = document.getElementById("numberHearts");
+        let secondNumber14 = document.getElementById("numberStars");
+        let thirdNumber14 = document.getElementById("numberRhombus");
+
+        firstNumber14.value = "";
+        secondNumber14.value = "";
+        thirdNumber14.value = "";
+
+        document.getElementsByClassName("correctAnswer14")[0].remove();
+        document.getElementsByClassName("app14")[0].style.height = "641px";
+        document.getElementsByClassName("app14")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading14"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber14.style.backgroundColor = "white";
+        firstNumber14.style.color = "black";
+        firstNumber14.style.border = "1px solid";
+
+        secondNumber14.style.backgroundColor = "white";
+        secondNumber14.style.color = "black";
+        secondNumber14.style.border = "1px solid";
+
+        thirdNumber14.style.backgroundColor = "white";
+        thirdNumber14.style.color = "black";
+        thirdNumber14.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer14")[0] && check14question();
+
+    // 17 QUESTION
+
+    function check17question() {
+        let firstNumber17 = document.getElementById("answer");
+        firstNumber17.value = "";
+
+        document.getElementsByClassName("correctAnswer17")[0].remove();
+        document.getElementsByClassName("app17")[0].style.height = "412px";
+        document.getElementsByClassName("app17")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading17"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber17.style.backgroundColor = "white";
+        firstNumber17.style.color = "black";
+        firstNumber17.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer17")[0] && check17question();
+
+    // 22 QUESTION
+
+    function check22question() {
+        let firstNumber22 = document.getElementById("tasselLength");
+        let secondNumber22 = document.getElementById("pencilLength");
+
+        firstNumber22.value = "";
+        secondNumber22.value = "";
+
+        document.getElementsByClassName("correctAnswer22")[0].remove();
+        document.getElementsByClassName("app22")[0].style.height = "412px";
+        document.getElementsByClassName("app22")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading22"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber22.style.backgroundColor = "white";
+        firstNumber22.style.color = "black";
+        firstNumber22.style.border = "1px solid";
+
+        secondNumber22.style.backgroundColor = "white";
+        secondNumber22.style.color = "black";
+        secondNumber22.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer22")[0] && check22question();
 };
