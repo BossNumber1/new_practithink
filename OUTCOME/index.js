@@ -4037,9 +4037,25 @@ document.getElementById("clear").onclick = function () {
     // 16 QUESTION
 
     function check16question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let emptyPlace0 = document.getElementById("topSeat").children[0];
+        let emptyPlace1 = document.getElementById("centralSeat").children[0];
+        let emptyPlace2 = document.getElementById("bottomSeat").children[0];
 
+        let figure160 = document.getElementById("figure160").children[0];
+        let figure161 = document.getElementById("figure161").children[0];
+        let figure162 = document.getElementById("figure162").children[0];
+
+        // меняем содержимое
+        emptyPlace0.src = "./pictures/16que/square.svg";
+        emptyPlace1.src = "./pictures/16que/square.svg";
+        emptyPlace2.src = "./pictures/16que/square.svg";
+
+        figure160.src = "./pictures/16que/toyCar.svg";
+        figure161.src = "./pictures/16que/robot.svg";
+        figure162.src = "./pictures/16que/pyramid.svg";
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer16")[0].remove();
         document.getElementsByClassName("app16")[0].style.height = "625px";
         document.getElementsByClassName("app16")[0].style.border =
@@ -4048,9 +4064,7 @@ document.getElementById("clear").onclick = function () {
             "lineUnderHeading16"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
 
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
+        document.getElementById("closet16").className = "closet";
     }
 
     document.getElementsByClassName("correctAnswer16")[0] && check16question();
