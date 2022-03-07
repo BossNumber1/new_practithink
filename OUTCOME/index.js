@@ -4109,6 +4109,15 @@ document.getElementById("clear").onclick = function () {
         secondNumber22.style.backgroundColor = "white";
         secondNumber22.style.color = "black";
         secondNumber22.style.border = "1px solid";
+
+        // возвращаем в дефолт кнопки
+        document.getElementById("selectBrush").style.backgroundColor = "white";
+        document.getElementById("selectBrush").style.color = "black";
+        document.getElementById("selectBrush").style.border = "1px solid";
+
+        document.getElementById("selectPencil").style.backgroundColor = "white";
+        document.getElementById("selectPencil").style.color = "black";
+        document.getElementById("selectPencil").style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer22")[0] && check22question();
