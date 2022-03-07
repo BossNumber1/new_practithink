@@ -3934,6 +3934,42 @@ document.getElementById("clear").onclick = function () {
         thirdNumber14.style.backgroundColor = "white";
         thirdNumber14.style.color = "black";
         thirdNumber14.style.border = "1px solid";
+
+        // получаем объекты
+        let figure140 = document.getElementById("figure140").children[0];
+        let figure141 = document.getElementById("figure141").children[0];
+        let figure142 = document.getElementById("figure142").children[0];
+        let figure143 = document.getElementById("figure143").children[0];
+        let figure144 = document.getElementById("figure144").children[0];
+        let figure145 = document.getElementById("figure145").children[0];
+        let figure146 = document.getElementById("figure146").children[0];
+        let figure147 = document.getElementById("figure147").children[0];
+        let figure148 = document.getElementById("figure148").children[0];
+        let figure149 = document.getElementById("figure149").children[0];
+        let figure1410 = document.getElementById("figure1410").children[0];
+        let figure1411 = document.getElementById("figure1411").children[0];
+        let figure1412 = document.getElementById("figure1412").children[0];
+        let figure1413 = document.getElementById("figure1413").children[0];
+
+        // меняем содержимое
+        figure140.src = "./pictures/14que/heart.svg";
+        figure141.src = "./pictures/14que/rhombus.svg";
+        figure142.src = "./pictures/14que/heart.svg";
+        figure143.src = "./pictures/14que/star.svg";
+        figure144.src = "./pictures/14que/star.svg";
+        figure145.src = "./pictures/14que/heart.svg";
+        figure146.src = "./pictures/14que/rhombus.svg";
+        figure147.src = "./pictures/14que/rhombus.svg";
+        figure148.src = "./pictures/14que/heart.svg";
+        figure149.src = "./pictures/14que/heart.svg";
+        figure1410.src = "./pictures/14que/heart.svg";
+        figure1411.src = "./pictures/14que/rhombus.svg";
+        figure1412.src = "./pictures/14que/star.svg";
+        figure1413.src = "./pictures/14que/star.svg";
+
+        document.getElementById("basketHearts").innerHTML = "";
+        document.getElementById("basketStars").innerHTML = "";
+        document.getElementById("basketRhombus").innerHTML = "";
     }
 
     document.getElementsByClassName("correctAnswer14")[0] && check14question();
