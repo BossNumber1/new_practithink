@@ -3741,9 +3741,28 @@ document.getElementById("clear").onclick = function () {
     // 8 QUESTION
 
     function check8question() {
-        // let firstNumber2 = document.getElementById("firstNumber2");
-        // firstNumber2.value = "";
+        // получаем объекты
+        let candy90 = document.getElementById("candy90").children[0];
+        let candy91 = document.getElementById("candy91").children[0];
+        let candy92 = document.getElementById("candy92").children[0];
+        let candy93 = document.getElementById("candy93").children[0];
+        let candy94 = document.getElementById("candy94").children[0];
+        let candy95 = document.getElementById("candy95").children[0];
+        let candy96 = document.getElementById("candy96").children[0];
 
+        // меняем содержимое
+        candy90.style.opacity = "1";
+        candy91.style.opacity = "1";
+        candy92.style.opacity = "1";
+        candy93.style.opacity = "1";
+        candy94.style.opacity = "1";
+        candy95.style.opacity = "1";
+        candy96.style.opacity = "1";
+
+        document.getElementById("placeDropCandyBob").innerHTML = "";
+        document.getElementById("placeDropCandyDave").innerHTML = "";
+
+        // возвращаем в дефолт
         document.getElementsByClassName("correctAnswer8")[0].remove();
         document.getElementsByClassName("app8")[0].style.height = "544px";
         document.getElementsByClassName("app8")[0].style.border =
@@ -3751,10 +3770,6 @@ document.getElementById("clear").onclick = function () {
         document.getElementsByClassName(
             "lineUnderHeading8"
         )[0].style.borderBottom = "0.5px solid #a8a8a8";
-
-        // firstNumber2.style.backgroundColor = "white";
-        // firstNumber2.style.color = "black";
-        // firstNumber2.style.border = "1px solid";
     }
 
     document.getElementsByClassName("correctAnswer8")[0] && check8question();
